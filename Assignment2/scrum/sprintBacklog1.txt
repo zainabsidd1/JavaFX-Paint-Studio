@@ -6,23 +6,23 @@
 # Sprint 1 Backlog UserStories go below
 
 --------------------------------------------------------------------------
-TYPE     : BUG BUG1.001 : UTORID : NotStarted
+TYPE     : BUG BUG1.001 : UTORID : sidd1378
 NAME     : Icons instead of text for drawing mode selection
 PRIORITY : 1 
-ESTIMATE : (1 hour, 2 hours, 4 hours, 1 day, 2 days, 4 days)    ACTUAL :
+ESTIMATE : 1 hour    ACTUAL :
 ISSUE    : Would be nice to have icons instead of "Circle", "Rectangle", ...
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
-TYPE     : BUG BUG1.002 : UTORID : NotStarted
+TYPE     : BUG BUG1.002 : UTORID : sidd1378
 NAME     : Drawing selection mode not indicated
 PRIORITY : 1
-ESTIMATE : (1 hour, 2 hours, 4 hours, 1 day, 2 days, 4 days)    ACTUAL :
+ESTIMATE : 1 hour    ACTUAL :
 ISSUE    : Currently, you can't tell which mode "Circle", "Rectangle", ...
            is currently selected. Is there a way
            to highlight the currently selected mode?
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
-TYPE     : BUG BUG1.005 : UTORID : NotStarted
+TYPE     : BUG BUG1.005 : UTORID :  NotStarted
 NAME     : Squiggle is broken
 PRIORITY : 1
 ESTIMATE : (1 hour, 2 hours, 4 hours, 1 day, 2 days, 4 days)    ACTUAL :
@@ -54,7 +54,7 @@ SO THAT  : I can see the circle I am about to build on release of the mouse
            button.
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
-TYPE     : USER STORY US1.003 : UTORID : NotStarted
+TYPE     : USER STORY US1.003 : UTORID :  NotStarted
 NAME     : Draw Rectangle
 PRIORITY : 2
 ESTIMATE : (1 hour, 2 hours, 4 hours, 1 day, 2 days, 4 days)    ACTUAL :
@@ -64,7 +64,7 @@ I WANT   : To click on one corner of a rectangle, drag, and release to
 SO THAT  : I can add rectangles to my canvas
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
-TYPE     : USER STORY US1.004 : UTORID : NotStarted
+TYPE     : USER STORY US1.004 : UTORID :  NotStarted
 NAME     : Draw Rectangle Feedback
 PRIORITY : 2
 ESTIMATE : (1 hour, 2 hours, 4 hours, 1 day, 2 days, 4 days)    ACTUAL :
