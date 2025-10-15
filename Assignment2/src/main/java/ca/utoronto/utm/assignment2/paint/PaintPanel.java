@@ -68,6 +68,7 @@ public class PaintPanel extends Canvas implements EventHandler<MouseEvent>, Obse
                 break;
             case "Rectangle":
                 if (mouseEventType.equals(MouseEvent.MOUSE_PRESSED)) {
+                    System.out.println("Started Rectangle");
                     Point p = new Point(mouseEvent.getX(), mouseEvent.getY());
                     this.rectangle = new Rectangle(p, p); // zero sized rect started at press
                 }
@@ -80,12 +81,13 @@ public class PaintPanel extends Canvas implements EventHandler<MouseEvent>, Obse
                 else if (mouseEventType.equals(MouseEvent.MOUSE_MOVED)) {
                     double x = mouseEvent.getX();
                     double y = mouseEvent.getY();
-                    System.out.printf("Mouse at", x, y); // need to change prints x, y
+                    // System.out.printf("Mouse at", x, y); // need to change prints x, y
                 }
                 else if (mouseEventType.equals(MouseEvent.MOUSE_RELEASED)) {
                     if (this.rectangle != null) {
                         this.rectangle.setP2(new Point(mouseEvent.getX(), mouseEvent.getY()));
                         this.model.addRectangle(this.rectangle);
+                        System.out.println("Added Rectangle");
                         this.rectangle=null; // clear all preview
                     }
                 }
