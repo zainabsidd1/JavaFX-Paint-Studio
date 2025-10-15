@@ -1,0 +1,74 @@
+# Move User Stories from the ProductBacklog 
+# to the appropriate sprintBacklogN.txt after the 
+# Sprint Planning Meeting.
+
+# Sprint 1 Oct 15-Oct 23, 2025
+# Sprint 1 Backlog UserStories go below
+
+--------------------------------------------------------------------------
+TYPE     : BUG BUG1.001 : UTORID : NotStarted
+NAME     : Icons instead of text for drawing mode selection
+PRIORITY : 1 
+ESTIMATE : (1 hour, 2 hours, 4 hours, 1 day, 2 days, 4 days)    ACTUAL :
+ISSUE    : Would be nice to have icons instead of "Circle", "Rectangle", ...
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : BUG BUG1.002 : UTORID : NotStarted
+NAME     : Drawing selection mode not indicated
+PRIORITY : 1
+ESTIMATE : (1 hour, 2 hours, 4 hours, 1 day, 2 days, 4 days)    ACTUAL :
+ISSUE    : Currently, you can't tell which mode "Circle", "Rectangle", ...
+           is currently selected. Is there a way
+           to highlight the currently selected mode?
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : BUG BUG1.005 : UTORID : NotStarted
+NAME     : Squiggle is broken
+PRIORITY : 1
+ESTIMATE : (1 hour, 2 hours, 4 hours, 1 day, 2 days, 4 days)    ACTUAL :
+ISSUE    : Squiggles are connected to each other by a straight line. Each drag
+                   of the mouse should be a separate squiggle. Possibly
+           the issue is with the representation of the squiggles in the Model.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : BUG BUG1.006 : UTORID : NotStarted
+NAME     : Circle drawing is broken
+PRIORITY : 1
+ESTIMATE : (1 hour, 2 hours, 4 hours, 1 day, 2 days, 4 days)    ACTUAL :
+ISSUE    : The first click should specify the center of the circle, with
+           a drag for the radius. This is not the case in the current
+           implementation.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US1.002 : UTORID : NotStarted
+NAME     : Draw Circle Feedback
+PRIORITY : 2
+ESTIMATE : (1 hour, 2 hours, 4 hours, 1 day, 2 days, 4 days)    ACTUAL :
+AS A     : user
+I WANT   : As a user is specifying a Circle, during the drag, a 'current'
+           circle should be on display. As the user drags, the 'current'
+           circle changes in real time so that a circle is drawn with
+           centre at users initial circle click, with radius out to
+           the current dragged mouse position.
+SO THAT  : I can see the circle I am about to build on release of the mouse
+           button.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US1.003 : UTORID : NotStarted
+NAME     : Draw Rectangle
+PRIORITY : 2
+ESTIMATE : (1 hour, 2 hours, 4 hours, 1 day, 2 days, 4 days)    ACTUAL :
+AS A     : user
+I WANT   : To click on one corner of a rectangle, drag, and release to
+                   specify two corners of a rectangle to be drawn in the current style.
+SO THAT  : I can add rectangles to my canvas
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US1.004 : UTORID : NotStarted
+NAME     : Draw Rectangle Feedback
+PRIORITY : 2
+ESTIMATE : (1 hour, 2 hours, 4 hours, 1 day, 2 days, 4 days)    ACTUAL :
+AS A     : user
+I WANT   : Similarly to Draw Circle Feedback, display the rectangle in mid construction.
+SO THAT  : I can see the rectangle I am about to build on release of the mouse button.
+--------------------------------------------------------------------------

@@ -1,0 +1,6 @@
+# Move User Stories from the ProductBacklog 
+# to the appropriate sprintBacklogN.txt after the 
+# Sprint Planning Meeting.
+
+# Sprint 2 Oct 24-Oct 30, 2025
+# Sprint 2 Backlog UserStories go below
