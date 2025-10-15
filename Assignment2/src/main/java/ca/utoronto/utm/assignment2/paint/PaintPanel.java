@@ -15,6 +15,7 @@ public class PaintPanel extends Canvas implements EventHandler<MouseEvent>, Obse
     private PaintModel model;
 
     public Circle circle; // This is VERY UGLY, should somehow fix this!!
+    private Rectangle rectangle;
 
     public PaintPanel(PaintModel model) {
         super(300, 300);
@@ -65,7 +66,29 @@ public class PaintPanel extends Canvas implements EventHandler<MouseEvent>, Obse
                 }
 
                 break;
-            case "Rectangle": break;
+            case "Rectangle":
+                if (mouseEventType.equals(MouseEvent.MOUSE_PRESSED)) {
+                    Point p = new Point(mouseEvent.getX(), mouseEvent.getY());
+                    this.rectangle = new Rectangle(p, p); // zero sized rect started at press
+                }
+                else if (mouseEventType.equals(MouseEvent.MOUSE_DRAGGED)) {
+                    if (this.rectangle != null) {
+                        this.rectangle.setP2(new Point(mouseEvent.getX(), mouseEvent.getY())); // live preview or rect growing
+                        // redraw(); when implemented
+                    }
+                }
+                else if (mouseEventType.equals(MouseEvent.MOUSE_MOVED)) {
+                    double x = mouseEvent.getX();
+                    double y = mouseEvent.getY();
+                    System.out.printf("Mouse at", x, y); // need to change prints x, y
+                }
+                else if (mouseEventType.equals(MouseEvent.MOUSE_RELEASED)) {
+                    if (this.rectangle != null) {
+                        this.rectangle.setP2(new Point(mouseEvent.getX(), mouseEvent.getY()));
+                        this.model.addRectangle(this.rectangle);
+                        this.rectangle=null; // clear all preview
+                    }
+                }
             case "Square": break;
             case "Squiggle":
                 if (mouseEventType.equals(MouseEvent.MOUSE_DRAGGED)) {
@@ -100,6 +123,22 @@ public class PaintPanel extends Canvas implements EventHandler<MouseEvent>, Obse
                         double y = c.getCentre().y;
                         double radius = c.getRadius();
                         g2d.fillOval(x, y, radius, radius);
+                }
+
+                // Draw Rectangles
+                ArrayList<Rectangle> rectangles = this.model.getRectangles();
+                g2d.setFill(Color.PINK); // fill colour of rect
+                for (Rectangle r: this.model.getRectangles()) {
+                    g2d.fillRect(r.getLeft(), r.getTop(), r.getWidth(), r.getHeight());
+                } // draw all rects
+                if (this.rectangle != null && "Rectangle".equals(this.mode)) {
+                    g2d.setStroke(Color.PINK);
+                    g2d.setLineWidth(2);
+                    g2d.setLineDashes(2);
+                    g2d.strokeRect(rectangle.getLeft(),
+                            rectangle.getTop(),
+                            rectangle.getWidth(),
+                            rectangle.getHeight());
                 }
     }
 }
