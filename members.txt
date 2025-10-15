@@ -1,0 +1,4 @@
+member1: sidd1378 Zainab Siddiqui zainabb.siddiqui@mail.utoronto.ca
+member2: royanus1 Anushka Roy anuskha.roy@mail.utoronto.ca
+member3: kaurjap9 Japnoor Kaur japnoor.kaur@mail.utoronto.ca
+member4: tatisoha Sohan Tati s.tati@mail.utoronto.ca
