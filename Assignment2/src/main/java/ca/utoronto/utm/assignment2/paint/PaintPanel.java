@@ -89,6 +89,7 @@ public class PaintPanel extends Canvas implements EventHandler<MouseEvent>, Obse
                         this.rectangle=null; // clear all preview
                     }
                 }
+                break;
             case "Square": break;
             case "Squiggle":
                 if (mouseEventType.equals(MouseEvent.MOUSE_DRAGGED)) {
