@@ -71,11 +71,13 @@ public class PaintPanel extends Canvas implements EventHandler<MouseEvent>, Obse
                     System.out.println("Started Rectangle");
                     Point p = new Point(mouseEvent.getX(), mouseEvent.getY());
                     this.rectangle = new Rectangle(p, p); // zero sized rect started at press
+                    update(null, null);
                 }
                 else if (mouseEventType.equals(MouseEvent.MOUSE_DRAGGED)) {
                     if (this.rectangle != null) {
                         this.rectangle.setP2(new Point(mouseEvent.getX(), mouseEvent.getY())); // live preview or rect growing
                         // redraw(); when implemented
+                        update(null, null); // live previews every mouse move
                     }
                 }
                 else if (mouseEventType.equals(MouseEvent.MOUSE_MOVED)) {
@@ -135,13 +137,15 @@ public class PaintPanel extends Canvas implements EventHandler<MouseEvent>, Obse
                     g2d.fillRect(r.getLeft(), r.getTop(), r.getWidth(), r.getHeight());
                 } // draw all rects
                 if (this.rectangle != null && "Rectangle".equals(this.mode)) {
+                    double x = rectangle.getLeft();
+                    double y = rectangle.getTop();
+                    double w = rectangle.getWidth();
+                    double h = rectangle.getHeight();
+                    g2d.setFill(Color.PINK);
+                    g2d.fillRect(x, y, w, h); // rect fill
                     g2d.setStroke(Color.PINK);
                     g2d.setLineWidth(2);
-                    g2d.setLineDashes(2);
-                    g2d.strokeRect(rectangle.getLeft(),
-                            rectangle.getTop(),
-                            rectangle.getWidth(),
-                            rectangle.getHeight());
+                    g2d.strokeRect(x, y, w, h);
                 }
     }
 }
