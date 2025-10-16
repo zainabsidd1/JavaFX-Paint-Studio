@@ -114,7 +114,9 @@ public class PaintPanel extends Canvas implements EventHandler<MouseEvent>, Obse
                 GraphicsContext g2d = this.getGraphicsContext2D();
                 g2d.clearRect(0, 0, this.getWidth(), this.getHeight());
                 // Draw Lines
-                g2d.setFill(Color.RED);
+                g2d.setGlobalAlpha(1.0);
+                g2d.setLineDashes(0);        // seperate rectangle colour from squiggle
+                g2d.setStroke(Color.RED);
                 for(ArrayList<Point> squiggle : this.model.getSquiggles()){
 
                         for(int i=0;i<squiggle.size()-1;i++) { //draw all the points in each squiggle

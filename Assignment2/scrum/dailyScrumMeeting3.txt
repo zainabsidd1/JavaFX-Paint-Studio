@@ -7,9 +7,9 @@ Oct 15,2025
 	Obstacles I face: Cloning the repository
 
 Oct 16,2025
-	What I did yesterday:
-	What I will do today:
-	Obstacles I face:
+	What I did yesterday: Finished UserStory1.003 and UserStory1.004
+	What I will do today: very minor bug fix in squiggle colour to ensure its red
+	Obstacles I face: squiggle changed colour when rectangle/circle selected
 
 Oct 17,2025
 	What I did yesterday:
