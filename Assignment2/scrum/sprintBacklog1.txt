@@ -54,7 +54,7 @@ SO THAT  : I can see the circle I am about to build on release of the mouse
            button.
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
-TYPE     : USER STORY US1.003 : UTORID :  kaurjap9
+TYPE     : USER STORY US1.003 : kaurjap9 : Complete
 NAME     : Draw Rectangle
 PRIORITY : 2
 ESTIMATE : 2 hours    ACTUAL : 1 hour
@@ -64,7 +64,7 @@ I WANT   : To click on one corner of a rectangle, drag, and release to
 SO THAT  : I can add rectangles to my canvas
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
-TYPE     : USER STORY US1.004 : UTORID :  kaurjap9
+TYPE     : USER STORY US1.004 : kaurjap9 : Complete
 NAME     : Draw Rectangle Feedback
 PRIORITY : 2
 ESTIMATE : 2 hours    ACTUAL : 1 hour
