@@ -8,6 +8,7 @@ public class ShapeChooserPanel extends GridPane implements EventHandler<ActionEv
 
         private View view;
 
+        // BUG1.001 To do: change the buttons to shape icons by downloading images of each shape
         public ShapeChooserPanel(View view) {
 
                 this.view = view;
