@@ -158,10 +158,10 @@ ISSUE    : Having a list of different types of drawable things in the
            here.
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
-TYPE     : BUG BUG1.005 : UTORID : NotStarted 
+TYPE     : BUG BUG1.005 : UTORID tatisoha : Started
 NAME     : Squiggle is broken
 PRIORITY : 1
-ESTIMATE : (1 hour, 2 hours, 4 hours, 1 day, 2 days, 4 days)    ACTUAL :
+ESTIMATE : 2 hours    ACTUAL :
 ISSUE    : Squiggles are connected to each other by a straight line. Each drag
 		   of the mouse should be a separate squiggle. Possibly
            the issue is with the representation of the squiggles in the Model.
