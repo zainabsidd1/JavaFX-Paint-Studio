@@ -22,10 +22,10 @@ ISSUE    : Currently, you can't tell which mode "Circle", "Rectangle", ...
            to highlight the currently selected mode?
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
-TYPE     : BUG BUG1.005 : tatisoha :  Started
+TYPE     : BUG BUG1.005 : tatisoha :  Completed
 NAME     : Squiggle is broken
 PRIORITY : 1
-ESTIMATE : 2 hours    ACTUAL : 
+ESTIMATE : 2 hours    ACTUAL : 30 mins
 ISSUE    : Squiggles are connected to each other by a straight line. Each drag
                    of the mouse should be a separate squiggle. Possibly
            the issue is with the representation of the squiggles in the Model.
