@@ -1,15 +1,15 @@
 # Fill in, commit and push each day.
-Member name:      email:     utorid:   
+Member name: Zainab Siddiqui     email: zainabb.siddiqui@mail.utoronto.ca     utorid: sidd1378
 
 Oct 15,2025
-	What I did yesterday:
-	What I will do today:
-	Obstacles I face:
+	What I did yesterday: n/a
+	What I will do today: Create a branch for my selected BUGs and get started on it
+	Obstacles I face: Remembering the appropriate git commands
 
 Oct 16,2025
-	What I did yesterday:
-	What I will do today:
-	Obstacles I face:
+	What I did yesterday: Set up the repo and created a branch for BUG1.001
+	What I will do today: Work on BUG01.001 by finding png's of icons to use
+	Obstacles I face: Rectangle and Circle were not syncing with the icon buttons.
 
 Oct 17,2025
 	What I did yesterday:
