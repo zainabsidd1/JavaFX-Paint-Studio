@@ -12,9 +12,9 @@ Oct 16,2025
 	Obstacles I face: squiggle changed colour when rectangle/circle selected
 
 Oct 17,2025
-	What I did yesterday:
-	What I will do today:
-	Obstacles I face:
+	What I did yesterday: minor bug fixes in BUG1.005 and BUG1.001
+	What I will do today: update product backlog and sprint backlog 1
+	Obstacles I face: n/a
 
 Oct 18,2025
 	What I did yesterday:

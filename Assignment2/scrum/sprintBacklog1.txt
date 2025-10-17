@@ -6,14 +6,14 @@
 # Sprint 1 Backlog UserStories go below
 
 --------------------------------------------------------------------------
-TYPE     : BUG BUG1.001 : UTORID : sidd1378
+TYPE     : BUG BUG1.001 : sidd1378 : Complete
 NAME     : Icons instead of text for drawing mode selection
 PRIORITY : 1 
-ESTIMATE : 1 hour    ACTUAL :
+ESTIMATE : 1 hour    ACTUAL : 2 hours
 ISSUE    : Would be nice to have icons instead of "Circle", "Rectangle", ...
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
-TYPE     : BUG BUG1.002 : UTORID : sidd1378
+TYPE     : BUG BUG1.002 : sidd1378 : InProgress
 NAME     : Drawing selection mode not indicated
 PRIORITY : 1
 ESTIMATE : 1 hour    ACTUAL :
@@ -22,7 +22,7 @@ ISSUE    : Currently, you can't tell which mode "Circle", "Rectangle", ...
            to highlight the currently selected mode?
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
-TYPE     : BUG BUG1.005 : tatisoha :  Completed
+TYPE     : BUG BUG1.005 : tatisoha : Complete
 NAME     : Squiggle is broken
 PRIORITY : 1
 ESTIMATE : 2 hours    ACTUAL : 30 mins
@@ -31,7 +31,7 @@ ISSUE    : Squiggles are connected to each other by a straight line. Each drag
            the issue is with the representation of the squiggles in the Model.
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
-TYPE     : BUG BUG1.006 : UTORID : royanus1
+TYPE     : BUG BUG1.006 : royanus1 : NotStarted
 NAME     : Circle drawing is broken
 PRIORITY : 1
 ESTIMATE : 2 hours   ACTUAL :
@@ -40,7 +40,7 @@ ISSUE    : The first click should specify the center of the circle, with
            implementation.
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
-TYPE     : USER STORY US1.002 : UTORID : royanus1
+TYPE     : USER STORY US1.002 : royanus1 : NotStarted
 NAME     : Draw Circle Feedback
 PRIORITY : 2
 ESTIMATE : 2 hours    ACTUAL :
