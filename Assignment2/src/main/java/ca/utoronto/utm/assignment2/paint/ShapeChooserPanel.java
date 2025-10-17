@@ -6,6 +6,8 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
 
+import java.util.Objects;
+
 public class ShapeChooserPanel extends GridPane implements EventHandler<ActionEvent> {
 
         private View view;
@@ -20,7 +22,7 @@ public class ShapeChooserPanel extends GridPane implements EventHandler<ActionEv
                 int row = 0;
                 for (String label : buttonLabels) {
                         Image icon = null;
-                        icon = new Image("file:Assignment2/src/main/resources/icons/" + label + ".png");
+                        icon = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/icons/" + label + ".png")));
                         ImageView viewIcon = new ImageView(icon);
                         viewIcon.setFitWidth(24);
                         viewIcon.setFitHeight(24);
