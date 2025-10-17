@@ -100,14 +100,7 @@ I WANT   : To be able to select the current line thickness, to be applied
 SO THAT  : 
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
-TYPE     : BUG BUG1.001 : Started UTORID : sidd1378
-NAME     : Icons instead of text for drawing mode selection
-PRIORITY : 1
-ESTIMATE : 2 hours    ACTUAL :
-ISSUE    : Would be nice to have icons instead of "Circle", "Rectangle", ...
---------------------------------------------------------------------------
---------------------------------------------------------------------------
-TYPE     : BUG BUG1.002 : Started UTORID : sidd1378
+TYPE     : BUG BUG1.002 : InProgress UTORID : sidd1378
 NAME     : Drawing selection mode not indicated
 PRIORITY : 1
 ESTIMATE : (1 hour, 2 hours, 4 hours, 1 day, 2 days, 4 days)    ACTUAL :
@@ -137,15 +130,6 @@ ISSUE    : Having a list of different types of drawable things in the
            so that it is more flexible, and easier to work with.
            Consider some design patterns, or change of responsibility
            here.
---------------------------------------------------------------------------
---------------------------------------------------------------------------
-TYPE     : BUG BUG1.005 : UTORID tatisoha : Completed
-NAME     : Squiggle is broken
-PRIORITY : 1
-ESTIMATE : 2 hours    ACTUAL : 30 mins
-ISSUE    : Squiggles are connected to each other by a straight line. Each drag
-		   of the mouse should be a separate squiggle. Possibly
-           the issue is with the representation of the squiggles in the Model.
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
 TYPE     : BUG BUG1.006 : UTORID : NotStarted 
@@ -187,6 +171,21 @@ AS A     : user
 I WANT   : Similarly to Draw Circle Feedback, display the rectangle in mid construction.
 SO THAT  : I can see the rectangle I am about to build on release of the mouse button.
 --------------------------------------------------------------------------
-
+--------------------------------------------------------------------------
+TYPE     : BUG BUG1.001 : Complete UTORID : sidd1378
+NAME     : Icons instead of text for drawing mode selection
+PRIORITY : 1
+ESTIMATE : 2 hours    ACTUAL :
+ISSUE    : Would be nice to have icons instead of "Circle", "Rectangle", ...
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : BUG BUG1.005 : UTORID tatisoha : Complete
+NAME     : Squiggle is broken
+PRIORITY : 1
+ESTIMATE : 2 hours    ACTUAL : 30 mins
+ISSUE    : Squiggles are connected to each other by a straight line. Each drag
+		   of the mouse should be a separate squiggle. Possibly
+           the issue is with the representation of the squiggles in the Model.
+--------------------------------------------------------------------------
 # OMITTED USER STORIES/BUGS BELOW   ###########################################
 
