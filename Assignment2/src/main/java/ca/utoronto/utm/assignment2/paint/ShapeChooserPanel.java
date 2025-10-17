@@ -19,24 +19,27 @@ public class ShapeChooserPanel extends GridPane implements EventHandler<ActionEv
 
                 int row = 0;
                 for (String label : buttonLabels) {
-                        Image icon = new Image("file:Assignment2/src/main/resources/icons/" + label+".png");
-                        ImageView viewIcon =  new ImageView(icon);
-                        viewIcon.setFitHeight(30);
-                        viewIcon.setFitWidth(40);
-
-                        Button button = new Button();
+                        Image icon = null;
+                        icon = new Image("file:Assignment2/src/main/resources/icons/" + label + ".png");
+                        ImageView viewIcon = new ImageView(icon);
+                        viewIcon.setFitWidth(24);
+                        viewIcon.setFitHeight(24);
+                        viewIcon.setPreserveRatio(true);
+                        Button button = new Button();          // icon-only button
                         button.setGraphic(viewIcon);
-
+                        // store the mode on the button (since getText() is empty with icons)
+                        button.setUserData(label);
                         button.setMinWidth(100);
-                        this.add(button, 0, row);
-                        row++;
+                        this.add(button, 0, row++);
                         button.setOnAction(this);
                 }
         }
 
         @Override
         public void handle(ActionEvent event) {
-                String command = ((Button) event.getSource()).getText();
+                Button btn = (Button) event.getSource();
+                // Read the mode from userData instead of getText()
+                String command = (String) btn.getUserData();
                 view.setMode(command);
                 System.out.println(command);
         }
