@@ -7,9 +7,9 @@ Oct 15,2025
 	Obstacles I face: cloning repo and learning to merge to and pull from master branch
 
 Oct 16,2025
-	What I did yesterday:
-	What I will do today:
-	Obstacles I face:
+	What I did yesterday: Fixed BUG1.005
+	What I will do today: n/a
+	Obstacles I face: learning about git merge branches and idea files
 
 Oct 17,2025
 	What I did yesterday:
