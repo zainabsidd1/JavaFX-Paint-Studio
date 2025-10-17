@@ -95,7 +95,7 @@ public class PaintPanel extends Canvas implements EventHandler<MouseEvent>, Obse
                 }
                 break;
             case "Square": break;
-            case "Squiggle":
+            case "Squiggle": //please be a new branch
                 if (mouseEventType.equals(MouseEvent.MOUSE_PRESSED)) { // every new press should be a new squiggle
                     this.model.startNewSqiuggle();
                     this.model.addPoint(new Point(mouseEvent.getX(), mouseEvent.getY()));
