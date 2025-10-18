@@ -17,9 +17,9 @@ Oct 17,2025
 	Obstacles I face: n/a
 
 Oct 18,2025
-	What I did yesterday:
-	What I will do today:
-	Obstacles I face:
+	What I did yesterday: Minor bug fixes
+	What I will do today: Look over project structure
+	Obstacles I face: Getting the correct file path in BUG1.001
 
 Oct 19,2025
 	What I did yesterday:
