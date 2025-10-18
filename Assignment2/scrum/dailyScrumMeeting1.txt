@@ -17,9 +17,9 @@ Oct 17,2025
 	Obstacles I face: The mode wasn't being reflected when changing shapes.
 
 Oct 18,2025
-	What I did yesterday:
-	What I will do today:
-	Obstacles I face:
+	What I did yesterday: Finished BUG1.001
+	What I will do today: Get started on BUG1.002, decide on the styling for selected buttons.
+	Obstacles I face: n/a
 
 Oct 19,2025
 	What I did yesterday:

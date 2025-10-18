@@ -46,6 +46,7 @@ public class ShapeChooserPanel extends GridPane implements EventHandler<ActionEv
                 if (thisButton != null) {
                     thisButton.setStyle("");
                 }
+                // Style the selected button
                 btn.setStyle("-fx-border-color: black;" +
                         " -fx-border-width: 2px;" +
                         "-fx-background-color:#FCF55F;");
