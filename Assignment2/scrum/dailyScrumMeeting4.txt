@@ -12,8 +12,8 @@ Oct 16,2025
 	Obstacles I face: learning about git merge branches and idea files
 
 Oct 17,2025
-	What I did yesterday:
-	What I will do today:
+	What I did yesterday: n/a
+	What I will do today: minor bug fixes in bug1.005
 	Obstacles I face:
 
 Oct 18,2025
