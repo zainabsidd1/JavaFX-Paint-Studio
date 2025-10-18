@@ -172,10 +172,10 @@ I WANT   : Similarly to Draw Circle Feedback, display the rectangle in mid const
 SO THAT  : I can see the rectangle I am about to build on release of the mouse button.
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
-TYPE     : BUG BUG1.001 : Complete UTORID : sidd1378
+TYPE     : BUG BUG1.001 : Complete UTORID : sidd1378 : Complete
 NAME     : Icons instead of text for drawing mode selection
 PRIORITY : 1
-ESTIMATE : 2 hours    ACTUAL :
+ESTIMATE : 2 hours    ACTUAL : 2 hours
 ISSUE    : Would be nice to have icons instead of "Circle", "Rectangle", ...
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
