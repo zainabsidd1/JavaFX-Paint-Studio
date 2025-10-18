@@ -11,6 +11,7 @@ import java.util.Objects;
 public class ShapeChooserPanel extends GridPane implements EventHandler<ActionEvent> {
 
         private View view;
+        private Button thisButton;
 
         // BUG1.001 To do: change the buttons to shape icons by downloading images of each shape
         public ShapeChooserPanel(View view) {
@@ -42,6 +43,13 @@ public class ShapeChooserPanel extends GridPane implements EventHandler<ActionEv
         public void handle(ActionEvent event) {
                 Button btn = (Button) event.getSource();
                 // Read the mode from userData instead of getText()
+                if (thisButton != null) {
+                    thisButton.setStyle("");
+                }
+                btn.setStyle("-fx-border-color: black;" +
+                        " -fx-border-width: 2px;" +
+                        "-fx-background-color:#FCF55F;");
+                thisButton = btn;
                 String command = (String) btn.getUserData();
                 view.setMode(command);
                 System.out.println(command);
