@@ -12,9 +12,9 @@ Oct 16,2025
 	Obstacles I face: Rectangle and Circle were not syncing with the icon buttons.
 
 Oct 17,2025
-	What I did yesterday:
-	What I will do today:
-	Obstacles I face:
+	What I did yesterday: Worked on BUG1.001 by replacing text buttons with icon buttons in ShapeChooserPanel.
+	What I will do today: Ensure the new icon buttons sync with the drawing modes in ShaperChooserPanel.
+	Obstacles I face: The mode wasn't being reflected when changing shapes.
 
 Oct 18,2025
 	What I did yesterday:
