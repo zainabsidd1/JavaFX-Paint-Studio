@@ -1,20 +1,20 @@
 # Fill in, commit and push each day.
-Member name:      email:     utorid:   
+Member name: Anushka Roy     email:  anushka.roy@mail.utoronto.ca   utorid: royanus1
 
 Oct 15,2025
-	What I did yesterday:
-	What I will do today:
-	Obstacles I face:
+	What I did yesterday: n/a
+	What I will do today: Update sprintBacklog and ProductBacklog
+	Obstacles I face: merge conflicts
 
 Oct 16,2025
-	What I did yesterday:
-	What I will do today:
-	Obstacles I face:
+	What I did yesterday: Update sprintBacklog and ProductBacklog
+	What I will do today: work on BUG1.006
+	Obstacles I face: n/a
 
 Oct 17,2025
-	What I did yesterday:
-	What I will do today:
-	Obstacles I face:
+	What I did yesterday: n/a
+	What I will do today: work on BUG1.006
+	Obstacles I face: none.
 
 Oct 18,2025
 	What I did yesterday:
