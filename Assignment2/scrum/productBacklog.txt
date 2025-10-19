@@ -100,15 +100,6 @@ I WANT   : To be able to select the current line thickness, to be applied
 SO THAT  : 
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
-TYPE     : BUG BUG1.002 : Completed UTORID : sidd1378
-NAME     : Drawing selection mode not indicated
-PRIORITY : 1
-ESTIMATE : 2 hours    ACTUAL : 1 hour
-ISSUE    : Currently, you can't tell which mode "Circle", "Rectangle", ...
-           is currently selected. Is there a way
-           to highlight the currently selected mode?
---------------------------------------------------------------------------
---------------------------------------------------------------------------
 TYPE     : BUG BUG?.003 : UTORID : NotStarted 
 NAME     : Architecture behind choosing selection mode is poor
 PRIORITY : 3
@@ -153,7 +144,7 @@ I WANT   : To click the center of the circle, drag, and release to specify
 SO THAT  : I can add circles to my canvas
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
-TYPE     : USER STORY US1.003 :  kaurjap9 : Complete
+TYPE     : USER STORY US1.003 : kaurjap9 : Complete
 NAME     : Draw Rectangle
 PRIORITY : 2
 ESTIMATE : 2 hours    ACTUAL : 1 hour
@@ -172,14 +163,23 @@ I WANT   : Similarly to Draw Circle Feedback, display the rectangle in mid const
 SO THAT  : I can see the rectangle I am about to build on release of the mouse button.
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
-TYPE     : BUG BUG1.001 : Complete UTORID : sidd1378 : Complete
+TYPE     : BUG BUG1.001 : sidd1378 : Complete
 NAME     : Icons instead of text for drawing mode selection
 PRIORITY : 1
 ESTIMATE : 2 hours    ACTUAL : 2 hours
 ISSUE    : Would be nice to have icons instead of "Circle", "Rectangle", ...
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
-TYPE     : BUG BUG1.005 : UTORID tatisoha : Complete
+TYPE     : BUG BUG1.002 : sidd1378 : Complete
+NAME     : Drawing selection mode not indicated
+PRIORITY : 1
+ESTIMATE : 2 hours    ACTUAL : 1 hour
+ISSUE    : Currently, you can't tell which mode "Circle", "Rectangle", ...
+           is currently selected. Is there a way
+           to highlight the currently selected mode?
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : BUG BUG1.005 : tatisoha : Complete
 NAME     : Squiggle is broken
 PRIORITY : 1
 ESTIMATE : 2 hours    ACTUAL : 30 mins
