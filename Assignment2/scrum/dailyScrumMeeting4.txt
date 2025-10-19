@@ -18,7 +18,7 @@ Oct 17,2025
 
 Oct 18,2025
 	What I did yesterday: fixed idea file commits and other bugs
-	What I will do today:n/a
+	What I will do today: changed username
 	Obstacles I face:n/a
 
 Oct 19,2025
