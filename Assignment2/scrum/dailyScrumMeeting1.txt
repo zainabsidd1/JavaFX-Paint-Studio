@@ -22,9 +22,9 @@ Oct 18,2025
 	Obstacles I face: n/a
 
 Oct 19,2025
-	What I did yesterday:
-	What I will do today:
-	Obstacles I face:
+	What I did yesterday: Worked on styling the icon buttons.
+	What I will do today: Finish BUG1.002 by ensuring highlighted feature works.
+	Obstacles I face: Choosing an appropriate color to highlight the icon.
 
 Oct 20,2025
 	What I did yesterday:
