@@ -22,9 +22,9 @@ Oct 18,2025
 	Obstacles I face:n/a
 
 Oct 19,2025
-	What I did yesterday:
-	What I will do today:
-	Obstacles I face:
+	What I did yesterday:changed username to utorid
+	What I will do today: changed email to uoft email + looked over project structure and product backlog
+	Obstacles I face:n/a
 
 Oct 20,2025
 	What I did yesterday:
