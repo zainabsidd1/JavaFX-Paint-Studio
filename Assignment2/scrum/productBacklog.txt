@@ -111,6 +111,16 @@ ISSUE    : Having a list of different types of drawable things in the
 
 # COMPLETED USER STORIES/BUGS BELOW ###########################################
 --------------------------------------------------------------------------
+TYPE     : USER STORY US1.001 : rosenbl6 : Complete
+NAME     : Draw Circle
+PRIORITY : 1
+ESTIMATE : 2 hours    ACTUAL : 2 hours
+AS A     : user
+I WANT   : To click the center of the circle, drag, and release to specify
+           a circle to be drawn in the current style.
+SO THAT  : I can add circles to my canvas
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
 TYPE     : USER STORY US1.002 : royanus1 : Complete
 NAME     : Draw Circle Feedback
 PRIORITY : 2
@@ -123,25 +133,6 @@ I WANT   : As a user is specifying a Circle, during the drag, a 'current'
            the current dragged mouse position.
 SO THAT  : I can see the circle I am about to build on release of the mouse
            button.
---------------------------------------------------------------------------
---------------------------------------------------------------------------
-TYPE     : BUG BUG1.006 : royanus1 : Complete
-NAME     : Circle drawing is broken
-PRIORITY : 1
-ESTIMATE : 2 hours    ACTUAL : 30 mins
-ISSUE    : The first click should specify the center of the circle, with
-           a drag for the radius. This is not the case in the current
-           implementation.
---------------------------------------------------------------------------
---------------------------------------------------------------------------
-TYPE     : USER STORY US1.001 : rosenbl6 : Complete
-NAME     : Draw Circle
-PRIORITY : 1
-ESTIMATE : 2 hours    ACTUAL : 2 hours
-AS A     : user
-I WANT   : To click the center of the circle, drag, and release to specify
-           a circle to be drawn in the current style.
-SO THAT  : I can add circles to my canvas
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
 TYPE     : USER STORY US1.003 : kaurjap9 : Complete
@@ -186,6 +177,15 @@ ESTIMATE : 2 hours    ACTUAL : 30 mins
 ISSUE    : Squiggles are connected to each other by a straight line. Each drag
 		   of the mouse should be a separate squiggle. Possibly
            the issue is with the representation of the squiggles in the Model.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : BUG BUG1.006 : royanus1 : Complete
+NAME     : Circle drawing is broken
+PRIORITY : 1
+ESTIMATE : 2 hours    ACTUAL : 30 mins
+ISSUE    : The first click should specify the center of the circle, with
+           a drag for the radius. This is not the case in the current
+           implementation.
 --------------------------------------------------------------------------
 # OMITTED USER STORIES/BUGS BELOW   ###########################################
 
