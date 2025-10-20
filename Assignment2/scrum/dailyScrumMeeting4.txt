@@ -27,9 +27,9 @@ Oct 19,2025
 	Obstacles I face:n/a
 
 Oct 20,2025
-	What I did yesterday:
-	What I will do today:
-	Obstacles I face:
+	What I did yesterday: changed email + looked over project structure
+	What I will do today: update product backlog
+	Obstacles I face: n/a
 
 Oct 21,2025
 	What I did yesterday:
