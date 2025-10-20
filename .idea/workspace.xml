@@ -46,7 +46,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "SDKs",
+    "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "editor.preferences.import",
@@ -124,8 +124,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Paint" />
-        <item itemvalue="Application.Scribble" />
         <item itemvalue="Application.HelloApplication" />
+        <item itemvalue="Application.Scribble" />
       </list>
     </recent_temporary>
   </component>
