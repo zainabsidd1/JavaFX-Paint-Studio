@@ -130,7 +130,7 @@ public class PaintPanel extends Canvas implements EventHandler<MouseEvent>, Obse
                 // Draw Circles
                 ArrayList<Circle> circles = this.model.getCircles();
 
-                g2d.setFill(Color.GREEN);
+                g2d.setFill(Color.AQUAMARINE);
                 for(Circle c: this.model.getCircles()){
                         double x = c.getCentre().x;
                         double y = c.getCentre().y;
