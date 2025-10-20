@@ -16,10 +16,10 @@
 # as appropriate.
 
 --------------------------------------------------------------------------
-TYPE     : USER STORY US1.002 : UTORID : NotStarted
+TYPE     : USER STORY US1.002 : royanus1 : Complete
 NAME     : Draw Circle Feedback
 PRIORITY : 2 
-ESTIMATE : 4 hours    ACTUAL :
+ESTIMATE : 2 hours    ACTUAL : 2 hours
 AS A     : user
 I WANT   : As a user is specifying a Circle, during the drag, a 'current'
            circle should be on display. As the user drags, the 'current'
@@ -123,10 +123,10 @@ ISSUE    : Having a list of different types of drawable things in the
            here.
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
-TYPE     : BUG BUG1.006 : UTORID : NotStarted 
+TYPE     : BUG BUG1.006 : royanus1 : Complete
 NAME     : Circle drawing is broken
 PRIORITY : 1
-ESTIMATE : (1 hour, 2 hours, 4 hours, 1 day, 2 days, 4 days)    ACTUAL :
+ESTIMATE : 2 hours    ACTUAL : 30 mins
 ISSUE    : The first click should specify the center of the circle, with
            a drag for the radius. This is not the case in the current
            implementation.

@@ -17,19 +17,19 @@ Oct 17,2025
 	Obstacles I face: none.
 
 Oct 18,2025
-	What I did yesterday:
-	What I will do today:
-	Obstacles I face:
+	What I did yesterday: some changes
+	What I will do today: work on BUG1.006 and US1.002
+	Obstacles I face: none
 
 Oct 19,2025
-	What I did yesterday:
-	What I will do today:
-	Obstacles I face:
+	What I did yesterday: work on BUG1.006 and US1.002
+	What I will do today: Finish BUG1.006 and US1.002 + sprintBacklog and productBacklog
+	Obstacles I face: issues with dragging and previewing the "current" circle
 
 Oct 20,2025
-	What I did yesterday:
-	What I will do today:
-	Obstacles I face:
+	What I did yesterday: Finish BUG1.006 and US1.002
+	What I will do today: implement any necessary changes
+	Obstacles I face: n/a
 
 Oct 21,2025
 	What I did yesterday:
