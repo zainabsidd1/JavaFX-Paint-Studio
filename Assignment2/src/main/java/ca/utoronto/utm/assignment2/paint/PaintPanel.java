@@ -50,18 +50,24 @@ public class PaintPanel extends Canvas implements EventHandler<MouseEvent>, Obse
                     System.out.println("Started Circle");
                      Point centre = new Point(mouseEvent.getX(), mouseEvent.getY());
                         this.circle=new Circle(centre, 0);
-                } else if (mouseEventType.equals(MouseEvent.MOUSE_DRAGGED)) {
+                        update(null, null);
+                }
+                else if (mouseEventType.equals(MouseEvent.MOUSE_DRAGGED)) { // using pythagorean theorem
+                    double x = mouseEvent.getX() - circle.getCentre().x;
+                    double y = mouseEvent.getY() - circle.getCentre().y;
+                    double r = Math.sqrt((x * x) + (y * y)); // calculate radius
+                    circle.setRadius(r);
+                    update(null, null); // live preview
+                }
+                else if (mouseEventType.equals(MouseEvent.MOUSE_MOVED)) {
 
-                } else if (mouseEventType.equals(MouseEvent.MOUSE_MOVED)) {
-
-                } else if (mouseEventType.equals(MouseEvent.MOUSE_RELEASED)) {
+                }
+                else if (mouseEventType.equals(MouseEvent.MOUSE_RELEASED)) {
                     if(this.circle!=null){
-                                // Problematic notion of radius and centre!!
-                                double radius = Math.abs(this.circle.getCentre().x-mouseEvent.getX());
-                                this.circle.setRadius(radius);
                                 this.model.addCircle(this.circle);
                                 System.out.println("Added Circle");
                                 this.circle=null;
+                                update(null, null);
                         }
                 }
 
@@ -130,12 +136,22 @@ public class PaintPanel extends Canvas implements EventHandler<MouseEvent>, Obse
                 // Draw Circles
                 ArrayList<Circle> circles = this.model.getCircles();
 
-                g2d.setFill(Color.AQUAMARINE);
+                g2d.setFill(Color.LIGHTBLUE); // colour circle
                 for(Circle c: this.model.getCircles()){
                         double x = c.getCentre().x;
                         double y = c.getCentre().y;
                         double radius = c.getRadius();
-                        g2d.fillOval(x - radius, y - radius, radius * 2, radius * 2);
+                        g2d.fillOval(x - radius, y - radius, radius * 2, radius * 2); // draw circle
+                }
+                if(this.circle!=null && "Circle".equals(this.mode)){ // check before drawing "current" circle
+                    double x = circle.getCentre().x;
+                    double y = circle.getCentre().y;
+                    double radius = circle.getRadius();
+                    g2d.setFill(Color.LIGHTBLUE);
+                    g2d.fillOval(x - radius, y - radius, radius * 2, radius * 2);
+                    g2d.setStroke(Color.LIGHTBLUE);
+                    g2d.setLineWidth(2);
+                    g2d.strokeOval(x - radius, y - radius, radius * 2, radius * 2); // outline circle
                 }
 
                 // Draw Rectangles
