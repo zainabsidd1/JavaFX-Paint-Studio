@@ -27,9 +27,9 @@ Oct 19,2025
 	Obstacles I face: n/a
 
 Oct 20,2025
-	What I did yesterday:
-	What I will do today:
-	Obstacles I face:
+	What I did yesterday: update sprint+product backlog
+	What I will do today: update sprint+product backlog
+	Obstacles I face: n/a
 
 Oct 21,2025
 	What I did yesterday:
