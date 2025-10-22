@@ -16,7 +16,7 @@ ISSUE    : Would be nice to have icons instead of "Circle", "Rectangle", ...
 TYPE     : BUG BUG1.002 : sidd1378 : Complete
 NAME     : Drawing selection mode not indicated
 PRIORITY : 1
-ESTIMATE : 1 hour    ACTUAL :
+ESTIMATE : 1 hour    ACTUAL : 1 hour
 ISSUE    : Currently, you can't tell which mode "Circle", "Rectangle", ...
            is currently selected. Is there a way
            to highlight the currently selected mode?
