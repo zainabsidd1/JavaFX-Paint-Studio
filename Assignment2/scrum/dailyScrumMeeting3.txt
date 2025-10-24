@@ -48,8 +48,8 @@ Oct 23,2025
 
 Oct 24,2025
 	What I did yesterday: git revert and reupdate sprint+product backlog.
-	What I will do today:
-	Obstacles I face:
+	What I will do today: look over sprint2 and pick a user story.
+	Obstacles I face: n/a
 
 Oct 25,2025
 	What I did yesterday:

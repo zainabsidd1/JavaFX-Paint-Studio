@@ -2,13 +2,13 @@
 Member name: Zainab Siddiqui     email: zainabb.siddiqui@mail.utoronto.ca     utorid: sidd1378
 
 Oct 15,2025
-	What I did yesterday: n/a
-	What I will do today: Create a branch for my selected BUGs and get started on it
-	Obstacles I face: Remembering the appropriate git commands
+	What I did yesterday: n/a.
+	What I will do today: Create a branch for my selected BUGs and get started on it.
+	Obstacles I face: Remembering the appropriate git commands.
 
 Oct 16,2025
-	What I did yesterday: Set up the repo and created a branch for BUG1.001
-	What I will do today: Work on BUG01.001 by finding png's of icons to use
+	What I did yesterday: Set up the repo and created a branch for BUG1.001.
+	What I will do today: Work on BUG01.001 by finding png's of icons to use.
 	Obstacles I face: Rectangle and Circle were not syncing with the icon buttons.
 
 Oct 17,2025
@@ -17,9 +17,9 @@ Oct 17,2025
 	Obstacles I face: The mode wasn't being reflected when changing shapes.
 
 Oct 18,2025
-	What I did yesterday: Finished BUG1.001
+	What I did yesterday: Finished BUG1.001.
 	What I will do today: Get started on BUG1.002, decide on the styling for selected buttons.
-	Obstacles I face: n/a
+	Obstacles I face: n/a.
 
 Oct 19,2025
 	What I did yesterday: Worked on styling the icon buttons.
@@ -27,24 +27,24 @@ Oct 19,2025
 	Obstacles I face: Choosing an appropriate color to highlight the icon.
 
 Oct 20,2025
-	What I did yesterday: Finished up on BUG1.002
+	What I did yesterday: Finished up on BUG1.002.
 	What I will do today: Analyze the architecture used by the classes and note down any design improvements that can be made.
-	Obstacles I face: n/a
+	Obstacles I face: n/a.
 
 Oct 21,2025
-	What I did yesterday: Study the projects architecture and design patterns
-	What I will do today: Update sprintBacklog1 and productBacklog
-	Obstacles I face: n/a
+	What I did yesterday: Study the projects architecture and design patterns.
+	What I will do today: Update sprintBacklog1 and productBacklog.
+	Obstacles I face: n/a.
 
 Oct 22,2025
-	What I did yesterday: update sprintBacklog1 and productBacklog
-	What I will do today: review design patters used by Shape and improvements that can be made
-	Obstacles I face: n/a
+	What I did yesterday: update sprintBacklog1 and productBacklog.
+	What I will do today: review design patters used by Shape and improvements that can be made.
+	Obstacles I face: n/a.
 
 Oct 23,2025
 	What I did yesterday: Studied the projects architecture and design patterns.
 	What I will do today: Look over sprint 2.
-	Obstacles I face: n/a
+	Obstacles I face: n/a.
 
 Oct 24,2025
 	What I did yesterday:

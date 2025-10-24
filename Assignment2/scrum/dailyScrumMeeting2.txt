@@ -2,34 +2,34 @@
 Member name: Anushka Roy     email:  anushka.roy@mail.utoronto.ca   utorid: royanus1
 
 Oct 15,2025
-	What I did yesterday: n/a
-	What I will do today: Update sprintBacklog and ProductBacklog
-	Obstacles I face: merge conflicts
+	What I did yesterday: n/a.
+	What I will do today: Update sprintBacklog and ProductBacklog.
+	Obstacles I face: merge conflicts.
 
 Oct 16,2025
-	What I did yesterday: Update sprintBacklog and ProductBacklog
-	What I will do today: work on BUG1.006
-	Obstacles I face: n/a
+	What I did yesterday: Update sprintBacklog and ProductBacklog.
+	What I will do today: work on BUG1.006.
+	Obstacles I face: n/a.
 
 Oct 17,2025
-	What I did yesterday: n/a
-	What I will do today: work on BUG1.006
+	What I did yesterday: n/a.
+	What I will do today: work on BUG1.006.
 	Obstacles I face: none.
 
 Oct 18,2025
-	What I did yesterday: some changes
-	What I will do today: work on BUG1.006 and US1.002
-	Obstacles I face: none
+	What I did yesterday: some changes.
+	What I will do today: work on BUG1.006 and US1.002.
+	Obstacles I face: none.
 
 Oct 19,2025
-	What I did yesterday: work on BUG1.006 and US1.002
-	What I will do today: Finish BUG1.006 and US1.002 + sprintBacklog and productBacklog
-	Obstacles I face: issues with dragging and previewing the "current" circle
+	What I did yesterday: work on BUG1.006 and US1.002.
+	What I will do today: Finish BUG1.006 and US1.002 + sprintBacklog and productBacklog.
+	Obstacles I face: issues with dragging and previewing the "current" circle.
 
 Oct 20,2025
-	What I did yesterday: Finish BUG1.006 and US1.002
-	What I will do today: implement any necessary changes
-	Obstacles I face: n/a
+	What I did yesterday: Finish BUG1.006 and US1.002.
+	What I will do today: implement any necessary changes.
+	Obstacles I face: n/a.
 
 Oct 21,2025
 	What I did yesterday:

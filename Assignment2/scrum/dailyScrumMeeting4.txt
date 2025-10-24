@@ -2,49 +2,49 @@
 Member name: Sohan Tati     email: s.tati@mail.utoronto.ca    utorid: tatisoha
 
 Oct 15,2025
-	What I did yesterday: n/a
-	What I will do today: Pick a bug and create a branch
-	Obstacles I face: cloning repo and learning to merge to and pull from master branch
+	What I did yesterday: n/a.
+	What I will do today: Pick a bug and create a branch.
+	Obstacles I face: cloning repo and learning to merge to and pull from master branch.
 
 Oct 16,2025
-	What I did yesterday: Fixed BUG1.005
-	What I will do today: n/a
-	Obstacles I face: learning about git merge branches and idea files
+	What I did yesterday: Fixed BUG1.005.
+	What I will do today: n/a.
+	Obstacles I face: learning about git merge branches and idea files.
 
 Oct 17,2025
-	What I did yesterday: n/a
-	What I will do today: minor bug fixes in bug1.005
-	Obstacles I face:
+	What I did yesterday: n/a.
+	What I will do today: minor bug fixes in bug1.005.
+	Obstacles I face: n/a.
 
 Oct 18,2025
-	What I did yesterday: fixed idea file commits and other bugs
-	What I will do today: changed username
-	Obstacles I face:n/a
+	What I did yesterday: fixed idea file commits and other bugs.
+	What I will do today: changed username.
+	Obstacles I face: n/a.
 
 Oct 19,2025
-	What I did yesterday:changed username to utorid
-	What I will do today: changed email to uoft email + looked over project structure and product backlog
-	Obstacles I face:n/a
+	What I did yesterday: changed username to utorid.
+	What I will do today: changed email to uoft email + looked over project structure and product backlog.
+	Obstacles I face: n/a.
 
 Oct 20,2025
-	What I did yesterday: changed email + looked over project structure
-	What I will do today: update product backlog
-	Obstacles I face: n/a
+	What I did yesterday: changed email + looked over project structure.
+	What I will do today: update product backlog.
+	Obstacles I face: n/a.
 
 Oct 21,2025
-	What I did yesterday: updated product backlog
-	What I will do today: sprint1 completed
-	Obstacles I face:n/a
+	What I did yesterday: updated product backlog.
+	What I will do today: sprint1 completed.
+	Obstacles I face:n/a.
 
 Oct 22,2025
-	What I did yesterday:sprint1 completed
-	What I will do today: look over sprint2 and product backlog
-	Obstacles I face:n/a
+	What I did yesterday: sprint1 completed.
+	What I will do today: look over sprint2 and product backlog.
+	Obstacles I face: n/a.
 
 Oct 23,2025
-	What I did yesterday: looked over
-	What I will do today: helping with git fixes and reverts
-	Obstacles I face: n/a
+	What I did yesterday: looked over the project.
+	What I will do today: helping with git fixes and reverts.
+	Obstacles I face: n/a.
 
 Oct 24,2025
 	What I did yesterday:
