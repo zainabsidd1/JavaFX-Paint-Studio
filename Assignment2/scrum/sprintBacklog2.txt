@@ -17,7 +17,7 @@ ISSUE    : Code is not modular and is difficult to expand. Need a better
            'if' blocks in the PaintPanel mouse event code.
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
-TYPE     : USER STORY US2.001 : UTORID : NotStarted
+TYPE     : USER STORY US2.001 : UTORID sidd1378 : In Progress
 NAME     : Draw Square
 PRIORITY : 2
 ESTIMATE : 2 hours    ACTUAL :
@@ -28,7 +28,7 @@ I WANT   : To click and drag from one corner to another to create a square
 SO THAT  : I can easily draw perfect squares on my canvas.
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
-TYPE     : USER STORY US2.002 : UTORID : NotStarted
+TYPE     : USER STORY US2.002 : UTORID : sidd1378 NotStarted
 NAME     : Draw Square Feedback
 PRIORITY : 2
 ESTIMATE : 2 hours    ACTUAL :
