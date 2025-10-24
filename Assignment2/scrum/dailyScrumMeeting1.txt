@@ -37,9 +37,9 @@ Oct 21,2025
 	Obstacles I face: n/a
 
 Oct 22,2025
-	What I did yesterday:
-	What I will do today:
-	Obstacles I face:
+	What I did yesterday: update sprintBacklog1 and productBacklog
+	What I will do today: review design patters used by Shape and improvements that can be made
+	Obstacles I face: n/a
 
 Oct 23,2025
 	What I did yesterday:
