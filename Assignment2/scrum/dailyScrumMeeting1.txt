@@ -42,9 +42,9 @@ Oct 22,2025
 	Obstacles I face: n/a
 
 Oct 23,2025
-	What I did yesterday:
-	What I will do today:
-	Obstacles I face:
+	What I did yesterday: Studied the projects architecture and design patterns.
+	What I will do today: Look over sprint 2.
+	Obstacles I face: n/a
 
 Oct 24,2025
 	What I did yesterday:
