@@ -2,52 +2,52 @@
 Member name: Japnoor Kaur    email: japnoor.kaur@mail.utoronto.ca    utorid: kaurjap9
 
 Oct 15,2025
-	What I did yesterday: n/a
-	What I will do today: Pick UserStories and create branches to start
-	Obstacles I face: Cloning the repository
+	What I did yesterday: n/a.
+	What I will do today: Pick UserStories and create branches to start.
+	Obstacles I face: Cloning the repository.
 
 Oct 16,2025
-	What I did yesterday: Finished UserStory1.003 and UserStory1.004
-	What I will do today: very minor bug fix in squiggle colour to ensure its red
-	Obstacles I face: squiggle changed colour when rectangle/circle selected
+	What I did yesterday: Finished UserStory1.003 and UserStory1.004.
+	What I will do today: very minor bug fix in squiggle colour to ensure its red.
+	Obstacles I face: squiggle changed colour when rectangle/circle selected.
 
 Oct 17,2025
-	What I did yesterday: minor bug fixes in BUG1.005 and BUG1.001
-	What I will do today: update product backlog and sprint backlog 1
-	Obstacles I face: n/a
+	What I did yesterday: minor bug fixes in BUG1.005 and BUG1.001.
+	What I will do today: update product backlog and sprint backlog 1.
+	Obstacles I face: n/a.
 
 Oct 18,2025
-	What I did yesterday: Minor bug fixes
-	What I will do today: Look over project structure
-	Obstacles I face: Getting the correct file path in BUG1.001
+	What I did yesterday: Minor bug fixes.
+	What I will do today: Look over project structure.
+	Obstacles I face: Getting the correct file path in BUG1.001.
 
 Oct 19,2025
-	What I did yesterday: Look over project structure
-	What I will do today: update sprint + product backlog
-	Obstacles I face: n/a
+	What I did yesterday: Look over project structure.
+	What I will do today: update sprint + product backlog.
+	Obstacles I face: n/a.
 
 Oct 20,2025
-	What I did yesterday: update sprint+product backlog
-	What I will do today: update sprint+product backlog
-	Obstacles I face: n/a
+	What I did yesterday: update sprint+product backlog.
+	What I will do today: update sprint+product backlog.
+	Obstacles I face: n/a.
 
 Oct 21,2025
-	What I did yesterday: update sprint+product backlog
-	What I will do today: sprint complete
-	Obstacles I face: n/a
+	What I did yesterday: update sprint+product backlog.
+	What I will do today: sprint complete.
+	Obstacles I face: n/a.
 
 Oct 22,2025
-	What I did yesterday:
-	What I will do today:
-	Obstacles I face:
+	What I did yesterday: update sprint+product backlog.
+	What I will do today: update sprint2+product backlog.
+	Obstacles I face: n/a.
 
 Oct 23,2025
-	What I did yesterday:
-	What I will do today:
-	Obstacles I face:
+	What I did yesterday: update sprint+product backlog.
+	What I will do today: git revert and reupdate sprint+product backlog.
+	Obstacles I face: paint stopped working due to files being pushed.
 
 Oct 24,2025
-	What I did yesterday:
+	What I did yesterday: git revert and reupdate sprint+product backlog.
 	What I will do today:
 	Obstacles I face:
 
