@@ -47,14 +47,14 @@ Oct 23,2025
 	Obstacles I face: n/a.
 
 Oct 24,2025
-	What I did yesterday:
-	What I will do today:
-	Obstacles I face:
+	What I did yesterday: helping with git fixes and reverts.
+	What I will do today: Reviewed sprint2 and selected userstories.
+	Obstacles I face: n/a
 
 Oct 25,2025
-	What I did yesterday:
-	What I will do today:
-	Obstacles I face:
+	What I did yesterday: Reviewed sprint2 and selected userstories.
+	What I will do today: Review sprint2 and selected userstories.
+	Obstacles I face: n/a
 
 Oct 26,2025
 	What I did yesterday:
