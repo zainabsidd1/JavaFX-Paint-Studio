@@ -47,9 +47,9 @@ Oct 23,2025
 	Obstacles I face: n/a.
 
 Oct 24,2025
-	What I did yesterday:
-	What I will do today:
-	Obstacles I face:
+	What I did yesterday: look over sprint 2
+	What I will do today: pick user stories from sprintBacklog2 for sprint2
+	Obstacles I face: n/a
 
 Oct 25,2025
 	What I did yesterday:
