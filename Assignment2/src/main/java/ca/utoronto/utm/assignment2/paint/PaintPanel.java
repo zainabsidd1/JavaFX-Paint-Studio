@@ -78,7 +78,7 @@ public class PaintPanel extends Canvas implements EventHandler<MouseEvent>, Obse
         GraphicsContext g = this.getGraphicsContext2D();
         g.clearRect(0, 0, getWidth(), getHeight());
 
-        // --- Draw existing shapes from the model ---
+        // Draw existing shapes from the model
 
         // Squiggles
         g.setGlobalAlpha(1.0);
@@ -105,7 +105,6 @@ public class PaintPanel extends Canvas implements EventHandler<MouseEvent>, Obse
             g.fillRect(r.getLeft(), r.getTop(), r.getWidth(), r.getHeight());
         }
 
-        // --- Draw current tool's live preview on top ---
         if (currentTool != null) currentTool.drawPreview(g);
     }
 }
