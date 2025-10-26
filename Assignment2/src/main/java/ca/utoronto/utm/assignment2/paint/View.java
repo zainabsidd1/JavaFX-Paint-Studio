@@ -39,7 +39,7 @@ public class View implements EventHandler<ActionEvent> {
 
         // ugly way to do this?
         public void setMode(String mode){
-            this.paintPanel.setMode(mode);
+            this.paintPanel.setTool(mode);
         }
         private MenuBar createMenuBar() {
 
