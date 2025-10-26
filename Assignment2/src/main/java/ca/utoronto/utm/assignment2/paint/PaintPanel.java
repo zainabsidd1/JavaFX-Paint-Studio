@@ -107,4 +107,9 @@ public class PaintPanel extends Canvas implements EventHandler<MouseEvent>, Obse
 
         if (currentTool != null) currentTool.drawPreview(g);
     }
+
+    // Getter for the list of tools.
+    public Collection<ToolStrategy> getTools() {
+        return tools.values();
+    }
 }

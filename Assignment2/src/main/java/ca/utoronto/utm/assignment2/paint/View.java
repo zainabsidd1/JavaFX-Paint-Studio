@@ -36,6 +36,7 @@ public class View implements EventHandler<ActionEvent> {
         public PaintModel getPaintModel() {
                 return this.paintModel;
         }
+        public PaintPanel getPaintPanel() { return this.paintPanel; }
 
         // ugly way to do this?
         public void setMode(String mode){
