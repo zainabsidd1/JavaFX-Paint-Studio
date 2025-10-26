@@ -16,7 +16,7 @@
 # as appropriate.
 
 --------------------------------------------------------------------------
-TYPE     : USER STORY US2.001 : UTORID : NotStarted
+TYPE     : USER STORY US2.001 : sidd1378 : InProgress
 NAME     : Draw Square
 PRIORITY : 2
 ESTIMATE : 2 hours    ACTUAL :
@@ -27,7 +27,7 @@ I WANT   : To click and drag from one corner to another to create a square
 SO THAT  : I can easily draw perfect squares on my canvas.
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
-TYPE     : USER STORY US2.002 : UTORID : NotStarted
+TYPE     : USER STORY US2.002 : sidd1378 : NotStarted
 NAME     : Draw Square Feedback
 PRIORITY : 2
 ESTIMATE : 2 hours    ACTUAL :
@@ -38,7 +38,7 @@ SO THAT  : I can visualize the square I am about to draw before releasing
            the mouse button.
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
-TYPE     : USER STORY US2.003 : UTORID : NotStarted
+TYPE     : USER STORY US2.003 : tatisoha : NotStarted
 NAME     : Draw Triangle
 PRIORITY : 2
 ESTIMATE : 3 hours    ACTUAL :
@@ -48,7 +48,7 @@ I WANT   : To click three times to specify the vertices of a triangle that
 SO THAT  : I can add triangular shapes to my drawings for more design variety.
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
-TYPE     : USER STORY US2.004 : UTORID : NotStarted
+TYPE     : USER STORY US2.004 : tatisoha : NotStarted
 NAME     : Draw Triangle Feedback
 PRIORITY : 2
 ESTIMATE : 2 hours    ACTUAL :
@@ -58,7 +58,7 @@ I WANT   : To see the triangle lines update dynamically as I choose the
 SO THAT  : I can adjust the shape in real time before finalizing it.
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
-TYPE     : USER STORY US2.005 : UTORID : NotStarted
+TYPE     : USER STORY US2.005 : royanus1 : NotStarted
 NAME     : Draw Oval
 PRIORITY : 2
 ESTIMATE : 3 hours    ACTUAL :
@@ -69,7 +69,7 @@ SO THAT  : I can create smooth oval shapes similar to those in standard
            paint programs.
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
-TYPE     : USER STORY US2.006 : UTORID : NotStarted
+TYPE     : USER STORY US2.006 : royanus1 : NotStarted
 NAME     : Draw Oval Feedback
 PRIORITY : 2
 ESTIMATE : 2 hours    ACTUAL :
@@ -149,7 +149,7 @@ I WANT   : To be able to select the current line thickness, to be applied
 SO THAT  : 
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
-TYPE     : BUG BUG2.003 : UTORID : NotStarted
+TYPE     : BUG BUG2.003 : kaurjap9 : InProgress
 NAME     : Architecture behind choosing selection mode is poor
 PRIORITY : 3
 ESTIMATE : (1 hour, 2 hours, 4 hours, 1 day, 2 days, 4 days)    ACTUAL :

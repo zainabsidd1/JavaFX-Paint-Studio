@@ -6,7 +6,7 @@
 # Sprint 2 Backlog UserStories go below
 
 --------------------------------------------------------------------------
-TYPE     : BUG BUG2.003 : UTORID : NotStarted
+TYPE     : BUG BUG2.003 : kaurjap9 : InProgress
 NAME     : Architecture behind choosing selection mode is poor
 PRIORITY : 3
 ESTIMATE : 2 days    ACTUAL :
@@ -17,7 +17,7 @@ ISSUE    : Code is not modular and is difficult to expand. Need a better
            'if' blocks in the PaintPanel mouse event code.
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
-TYPE     : USER STORY US2.001 : UTORID sidd1378 : In Progress
+TYPE     : USER STORY US2.001 : sidd1378 : InProgress
 NAME     : Draw Square
 PRIORITY : 2
 ESTIMATE : 2 hours    ACTUAL :
@@ -28,7 +28,7 @@ I WANT   : To click and drag from one corner to another to create a square
 SO THAT  : I can easily draw perfect squares on my canvas.
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
-TYPE     : USER STORY US2.002 : UTORID : sidd1378 NotStarted
+TYPE     : USER STORY US2.002 : sidd1378 : NotStarted
 NAME     : Draw Square Feedback
 PRIORITY : 2
 ESTIMATE : 2 hours    ACTUAL :
@@ -59,7 +59,7 @@ I WANT   : To see the triangle lines update dynamically as I choose the
 SO THAT  : I can adjust the shape in real time before finalizing it.
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
-TYPE     : USER STORY US2.005 : UTORID : NotStarted
+TYPE     : USER STORY US2.005 : royanus1 : NotStarted
 NAME     : Draw Oval
 PRIORITY : 2
 ESTIMATE : 3 hours    ACTUAL :
@@ -70,7 +70,7 @@ SO THAT  : I can create smooth oval shapes similar to those in standard
            paint programs.
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
-TYPE     : USER STORY US2.006 : UTORID : NotStarted
+TYPE     : USER STORY US2.006 : royanus1 : NotStarted
 NAME     : Draw Oval Feedback
 PRIORITY : 2
 ESTIMATE : 2 hours    ACTUAL :
