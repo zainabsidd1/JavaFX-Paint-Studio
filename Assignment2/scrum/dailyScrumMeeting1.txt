@@ -52,9 +52,9 @@ Oct 24,2025
 	Obstacles I face: n/a
 
 Oct 25,2025
-	What I did yesterday:
-	What I will do today:
-	Obstacles I face:
+	What I did yesterday: Pick user stories from sprintBacklog2 for sprint2
+	What I will do today: Look over US2.001 and decide how to implement Draw Square
+	Obstacles I face: n/a
 
 Oct 26,2025
 	What I did yesterday:
