@@ -7,7 +7,7 @@ import java.util.List;
 
 public class Polyline implements Shape{
     private final List<Point> pathPoints = new ArrayList<>();
-    private final Color color = Color.PURPLE;
+    private final Color color = Color.DEEPPINK;
     public void addPoint(Point p) {
         pathPoints.add(p);
     }
