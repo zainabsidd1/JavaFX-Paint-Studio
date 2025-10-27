@@ -18,6 +18,7 @@ public class PaintModel {
         // ---- Model State ----
         private final List<Shape> shapes = new ArrayList<>();
         private Squiggle currentSquiggle;
+        private Polyline polylineCurr;
 
         public void addShape(Shape s) {
                 if (s == null) return;
@@ -47,4 +48,19 @@ public class PaintModel {
                 currentSquiggle.addPoint(p);
                 notifyListeners();
         }
+
+        // Polyline convenience
+        public void startNewPolyline(){
+            polylineCurr = new Polyline();
+            shapes.add(polylineCurr);
+            notifyListeners();
+        }
+
+        public void addPolylinePoint(Point p) {
+            if (polylineCurr == null) startNewSquiggle();
+            polylineCurr.addPoint(p);
+            notifyListeners();
+        }
+
+
 }

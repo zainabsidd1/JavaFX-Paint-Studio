@@ -47,7 +47,7 @@ public class View implements EventHandler<ActionEvent> {
                         case "Rectangle" -> strategy = new RectangleStrategy(paintModel, paintPanel);
                         case "Squiggle" -> strategy = new SquiggleStrategy(paintModel, paintPanel);
                         // case "Square" -> strategy = new SquareStrategy(paintModel, paintPanel);
-                        // case "Polyline" -> strategy = new PolylineStrategy(paintModel, paintPanel);
+                        case "Polyline" -> strategy = new PolylineStrategy(paintModel, paintPanel);
                         default -> System.out.println("Unknown tool: " + mode);
                 }
 
