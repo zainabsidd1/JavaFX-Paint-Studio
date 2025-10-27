@@ -72,7 +72,7 @@ SO THAT  : I can create smooth oval shapes similar to those in standard
 TYPE     : USER STORY US2.006 : royanus1 : NotStarted
 NAME     : Draw Oval Feedback
 PRIORITY : 2
-ESTIMATE : 2 hours    ACTUAL :
+ESTIMATE : 3 hours    ACTUAL :
 AS A     : user
 I WANT   : To see a live outline of the oval as I drag, dynamically showing
            the shape that will be finalized on mouse release.
