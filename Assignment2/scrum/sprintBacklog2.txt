@@ -80,10 +80,10 @@ I WANT   : To see a live outline of the oval as I drag, dynamically showing
 SO THAT  : I can control the proportions and positioning of the oval more easily.
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
-TYPE     : USER STORY US2.007 : tatisoha : InProgress
+TYPE     : USER STORY US2.007 : tatisoha : Completed
 NAME     : Draw Polyline
 PRIORITY : 1
-ESTIMATE : 1 hours    ACTUAL :
+ESTIMATE : 1 hour    ACTUAL : 1 hour
 AS A     : user
 I WANT   : To click multiple points on the canvas to create a connected
            series of straight line segments, ending the shape with a
