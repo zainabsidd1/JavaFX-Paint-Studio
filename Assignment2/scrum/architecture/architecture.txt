@@ -38,12 +38,53 @@ DESIGN PATTERNS USED
 	the code. I see at least two that would greatly improve code. 
 		
 	Strategy:
-	Command: 
+	Originally, all mouse-handling logic for drawing shapes
+	(circles, rectangles, squiggles, etc.) was crammed inside the
+	PaintPanel class under one large switch(mode) statement.
+    Each case handled how to:
+        - respond to mouse presses, drags, and releases,
+        - preview the shape being drawn, and
+        - update the model once the shape was finished.
+    This made the class long, hard to read, and violated the Open/Closed
+    Principle — every time we added a new tool or shape, we had to edit
+    the same PaintPanel file and extend the switch block. The code was
+    tightly coupled and not modular.
+    We introduced the Strategy pattern by creating a ToolStrategy
+    interface that defines how all drawing tools behave:
+    Each shape (e.g., Circle, Rectangle, Squiggle) now has its own concrete
+    strategy class:
+        CircleStrategy
+        RectangleStrategy
+        SquiggleStrategy
+    Each of these classes encapsulates:
+        how that shape responds to mouse events, and
+        how it draws its live preview while being created.
+        For example, CircleStrategy handles calculating the radius while
+        dragging, and RectangleStrategy handles the second corner. The
+        PaintPanel no longer contains any shape-specific logic — instead,
+        it delegates all event handling to the current strategy which
+        improves readability and makes the class easier to extend.
+
+	Command:
 	Singleton:
 	Composite:
 	Factory:
 	Builder:
 	Observer/Observable:
+    Originally, the `PaintModel` class extended Java’s built-in `Observable`
+    and relied on the deprecated `notifyObservers()` and `setChanged()`
+    methods to update the view. This approach made the model tightly coupled
+    to Java’s outdated observer implementation and less flexible for expansion.
+    We refactored it using a custom **Observer design pattern**, introducing
+    a simple `PaintModelListener` interface with a single `modelChanged()`
+    method. The `PaintModel` now maintains a list of listeners and notifies
+    them directly whenever its internal state changes (such as when a shape
+    is added or cleared). The `PaintPanel` implements this listener and
+    updates its canvas whenever the model changes. This refactor made the
+    communication between model and view explicit, modular, and easier to
+    maintain. The model now focuses purely on data management, while the
+    panel handles rendering, resulting in a cleaner MVC-aligned architecture.
+
 	... (any others you find useful) ...
 
 OTHER ARCHITECTURE DISCUSSIONS

@@ -6,6 +6,8 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
 
+import javax.tools.Tool;
+import java.util.Collection;
 import java.util.Objects;
 
 public class ShapeChooserPanel extends GridPane implements EventHandler<ActionEvent> {
@@ -18,10 +20,12 @@ public class ShapeChooserPanel extends GridPane implements EventHandler<ActionEv
 
                 this.view = view;
 
-                String[] buttonLabels = { "Circle", "Rectangle", "Square", "Squiggle", "Polyline" };
+                // Get all the tools from PaintPanel through view.
+                Collection< ToolStrategy> toolsList = view.getPaintPanel().getTools();
 
                 int row = 0;
-                for (String label : buttonLabels) {
+                for (ToolStrategy tool : toolsList) {
+                        String label = tool.getName();
                         Image icon = null;
                         // get resource stream to ensure file paths with slight deviations works
                         icon = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/icons/" + label + ".png")));
