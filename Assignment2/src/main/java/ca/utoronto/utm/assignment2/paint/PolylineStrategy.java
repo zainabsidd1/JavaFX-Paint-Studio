@@ -22,19 +22,16 @@ public class PolylineStrategy implements ToolStrategy{
     public void onMouseClicked(MouseEvent e){
         if (e.getClickCount() == 2) {
             polyline = null;
-            System.out.println("Finished polyline");
             panel.requestRender();
             return;
         }
 
         if (polyline == null){
             model.startNewPolyline();
-            System.out.println("Started polyline");
             polyline = new ArrayList<>();
         } // start a new polyline in model
         model.addPolylinePoint(new Point(e.getX(), e.getY()));
         polyline.add(new Point(e.getX(), e.getY()));
-        System.out.println("Added polyline point");
         panel.requestRender();
     };
 
