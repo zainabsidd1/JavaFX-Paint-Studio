@@ -79,16 +79,14 @@ I WANT   : To see a live outline of the oval as I drag, dynamically showing
 SO THAT  : I can control the proportions and positioning of the oval more easily.
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
-TYPE     : USER STORY US2.007 : tatisoha : InProgress
-NAME     : Draw Polyline
+TYPE     : USER STORY US2.008 : kaurjap9 : InProgress
+NAME     : Draw Polyline Feedback
 PRIORITY : 1
-ESTIMATE : 1 hours    ACTUAL :
+ESTIMATE : 1 hour    ACTUAL : 1 hour
 AS A     : user
-I WANT   : To click multiple points on the canvas to create a connected
-           series of straight line segments, ending the shape with a
-           double click.
-SO THAT  : I can draw custom multi-segment shapes that are not restricted
-           to standard polygons.
+I WANT   : To see a live outline of the polyline as I drag, dynamically
+           showing the shape that will be finalized on mouse release.
+SO THAT  : I can adjust the polyline in real time before finalizing it.
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
 TYPE     : USER STORY US?.005 : UTORID : NotStarted 
@@ -227,6 +225,18 @@ ESTIMATE : 2 hours    ACTUAL : 1 hour
 AS A     : user
 I WANT   : Similarly to Draw Circle Feedback, display the rectangle in mid construction.
 SO THAT  : I can see the rectangle I am about to build on release of the mouse button.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US2.007 : tatisoha : Complete
+NAME     : Draw Polyline
+PRIORITY : 1
+ESTIMATE : 1 hours    ACTUAL : 1 hour
+AS A     : user
+I WANT   : To click multiple points on the canvas to create a connected
+           series of straight line segments, ending the shape with a
+           double click.
+SO THAT  : I can draw custom multi-segment shapes that are not restricted
+           to standard polygons.
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
 TYPE     : BUG BUG1.001 : sidd1378 : Complete
