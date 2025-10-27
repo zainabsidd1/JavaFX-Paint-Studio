@@ -62,12 +62,34 @@ public class PolylineStrategy implements ToolStrategy{
 
     @Override
     public void drawPreview(GraphicsContext g) {
-        if (polyline == null || polyline.isEmpty() || hoverPoint == null) return;
+        if (polyline == null || polyline.isEmpty()) return;
 
-        Point last = polyline.get(polyline.size() - 1); // last committed vertex
-        g.setLineDashes(0);                             // ensure solid preview (or set dashes if you like)
-        g.setStroke(Color.DEEPPINK);
-        g.setLineWidth(2);
-        g.strokeLine(last.x, last.y, hoverPoint.x, hoverPoint.y);
+        // 1) rubber-band from last vertex to cursor
+        if (hoverPoint != null) {
+            Point last = polyline.get(polyline.size() - 1);
+            g.setLineDashes(0);
+            g.setStroke(Color.DEEPPINK);
+            g.setLineWidth(2);
+            g.strokeLine(last.x, last.y, hoverPoint.x, hoverPoint.y);
+        }
+
+        // 2) small dots at each committed vertex + (optionally) at the hover point
+        final double r = 3.0;
+        g.setLineWidth(1);
+
+        for (Point v : polyline) {
+            polylineVertices(g, r, v);
+        }
+
+        if (hoverPoint != null) {
+            polylineVertices(g, r, hoverPoint);
+        }
+    }
+
+    private void polylineVertices(GraphicsContext g, double r, Point v) {
+        g.setFill(Color.DEEPPINK);
+        g.fillOval(v.x - r, v.y - r, 2 * r, 2 * r);
+        g.setStroke(Color.WHITE);
+        g.strokeOval(v.x - r, v.y - r, 2 * r, 2 * r);
     }
 }
