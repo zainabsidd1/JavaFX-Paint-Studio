@@ -62,12 +62,12 @@ Oct 26,2025
 	Obstacles I face: understanding the architecture currently.
 
 Oct 27,2025
-	What I did yesterday:
-	What I will do today:
-	Obstacles I face:
+	What I did yesterday: branch into bug2.003 and start working.
+	What I will do today: think of other design patterns and architecture to incorporate.
+	Obstacles I face: researching design patterns.
 
 Oct 28,2025
-	What I did yesterday:
+	What I did yesterday: think of other design patterns and architecture to incorporate.
 	What I will do today:
 	Obstacles I face:
 

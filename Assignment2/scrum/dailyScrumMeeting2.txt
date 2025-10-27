@@ -33,37 +33,37 @@ Oct 20,2025
 
 Oct 21,2025
 	What I did yesterday: implemented any necessary changes.
-	What I will do today: update sprint backlog and product backlog
-	Obstacles I face: n/a
+	What I will do today: update sprint backlog and product backlog.
+	Obstacles I face: n/a.
 
 Oct 22,2025
-	What I did yesterday: Updated sprint backlog and product backlog
-	What I will do today: Complete Sprint 1
-	Obstacles I face: n/a
+	What I did yesterday: Updated sprint backlog and product backlog.
+	What I will do today: Complete Sprint 1.
+	Obstacles I face: n/a.
 
 Oct 23,2025
-	What I did yesterday: Complete Sprint 1
-	What I will do today: plan what to do for sprint 2
-	Obstacles I face: n/a
+	What I did yesterday: Complete Sprint 1.
+	What I will do today: plan what to do for sprint 2.
+	Obstacles I face: n/a.
 
 Oct 24,2025
-	What I did yesterday: planned what to do for sprint 2
-	What I will do today: Fix add and commit issues
-	Obstacles I face: n/a
+	What I did yesterday: planned what to do for sprint 2.
+	What I will do today: Fix add and commit issues.
+	Obstacles I face: n/a.
 
 Oct 25,2025
-	What I did yesterday: Fixed add and commit issues
-	What I will do today: Review sprint 2
-	Obstacles I face: n/a
+	What I did yesterday: Fixed add and commit issues.
+	What I will do today: Review sprint 2.
+	Obstacles I face: n/a.
 
 Oct 26,2025
-	What I did yesterday: Reviewed sprint 2 and picked user stories
-	What I will do today: Update sprint backlog and product backlog
-	Obstacles I face: n/a
+	What I did yesterday: Reviewed sprint 2 and picked user stories.
+	What I will do today: Update sprint backlog and product backlog.
+	Obstacles I face: n/a.
 
 Oct 27,2025
-	What I did yesterday: updated sprint backlog and product backlog
-	What I will do today: Start working on an user story
+	What I did yesterday: updated sprint backlog and product backlog.
+	What I will do today: Start working on an user story.
 	Obstacles I face:
 
 Oct 28,2025
