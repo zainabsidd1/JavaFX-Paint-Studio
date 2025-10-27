@@ -42,7 +42,7 @@ public class PolylineStrategy implements ToolStrategy{
     @Override
     public void onMousePressed(MouseEvent e){ /* no-op */ }
     @Override
-    public void onMouseReleased(MouseEvent e){ /* no-op */ };
+    public void onMouseReleased(MouseEvent e){ /* no-op */ }
 
     @Override
     public void onMouseMoved(MouseEvent e){
@@ -66,7 +66,7 @@ public class PolylineStrategy implements ToolStrategy{
 
         // 1) rubber-band from last vertex to cursor
         if (hoverPoint != null) {
-            Point last = polyline.get(polyline.size() - 1);
+            Point last = polyline.getLast();
             g.setLineDashes(0);
             g.setStroke(Color.DEEPPINK);
             g.setLineWidth(2);
@@ -74,22 +74,21 @@ public class PolylineStrategy implements ToolStrategy{
         }
 
         // 2) small dots at each committed vertex + (optionally) at the hover point
-        final double r = 3.0;
         g.setLineWidth(1);
 
         for (Point v : polyline) {
-            polylineVertices(g, r, v);
+            polylineVertices(g, v);
         }
 
         if (hoverPoint != null) {
-            polylineVertices(g, r, hoverPoint);
+            polylineVertices(g, hoverPoint);
         }
     }
 
-    private void polylineVertices(GraphicsContext g, double r, Point v) {
+    private void polylineVertices(GraphicsContext g, Point v) {
         g.setFill(Color.DEEPPINK);
-        g.fillOval(v.x - r, v.y - r, 2 * r, 2 * r);
+        g.fillOval(v.x - 3.0, v.y - 3.0, 2 * 3.0, 2 * 3.0);
         g.setStroke(Color.WHITE);
-        g.strokeOval(v.x - r, v.y - r, 2 * r, 2 * r);
+        g.strokeOval(v.x - 3.0, v.y - 3.0, 2 * 3.0, 2 * 3.0);
     }
 }
