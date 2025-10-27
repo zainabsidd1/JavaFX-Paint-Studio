@@ -20,7 +20,7 @@ public class RectangleStrategy implements ToolStrategy {
     @Override
     public void onMousePressed(MouseEvent e) {
         Point p = new Point(e.getX(), e.getY());
-        rectangle = new Rectangle(p, p);  // zero-sized start
+        rectangle = new Rectangle(p, p, Color.PINK);  // zero-sized start
         panel.requestRender();            // repaint to show preview immediately
     }
 
@@ -36,7 +36,7 @@ public class RectangleStrategy implements ToolStrategy {
     public void onMouseReleased(MouseEvent e) {
         if (rectangle != null) {
             rectangle.setP2(new Point(e.getX(), e.getY()));
-            model.addRectangle(rectangle); // commit to model
+            model.addShape(rectangle); // commit to model
             rectangle = null;              // clear preview state
             // Model change will trigger observers -> panel will render
         }

@@ -38,10 +38,25 @@ public class View implements EventHandler<ActionEvent> {
         }
         public PaintPanel getPaintPanel() { return this.paintPanel; }
 
-        // ugly way to do this?
-        public void setMode(String mode){
-            this.paintPanel.setTool(mode);
+        public void setMode(String mode) {
+                ToolStrategy strategy = null;
+
+                // Select the correct strategy based on button click
+                switch (mode) {
+                        case "Circle" -> strategy = new CircleStrategy(paintModel, paintPanel);
+                        case "Rectangle" -> strategy = new RectangleStrategy(paintModel, paintPanel);
+                        case "Squiggle" -> strategy = new SquiggleStrategy(paintModel, paintPanel);
+                        // case "Square" -> strategy = new SquareStrategy(paintModel, paintPanel);
+                        // case "Polyline" -> strategy = new PolylineStrategy(paintModel, paintPanel);
+                        default -> System.out.println("Unknown tool: " + mode);
+                }
+
+                if (strategy != null) {
+                        paintPanel.setStrategy(strategy);
+                        System.out.println("Tool: " + strategy.getName());
+                }
         }
+
         private MenuBar createMenuBar() {
 
                 MenuBar menuBar = new MenuBar();

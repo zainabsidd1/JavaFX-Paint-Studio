@@ -71,6 +71,20 @@ DESIGN PATTERNS USED
 	Factory:
 	Builder:
 	Observer/Observable:
+    Originally, the `PaintModel` class extended Java’s built-in `Observable`
+    and relied on the deprecated `notifyObservers()` and `setChanged()`
+    methods to update the view. This approach made the model tightly coupled
+    to Java’s outdated observer implementation and less flexible for expansion.
+    We refactored it using a custom **Observer design pattern**, introducing
+    a simple `PaintModelListener` interface with a single `modelChanged()`
+    method. The `PaintModel` now maintains a list of listeners and notifies
+    them directly whenever its internal state changes (such as when a shape
+    is added or cleared). The `PaintPanel` implements this listener and
+    updates its canvas whenever the model changes. This refactor made the
+    communication between model and view explicit, modular, and easier to
+    maintain. The model now focuses purely on data management, while the
+    panel handles rendering, resulting in a cleaner MVC-aligned architecture.
+
 	... (any others you find useful) ...
 
 OTHER ARCHITECTURE DISCUSSIONS

@@ -22,7 +22,7 @@ public class SquiggleStrategy implements ToolStrategy{
 
     @Override
     public void onMousePressed(MouseEvent e) {
-        model.startNewSqiuggle();                     // begin a new squiggle in model
+        model.startNewSquiggle();                     // begin a new squiggle in model
         model.addPoint(new Point(e.getX(), e.getY()));
         squiggle = new ArrayList<>();
         squiggle.add(new Point(e.getX(), e.getY()));

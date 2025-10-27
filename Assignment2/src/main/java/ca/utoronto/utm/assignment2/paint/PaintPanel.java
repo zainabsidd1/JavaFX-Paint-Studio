@@ -11,8 +11,10 @@ import java.util.*;
 import java.util.Observable;
 import java.util.Observer;
 
-public class PaintPanel extends Canvas implements EventHandler<MouseEvent>, Observer {
+public class PaintPanel extends Canvas implements EventHandler<MouseEvent>, Observer, PaintModelListener {
     private final PaintModel model;
+    private Color currentColor = Color.LIGHTBLUE;
+    private ToolStrategy currentStrategy;
 
     // Strategy wiring
     private final Map<String, ToolStrategy> tools = new HashMap<>();
@@ -21,14 +23,13 @@ public class PaintPanel extends Canvas implements EventHandler<MouseEvent>, Obse
     public PaintPanel(PaintModel model) {
         super(300, 300);
         this.model = model;
-        this.model.addObserver(this);
+        this.model.addListener(this);
+
 
         // Register tools (constructor-inject model + this panel)
         register(new CircleStrategy(model, this));
         register(new RectangleStrategy(model, this));
         register(new SquiggleStrategy(model, this));
-        // You can add more: register(new SquareStrategy(model, this)), etc.
-
         setTool("Circle"); // default tool
 
         // Mouse event wiring
@@ -38,6 +39,17 @@ public class PaintPanel extends Canvas implements EventHandler<MouseEvent>, Obse
         this.addEventHandler(MouseEvent.MOUSE_CLICKED, this);
         this.addEventHandler(MouseEvent.MOUSE_DRAGGED, this);
     }
+
+    public void setStrategy(ToolStrategy strategy) {
+        this.currentStrategy = strategy;
+    }
+
+    public ToolStrategy getStrategy() {
+        return this.currentStrategy;
+    }
+
+    public void setColor(Color c) { currentColor = c; }
+    public Color getColor() { return currentColor; }
 
     private void register(ToolStrategy tool) {
         tools.put(tool.getName(), tool);
@@ -63,53 +75,46 @@ public class PaintPanel extends Canvas implements EventHandler<MouseEvent>, Obse
 
     @Override
     public void handle(MouseEvent e) {
-        if (currentTool == null) return;
+        if (currentStrategy == null) return;
 
         EventType<? extends MouseEvent> type = e.getEventType();
-        if (type == MouseEvent.MOUSE_PRESSED)      currentTool.onMousePressed(e);
-        else if (type == MouseEvent.MOUSE_DRAGGED)  currentTool.onMouseDragged(e);
-        else if (type == MouseEvent.MOUSE_RELEASED) currentTool.onMouseReleased(e);
-        else if (type == MouseEvent.MOUSE_MOVED)    currentTool.onMouseMoved(e);
-        else if (type == MouseEvent.MOUSE_CLICKED)  currentTool.onMouseClicked(e);
+
+        if (type == MouseEvent.MOUSE_PRESSED) currentStrategy.onMousePressed(e);
+        else if (type == MouseEvent.MOUSE_DRAGGED) currentStrategy.onMouseDragged(e);
+        else if (type == MouseEvent.MOUSE_RELEASED) currentStrategy.onMouseReleased(e);
+        else if (type == MouseEvent.MOUSE_MOVED) currentStrategy.onMouseMoved(e);
+        else if (type == MouseEvent.MOUSE_CLICKED) currentStrategy.onMouseClicked(e);
     }
+
 
     @Override
     public void update(Observable o, Object arg) {
-        GraphicsContext g = this.getGraphicsContext2D();
-        g.clearRect(0, 0, getWidth(), getHeight());
+        GraphicsContext g2d = this.getGraphicsContext2D();
+        g2d.clearRect(0, 0, this.getWidth(), this.getHeight());
 
-        // Draw existing shapes from the model
-
-        // Squiggles
-        g.setGlobalAlpha(1.0);
-        g.setLineDashes(0);
-        g.setStroke(Color.RED);
-        for (ArrayList<Point> squiggle : model.getSquiggles()) {
-            for (int i = 0; i < squiggle.size() - 1; i++) {
-                Point p1 = squiggle.get(i);
-                Point p2 = squiggle.get(i + 1);
-                g.strokeLine(p1.x, p1.y, p2.x, p2.y);
-            }
+        // Draw all permanent shapes
+        for (Shape s : model.getShapes()) {
+            s.draw(g2d);
         }
 
-        // Circles
-        g.setFill(Color.LIGHTBLUE);
-        for (Circle c : model.getCircles()) {
-            double x = c.getCentre().x, y = c.getCentre().y, r = c.getRadius();
-            g.fillOval(x - r, y - r, r * 2, r * 2);
+        // Draw preview of the current tool
+        if (currentStrategy != null) {
+            currentStrategy.drawPreview(g2d);
         }
-
-        // Rectangles
-        g.setFill(Color.PINK);
-        for (Rectangle r : model.getRectangles()) {
-            g.fillRect(r.getLeft(), r.getTop(), r.getWidth(), r.getHeight());
+        if (currentStrategy != null) {
+            currentStrategy.drawPreview(this.getGraphicsContext2D());
         }
-
-        if (currentTool != null) currentTool.drawPreview(g);
     }
+
+
 
     // Getter for the list of tools.
     public Collection<ToolStrategy> getTools() {
         return tools.values();
+    }
+
+    @Override
+    public void modelChanged() {
+        requestRender();
     }
 }

@@ -19,15 +19,15 @@ public class CircleStrategy implements ToolStrategy {
     @Override
     public void onMousePressed(MouseEvent e) {
         Point centre = new Point(e.getX(), e.getY());
-        circle = new Circle(centre, 0);
+        circle = new Circle(centre, 0, panel.getColor());
         panel.requestRender(); // show zero-radius preview immediately
     }
 
     @Override
     public void onMouseDragged(MouseEvent e) {
         if (circle != null) {
-            double dx = e.getX() - circle.getCentre().x;
-            double dy = e.getY() - circle.getCentre().y;
+            double dx = e.getX() - circle.getCenter().x;
+            double dy = e.getY() - circle.getCenter().y;
             circle.setRadius(Math.sqrt(dx*dx + dy*dy));
             panel.requestRender(); // live preview
         }
@@ -36,10 +36,10 @@ public class CircleStrategy implements ToolStrategy {
     @Override
     public void onMouseReleased(MouseEvent e) {
         if (circle != null) {
-            double dx = e.getX() - circle.getCentre().x;
-            double dy = e.getY() - circle.getCentre().y;
+            double dx = e.getX() - circle.getCenter().x;
+            double dy = e.getY() - circle.getCenter().y;
             circle.setRadius(Math.sqrt(dx*dx + dy*dy));
-            model.addCircle(circle);
+            model.addShape(circle);
             circle = null;            // clear preview
         }
     }
@@ -50,7 +50,7 @@ public class CircleStrategy implements ToolStrategy {
     @Override
     public void drawPreview(GraphicsContext g) {
         if (circle == null) return;
-        double x = circle.getCentre().x, y = circle.getCentre().y, r = circle.getRadius();
+        double x = circle.getCenter().x, y = circle.getCenter().y, r = circle.getRadius();
         g.setFill(Color.LIGHTBLUE);
         g.fillOval(x - r, y - r, r * 2, r * 2);
         g.setStroke(Color.LIGHTBLUE);
