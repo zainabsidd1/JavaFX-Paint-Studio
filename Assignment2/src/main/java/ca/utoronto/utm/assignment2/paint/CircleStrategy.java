@@ -20,7 +20,7 @@ public class CircleStrategy implements ToolStrategy {
     public void onMousePressed(MouseEvent e) {
         Point centre = new Point(e.getX(), e.getY());
         circle = new Circle(centre, 0, panel.getColor());
-        panel.requestRender(); // show zero-radius preview immediately
+        panel.requestRender();
     }
 
     @Override
@@ -40,7 +40,7 @@ public class CircleStrategy implements ToolStrategy {
             double dy = e.getY() - circle.getCenter().y;
             circle.setRadius(Math.sqrt(dx*dx + dy*dy));
             model.addShape(circle);
-            circle = null;            // clear preview
+            circle = null; // clear preview
         }
     }
 

@@ -8,7 +8,7 @@ import java.util.ArrayList;
 public class SquiggleStrategy implements ToolStrategy{
     private final PaintModel model;
     private final PaintPanel panel;
-    private ArrayList<Point> squiggle; // transient points for preview
+    private ArrayList<Point> squiggle;
 
     public SquiggleStrategy(PaintModel model, PaintPanel panel) {
         this.model = model;
@@ -22,7 +22,7 @@ public class SquiggleStrategy implements ToolStrategy{
 
     @Override
     public void onMousePressed(MouseEvent e) {
-        model.startNewSquiggle();                     // begin a new squiggle in model
+        model.startNewSquiggle();
         model.addPoint(new Point(e.getX(), e.getY()));
         squiggle = new ArrayList<>();
         squiggle.add(new Point(e.getX(), e.getY()));

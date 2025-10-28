@@ -62,7 +62,7 @@ public class PaintPanel extends Canvas implements EventHandler<MouseEvent>, Obse
         ToolStrategy t = tools.get(name);
         if (t != null) {
             this.currentTool = t;
-            // Optional: clear any stale preview by repainting
+            // clear any stale preview by repainting
             requestRender();
             System.out.println("Tool: " + name);
         } else {
@@ -70,7 +70,8 @@ public class PaintPanel extends Canvas implements EventHandler<MouseEvent>, Obse
         }
     }
 
-    /** Let strategies trigger a repaint for live preview without mutating the model */
+    /** Let strategies trigger a repaint for live preview
+     * without mutating the model */
     public void requestRender() {
         this.update(null, null);
     }

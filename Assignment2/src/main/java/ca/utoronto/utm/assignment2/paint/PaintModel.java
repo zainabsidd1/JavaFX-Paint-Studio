@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.List;
 
 public class PaintModel {
-        // ---- Observer Pattern ----
+        // Observer Pattern
         private final List<PaintModelListener> listeners = new ArrayList<>();
         private void notifyListeners() {
                 for (PaintModelListener l : listeners) {
@@ -15,7 +15,7 @@ public class PaintModel {
         public void addListener(PaintModelListener l) { listeners.add(l); }
         public void removeListener(PaintModelListener l) { listeners.remove(l); }
 
-        // ---- Model State ----
+        // Model State
         private final List<Shape> shapes = new ArrayList<>();
         private Squiggle currentSquiggle;
         private Polyline polylineCurr;
@@ -36,7 +36,7 @@ public class PaintModel {
                 notifyListeners();
         }
 
-        // ---- Squiggle Convenience ----
+        // Squiggle Convenience
         public void startNewSquiggle() {
                 currentSquiggle = new Squiggle();
                 shapes.add(currentSquiggle);

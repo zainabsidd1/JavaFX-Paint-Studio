@@ -9,7 +9,7 @@ public class PolylineStrategy implements ToolStrategy{
     private final PaintModel model;
     private final PaintPanel panel;
     private ArrayList<Point> polyline;
-    private Point hoverPoint = null;   // current mouse position for the preview segment
+    private Point hoverPoint = null; // current mouse position for the preview segment
 
     public PolylineStrategy(PaintModel model, PaintPanel panel) {
         this.model = model;
@@ -63,8 +63,6 @@ public class PolylineStrategy implements ToolStrategy{
     @Override
     public void drawPreview(GraphicsContext g) {
         if (polyline == null || polyline.isEmpty()) return;
-
-        // 1) rubber-band from last vertex to cursor
         if (hoverPoint != null) {
             Point last = polyline.getLast();
             g.setLineDashes(0);
@@ -72,8 +70,7 @@ public class PolylineStrategy implements ToolStrategy{
             g.setLineWidth(2);
             g.strokeLine(last.x, last.y, hoverPoint.x, hoverPoint.y);
         }
-
-        // 2) small dots at each committed vertex + (optionally) at the hover point
+        // 2) small dots at each committed vertex
         g.setLineWidth(1);
 
         for (Point v : polyline) {

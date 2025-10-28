@@ -7,7 +7,7 @@ import java.util.List;
 
 public class Squiggle implements Shape {
     private final List<Point> points = new ArrayList<>();
-    private final Color color = Color.RED; // You can later inject via constructor
+    private final Color color = Color.RED;
 
     public void addPoint(Point p) {
         points.add(p);
