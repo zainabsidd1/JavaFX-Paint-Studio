@@ -17,10 +17,10 @@ ISSUE    : Code is not modular and is difficult to expand. Need a better
            'if' blocks in the PaintPanel mouse event code.
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
-TYPE     : USER STORY US2.001 : sidd1378 : InProgress
+TYPE     : USER STORY US2.001 : sidd1378 : Complete
 NAME     : Draw Square
 PRIORITY : 2
-ESTIMATE : 2 hours    ACTUAL :
+ESTIMATE : 2 hours    ACTUAL : 3 hours
 AS A     : user
 I WANT   : To click and drag from one corner to another to create a square
            where all sides are equal, drawn in the current style (outline,
