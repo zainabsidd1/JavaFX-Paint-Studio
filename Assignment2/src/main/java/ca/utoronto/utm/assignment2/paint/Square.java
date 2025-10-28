@@ -25,7 +25,7 @@ public class Square implements Shape{
     public double getLength(){
         double dx = Math.abs(p2.x - p1.x);
         double dy = Math.abs(p2.y - p1.y);
-        return Math.max(dx, dy);
+        return Math.min(dx, dy);
     }
 
     @Override
