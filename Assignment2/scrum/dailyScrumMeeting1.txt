@@ -62,9 +62,9 @@ Oct 26,2025
 	Obstacles I face: n/a
 
 Oct 27,2025
-	What I did yesterday:
-	What I will do today:
-	Obstacles I face:
+	What I did yesterday: Started on US2.001
+	What I will do today: Implement Square and SquareStrategy classes.
+	Obstacles I face: Understanding how to keep all sides equal when dragging to create Square shape.
 
 Oct 28,2025
 	What I did yesterday:
