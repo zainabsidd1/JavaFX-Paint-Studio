@@ -27,10 +27,10 @@ SO THAT  : I can visualize the square I am about to draw before releasing
            the mouse button.
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
-TYPE     : USER STORY US2.003 : tatisoha : NotStarted
+TYPE     : USER STORY US2.003 : tatisoha : Complete
 NAME     : Draw Triangle
 PRIORITY : 2
-ESTIMATE : 3 hours    ACTUAL :
+ESTIMATE : 3 hours    ACTUAL : 2 hours
 AS A     : user
 I WANT   : To click three times to specify the vertices of a triangle that
            will be drawn using the current colour, outline, and fill settings.
