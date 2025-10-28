@@ -23,6 +23,7 @@ public class SquareStrategy implements ToolStrategy{
     public void onMousePressed(MouseEvent e){
         Point p = new Point(e.getX(), e.getY());
         square = new Square(p, p, Color.CYAN);
+        panel.requestRender();
     }
 
     @Override
@@ -62,7 +63,15 @@ public class SquareStrategy implements ToolStrategy{
 
     @Override
     public void drawPreview(GraphicsContext g){
-        // To be implemented in US2.002
+        if(square==null) return;
+        double x = square.getLeft();
+        double y = square.getTop();
+        double length = square.getLength();
+        g.setFill(Color.CYAN);
+        g.fillRect(x, y, length, length);
+        g.setStroke(Color.CYAN);
+        g.setLineWidth(2);
+        g.strokeRect(x,y,length,length);
     }
 
     @Override
