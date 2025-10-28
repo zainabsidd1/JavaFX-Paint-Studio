@@ -63,4 +63,8 @@ public class PaintModel {
         }
 
 
+        public void addToShape(Shape s) {
+            shapes.add(s);
+            notifyListeners();
+        }
 }
