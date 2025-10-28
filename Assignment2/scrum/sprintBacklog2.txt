@@ -92,7 +92,7 @@ SO THAT  : I can draw custom multi-segment shapes that are not restricted
            to standard polygons.
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
-TYPE     : USER STORY US2.008 : kaurjap9 : InProgress
+TYPE     : USER STORY US2.008 : kaurjap9 : Complete
 NAME     : Draw Polyline Feedback
 PRIORITY : 1
 ESTIMATE : 1 hour    ACTUAL : 1 hour

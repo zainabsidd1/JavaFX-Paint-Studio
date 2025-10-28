@@ -68,11 +68,11 @@ Oct 27,2025
 
 Oct 28,2025
 	What I did yesterday: think of other design patterns and architecture to incorporate.
-	What I will do today:
-	Obstacles I face:
+	What I will do today: complete polyline feedback US2.008.
+	Obstacles I face: adding circles to the end of the polyline to highlight vertices.
 
 Oct 29,2025
-	What I did yesterday:
+	What I did yesterday: complete polyline feedback US2.008.
 	What I will do today:
 	Obstacles I face:
 

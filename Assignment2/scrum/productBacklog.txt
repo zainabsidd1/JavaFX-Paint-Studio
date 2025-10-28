@@ -16,17 +16,6 @@
 # as appropriate.
 
 --------------------------------------------------------------------------
-TYPE     : USER STORY US2.001 : sidd1378 : Completed
-NAME     : Draw Square
-PRIORITY : 2
-ESTIMATE : 2 hours    ACTUAL : 3 hours
-AS A     : user
-I WANT   : To click and drag from one corner to another to create a square
-           where all sides are equal, drawn in the current style (outline,
-           fill, colour).
-SO THAT  : I can easily draw perfect squares on my canvas.
---------------------------------------------------------------------------
---------------------------------------------------------------------------
 TYPE     : USER STORY US2.002 : sidd1378 : NotStarted
 NAME     : Draw Square Feedback
 PRIORITY : 2
@@ -77,16 +66,6 @@ AS A     : user
 I WANT   : To see a live outline of the oval as I drag, dynamically showing
            the shape that will be finalized on mouse release.
 SO THAT  : I can control the proportions and positioning of the oval more easily.
---------------------------------------------------------------------------
---------------------------------------------------------------------------
-TYPE     : USER STORY US2.008 : kaurjap9 : InProgress
-NAME     : Draw Polyline Feedback
-PRIORITY : 1
-ESTIMATE : 1 hour    ACTUAL : 1 hour
-AS A     : user
-I WANT   : To see a live outline of the polyline as I drag, dynamically
-           showing the shape that will be finalized on mouse release.
-SO THAT  : I can adjust the polyline in real time before finalizing it.
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
 TYPE     : USER STORY US?.005 : UTORID : NotStarted 
@@ -227,6 +206,17 @@ I WANT   : Similarly to Draw Circle Feedback, display the rectangle in mid const
 SO THAT  : I can see the rectangle I am about to build on release of the mouse button.
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
+TYPE     : USER STORY US2.001 : sidd1378 : Complete
+NAME     : Draw Square
+PRIORITY : 2
+ESTIMATE : 2 hours    ACTUAL : 3 hours
+AS A     : user
+I WANT   : To click and drag from one corner to another to create a square
+           where all sides are equal, drawn in the current style (outline,
+           fill, colour).
+SO THAT  : I can easily draw perfect squares on my canvas.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
 TYPE     : USER STORY US2.007 : tatisoha : Complete
 NAME     : Draw Polyline
 PRIORITY : 1
@@ -237,6 +227,16 @@ I WANT   : To click multiple points on the canvas to create a connected
            double click.
 SO THAT  : I can draw custom multi-segment shapes that are not restricted
            to standard polygons.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US2.008 : kaurjap9 : Complete
+NAME     : Draw Polyline Feedback
+PRIORITY : 1
+ESTIMATE : 1 hour    ACTUAL : 1 hour
+AS A     : user
+I WANT   : To see a live outline of the polyline as I drag, dynamically
+           showing the shape that will be finalized on mouse release.
+SO THAT  : I can adjust the polyline in real time before finalizing it.
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
 TYPE     : BUG BUG1.001 : sidd1378 : Complete
