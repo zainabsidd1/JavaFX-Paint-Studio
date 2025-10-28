@@ -63,14 +63,14 @@ Oct 26,2025
 	Obstacles I face: n/a
 
 Oct 27,2025
-	What I did yesterday:
-	What I will do today:
-	Obstacles I face:
+	What I did yesterday: Refactored PaintChooserPanel to remove hardcoding the paint tool chooser in BUG2.003.
+	What I will do today: Implmented US2.007 to create polylines.
+	Obstacles I face:  n/a
 
 Oct 28,2025
-	What I did yesterday:
-	What I will do today:
-	Obstacles I face:
+	What I did yesterday: Implmented US2.007 to create polylines.
+	What I will do today: Implemented US2.003 to create triangle shapes.
+	Obstacles I face: n/a
 
 Oct 29,2025
 	What I did yesterday:
