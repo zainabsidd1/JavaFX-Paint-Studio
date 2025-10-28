@@ -49,7 +49,7 @@ I WANT   : To click three times to specify the vertices of a triangle that
 SO THAT  : I can add triangular shapes to my drawings for more design variety.
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
-TYPE     : USER STORY US2.004 : tatisoha : NotStarted
+TYPE     : USER STORY US2.004 : tatisoha : In Progress
 NAME     : Draw Triangle Feedback
 PRIORITY : 2
 ESTIMATE : 2 hours    ACTUAL :
