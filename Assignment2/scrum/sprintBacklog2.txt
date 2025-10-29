@@ -59,10 +59,10 @@ I WANT   : To see the triangle lines update dynamically as I choose the
 SO THAT  : I can adjust the shape in real time before finalizing it.
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
-TYPE     : USER STORY US2.005 : royanus1 : NotStarted
+TYPE     : USER STORY US2.005 : royanus1 : Complete
 NAME     : Draw Oval
 PRIORITY : 2
-ESTIMATE : 3 hours    ACTUAL :
+ESTIMATE : 3 hours    ACTUAL : 3
 AS A     : user
 I WANT   : To click and drag to define a bounding box, inside which an oval
            is drawn using the current colour and fill settings.
@@ -70,10 +70,10 @@ SO THAT  : I can create smooth oval shapes similar to those in standard
            paint programs.
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
-TYPE     : USER STORY US2.006 : royanus1 : NotStarted
+TYPE     : USER STORY US2.006 : royanus1 : Complete
 NAME     : Draw Oval Feedback
 PRIORITY : 2
-ESTIMATE : 2 hours    ACTUAL :
+ESTIMATE : 2 hours    ACTUAL : 1
 AS A     : user
 I WANT   : To see a live outline of the oval as I drag, dynamically showing
            the shape that will be finalized on mouse release.
