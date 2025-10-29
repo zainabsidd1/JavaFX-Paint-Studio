@@ -67,17 +67,17 @@ Oct 27,2025
 	Obstacles I face:
 
 Oct 28,2025
-	What I did yesterday:
-	What I will do today:
-	Obstacles I face:
+	What I did yesterday: Start working on an user story.
+	What I will do today: Complete US2.005
+	Obstacles I face: making the bounding box
 
 Oct 29,2025
-	What I did yesterday:
-	What I will do today:
-	Obstacles I face:
+	What I did yesterday: Mostly finished US2.005
+	What I will do today: Complete US2.005 and U2.006
+	Obstacles I face: n/a
 
 Oct 30,2025
-	What I did yesterday:
+	What I did yesterday: Complete user stories + sprint/product backlog/scrum update
 	What I will do today:
 	Obstacles I face:
 
