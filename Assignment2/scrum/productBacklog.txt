@@ -16,17 +16,6 @@
 # as appropriate.
 
 --------------------------------------------------------------------------
-TYPE     : USER STORY US2.002 : sidd1378 : NotStarted
-NAME     : Draw Square Feedback
-PRIORITY : 2
-ESTIMATE : 2 hours    ACTUAL :
-AS A     : user
-I WANT   : To see a live preview of the square as I drag, showing the
-           current square outline updating in real time.
-SO THAT  : I can visualize the square I am about to draw before releasing
-           the mouse button.
---------------------------------------------------------------------------
---------------------------------------------------------------------------
 TYPE     : USER STORY US2.005 : royanus1 : NotStarted
 NAME     : Draw Oval
 PRIORITY : 2
@@ -195,6 +184,17 @@ I WANT   : To click and drag from one corner to another to create a square
            where all sides are equal, drawn in the current style (outline,
            fill, colour).
 SO THAT  : I can easily draw perfect squares on my canvas.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US2.002 : sidd1378 : Complete
+NAME     : Draw Square Feedback
+PRIORITY : 2
+ESTIMATE : 2 hours    ACTUAL :
+AS A     : user
+I WANT   : To see a live preview of the square as I drag, showing the
+           current square outline updating in real time.
+SO THAT  : I can visualize the square I am about to draw before releasing
+           the mouse button.
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
 TYPE     : USER STORY US2.003 : tatisoha : Complete
