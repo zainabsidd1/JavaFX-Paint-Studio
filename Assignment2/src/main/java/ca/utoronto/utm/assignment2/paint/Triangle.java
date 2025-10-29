@@ -36,4 +36,8 @@ public class Triangle implements Shape{
     public boolean isComplete() {
         return vertices.size() == 3;
     }
+
+    public boolean isEmpty() { return vertices.isEmpty(); }
+
+    public ArrayList<Point> getVertices() { return vertices; }
 }
