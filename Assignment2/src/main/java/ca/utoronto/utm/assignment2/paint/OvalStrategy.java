@@ -19,13 +19,15 @@ public class OvalStrategy implements ToolStrategy{
     @Override
     public void onMousePressed(MouseEvent e) {
         Point p = new Point(e.getX(), e.getY());
-        oval = new Oval(p, p, Color.DARKOLIVEGREEN, true);
+        oval = new Oval(p, p, Color.LIGHTSEAGREEN, true);
+        panel.requestRender();
     }
 
     @Override
     public void onMouseDragged(MouseEvent e) {
         if (oval != null) {
             oval.setPoint2(new Point(e.getX(), e.getY()));
+            panel.requestRender();
         }
 
     }
@@ -48,17 +50,17 @@ public class OvalStrategy implements ToolStrategy{
         double width = oval.getWidth();
         double height = oval.getHeight();
 
-       g.setStroke(Color.GREY);
-       g.setLineWidth(2);
+       g.setStroke(Color.BLACK);
+       g.setLineWidth(1);
        g.setLineDashes(4);
        g.strokeRect(x, y, width, height);
        g.setLineDashes();
 
-        g.setStroke(Color.DARKOLIVEGREEN);
+        g.setStroke(Color.LIGHTSEAGREEN);
         g.setLineWidth(2);
 
         if (oval.getFilled()) {
-            g.setFill(Color.DARKOLIVEGREEN);
+            g.setFill(Color.LIGHTSEAGREEN);
             g.fillOval(x, y, width, height);
         } else {
             g.strokeOval(x, y, width, height);
