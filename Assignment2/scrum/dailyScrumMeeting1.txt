@@ -67,9 +67,9 @@ Oct 27,2025
 	Obstacles I face: Understanding how to keep all sides equal when dragging to create Square shape.
 
 Oct 28,2025
-	What I did yesterday:
-	What I will do today:
-	Obstacles I face:
+	What I did yesterday: Finished up on US2.001.
+	What I will do today: Implement live feedback for the Square shape (US2.002).
+	Obstacles I face: Ensuring equal side lengths when dragging the square.
 
 Oct 29,2025
 	What I did yesterday:
