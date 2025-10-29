@@ -69,7 +69,7 @@ Oct 27,2025
 
 Oct 28,2025
 	What I did yesterday: Implmented US2.007 to create polylines.
-	What I will do today: Implemented US2.003 to create triangle shapes.
+	What I will do today: Implemented US2.003 and US2.004 to implement triangle and triangle feedback.
 	Obstacles I face: n/a
 
 Oct 29,2025
