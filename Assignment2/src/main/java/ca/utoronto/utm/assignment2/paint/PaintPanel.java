@@ -33,6 +33,7 @@ public class PaintPanel extends Canvas implements EventHandler<MouseEvent>, Obse
         register(new PolylineStrategy(model, this));
         register(new SquareStrategy(model, this));
         register(new TriangleStrategy(model, this));
+        register(new OvalStrategy(model, this));
         setTool("Circle"); // default tool
 
         // Mouse event wiring
