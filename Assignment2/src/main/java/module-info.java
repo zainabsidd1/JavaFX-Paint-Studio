@@ -3,6 +3,7 @@ module ca.utoronto.utm.assignment2 {
     requires javafx.fxml;
     requires java.compiler;
     requires javafx.graphics;
+    requires java.xml;
 
 
     opens ca.utoronto.utm.assignment2 to javafx.fxml;
