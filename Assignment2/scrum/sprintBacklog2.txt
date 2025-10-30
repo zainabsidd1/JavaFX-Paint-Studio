@@ -64,8 +64,8 @@ NAME     : Draw Oval
 PRIORITY : 2
 ESTIMATE : 3 hours    ACTUAL : 3
 AS A     : user
-I WANT   : To click and drag to define a bounding box, inside which an oval
-           is drawn using the current colour and fill settings.
+I WANT   : To click and drag to define an oval is drawn using the current
+           colour and fill settings.
 SO THAT  : I can create smooth oval shapes similar to those in standard
            paint programs.
 --------------------------------------------------------------------------
