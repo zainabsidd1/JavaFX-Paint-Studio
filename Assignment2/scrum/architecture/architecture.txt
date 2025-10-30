@@ -69,6 +69,18 @@ DESIGN PATTERNS USED
 	Singleton:
 	Composite:
 	Factory:
+	Originally, the shape buttons were hard-wired to modes and PaintPanel
+	logic, so adding a new tool meant editing multiple places (button
+	wiring, mode switch, and event handling). We introduced a Factory
+	model by registering each tool as a ToolDescriptor (name, icon path,
+	ToolStrategy class). When a button is clicked, the panel instantiates
+	the correct strategy via the descriptor (reflection) and sets it on
+	the PaintPanel. This removes shape-specific conditionals from the UI,
+	centralizes tool metadata in one list, and supports adding tools by
+	appending a single descriptor, and better adherence to the Open/Closed
+	Principle. It also keeps MVC cleaner: the chooser creates tools; the
+	panel uses them and the model stays uninvolved.
+
 	Builder:
 	Observer/Observable:
     Originally, the `PaintModel` class extended Java’s built-in `Observable`
