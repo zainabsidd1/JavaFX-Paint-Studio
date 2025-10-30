@@ -72,9 +72,9 @@ Oct 28,2025
 	Obstacles I face: Ensuring equal side lengths when dragging the square.
 
 Oct 29,2025
-	What I did yesterday:
-	What I will do today:
-	Obstacles I face:
+	What I did yesterday: Finished up on US2.002
+	What I will do today: Update sprint backlog and product backlog
+	Obstacles I face: n/a
 
 Oct 30,2025
 	What I did yesterday:

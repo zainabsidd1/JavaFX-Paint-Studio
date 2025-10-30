@@ -168,7 +168,7 @@ SO THAT  : I can easily draw perfect squares on my canvas.
 TYPE     : USER STORY US2.002 : sidd1378 : Complete
 NAME     : Draw Square Feedback
 PRIORITY : 2
-ESTIMATE : 2 hours    ACTUAL :
+ESTIMATE : 2 hours    ACTUAL : 1
 AS A     : user
 I WANT   : To see a live preview of the square as I drag, showing the
            current square outline updating in real time.
