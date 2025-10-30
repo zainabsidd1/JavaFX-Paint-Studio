@@ -73,7 +73,7 @@ Oct 28,2025
 
 Oct 29,2025
 	What I did yesterday: Finished up on US2.002
-	What I will do today: Update sprint backlog and product backlog
+	What I will do today: Update sprintBacklog2.txt and product backlog
 	Obstacles I face: n/a
 
 Oct 30,2025
