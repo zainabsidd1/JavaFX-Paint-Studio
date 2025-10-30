@@ -50,12 +50,6 @@ public class OvalStrategy implements ToolStrategy{
         double width = oval.getWidth();
         double height = oval.getHeight();
 
-       g.setStroke(Color.BLACK);
-       g.setLineWidth(1);
-       g.setLineDashes(4);
-       g.strokeRect(x, y, width, height);
-       g.setLineDashes();
-
         g.setStroke(Color.LIGHTSEAGREEN);
         g.setLineWidth(2);
 
