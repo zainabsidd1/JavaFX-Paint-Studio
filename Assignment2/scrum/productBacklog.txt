@@ -52,7 +52,7 @@ I WANT   : To fill enclosed areas or shapes with a selected color
 SO THAT  : I can quickly color large regions
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
-TYPE     : USER STORY US3.005 : UTORID : NotStarted
+TYPE     : USER STORY US3.005 : kaurjap9 : NotStarted
 NAME     : Color selector
 PRIORITY : 3
 ESTIMATE : (1 hour, 2 hours, 4 hours, 1 day, 2 days, 4 days)    ACTUAL :
