@@ -4,10 +4,11 @@ import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Color;
 
-public class CircleStrategy implements ToolStrategy {
+public class CircleStrategy implements ToolStrategy, Colorable {
     private final PaintModel model;
     private final PaintPanel panel; // used for preview repaint
     private Circle circle;
+    private Color color = Color.LIGHTBLUE;
 
     public CircleStrategy(PaintModel model, PaintPanel panel) {
         this.model = model;
@@ -19,7 +20,7 @@ public class CircleStrategy implements ToolStrategy {
     @Override
     public void onMousePressed(MouseEvent e) {
         Point centre = new Point(e.getX(), e.getY());
-        circle = new Circle(centre, 0, panel.getColor());
+        circle = new Circle(centre, 0, color);
         panel.requestRender();
     }
 
@@ -48,12 +49,22 @@ public class CircleStrategy implements ToolStrategy {
     @Override public void onMouseClicked(MouseEvent e) { }
 
     @Override
+    public Color getColor() {
+        return color;
+    }
+
+    @Override
+    public void setColor(Color c) {
+        if (c != null) this.color = c;
+    }
+
+    @Override
     public void drawPreview(GraphicsContext g) {
         if (circle == null) return;
         double x = circle.getCenter().x, y = circle.getCenter().y, r = circle.getRadius();
-        g.setFill(Color.LIGHTBLUE);
+        g.setFill(color);
         g.fillOval(x - r, y - r, r * 2, r * 2);
-        g.setStroke(Color.LIGHTBLUE);
+        g.setStroke(color);
         g.setLineWidth(2);
         g.strokeOval(x - r, y - r, r * 2, r * 2);
     }

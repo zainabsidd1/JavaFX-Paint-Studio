@@ -3,9 +3,13 @@ package ca.utoronto.utm.assignment2.paint;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Objects;
+
+import javafx.scene.paint.Color;
 
 public class PaintModel {
         // Observer Pattern
+        private Color currentColor = Color.BLACK;
         private final List<PaintModelListener> listeners = new ArrayList<>();
         private void notifyListeners() {
                 for (PaintModelListener l : listeners) {
@@ -33,12 +37,26 @@ public class PaintModel {
         public void clearAll() {
                 shapes.clear();
                 currentSquiggle = null;
+                polylineCurr = null;
                 notifyListeners();
+        }
+
+        public Color getCurrentColor() {
+                return currentColor;
+        }
+
+        public void setCurrentColor(Color c) {
+                if (c == null) return;
+                if (!Objects.equals(this.currentColor, c)) {
+                        this.currentColor = c;
+                        notifyListeners();
+                }
         }
 
         // Squiggle Convenience
         public void startNewSquiggle() {
                 currentSquiggle = new Squiggle();
+                currentSquiggle.setColor(currentColor);
                 shapes.add(currentSquiggle);
                 notifyListeners();
         }
@@ -57,7 +75,7 @@ public class PaintModel {
         }
 
         public void addPolylinePoint(Point p) {
-            if (polylineCurr == null) startNewSquiggle();
+            if (polylineCurr == null) startNewPolyline();
             polylineCurr.addPoint(p);
             notifyListeners();
         }

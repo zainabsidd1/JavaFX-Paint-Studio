@@ -5,10 +5,11 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Color;
 import java.util.ArrayList;
 
-public class SquiggleStrategy implements ToolStrategy{
+public class SquiggleStrategy implements ToolStrategy, Colorable {
     private final PaintModel model;
     private final PaintPanel panel;
     private ArrayList<Point> squiggle;
+    private Color color = Color.RED;
 
     public SquiggleStrategy(PaintModel model, PaintPanel panel) {
         this.model = model;
@@ -49,11 +50,21 @@ public class SquiggleStrategy implements ToolStrategy{
     @Override public void onMouseClicked(MouseEvent e) { /* no-op */ }
 
     @Override
+    public Color getColor() {
+        return color;
+    }
+
+    @Override
+    public void setColor(Color c) {
+        if (c != null) this.color = c;
+    }
+
+    @Override
     public void drawPreview(GraphicsContext g) {
         if (squiggle == null || squiggle.size() < 2) {
             return;
         }
-        g.setStroke(Color.RED);
+        g.setStroke(color);
         g.setLineDashes(0);
         g.setGlobalAlpha(1.0);
         for (int i=0; i<squiggle.size()-1; i++) {

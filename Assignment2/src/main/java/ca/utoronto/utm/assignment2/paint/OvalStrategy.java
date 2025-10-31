@@ -4,10 +4,11 @@ import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Color;
 
-public class OvalStrategy implements ToolStrategy{
+public class OvalStrategy implements ToolStrategy, Colorable{
     private final PaintModel model;
     private final PaintPanel panel;
     private Oval oval;
+    private Color color = Color.LIGHTSEAGREEN;
 
     public OvalStrategy(PaintModel model, PaintPanel panel) {
         this.model = model;
@@ -42,6 +43,16 @@ public class OvalStrategy implements ToolStrategy{
     }
 
     @Override
+    public Color getColor() {
+        return color;
+    }
+
+    @Override
+    public void setColor(Color c) {
+        if (c != null) this.color = c;
+    }
+
+    @Override
     public void drawPreview(GraphicsContext g) {
         if (oval == null) return;
 
@@ -50,11 +61,11 @@ public class OvalStrategy implements ToolStrategy{
         double width = oval.getWidth();
         double height = oval.getHeight();
 
-        g.setStroke(Color.LIGHTSEAGREEN);
+        g.setStroke(color);
         g.setLineWidth(2);
 
         if (oval.getFilled()) {
-            g.setFill(Color.LIGHTSEAGREEN);
+            g.setFill(color);
             g.fillOval(x, y, width, height);
         } else {
             g.strokeOval(x, y, width, height);

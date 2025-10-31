@@ -7,11 +7,12 @@ import javafx.scene.paint.Color;
 import javax.xml.transform.SourceLocator;
 import java.util.ArrayList;
 
-public class TriangleStrategy implements ToolStrategy{
+public class TriangleStrategy implements ToolStrategy, Colorable{
     private final PaintModel model;
     private final PaintPanel panel;
     private Triangle triangle;
     private Point hoverPoint;
+    private Color color = Color.DARKRED;
 
     public TriangleStrategy(PaintModel model, PaintPanel panel) {
         this.model = model;
@@ -56,9 +57,19 @@ public class TriangleStrategy implements ToolStrategy{
     }
 
     @Override
+    public Color getColor() {
+        return color;
+    }
+
+    @Override
+    public void setColor(Color c) {
+        if (c != null) this.color = c;
+    }
+
+    @Override
     public void drawPreview(GraphicsContext g) {
         if (triangle == null || triangle.isEmpty()) return;
-        g.setStroke(Color.DARKRED);
+        g.setStroke(color);
         g.setLineWidth(1.5);
 
         var vertices = triangle.getVertices();
@@ -86,10 +97,10 @@ public class TriangleStrategy implements ToolStrategy{
     }
 
     private void triangleVertices(GraphicsContext g, Point v) {
-        g.setFill(Color.DARKRED);
+        g.setFill(color);
         g.fillOval(v.x - 3.0, v.y - 3.0, 2 * 3.0, 2 * 3.0);
         g.setStroke(Color.WHITE);
         g.strokeOval(v.x - 3.0, v.y - 3.0, 2 * 3.0, 2 * 3.0);
-        g.setStroke(Color.DARKRED);
+        g.setStroke(color);
     }
 }

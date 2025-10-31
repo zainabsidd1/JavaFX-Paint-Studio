@@ -4,10 +4,11 @@ import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Color;
 
-public class RectangleStrategy implements ToolStrategy {
+public class RectangleStrategy implements ToolStrategy, Colorable {
     private final PaintModel model;
     private final PaintPanel panel; // so we can ask for a repaint during preview
     private Rectangle rectangle;
+    private Color color = Color.PINK;
 
     public RectangleStrategy(PaintModel model, PaintPanel panel) {
         this.model = model;
@@ -20,7 +21,7 @@ public class RectangleStrategy implements ToolStrategy {
     @Override
     public void onMousePressed(MouseEvent e) {
         Point p = new Point(e.getX(), e.getY());
-        rectangle = new Rectangle(p, p, Color.PINK);  // zero-sized start
+        rectangle = new Rectangle(p, p, color);  // zero-sized start
         panel.requestRender();            // repaint to show preview immediately
     }
 
@@ -46,6 +47,16 @@ public class RectangleStrategy implements ToolStrategy {
     @Override public void onMouseClicked(MouseEvent e) { /* no-op */ }
 
     @Override
+    public Color getColor() {
+        return color;
+    }
+
+    @Override
+    public void setColor(Color c) {
+        if (c != null) this.color = c;
+    }
+
+    @Override
     public void drawPreview(GraphicsContext g) {
         if (rectangle == null) return;
 
@@ -54,9 +65,9 @@ public class RectangleStrategy implements ToolStrategy {
         double w = rectangle.getWidth();
         double h = rectangle.getHeight();
 
-        g.setFill(Color.PINK);
+        g.setFill(color);
         g.fillRect(x, y, w, h);
-        g.setStroke(Color.PINK);
+        g.setStroke(color);
         g.setLineWidth(2);
         g.strokeRect(x, y, w, h);
     }
