@@ -1,4 +1,5 @@
 package ca.utoronto.utm.assignment2.paint;
+
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.control.Button;
@@ -6,59 +7,83 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
 
-import javax.tools.Tool;
-import java.util.Collection;
+import java.util.List;
 import java.util.Objects;
 
 public class ShapeChooserPanel extends GridPane implements EventHandler<ActionEvent> {
 
-        private View view;
-        private Button thisButton;
+        private final View view;
+        private Button selectedButton;
 
-        // BUG1.001 To do: change the buttons to shape icons by downloading images of each shape
-        public ShapeChooserPanel(View view) {
-
+    public ShapeChooserPanel(View view) {
                 this.view = view;
 
-                // Get all the tools from PaintPanel through view.
-                Collection< ToolStrategy> toolsList = view.getPaintPanel().getTools();
-
                 int row = 0;
-                for (ToolStrategy tool : toolsList) {
-                        String label = tool.getName();
-                        Image icon = null;
-                        // get resource stream to ensure file paths with slight deviations works
-                        icon = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/icons/" + label + ".png")));
-                        ImageView viewIcon = new ImageView(icon);
-                        viewIcon.setFitWidth(24);
-                        viewIcon.setFitHeight(24);
-                        viewIcon.setPreserveRatio(true);
-                        Button button = new Button();          // icon-only button
-                        button.setGraphic(viewIcon);
-                        // store the mode on the button (since getText() is empty with icons)
-                        button.setUserData(label);
+        List<ToolDescriptor> tools = List.of(
+                new ToolDescriptor("Circle", "/icons/Circle.png", CircleStrategy.class),
+                new ToolDescriptor("Rectangle", "/icons/Rectangle.png", RectangleStrategy.class),
+                new ToolDescriptor("Squiggle", "/icons/Squiggle.png", SquiggleStrategy.class),
+                new ToolDescriptor("Oval", "/icons/Oval.png", OvalStrategy.class),
+                new ToolDescriptor("Square", "/icons/Square.png", SquareStrategy.class),
+                new ToolDescriptor("Polyline", "/icons/Polyline.png", PolylineStrategy.class),
+                new ToolDescriptor("Triangle", "/icons/Triangle.png", TriangleStrategy.class)
+        );
+        for (ToolDescriptor td : tools) {
+                        Image icon = new Image(Objects.requireNonNull(
+                                getClass().getResourceAsStream(td.iconPath())));
+                        ImageView iv = new ImageView(icon);
+                        iv.setFitWidth(24);
+                        iv.setFitHeight(24);
+                        iv.setPreserveRatio(true);
+
+                        Button button = new Button();         // icon-only button
+                        button.setGraphic(iv);
+                        button.setUserData(td);               // store descriptor for later
                         button.setMinWidth(100);
-                        this.add(button, 0, row++);
                         button.setOnAction(this);
+                        this.add(button, 0, row++);
+                }
+
+                // Auto-select and apply the first tool
+                if (!getChildren().isEmpty()) {
+                        Button first = (Button) getChildren().getFirst();
+                        highlight(first);
+                        activateTool((ToolDescriptor) first.getUserData());
                 }
         }
 
         @Override
         public void handle(ActionEvent event) {
                 Button btn = (Button) event.getSource();
-                // Read the mode from userData instead of getText()
-                if (thisButton != null) {
-                    thisButton.setStyle("");
+                highlight(btn);
+                ToolDescriptor td = (ToolDescriptor) btn.getUserData();
+                activateTool(td);
+        }
+
+        /** Create and set the selected tool via reflection. */
+        private void activateTool(ToolDescriptor td) {
+                try {
+                        ToolStrategy strategy = td.strategyClass()
+                                .getConstructor(PaintModel.class, PaintPanel.class)
+                                .newInstance(view.getPaintModel(), view.getPaintPanel());
+                        view.getPaintPanel().setStrategy(strategy);
+                        System.out.println("Tool selected: " + td.name());
+                } catch (Exception e) {
+                        e.printStackTrace();
+                        System.err.println("Failed to instantiate tool: " + td.name());
                 }
-                // Style the selected button
-                btn.setStyle("-fx-border-color: black;" +
-                        " -fx-border-width: 2px;" +
-                        "-fx-background-color:#FCF55F;");
-                thisButton = btn;
-                String command = (String) btn.getUserData();
-                view.setMode(command);
-                System.out.println(command);
+        }
+
+        /** Apply old-school yellow highlight to the selected button. */
+        private void highlight(Button btn) {
+                if (selectedButton != null) {
+                        selectedButton.setStyle(""); // clear previous
+                }
+                btn.setStyle(
+                        "-fx-border-color: black;" +
+                                " -fx-border-width: 2px;" +
+                                " -fx-background-color:#FCF55F;"
+                );
+                selectedButton = btn;
         }
 }
-
-

@@ -1,5 +1,6 @@
 package ca.utoronto.utm.assignment2.paint;
 
+import javafx.application.Platform;
 import javafx.event.EventHandler;
 import javafx.event.EventType;
 import javafx.scene.canvas.Canvas;
@@ -7,76 +8,58 @@ import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Color;
 
-import java.util.*;
-import java.util.Observable;
-import java.util.Observer;
+public class PaintPanel extends Canvas implements EventHandler<MouseEvent>, PaintModelListener {
 
-public class PaintPanel extends Canvas implements EventHandler<MouseEvent>, Observer, PaintModelListener {
     private final PaintModel model;
     private Color currentColor = Color.LIGHTBLUE;
-    private ToolStrategy currentStrategy;
 
-    // Strategy wiring
-    private final Map<String, ToolStrategy> tools = new HashMap<>();
-    private ToolStrategy currentTool;
+    // Active drawing tool (Strategy)
+    private ToolStrategy currentStrategy;
 
     public PaintPanel(PaintModel model) {
         super(300, 300);
         this.model = model;
         this.model.addListener(this);
 
-
-        // Register tools (constructor-inject model + this panel)
-        register(new CircleStrategy(model, this));
-        register(new RectangleStrategy(model, this));
-        register(new SquiggleStrategy(model, this));
-        register(new PolylineStrategy(model, this));
-        register(new SquareStrategy(model, this));
-        register(new TriangleStrategy(model, this));
-        register(new OvalStrategy(model, this));
-        setTool("Circle"); // default tool
-
         // Mouse event wiring
-        this.addEventHandler(MouseEvent.MOUSE_PRESSED, this);
+        this.addEventHandler(MouseEvent.MOUSE_PRESSED,  this);
+        this.addEventHandler(MouseEvent.MOUSE_DRAGGED,  this);
         this.addEventHandler(MouseEvent.MOUSE_RELEASED, this);
-        this.addEventHandler(MouseEvent.MOUSE_MOVED, this);
-        this.addEventHandler(MouseEvent.MOUSE_CLICKED, this);
-        this.addEventHandler(MouseEvent.MOUSE_DRAGGED, this);
+        this.addEventHandler(MouseEvent.MOUSE_MOVED,    this);
+        this.addEventHandler(MouseEvent.MOUSE_CLICKED,  this);
+
+        // Repaint when the canvas is resized
+        widthProperty().addListener((obs, o, n) -> requestRender());
+        heightProperty().addListener((obs, o, n) -> requestRender());
+
+        // Initial paint with nothing on it
+        requestRender();
     }
+
+    // Strategy wiring
 
     public void setStrategy(ToolStrategy strategy) {
         this.currentStrategy = strategy;
+        requestRender(); // clear any stale preview
     }
 
     public ToolStrategy getStrategy() {
         return this.currentStrategy;
     }
 
-    public void setColor(Color c) { currentColor = c; }
-    public Color getColor() { return currentColor; }
+    // set colour
 
-    private void register(ToolStrategy tool) {
-        tools.put(tool.getName(), tool);
+    public void setColor(Color c) { this.currentColor = c; requestRender(); }
+    public Color getColor()       { return this.currentColor; }
+
+    // Model → View (Observer)
+
+    @Override
+    public void modelChanged() {
+        requestRender();
     }
 
-    /** Called by toolbar / chooser to switch tools */
-    public void setTool(String name) {
-        ToolStrategy t = tools.get(name);
-        if (t != null) {
-            this.currentTool = t;
-            // clear any stale preview by repainting
-            requestRender();
-            System.out.println("Tool: " + name);
-        } else {
-            System.err.println("Unknown tool: " + name);
-        }
-    }
-
-    /** Let strategies trigger a repaint for live preview
-     * without mutating the model */
-    public void requestRender() {
-        this.update(null, null);
-    }
+    // Mouse → Strategy
 
     @Override
     public void handle(MouseEvent e) {
@@ -84,42 +67,27 @@ public class PaintPanel extends Canvas implements EventHandler<MouseEvent>, Obse
 
         EventType<? extends MouseEvent> type = e.getEventType();
 
-        if (type == MouseEvent.MOUSE_PRESSED) currentStrategy.onMousePressed(e);
-        else if (type == MouseEvent.MOUSE_DRAGGED) currentStrategy.onMouseDragged(e);
+        if (type == MouseEvent.MOUSE_PRESSED)      currentStrategy.onMousePressed(e);
+        else if (type == MouseEvent.MOUSE_DRAGGED)  currentStrategy.onMouseDragged(e);
         else if (type == MouseEvent.MOUSE_RELEASED) currentStrategy.onMouseReleased(e);
-        else if (type == MouseEvent.MOUSE_MOVED) currentStrategy.onMouseMoved(e);
-        else if (type == MouseEvent.MOUSE_CLICKED) currentStrategy.onMouseClicked(e);
+        else if (type == MouseEvent.MOUSE_MOVED)    currentStrategy.onMouseMoved(e);
+        else if (type == MouseEvent.MOUSE_CLICKED)  currentStrategy.onMouseClicked(e);
     }
 
+    // Rendering
+    public void requestRender() {
+        if (Platform.isFxApplicationThread()) render();
+        else Platform.runLater(this::render);
+    }
 
-    @Override
-    public void update(Observable o, Object arg) {
-        GraphicsContext g2d = this.getGraphicsContext2D();
-        g2d.clearRect(0, 0, this.getWidth(), this.getHeight());
-
-        // Draw all permanent shapes
+    private void render() {
+        GraphicsContext g = getGraphicsContext2D();
+        g.clearRect(0, 0, getWidth(), getHeight());
         for (Shape s : model.getShapes()) {
-            s.draw(g2d);
-        }
-
-        // Draw preview of the current tool
-        if (currentStrategy != null) {
-            currentStrategy.drawPreview(g2d);
+            s.draw(g);
         }
         if (currentStrategy != null) {
-            currentStrategy.drawPreview(this.getGraphicsContext2D());
+            currentStrategy.drawPreview(g);
         }
-    }
-
-
-
-    // Getter for the list of tools.
-    public Collection<ToolStrategy> getTools() {
-        return tools.values();
-    }
-
-    @Override
-    public void modelChanged() {
-        requestRender();
     }
 }
