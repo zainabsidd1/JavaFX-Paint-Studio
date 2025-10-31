@@ -77,9 +77,9 @@ Oct 29,2025
 	Obstacles I face: n/a
 
 Oct 30,2025
-	What I did yesterday:
-	What I will do today:
-	Obstacles I face:
+	What I did yesterday: Updated my user stories in sprintBacklog2 and product backlog
+	What I will do today: Look over architecture bug for sprint2
+	Obstacles I face: n/a
 
 Oct 31,2025
 	What I did yesterday:
