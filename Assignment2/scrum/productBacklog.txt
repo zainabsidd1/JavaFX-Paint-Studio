@@ -86,17 +86,6 @@ I WANT   : To be able to select the current line thickness, to be applied
 SO THAT  : 
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
-TYPE     : BUG BUG2.003 : kaurjap9 : InProgress
-NAME     : Architecture behind choosing selection mode is poor
-PRIORITY : 3
-ESTIMATE : 2 days    ACTUAL :
-ISSUE    : Code is not modular and is difficult to expand. Need a better
-           architecture behind selecting a drawing mode, and handling
-           the drawing events. Consider some design patterns here.
-           Refactor ShapeChooserPanel and PaintPanel to get rid of the
-           'if' blocks in the PaintPanel mouse event code.
---------------------------------------------------------------------------
---------------------------------------------------------------------------
 TYPE     : BUG BUG?.004 : UTORID : NotStarted 
 NAME     : Architecture behind Model is poor
 PRIORITY : 3
@@ -271,6 +260,17 @@ ESTIMATE : 2 hours    ACTUAL : 30 mins
 ISSUE    : The first click should specify the center of the circle, with
            a drag for the radius. This is not the case in the current
            implementation.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : BUG BUG2.003 : kaurjap9 : Complete
+NAME     : Architecture behind choosing selection mode is poor
+PRIORITY : 3
+ESTIMATE : 2 days    ACTUAL :
+ISSUE    : Code is not modular and is difficult to expand. Need a better
+           architecture behind selecting a drawing mode, and handling
+           the drawing events. Consider some design patterns here.
+           Refactor ShapeChooserPanel and PaintPanel to get rid of the
+           'if' blocks in the PaintPanel mouse event code.
 --------------------------------------------------------------------------
 # OMITTED USER STORIES/BUGS BELOW   ###########################################
 

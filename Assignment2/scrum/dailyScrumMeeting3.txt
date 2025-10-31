@@ -78,8 +78,8 @@ Oct 29,2025
 
 Oct 30,2025
 	What I did yesterday: work on incorporating design patterns in project.
-	What I will do today:
-	Obstacles I face:
+	What I will do today: finish bug 2.003.
+	Obstacles I face: n/a.
 
 Oct 31,2025
 	What I did yesterday:

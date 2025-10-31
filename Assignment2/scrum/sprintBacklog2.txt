@@ -6,7 +6,7 @@
 # Sprint 2 Backlog UserStories go below
 
 --------------------------------------------------------------------------
-TYPE     : BUG BUG2.003 : kaurjap9 : InProgress
+TYPE     : BUG BUG2.003 : kaurjap9 : Complete
 NAME     : Architecture behind choosing selection mode is poor
 PRIORITY : 3
 ESTIMATE : 2 days    ACTUAL :
