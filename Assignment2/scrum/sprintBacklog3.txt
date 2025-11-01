@@ -18,16 +18,16 @@ ISSUE    : Having a list of different types of drawable things in the
            here.
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
-TYPE     : USER STORY US3.001 : UTORID : NotStarted
+TYPE     : USER STORY US3.001 : tatisoha : In Progress
 NAME     : Eraser Tool
 PRIORITY : 3
-ESTIMATE : (1 hour, 2 hours, 4 hours, 1 day, 2 days, 4 days)     ACTUAL :
+ESTIMATE : 1 hour     ACTUAL :
 AS A     : user
 I WANT   : To erase parts of existing drawings
 SO THAT  : I can remove unwanted shapes or sections from the canvas
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
-TYPE     : USER STORY US3.002 : UTORID : NotStarted
+TYPE     : USER STORY US3.002 : UTORID sidd1378 : NotStarted
 NAME     : Undo Function
 PRIORITY : 3
 ESTIMATE : (1 hour, 2 hours, 4 hours, 1 day, 2 days, 4 days)     ACTUAL :

@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Objects;
 
 import javafx.scene.paint.Color;
+import java.util.*;
 
 public class PaintModel {
         // Observer Pattern
@@ -24,9 +25,15 @@ public class PaintModel {
         private Squiggle currentSquiggle;
         private Polyline polylineCurr;
 
+        private final Deque<Shape> undoStack = new ArrayDeque<>(); // stack stores last shapes added
+        private final Deque<Shape> redoStack = new ArrayDeque<>(); // stack stores the last shapes removed
+
         public void addShape(Shape s) {
                 if (s == null) return;
                 shapes.add(s);
+                undoStack.push(s);
+                redoStack.clear();
+
                 notifyListeners();
         }
 
@@ -38,6 +45,8 @@ public class PaintModel {
                 shapes.clear();
                 currentSquiggle = null;
                 polylineCurr = null;
+                undoStack.clear();
+                redoStack.clear();
                 notifyListeners();
         }
 
@@ -58,6 +67,7 @@ public class PaintModel {
                 currentSquiggle = new Squiggle();
                 currentSquiggle.setColor(currentColor);
                 shapes.add(currentSquiggle);
+                undoStack.push(currentSquiggle);
                 notifyListeners();
         }
 
@@ -71,6 +81,7 @@ public class PaintModel {
         public void startNewPolyline(){
             polylineCurr = new Polyline();
             shapes.add(polylineCurr);
+            undoStack.push(polylineCurr);
             notifyListeners();
         }
 
@@ -83,6 +94,15 @@ public class PaintModel {
 
         public void addToShape(Shape s) {
             shapes.add(s);
+            notifyListeners();
+        }
+
+
+        public void undo(){
+            if(undoStack.isEmpty()) return;
+            Shape last = undoStack.pop();
+            redoStack.push(last);
+            shapes.remove(last);
             notifyListeners();
         }
 }
