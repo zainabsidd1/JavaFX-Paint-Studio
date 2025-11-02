@@ -6,7 +6,7 @@ import javafx.scene.paint.Color;
 public class Rectangle implements Shape {
     private Point p1;
     private Point p2;
-    private final Color color;
+    private Color color;
 
     public Rectangle(Point p1, Point p2, Color color) {
         this.p1 = p1;
@@ -26,6 +26,14 @@ public class Rectangle implements Shape {
     public double getTop() { return Math.min(p1.y, p2.y); }
     public double getWidth() { return Math.abs(p2.x - p1.x); }
     public double getHeight() { return Math.abs(p2.y - p1.y); }
+
+    @Override
+    public Color getColor() { return color; }
+
+    @Override
+    public void setColor(Color c) {
+        if (c != null) this.color = c;
+    }
 
     @Override
     public void draw(GraphicsContext g) {

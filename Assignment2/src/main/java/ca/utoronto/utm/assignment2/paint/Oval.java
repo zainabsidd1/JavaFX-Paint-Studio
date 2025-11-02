@@ -6,7 +6,7 @@ import javafx.scene.paint.Color;
 public class Oval implements Shape {
     private Point p1;
     private Point p2;
-    private final Color color;
+    private Color color;
     private boolean filled;
 
     public Oval(Point p1, Point p2, Color color, boolean filled) {
@@ -25,6 +25,13 @@ public class Oval implements Shape {
     public double getWidth() { return Math.abs(p2.x - p1.x); }
     public double getHeight() { return Math.abs(p2.y - p1.y); }
 
+    @Override
+    public Color getColor() { return color; }
+
+    @Override
+    public void setColor(Color c) {
+        if (c != null) this.color = c;
+    }
 
     @Override
     public void draw(GraphicsContext g) {
