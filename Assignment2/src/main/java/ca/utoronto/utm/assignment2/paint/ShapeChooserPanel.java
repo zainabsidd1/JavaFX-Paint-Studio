@@ -31,12 +31,6 @@ public class ShapeChooserPanel extends GridPane implements EventHandler<ActionEv
                 new ToolDescriptor("Triangle", "/icons/Triangle.png", TriangleStrategy.class)
         );
         for (ToolDescriptor td : tools) {
-            // OLD (crashes if missing):
-            // Image icon = new Image(Objects.requireNonNull(
-            //         getClass().getResourceAsStream(td.iconPath())));
-            // ImageView iv = new ImageView(icon);
-
-            // NEW (robust, same look/size):
             ImageView iv = safeIcon(td.iconPath(), 24, 24);
 
             Button button = new Button();         // icon-only button
@@ -56,7 +50,6 @@ public class ShapeChooserPanel extends GridPane implements EventHandler<ActionEv
     }
 
     private ImageView safeIcon(String absolutePath, double w, double h) {
-        // Ensure absolute path like "/icons/Circle.png"
         String path = absolutePath.startsWith("/") ? absolutePath : "/" + absolutePath;
         URL url = getClass().getResource(path);
 
@@ -65,7 +58,6 @@ public class ShapeChooserPanel extends GridPane implements EventHandler<ActionEv
             img = new Image(url.toExternalForm(), w, h, true, true);
         } else {
             System.err.println("Missing icon on classpath: " + path);
-            // Transparent placeholder to keep button size identical
             img = new WritableImage((int) Math.ceil(w), (int) Math.ceil(h));
         }
         ImageView iv = new ImageView(img);
@@ -83,7 +75,6 @@ public class ShapeChooserPanel extends GridPane implements EventHandler<ActionEv
         activateTool(td);
     }
 
-    /** Create and set the selected tool via reflection. */
     private void activateTool(ToolDescriptor td) {
         try {
             ToolStrategy strategy = td.strategyClass()
@@ -97,7 +88,6 @@ public class ShapeChooserPanel extends GridPane implements EventHandler<ActionEv
         }
     }
 
-    /** Apply old-school yellow highlight to the selected button. */
     private void highlight(Button btn) {
         if (selectedButton != null) {
             selectedButton.setStyle(""); // clear previous
