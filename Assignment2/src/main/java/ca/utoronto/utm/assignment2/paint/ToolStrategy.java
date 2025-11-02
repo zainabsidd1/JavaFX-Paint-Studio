@@ -1,5 +1,6 @@
 package ca.utoronto.utm.assignment2.paint;
 
+import javafx.scene.Cursor;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.input.MouseEvent;
 
@@ -14,5 +15,6 @@ public interface ToolStrategy {
     void onMouseMoved(MouseEvent e);
 
     void onMouseClicked(MouseEvent e);
+    default Cursor getCursor() { return Cursor.DEFAULT; }
 }
 
