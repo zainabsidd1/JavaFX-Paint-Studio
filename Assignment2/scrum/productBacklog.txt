@@ -16,28 +16,19 @@
 # as appropriate.
 
 --------------------------------------------------------------------------
-TYPE     : USER STORY US3.001 : UTORID : NotStarted
+TYPE     : USER STORY US3.001 : tatisoha : In Progress
 NAME     : Eraser Tool
 PRIORITY : 3
-ESTIMATE : (1 hour, 2 hours, 4 hours, 1 day, 2 days, 4 days)     ACTUAL :
+ESTIMATE : 1 hour     ACTUAL :
 AS A     : user
 I WANT   : To erase parts of existing drawings
 SO THAT  : I can remove unwanted shapes or sections from the canvas
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
-TYPE     : USER STORY US3.002 : UTORID : NotStarted
-NAME     : Undo Function
-PRIORITY : 3
-ESTIMATE : (1 hour, 2 hours, 4 hours, 1 day, 2 days, 4 days)     ACTUAL :
-AS A     : user
-I WANT   : To undo the most recent action
-SO THAT  : I can correct mistakes without restarting my work
---------------------------------------------------------------------------
---------------------------------------------------------------------------
-TYPE     : USER STORY US3.003 : UTORID : NotStarted
+TYPE     : USER STORY US3.003 : sidd1378 : InProgress
 NAME     : Redo Function
 PRIORITY : 3
-ESTIMATE : (1 hour, 2 hours, 4 hours, 1 day, 2 days, 4 days)     ACTUAL :
+ESTIMATE : 2 hours     ACTUAL :
 AS A     : user
 I WANT   : To redo an action previously undone
 SO THAT  : I can reapply the last undone change if needed
@@ -50,29 +41,6 @@ ESTIMATE : (1 hour, 2 hours, 4 hours, 1 day, 2 days, 4 days)     ACTUAL :
 AS A     : user
 I WANT   : To fill enclosed areas or shapes with a selected color
 SO THAT  : I can quickly color large regions
---------------------------------------------------------------------------
---------------------------------------------------------------------------
-TYPE     : USER STORY US3.005 : kaurjap9 : NotStarted
-NAME     : Color selector
-PRIORITY : 3
-ESTIMATE : (1 hour, 2 hours, 4 hours, 1 day, 2 days, 4 days)    ACTUAL :
-AS A     : user
-I WANT   : To be able to select the current drawing color, to be applied
-           to subsequent shapes. Example:
-           		selects color red
-           		mode circle
-           		draw a circle
-           		draw a circle
-           		mode rectangle
-           		draw a rectangle
-           		select color green
-           		draw a rectangle
-           		draw a rectangle
-           		select mode squiggle
-           		draw a squiggle
-           	results in two red circles and a red rectangle as well as
-           	two green rectangles and a green squiggle
-SO THAT  : Shapes drawn afterwards use the chosen color
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
 TYPE     : USER STORY US3.006 : UTORID : NotStarted
@@ -289,6 +257,38 @@ AS A     : user
 I WANT   : To see a live outline of the polyline as I drag, dynamically
            showing the shape that will be finalized on mouse release.
 SO THAT  : I can adjust the polyline in real time before finalizing it.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US3.002 : sidd1378 : Complete
+NAME     : Undo Function
+PRIORITY : 3
+ESTIMATE : 2 hours     ACTUAL : 2 hours
+AS A     : user
+I WANT   : To undo the most recent action
+SO THAT  : I can correct mistakes without restarting my work
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US3.005 : kaurjap9 : Complete
+NAME     : Color selector
+PRIORITY : 3
+ESTIMATE : 2 hours    ACTUAL : 1 day
+AS A     : user
+I WANT   : To be able to select the current drawing color, to be applied
+           to subsequent shapes. Example:
+           		selects color red
+           		mode circle
+           		draw a circle
+           		draw a circle
+           		mode rectangle
+           		draw a rectangle
+           		select color green
+           		draw a rectangle
+           		draw a rectangle
+           		select mode squiggle
+           		draw a squiggle
+           	results in two red circles and a red rectangle as well as
+           	two green rectangles and a green squiggle
+SO THAT  : Shapes drawn afterwards use the chosen color
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
 TYPE     : BUG BUG1.001 : sidd1378 : Complete

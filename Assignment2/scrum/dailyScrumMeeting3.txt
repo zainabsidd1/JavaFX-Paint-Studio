@@ -88,8 +88,8 @@ Oct 31,2025
 
 Nov 1,2025
 	What I did yesterday: start bug3.005.
-	What I will do today: work on bug3.005.
-	Obstacles I face: n/a.
+	What I will do today: completed hex colour picker.
+	Obstacles I face: changing the colour of all shapes.
 
 Nov 2,2025
 	What I did yesterday:
