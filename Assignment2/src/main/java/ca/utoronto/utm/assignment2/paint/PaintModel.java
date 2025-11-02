@@ -19,6 +19,7 @@ public class PaintModel {
         private final List<Shape> shapes = new ArrayList<>();
         private Squiggle currentSquiggle;
         private Polyline polylineCurr;
+        private Polyline currEraser;
         private final Deque<Shape> undoStack = new ArrayDeque<>();
         private final Deque<Shape> redoStack = new ArrayDeque<>();
 
@@ -97,6 +98,20 @@ public class PaintModel {
         public void addToShape(Shape s) {
                 shapes.add(s);
                 notifyListeners();
+        }
+
+        public void startNewEraser(){
+            currEraser = new Polyline();
+            currEraser.setColor(Color.web("#F4F4F4"));
+            shapes.add(currEraser);
+            undoStack.push(currEraser);
+            notifyListeners();
+        }
+
+        public void addEraserPoint(Point p){
+            if (currEraser == null) startNewSquiggle();
+            currEraser.addPoint(p);
+            notifyListeners();
         }
 
         public void undo() {
