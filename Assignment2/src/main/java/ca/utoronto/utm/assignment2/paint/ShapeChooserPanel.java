@@ -5,6 +5,7 @@ import javafx.event.EventHandler;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.image.WritableImage;
 import javafx.scene.layout.GridPane;
 
 import java.util.List;
@@ -29,13 +30,7 @@ public class ShapeChooserPanel extends GridPane implements EventHandler<ActionEv
                 new ToolDescriptor("Triangle", "/icons/Triangle.png", TriangleStrategy.class)
         );
         for (ToolDescriptor td : tools) {
-            Image icon = new Image(Objects.requireNonNull(
-                    getClass().getResourceAsStream(td.iconPath())));
-            ImageView iv = new ImageView(icon);
-            iv.setFitWidth(24);
-            iv.setFitHeight(24);
-            iv.setPreserveRatio(true);
-
+            ImageView iv = loadIconKeepLook(td.iconPath());
             Button button = new Button();         // icon-only button
             button.setGraphic(iv);
             button.setUserData(td);               // store descriptor for later
@@ -72,6 +67,22 @@ public class ShapeChooserPanel extends GridPane implements EventHandler<ActionEv
             e.printStackTrace();
             System.err.println("Failed to instantiate tool: " + td.name());
         }
+    }
+
+    private ImageView loadIconKeepLook(String path) {
+        ImageView iv = new ImageView();
+        iv.setFitWidth(24);
+        iv.setFitHeight(24);
+        iv.setPreserveRatio(true);
+
+        var url = ShapeChooserPanel.class.getResource(path);
+        if (url != null) {
+            iv.setImage(new Image(url.toExternalForm()));
+        } else {
+            System.err.println("[ShapeChooserPanel] Missing icon: " + path);
+            iv.setImage(new WritableImage(24, 24));
+        }
+        return iv;
     }
 
     /** Apply old-school yellow highlight to the selected button. */
