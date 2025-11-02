@@ -55,7 +55,7 @@ public class View {
                 cutItem.setOnAction(e -> System.out.println("Cut (not implemented)"));
                 copyItem.setOnAction(e -> System.out.println("Copy (not implemented)"));
                 pasteItem.setOnAction(e -> System.out.println("Paste (not implemented)"));
-                undoItem.setOnAction(e -> System.out.println("Undo (not implemented)"));
+                undoItem.setOnAction(e -> paintModel.undo());
                 redoItem.setOnAction(e -> System.out.println("Redo (not implemented)"));
                 edit.getItems().addAll(cutItem, copyItem, pasteItem, new SeparatorMenuItem(),
                         undoItem, redoItem);

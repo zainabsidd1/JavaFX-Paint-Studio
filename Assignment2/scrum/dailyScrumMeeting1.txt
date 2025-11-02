@@ -82,9 +82,9 @@ Oct 30,2025
 	Obstacles I face: n/a
 
 Oct 31,2025
-	What I did yesterday:
-	What I will do today:
-	Obstacles I face:
+	What I did yesterday: Look over architecture bug for sprint2
+	What I will do today: Look over sprint 3 and claimed US3.002
+	Obstacles I face: n/a
 
 Nov 1,2025
 	What I did yesterday:
