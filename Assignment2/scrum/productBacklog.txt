@@ -90,6 +90,15 @@ I WANT   : To cut selected shapes
 SO THAT  : I can remove and move them elsewhere using paste
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
+TYPE     : USER STORY US3.009 : UTORID : NotStarted
+NAME     : Copy Function
+PRIORITY : 3
+ESTIMATE : (1 hour, 2 hours, 4 hours, 1 day, 2 days, 4 days)     ACTUAL :
+AS A     : user
+I WANT   : To copy the selected shape
+SO THAT  : I can copy the selected shape
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
 TYPE     : USER STORY US3.010 : UTORID : NotStarted
 NAME     : Paste Function
 PRIORITY : 3
