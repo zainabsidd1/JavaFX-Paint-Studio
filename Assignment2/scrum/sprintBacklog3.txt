@@ -45,10 +45,10 @@ I WANT   : To redo an action previously undone
 SO THAT  : I can reapply the last undone change if needed
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
-TYPE     : USER STORY US3.004 : kaurjap9 : InProgress
+TYPE     : USER STORY US3.004 : kaurjap9 : Complete
 NAME     : Fill Bucket Tool
 PRIORITY : 3
-ESTIMATE : 2 hours     ACTUAL :
+ESTIMATE : 2 hours     ACTUAL : 4 hours
 AS A     : user
 I WANT   : To fill enclosed areas or shapes with a selected color
 SO THAT  : I can quickly color large regions
