@@ -7,31 +7,40 @@ import javafx.scene.paint.Color;
 import javax.xml.transform.SourceLocator;
 import java.util.ArrayList;
 
-public class TriangleStrategy implements ToolStrategy{
+public class TriangleStrategy implements ToolStrategy, Colorable{
     private final PaintModel model;
     private final PaintPanel panel;
     private Triangle triangle;
     private Point hoverPoint;
+    private Color color = Color.DARKRED;
 
     public TriangleStrategy(PaintModel model, PaintPanel panel) {
         this.model = model;
         this.panel = panel;
     }
     @Override
-    public void onMouseClicked(MouseEvent e){
+    public void onMouseClicked(MouseEvent e) {
         Point p = new Point(e.getX(), e.getY());
-        if (triangle == null){
+
+        if (triangle == null) {
             triangle = new Triangle();
         }
+
         triangle.addVertex(p);
 
         if (triangle.isComplete()) {
+            Color chosen = (model.getCurrentColor() != null &&
+                    !model.getCurrentColor().equals(Color.BLACK))
+                    ? model.getCurrentColor()
+                    : color;
+
+            triangle.setColor(chosen);
             model.addToShape(triangle);
             triangle = null;
             hoverPoint = null;
         }
-        panel.requestRender();
 
+        panel.requestRender();
     }
 
 
@@ -56,9 +65,23 @@ public class TriangleStrategy implements ToolStrategy{
     }
 
     @Override
+    public Color getColor() {
+        return color;
+    }
+
+    @Override
+    public void setColor(Color c) {
+        if (c != null) this.color = c;
+    }
+
+    @Override
     public void drawPreview(GraphicsContext g) {
         if (triangle == null || triangle.isEmpty()) return;
-        g.setStroke(Color.DARKRED);
+        Color previewColour = (model.getCurrentColor() != null &&
+                !model.getCurrentColor().equals(Color.BLACK))
+                ? model.getCurrentColor()
+                : color;
+        g.setStroke(previewColour);
         g.setLineWidth(1.5);
 
         var vertices = triangle.getVertices();
@@ -86,10 +109,14 @@ public class TriangleStrategy implements ToolStrategy{
     }
 
     private void triangleVertices(GraphicsContext g, Point v) {
-        g.setFill(Color.DARKRED);
+        Color chosen = (model.getCurrentColor() != null
+                && !model.getCurrentColor().equals(Color.BLACK))
+                ? model.getCurrentColor()
+                : color;
+        g.setFill(chosen);
         g.fillOval(v.x - 3.0, v.y - 3.0, 2 * 3.0, 2 * 3.0);
-        g.setStroke(Color.WHITE);
+        g.setStroke(chosen);
         g.strokeOval(v.x - 3.0, v.y - 3.0, 2 * 3.0, 2 * 3.0);
-        g.setStroke(Color.DARKRED);
+        g.setStroke(chosen);
     }
 }

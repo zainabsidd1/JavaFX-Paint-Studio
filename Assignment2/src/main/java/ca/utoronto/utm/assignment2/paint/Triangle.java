@@ -7,7 +7,7 @@ import java.util.List;
 
 public class Triangle implements Shape{
     private final ArrayList<Point> vertices = new ArrayList<>();
-    private final Color color = Color.DARKRED;
+    private Color color = Color.DARKRED;
     private double[] xvertices, yvertices;
 
     public void addVertex(Point p) {
@@ -40,4 +40,12 @@ public class Triangle implements Shape{
     public boolean isEmpty() { return vertices.isEmpty(); }
 
     public ArrayList<Point> getVertices() { return vertices; }
+
+    @Override
+    public Color getColor() { return color; }
+
+    @Override
+    public void setColor(Color c) {
+        if (c != null) this.color = c;
+    }
 }

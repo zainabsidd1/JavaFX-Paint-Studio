@@ -1,9 +1,11 @@
 package ca.utoronto.utm.assignment2.paint;
 
 import java.util.*;
+import javafx.scene.paint.Color;
 
 public class PaintModel {
         // Observer Pattern
+        private Color currentColor = null;
         private final List<PaintModelListener> listeners = new ArrayList<>();
         private void notifyListeners() {
                 for (PaintModelListener l : listeners) {
@@ -17,16 +19,35 @@ public class PaintModel {
         private final List<Shape> shapes = new ArrayList<>();
         private Squiggle currentSquiggle;
         private Polyline polylineCurr;
+        private final Deque<Shape> undoStack = new ArrayDeque<>();
+        private final Deque<Shape> redoStack = new ArrayDeque<>();
 
-        private final Deque<Shape> undoStack = new ArrayDeque<>(); // stack stores last shapes added
-        private final Deque<Shape> redoStack = new ArrayDeque<>(); // stack stores the last shapes removed
 
+        // Color
+
+        public Color getCurrentColor() {
+                return currentColor; // may be null if user never picked one
+        }
+
+        public boolean hasUserColor() {
+                return currentColor != null;
+        }
+
+        public void setCurrentColor(Color c) {
+                if (c == null) return;
+                if (!Objects.equals(this.currentColor, c)) {
+                        this.currentColor = c;
+                        notifyListeners();
+                }
+        }
+
+
+        // Shape handling
         public void addShape(Shape s) {
                 if (s == null) return;
                 shapes.add(s);
                 undoStack.push(s);
                 redoStack.clear();
-
                 notifyListeners();
         }
 
@@ -37,14 +58,16 @@ public class PaintModel {
         public void clearAll() {
                 shapes.clear();
                 currentSquiggle = null;
+                polylineCurr = null;
                 undoStack.clear();
                 redoStack.clear();
                 notifyListeners();
         }
 
-        // Squiggle Convenience
+        // Squiggle
         public void startNewSquiggle() {
                 currentSquiggle = new Squiggle();
+                if (hasUserColor()) currentSquiggle.setColor(currentColor); // only override if user picked
                 shapes.add(currentSquiggle);
                 undoStack.push(currentSquiggle);
                 notifyListeners();
@@ -56,32 +79,31 @@ public class PaintModel {
                 notifyListeners();
         }
 
-        // Polyline convenience
-        public void startNewPolyline(){
-            polylineCurr = new Polyline();
-            shapes.add(polylineCurr);
-            undoStack.push(polylineCurr);
-            notifyListeners();
+        // Polyline
+        public void startNewPolyline() {
+                polylineCurr = new Polyline();
+                if (hasUserColor()) polylineCurr.setColor(currentColor); // only override if user picked
+                shapes.add(polylineCurr);
+                undoStack.push(polylineCurr);
+                notifyListeners();
         }
 
         public void addPolylinePoint(Point p) {
-            if (polylineCurr == null) startNewSquiggle();
-            polylineCurr.addPoint(p);
-            notifyListeners();
+                if (polylineCurr == null) startNewPolyline();
+                polylineCurr.addPoint(p);
+                notifyListeners();
         }
-
 
         public void addToShape(Shape s) {
-            shapes.add(s);
-            notifyListeners();
+                shapes.add(s);
+                notifyListeners();
         }
 
-
-        public void undo(){
-            if(undoStack.isEmpty()) return;
-            Shape last = undoStack.pop();
-            redoStack.push(last);
-            shapes.remove(last);
-            notifyListeners();
+        public void undo() {
+                if (undoStack.isEmpty()) return;
+                Shape last = undoStack.pop();
+                redoStack.push(last);
+                shapes.remove(last);
+                notifyListeners();
         }
 }

@@ -82,14 +82,14 @@ Oct 30,2025
 	Obstacles I face: n/a.
 
 Oct 31,2025
-	What I did yesterday:
-	What I will do today:
-	Obstacles I face:
+	What I did yesterday: finish bug 2.003.
+	What I will do today: start bug3.005.
+	Obstacles I face: n/a
 
 Nov 1,2025
-	What I did yesterday:
-	What I will do today:
-	Obstacles I face:
+	What I did yesterday: start bug3.005.
+	What I will do today: completed hex colour picker.
+	Obstacles I face: changing the colour of all shapes.
 
 Nov 2,2025
 	What I did yesterday:

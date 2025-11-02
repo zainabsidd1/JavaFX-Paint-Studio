@@ -5,11 +5,12 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Color;
 import java.util.ArrayList;
 
-public class PolylineStrategy implements ToolStrategy{
+public class PolylineStrategy implements ToolStrategy, Colorable {
     private final PaintModel model;
     private final PaintPanel panel;
     private ArrayList<Point> polyline;
     private Point hoverPoint = null; // current mouse position for the preview segment
+    private Color color = Color.DEEPPINK;
 
     public PolylineStrategy(PaintModel model, PaintPanel panel) {
         this.model = model;
@@ -61,12 +62,26 @@ public class PolylineStrategy implements ToolStrategy{
     }
 
     @Override
+    public Color getColor() {
+        return color;
+    }
+
+    @Override
+    public void setColor(Color c) {
+        if (c != null) this.color = c;
+    }
+
+    @Override
     public void drawPreview(GraphicsContext g) {
         if (polyline == null || polyline.isEmpty()) return;
+        Color previewColour = (model.getCurrentColor() != null &&
+                !model.getCurrentColor().equals(Color.BLACK))
+                ? model.getCurrentColor()
+                : color;
         if (hoverPoint != null) {
             Point last = polyline.getLast();
             g.setLineDashes(0);
-            g.setStroke(Color.DEEPPINK);
+            g.setStroke(previewColour);
             g.setLineWidth(2);
             g.strokeLine(last.x, last.y, hoverPoint.x, hoverPoint.y);
         }
@@ -83,7 +98,11 @@ public class PolylineStrategy implements ToolStrategy{
     }
 
     private void polylineVertices(GraphicsContext g, Point v) {
-        g.setFill(Color.DEEPPINK);
+        Color vertexColour = (model.getCurrentColor() != null &&
+                !model.getCurrentColor().equals(Color.BLACK))
+                ? model.getCurrentColor()
+                : color;
+        g.setFill(vertexColour);
         g.fillOval(v.x - 3.0, v.y - 3.0, 2 * 3.0, 2 * 3.0);
         g.setStroke(Color.WHITE);
         g.strokeOval(v.x - 3.0, v.y - 3.0, 2 * 3.0, 2 * 3.0);

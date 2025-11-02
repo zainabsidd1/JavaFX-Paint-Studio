@@ -6,10 +6,11 @@ import javafx.scene.paint.Color;
 
 
 
-public class SquareStrategy implements ToolStrategy{
+public class SquareStrategy implements ToolStrategy, Colorable {
     private final PaintModel model;
     private final PaintPanel panel;
     private Square square;
+    private Color color = Color.CYAN;
 
     public SquareStrategy(PaintModel model, PaintPanel panel) {
         this.model = model;
@@ -22,7 +23,11 @@ public class SquareStrategy implements ToolStrategy{
     @Override
     public void onMousePressed(MouseEvent e){
         Point p = new Point(e.getX(), e.getY());
-        square = new Square(p, p, Color.CYAN);
+        Color chosen = (model.getCurrentColor() != null && !model.getCurrentColor().equals(Color.BLACK))
+                ? model.getCurrentColor()
+                : color;
+        square = new Square(p, p, chosen);
+        square.setColor(chosen);
         panel.requestRender();
     }
 
@@ -60,6 +65,15 @@ public class SquareStrategy implements ToolStrategy{
         }
     }
 
+    @Override
+    public Color getColor() {
+        return color;
+    }
+
+    @Override
+    public void setColor(Color c) {
+        if (c != null) this.color = c;
+    }
 
     @Override
     public void drawPreview(GraphicsContext g){
@@ -67,9 +81,13 @@ public class SquareStrategy implements ToolStrategy{
         double x = square.getLeft();
         double y = square.getTop();
         double length = square.getLength();
-        g.setFill(Color.CYAN);
+        Color previewColour = (model.getCurrentColor() != null
+                && !model.getCurrentColor().equals(Color.BLACK))
+                ? model.getCurrentColor()
+                : color;
+        g.setFill(previewColour);
         g.fillRect(x, y, length, length);
-        g.setStroke(Color.CYAN);
+        g.setStroke(previewColour);
         g.setLineWidth(2);
         g.strokeRect(x,y,length,length);
     }

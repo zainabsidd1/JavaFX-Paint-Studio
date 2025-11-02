@@ -5,9 +5,9 @@ import javafx.scene.paint.Color;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Squiggle implements Shape {
+public class Squiggle implements Shape, Colorable {
     private final List<Point> points = new ArrayList<>();
-    private final Color color = Color.RED;
+    private Color color = Color.RED;
 
     public void addPoint(Point p) {
         points.add(p);
@@ -28,4 +28,10 @@ public class Squiggle implements Shape {
     public List<Point> getPoints() {
         return points;
     }
+
+    @Override
+    public void setColor(Color c) { this.color = c; }
+
+    @Override
+    public Color getColor() { return color; }
 }
