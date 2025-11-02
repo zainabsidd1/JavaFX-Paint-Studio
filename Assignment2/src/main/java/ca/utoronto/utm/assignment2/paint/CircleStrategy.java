@@ -20,9 +20,16 @@ public class CircleStrategy implements ToolStrategy, Colorable {
     @Override
     public void onMousePressed(MouseEvent e) {
         Point centre = new Point(e.getX(), e.getY());
-        circle = new Circle(centre, 0, color);
+        // lambda for if the user picks a color, use it; otherwise use the circle's default
+        Color chosen = (model.getCurrentColor() != null && !model.getCurrentColor().equals(Color.BLACK))
+                ? model.getCurrentColor()
+                : color;
+        circle = new Circle(centre, 0, chosen);
+        circle.setColor(chosen);
+
         panel.requestRender();
     }
+
 
     @Override
     public void onMouseDragged(MouseEvent e) {
@@ -62,11 +69,15 @@ public class CircleStrategy implements ToolStrategy, Colorable {
     public void drawPreview(GraphicsContext g) {
         if (circle == null) return;
         double x = circle.getCenter().x, y = circle.getCenter().y, r = circle.getRadius();
-        g.setFill(color);
-        g.fillOval(x - r, y - r, r * 2, r * 2);
-        g.setStroke(color);
+        Color previewColor = (model.getCurrentColor() != null && !model.getCurrentColor().equals(Color.BLACK))
+                ? model.getCurrentColor()
+                : color;
+        g.setFill(previewColor);
+        g.setStroke(previewColor);
         g.setLineWidth(2);
         g.strokeOval(x - r, y - r, r * 2, r * 2);
+        g.fillOval(x - r, y - r, r * 2, r * 2);
     }
 }
+
 

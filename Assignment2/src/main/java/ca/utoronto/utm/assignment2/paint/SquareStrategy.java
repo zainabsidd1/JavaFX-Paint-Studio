@@ -23,7 +23,11 @@ public class SquareStrategy implements ToolStrategy, Colorable {
     @Override
     public void onMousePressed(MouseEvent e){
         Point p = new Point(e.getX(), e.getY());
-        square = new Square(p, p, color);
+        Color chosen = (model.getCurrentColor() != null && !model.getCurrentColor().equals(Color.BLACK))
+                ? model.getCurrentColor()
+                : color;
+        square = new Square(p, p, chosen);
+        square.setColor(chosen);
         panel.requestRender();
     }
 
@@ -77,9 +81,13 @@ public class SquareStrategy implements ToolStrategy, Colorable {
         double x = square.getLeft();
         double y = square.getTop();
         double length = square.getLength();
-        g.setFill(color);
+        Color previewColour = (model.getCurrentColor() != null
+                && !model.getCurrentColor().equals(Color.BLACK))
+                ? model.getCurrentColor()
+                : color;
+        g.setFill(previewColour);
         g.fillRect(x, y, length, length);
-        g.setStroke(color);
+        g.setStroke(previewColour);
         g.setLineWidth(2);
         g.strokeRect(x,y,length,length);
     }

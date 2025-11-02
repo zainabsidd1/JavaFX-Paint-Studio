@@ -64,7 +64,10 @@ public class SquiggleStrategy implements ToolStrategy, Colorable {
         if (squiggle == null || squiggle.size() < 2) {
             return;
         }
-        g.setStroke(color);
+        Color chosen = (model.getCurrentColor() != null && !model.getCurrentColor().equals(Color.BLACK))
+                ? model.getCurrentColor()
+                : color;
+        g.setStroke(chosen);
         g.setLineDashes(0);
         g.setGlobalAlpha(1.0);
         for (int i=0; i<squiggle.size()-1; i++) {

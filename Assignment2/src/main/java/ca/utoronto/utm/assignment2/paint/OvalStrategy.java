@@ -20,7 +20,11 @@ public class OvalStrategy implements ToolStrategy, Colorable{
     @Override
     public void onMousePressed(MouseEvent e) {
         Point p = new Point(e.getX(), e.getY());
-        oval = new Oval(p, p, Color.LIGHTSEAGREEN, true);
+        Color chosen = (model.getCurrentColor() != null && !model.getCurrentColor().equals(Color.BLACK))
+                ? model.getCurrentColor()
+                : color;
+        oval = new Oval(p, p, color, true);
+        oval.setColor(chosen);
         panel.requestRender();
     }
 
@@ -55,17 +59,20 @@ public class OvalStrategy implements ToolStrategy, Colorable{
     @Override
     public void drawPreview(GraphicsContext g) {
         if (oval == null) return;
-
         double x = oval.getLeft();
         double y = oval.getTop();
         double width = oval.getWidth();
         double height = oval.getHeight();
 
-        g.setStroke(color);
+        Color previewColour = (model.getCurrentColor() != null &&
+                !model.getCurrentColor().equals(Color.BLACK))
+                ? model.getCurrentColor()
+                : color;
+        g.setStroke(previewColour);
         g.setLineWidth(2);
 
         if (oval.getFilled()) {
-            g.setFill(color);
+            g.setFill(previewColour);
             g.fillOval(x, y, width, height);
         } else {
             g.strokeOval(x, y, width, height);

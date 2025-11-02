@@ -74,10 +74,14 @@ public class PolylineStrategy implements ToolStrategy, Colorable {
     @Override
     public void drawPreview(GraphicsContext g) {
         if (polyline == null || polyline.isEmpty()) return;
+        Color previewColour = (model.getCurrentColor() != null &&
+                !model.getCurrentColor().equals(Color.BLACK))
+                ? model.getCurrentColor()
+                : color;
         if (hoverPoint != null) {
             Point last = polyline.getLast();
             g.setLineDashes(0);
-            g.setStroke(color);
+            g.setStroke(previewColour);
             g.setLineWidth(2);
             g.strokeLine(last.x, last.y, hoverPoint.x, hoverPoint.y);
         }
@@ -94,7 +98,11 @@ public class PolylineStrategy implements ToolStrategy, Colorable {
     }
 
     private void polylineVertices(GraphicsContext g, Point v) {
-        g.setFill(color);
+        Color vertexColour = (model.getCurrentColor() != null &&
+                !model.getCurrentColor().equals(Color.BLACK))
+                ? model.getCurrentColor()
+                : color;
+        g.setFill(vertexColour);
         g.fillOval(v.x - 3.0, v.y - 3.0, 2 * 3.0, 2 * 3.0);
         g.setStroke(Color.WHITE);
         g.strokeOval(v.x - 3.0, v.y - 3.0, 2 * 3.0, 2 * 3.0);

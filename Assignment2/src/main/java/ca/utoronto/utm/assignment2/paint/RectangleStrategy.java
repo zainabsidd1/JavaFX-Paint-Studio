@@ -21,7 +21,11 @@ public class RectangleStrategy implements ToolStrategy, Colorable {
     @Override
     public void onMousePressed(MouseEvent e) {
         Point p = new Point(e.getX(), e.getY());
-        rectangle = new Rectangle(p, p, color);  // zero-sized start
+        Color chosen = (model.getCurrentColor() != null && !model.getCurrentColor().equals(Color.BLACK))
+                ? model.getCurrentColor()
+                : color;
+        rectangle = new Rectangle(p, p, chosen);  // zero-sized start
+        rectangle.setColor(chosen);
         panel.requestRender();            // repaint to show preview immediately
     }
 
@@ -65,9 +69,14 @@ public class RectangleStrategy implements ToolStrategy, Colorable {
         double w = rectangle.getWidth();
         double h = rectangle.getHeight();
 
-        g.setFill(color);
+        Color previewColour = (model.getCurrentColor() != null &&
+                !model.getCurrentColor().equals(Color.BLACK))
+                ? model.getCurrentColor()
+                : color;
+
+        g.setFill(previewColour);
         g.fillRect(x, y, w, h);
-        g.setStroke(color);
+        g.setStroke(previewColour);
         g.setLineWidth(2);
         g.strokeRect(x, y, w, h);
     }

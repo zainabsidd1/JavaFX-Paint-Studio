@@ -19,13 +19,20 @@ public class Square implements Shape{
     public void setP1(Point p1){this.p1 = p1;}
     public void setP2(Point p2){this.p2 = p2;}
 
-    public Color getColor(){return this.color;}
     public double getLeft(){return Math.min(p1.x, p2.x);}
     public double getTop(){return Math.min(p1.y, p2.y);}
     public double getLength(){
         double dx = Math.abs(p2.x - p1.x);
         double dy = Math.abs(p2.y - p1.y);
         return Math.min(dx, dy);
+    }
+
+    @Override
+    public Color getColor() { return color; }
+
+    @Override
+    public void setColor(Color c) {
+        if (c != null) this.color = c;
     }
 
     @Override

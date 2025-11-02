@@ -19,20 +19,28 @@ public class TriangleStrategy implements ToolStrategy, Colorable{
         this.panel = panel;
     }
     @Override
-    public void onMouseClicked(MouseEvent e){
+    public void onMouseClicked(MouseEvent e) {
         Point p = new Point(e.getX(), e.getY());
-        if (triangle == null){
+
+        if (triangle == null) {
             triangle = new Triangle();
         }
+
         triangle.addVertex(p);
 
         if (triangle.isComplete()) {
+            Color chosen = (model.getCurrentColor() != null &&
+                    !model.getCurrentColor().equals(Color.BLACK))
+                    ? model.getCurrentColor()
+                    : color;
+
+            triangle.setColor(chosen);
             model.addToShape(triangle);
             triangle = null;
             hoverPoint = null;
         }
-        panel.requestRender();
 
+        panel.requestRender();
     }
 
 
@@ -69,7 +77,11 @@ public class TriangleStrategy implements ToolStrategy, Colorable{
     @Override
     public void drawPreview(GraphicsContext g) {
         if (triangle == null || triangle.isEmpty()) return;
-        g.setStroke(color);
+        Color previewColour = (model.getCurrentColor() != null &&
+                !model.getCurrentColor().equals(Color.BLACK))
+                ? model.getCurrentColor()
+                : color;
+        g.setStroke(previewColour);
         g.setLineWidth(1.5);
 
         var vertices = triangle.getVertices();
@@ -97,10 +109,14 @@ public class TriangleStrategy implements ToolStrategy, Colorable{
     }
 
     private void triangleVertices(GraphicsContext g, Point v) {
-        g.setFill(color);
+        Color chosen = (model.getCurrentColor() != null
+                && !model.getCurrentColor().equals(Color.BLACK))
+                ? model.getCurrentColor()
+                : color;
+        g.setFill(chosen);
         g.fillOval(v.x - 3.0, v.y - 3.0, 2 * 3.0, 2 * 3.0);
-        g.setStroke(Color.WHITE);
+        g.setStroke(chosen);
         g.strokeOval(v.x - 3.0, v.y - 3.0, 2 * 3.0, 2 * 3.0);
-        g.setStroke(color);
+        g.setStroke(chosen);
     }
 }
