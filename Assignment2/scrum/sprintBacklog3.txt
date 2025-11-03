@@ -77,7 +77,7 @@ I WANT   : To be able to select the current drawing color, to be applied
 SO THAT  : Shapes drawn afterwards use the chosen color
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
-TYPE     : USER STORY US3.006 : UTORID : NotStarted
+TYPE     : USER STORY US3.006 : royanus1 : NotStarted
 NAME     : Fill style selector
 PRIORITY : 3
 ESTIMATE : (1 hour, 2 hours, 4 hours, 1 day, 2 days, 4 days)    ACTUAL :
@@ -124,7 +124,7 @@ I WANT   : To be able to select the current line thickness, to be applied
 SO THAT  : Outlines and strokes appear at the chosen width
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
-TYPE     : USER STORY US3.008 : UTORID : NotStarted
+TYPE     : USER STORY US3.008 : royanus1 : NotStarted
 NAME     : Cut Function
 PRIORITY : 3
 ESTIMATE : (1 hour, 2 hours, 4 hours, 1 day, 2 days, 4 days)     ACTUAL :
@@ -133,7 +133,7 @@ I WANT   : To cut selected shapes
 SO THAT  : I can remove and move them elsewhere using paste
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
-TYPE     : USER STORY US3.009 : UTORID : NotStarted
+TYPE     : USER STORY US3.009 : royanus1 : NotStarted
 NAME     : Copy Function
 PRIORITY : 3
 ESTIMATE : (1 hour, 2 hours, 4 hours, 1 day, 2 days, 4 days)     ACTUAL :
@@ -142,7 +142,7 @@ I WANT   : To copy the selected shape
 SO THAT  : I can copy the selected shape
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
-TYPE     : USER STORY US3.010 : UTORID : NotStarted
+TYPE     : USER STORY US3.010 : royanus1 : NotStarted
 NAME     : Paste Function
 PRIORITY : 3
 ESTIMATE : (1 hour, 2 hours, 4 hours, 1 day, 2 days, 4 days)     ACTUAL :

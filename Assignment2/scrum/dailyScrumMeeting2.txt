@@ -78,26 +78,26 @@ Oct 29,2025
 
 Oct 30,2025
 	What I did yesterday: Complete user stories + sprint/product backlog/scrum update
-	What I will do today:
-	Obstacles I face:
+	What I will do today: Remove bounding box
+	Obstacles I face: n/a
 
 Oct 31,2025
-	What I did yesterday:
-	What I will do today:
-	Obstacles I face:
+	What I did yesterday: Remove bounding box
+	What I will do today: n/a
+	Obstacles I face: n/a
 
 Nov 1,2025
-	What I did yesterday:
-	What I will do today:
-	Obstacles I face:
+	What I did yesterday: n/a
+	What I will do today: look over sprint 3 user stories
+	Obstacles I face: n/a
 
 Nov 2,2025
-	What I did yesterday:
-	What I will do today:
-	Obstacles I face:
+	What I did yesterday: looked over sprint 3 US
+	What I will do today: Started working on User stories + update sprint and product back log
+	Obstacles I face: n/a
 
 Nov 3,2025
-	What I did yesterday:
+	What I did yesterday: Started working on User stories
 	What I will do today:
 	Obstacles I face:
 
