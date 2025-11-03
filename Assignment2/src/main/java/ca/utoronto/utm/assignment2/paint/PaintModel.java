@@ -163,9 +163,14 @@ public class PaintModel {
 
         public void redo(){
             if (redoStack.isEmpty()) return;
-            Shape last = redoStack.pop();
-            undoStack.push(last);
-            shapes.add(last);
+            Object last = redoStack.pop();
+            if(last instanceof Shape s){
+                shapes.add(s);
+                undoStack.push(s);
+            } else if(last instanceof FillChange fc){
+                fc.getTarget().setFillColor(fc.getNext());
+                undoStack.push(new FillChange(fc.getTarget(), fc.getNext(), fc.getPrev()));
+            }
             notifyListeners();
         }
 }
