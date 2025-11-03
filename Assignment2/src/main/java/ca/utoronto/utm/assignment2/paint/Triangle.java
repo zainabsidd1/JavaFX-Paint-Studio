@@ -3,20 +3,21 @@ package ca.utoronto.utm.assignment2.paint;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 import java.util.ArrayList;
-import java.util.List;
 
-public class Triangle implements Shape{
+public class Triangle implements Shape, Fillable, Hittable {
     private final ArrayList<Point> vertices = new ArrayList<>();
-    private Color color = Color.DARKRED;
+    private Color strokeColor = Color.DARKRED;
+    private Color fillColor   = Color.DARKRED;
     private double[] xvertices, yvertices;
 
     public void addVertex(Point p) {
-        if (vertices.size() < 3) { vertices.add(p); }
-        if (vertices.size() == 3) { // only compute when list is size 3
+        if (vertices.size() < 3) {
+            vertices.add(p);
+        }
+        if (vertices.size() == 3) {
             xvertices = new double[3];
             yvertices = new double[3];
-
-            for (int i=0; i<3; i++){
+            for (int i = 0; i < 3; i++) {
                 xvertices[i] = vertices.get(i).x;
                 yvertices[i] = vertices.get(i).y;
             }
@@ -24,28 +25,51 @@ public class Triangle implements Shape{
     }
 
     @Override
+    public void setFillColor(Color c) {
+        if (c != null) this.fillColor = c;
+    }
+
+    @Override
+    public Color getFillColor() { return fillColor; }
+
+    @Override
+    public boolean contains(double x, double y) {
+        if (vertices.size() < 3) return false;
+
+        double x1 = xvertices[0], y1 = yvertices[0];
+        double x2 = xvertices[1], y2 = yvertices[1];
+        double x3 = xvertices[2], y3 = yvertices[2];
+
+        double denom = ((y2 - y3) * (x1 - x3)) + ((x3 - x2) * (y1 - y3));
+        if (denom == 0) return false;
+        double a = (((y2 - y3) * (x - x3)) + ((x3 - x2) * (y - y3)));
+        double b = (((y3 - y1) * (x - x3)) + ((x1 - x3) * (y - y3)));
+        double c = 1 - a - b;
+
+        return a >= 0 && b >= 0 && c >= 0;
+    }
+
+    @Override
+    public Color getColor() { return strokeColor; }
+
+    @Override
+    public void setColor(Color c) { if (c != null) this.strokeColor = c; }
+
+    @Override
     public void draw(GraphicsContext g) {
-        if (vertices.size() < 3) { return; }
-        g.setStroke(color);
+        if (vertices.size() < 3) return;
+
+        if (fillColor != null && fillColor.getOpacity() > 0) {
+            g.setFill(fillColor);
+            g.fillPolygon(xvertices, yvertices, 3);
+        }
+
+        g.setStroke(fillColor);
         g.setLineWidth(2);
-        g.setFill(color);
-        g.fillPolygon(xvertices, yvertices, 3);
         g.strokePolygon(xvertices, yvertices, 3);
     }
 
-    public boolean isComplete() {
-        return vertices.size() == 3;
-    }
-
+    public boolean isComplete() { return vertices.size() == 3; }
     public boolean isEmpty() { return vertices.isEmpty(); }
-
     public ArrayList<Point> getVertices() { return vertices; }
-
-    @Override
-    public Color getColor() { return color; }
-
-    @Override
-    public void setColor(Color c) {
-        if (c != null) this.color = c;
-    }
 }

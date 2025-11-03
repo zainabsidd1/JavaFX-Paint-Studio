@@ -20,8 +20,8 @@ public class PaintModel {
         private Squiggle currentSquiggle;
         private Polyline polylineCurr;
         private Polyline currEraser;
-        private final Deque<Shape> undoStack = new ArrayDeque<>();
-        private final Deque<Shape> redoStack = new ArrayDeque<>();
+        private final Deque<Object> undoStack = new ArrayDeque<>();
+        private final Deque<Object> redoStack = new ArrayDeque<>();
 
 
         // Color
@@ -116,10 +116,49 @@ public class PaintModel {
 
         public void undo() {
                 if (undoStack.isEmpty()) return;
-                Shape last = undoStack.pop();
-                redoStack.push(last);
-                shapes.remove(last);
+                Object last = undoStack.pop();
+
+                if (last instanceof Shape s) {
+                        shapes.remove(s);
+                        redoStack.push(s);
+                } else if (last instanceof FillChange fc) {
+                        fc.getTarget().setFillColor(fc.getPrev());
+                        redoStack.push(new FillChange(fc.getTarget(), fc.getPrev(), fc.getNext()));
+                }
                 notifyListeners();
+        }
+
+        /** Returns the top-most shape under (x,y), or null if none. */
+        public Shape findTopmostAt(double x, double y) {
+                for (int i = shapes.size() - 1; i >= 0; i--) {
+                        Shape s = shapes.get(i);
+                        if (s instanceof Hittable && ((Hittable) s).contains(x, y)) {
+                                return s;
+                        }
+                }
+                return null;
+        }
+
+        /** Fill the top-most Fillable shape at (x,y) with the given color (or currentColor if null). */
+        public boolean fillTopmostAt(double x, double y, Color c) {
+                Shape s = findTopmostAt(x, y);
+                if (s instanceof Fillable) {
+                        Fillable f = (Fillable) s;
+
+                        Color use = (c != null) ? c : this.currentColor;
+                        if (use == null) use = Color.BLACK;
+
+                        Color prev = f.getFillColor();
+                        if (Objects.equals(prev, use)) {
+                                return false;
+                        }
+                        undoStack.push(new FillChange(f, prev, use));
+                        redoStack.clear();
+                        f.setFillColor(use);
+                        notifyListeners();
+                        return true;
+                }
+                return false;
         }
 
         public void redo(){
