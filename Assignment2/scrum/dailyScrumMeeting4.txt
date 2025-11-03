@@ -88,14 +88,14 @@ Oct 31,2025
 	Obstacles I face: n/a
 
 Nov 1,2025
-	What I did yesterday:
-	What I will do today:
-	Obstacles I face:
+	What I did yesterday:Chose US3.001 to implement an eraser tool.
+	What I will do today:Worked on eraser tool.
+	Obstacles I face: Working on eraser and eraser strategy class.
 
 Nov 2,2025
-	What I did yesterday:
-	What I will do today:
-	Obstacles I face:
+	What I did yesterday:Worked on eraser tool.
+	What I will do today:Implemented eraser tool.
+	Obstacles I face:n/a
 
 Nov 3,2025
 	What I did yesterday:
