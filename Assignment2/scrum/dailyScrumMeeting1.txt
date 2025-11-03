@@ -92,9 +92,9 @@ Nov 1,2025
 	Obstacles I face: Resolving merge conflicts when merging a pull request.
 
 Nov 2,2025
-	What I did yesterday:
-	What I will do today:
-	Obstacles I face:
+	What I did yesterday: Finished US3.003
+	What I will do today: Start on US3.007, line thickness selector
+	Obstacles I face: n/a
 
 Nov 3,2025
 	What I did yesterday:

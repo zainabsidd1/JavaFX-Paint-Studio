@@ -36,10 +36,10 @@ I WANT   : To undo the most recent action
 SO THAT  : I can correct mistakes without restarting my work
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
-TYPE     : USER STORY US3.003 : sidd1378 : InProgress
+TYPE     : USER STORY US3.003 : sidd1378 : Complete
 NAME     : Redo Function
 PRIORITY : 3
-ESTIMATE : 2 hours     ACTUAL :
+ESTIMATE : 2 hours     ACTUAL : 1 hour
 AS A     : user
 I WANT   : To redo an action previously undone
 SO THAT  : I can reapply the last undone change if needed
