@@ -6,7 +6,7 @@
 # Sprint 2 Backlog UserStories go below
 
 --------------------------------------------------------------------------
-TYPE     : BUG BUG2.003 : kaurjap9 : InProgress
+TYPE     : BUG BUG2.003 : kaurjap9 : Complete
 NAME     : Architecture behind choosing selection mode is poor
 PRIORITY : 3
 ESTIMATE : 2 days    ACTUAL :
@@ -31,7 +31,7 @@ SO THAT  : I can easily draw perfect squares on my canvas.
 TYPE     : USER STORY US2.002 : sidd1378 : Complete
 NAME     : Draw Square Feedback
 PRIORITY : 2
-ESTIMATE : 2 hours    ACTUAL :
+ESTIMATE : 2 hours    ACTUAL : 1
 AS A     : user
 I WANT   : To see a live preview of the square as I drag, showing the
            current square outline updating in real time.
@@ -64,8 +64,8 @@ NAME     : Draw Oval
 PRIORITY : 2
 ESTIMATE : 3 hours    ACTUAL : 3
 AS A     : user
-I WANT   : To click and drag to define a bounding box, inside which an oval
-           is drawn using the current colour and fill settings.
+I WANT   : To click and drag to define an oval is drawn using the current
+           colour and fill settings.
 SO THAT  : I can create smooth oval shapes similar to those in standard
            paint programs.
 --------------------------------------------------------------------------

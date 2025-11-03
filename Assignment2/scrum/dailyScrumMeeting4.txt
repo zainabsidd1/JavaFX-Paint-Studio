@@ -69,23 +69,23 @@ Oct 27,2025
 
 Oct 28,2025
 	What I did yesterday: Implmented US2.007 to create polylines.
-	What I will do today: Implemented US2.003 and US2.004 to implement triangle and triangle feedback.
+	What I will do today: Implemented US2.003 and US2.004 to satisfy triangle and triangle feedback.
 	Obstacles I face: n/a
 
 Oct 29,2025
-	What I did yesterday:
-	What I will do today:
-	Obstacles I face:
+	What I did yesterday: Implemented US2.003 and US2.004 to satisfy triangle and triangle feedback.
+	What I will do today: Looked over architecture logs and backlogs.
+	Obstacles I face: n/a
 
 Oct 30,2025
-	What I did yesterday:
-	What I will do today:
-	Obstacles I face:
+	What I did yesterday: Looked over architecture and backlogs.
+	What I will do today: Looked over sprint3 requirements.
+	Obstacles I face: n/a
 
 Oct 31,2025
-	What I did yesterday:
-	What I will do today:
-	Obstacles I face:
+	What I did yesterday: Looked over sprint3.
+	What I will do today: Chose US3.001 to implement an eraser tool.
+	Obstacles I face: n/a
 
 Nov 1,2025
 	What I did yesterday:

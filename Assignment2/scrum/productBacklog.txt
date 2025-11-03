@@ -16,36 +16,31 @@
 # as appropriate.
 
 --------------------------------------------------------------------------
-TYPE     : USER STORY US?.005 : UTORID : NotStarted 
-NAME     : Color selector
+TYPE     : USER STORY US3.001 : tatisoha : In Progress
+NAME     : Eraser Tool
 PRIORITY : 3
-ESTIMATE : (1 hour, 2 hours, 4 hours, 1 day, 2 days, 4 days)    ACTUAL :
+ESTIMATE : 1 hour     ACTUAL :
 AS A     : user
-I WANT   : To be able to select the current drawing color, to be applied
-           to subsequent shapes. Example: 
-           		selects color red 
-           		mode circle
-           		draw a circle
-           		draw a circle
-           		mode rectangle
-           		draw a rectangle
-           		select color green
-           		draw a rectangle
-           		draw a rectangle
-           		select mode squiggle
-           		draw a squiggle
-           	results in two red circles and a red rectangle as well as
-           	two green rectangles and a green squiggle
-SO THAT  : 
+I WANT   : To erase parts of existing drawings
+SO THAT  : I can remove unwanted shapes or sections from the canvas
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
-TYPE     : USER STORY US?.006 : UTORID : NotStarted 
+TYPE     : USER STORY US3.003 : sidd1378 : InProgress
+NAME     : Redo Function
+PRIORITY : 3
+ESTIMATE : 2 hours     ACTUAL :
+AS A     : user
+I WANT   : To redo an action previously undone
+SO THAT  : I can reapply the last undone change if needed
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US3.006 : UTORID : NotStarted
 NAME     : Fill style selector
 PRIORITY : 3
 ESTIMATE : (1 hour, 2 hours, 4 hours, 1 day, 2 days, 4 days)    ACTUAL :
 AS A     : user
 I WANT   : To be able to select the current drawing style (filled or outline), to be applied
-           to subsequent shapes. Example: 
+           to subsequent shapes. Example:
            		selects fill style solid
            		mode circle
            		draw a circle
@@ -59,17 +54,17 @@ I WANT   : To be able to select the current drawing style (filled or outline), t
            		draw a squiggle
            	results in two solid circles and a solid rectangle as well as
            	two outlined rectangles and a squiggle
-SO THAT  : 
+SO THAT  : Shapes are rendered using the chosen style
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
-TYPE     : USER STORY US?.007 : UTORID : NotStarted 
+TYPE     : USER STORY US3.007 : UTORID : NotStarted
 NAME     : Line thickness selector
 PRIORITY : 3
 ESTIMATE : (1 hour, 2 hours, 4 hours, 1 day, 2 days, 4 days)    ACTUAL :
 AS A     : user
 I WANT   : To be able to select the current line thickness, to be applied
            to subsequent shapes. Example:
-           		select fill style outline 
+           		select fill style outline
            		selects line thickness 1
            		mode circle
            		draw a circle
@@ -81,23 +76,48 @@ I WANT   : To be able to select the current line thickness, to be applied
            		draw a rectangle
            		select mode squiggle
            		draw a squiggle
-           	results in two thinly outlined circles and a thinly outlined 
+           	results in two thinly outlined circles and a thinly outlined
            	rectangle as well as two thickly outlined rectangles and a thick squiggle
-SO THAT  : 
+SO THAT  : Outlines and strokes appear at the chosen width
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
-TYPE     : BUG BUG2.003 : kaurjap9 : InProgress
-NAME     : Architecture behind choosing selection mode is poor
+TYPE     : USER STORY US3.008 : UTORID : NotStarted
+NAME     : Cut Function
 PRIORITY : 3
-ESTIMATE : 2 days    ACTUAL :
-ISSUE    : Code is not modular and is difficult to expand. Need a better
-           architecture behind selecting a drawing mode, and handling
-           the drawing events. Consider some design patterns here.
-           Refactor ShapeChooserPanel and PaintPanel to get rid of the
-           'if' blocks in the PaintPanel mouse event code.
+ESTIMATE : (1 hour, 2 hours, 4 hours, 1 day, 2 days, 4 days)     ACTUAL :
+AS A     : user
+I WANT   : To cut selected shapes
+SO THAT  : I can remove and move them elsewhere using paste
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
-TYPE     : BUG BUG?.004 : UTORID : NotStarted 
+TYPE     : USER STORY US3.009 : UTORID : NotStarted
+NAME     : Copy Function
+PRIORITY : 3
+ESTIMATE : (1 hour, 2 hours, 4 hours, 1 day, 2 days, 4 days)     ACTUAL :
+AS A     : user
+I WANT   : To copy the selected shape
+SO THAT  : I can copy the selected shape
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US3.010 : UTORID : NotStarted
+NAME     : Paste Function
+PRIORITY : 3
+ESTIMATE : (1 hour, 2 hours, 4 hours, 1 day, 2 days, 4 days)     ACTUAL :
+AS A     : user
+I WANT   : To paste previously cut or copied shapes
+SO THAT  : I can reposition or duplicate content
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US3.011 : UTORID : NotStarted
+NAME     : Mover Tool
+PRIORITY : 3
+ESTIMATE : (1 hour, 2 hours, 4 hours, 1 day, 2 days, 4 days)     ACTUAL :
+AS A     : user
+I WANT   : To move existing shapes to a different position on the canvas
+SO THAT  : I can reposition elements without redrawing them
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : BUG BUG3.004 : UTORID : NotStarted
 NAME     : Architecture behind Model is poor
 PRIORITY : 3
 ESTIMATE : (1 hour, 2 hours, 4 hours, 1 day, 2 days, 4 days)    ACTUAL :
@@ -168,7 +188,7 @@ SO THAT  : I can easily draw perfect squares on my canvas.
 TYPE     : USER STORY US2.002 : sidd1378 : Complete
 NAME     : Draw Square Feedback
 PRIORITY : 2
-ESTIMATE : 2 hours    ACTUAL :
+ESTIMATE : 2 hours    ACTUAL : 1
 AS A     : user
 I WANT   : To see a live preview of the square as I drag, showing the
            current square outline updating in real time.
@@ -196,6 +216,27 @@ I WANT   : To see the triangle lines update dynamically as I choose the
 SO THAT  : I can adjust the shape in real time before finalizing it.
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
+TYPE     : USER STORY US2.005 : royanus1 : Complete
+NAME     : Draw Oval
+PRIORITY : 2
+ESTIMATE : 3 hours    ACTUAL : 3
+AS A     : user
+I WANT   : To click and drag to define a bounding box, inside which an oval
+           is drawn using the current colour and fill settings.
+SO THAT  : I can create smooth oval shapes similar to those in standard
+           paint programs.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US2.006 : royanus1 : Complete
+NAME     : Draw Oval Feedback
+PRIORITY : 2
+ESTIMATE : 2 hours    ACTUAL : 1
+AS A     : user
+I WANT   : To see a live outline of the oval as I drag, dynamically showing
+           the shape that will be finalized on mouse release.
+SO THAT  : I can control the proportions and positioning of the oval more easily.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
 TYPE     : USER STORY US2.007 : tatisoha : Complete
 NAME     : Draw Polyline
 PRIORITY : 1
@@ -218,25 +259,45 @@ I WANT   : To see a live outline of the polyline as I drag, dynamically
 SO THAT  : I can adjust the polyline in real time before finalizing it.
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
-TYPE     : USER STORY US2.005 : royanus1 : Complete
-NAME     : Draw Oval
-PRIORITY : 2
-ESTIMATE : 3 hours    ACTUAL : 3
+TYPE     : USER STORY US3.002 : sidd1378 : Complete
+NAME     : Undo Function
+PRIORITY : 3
+ESTIMATE : 2 hours     ACTUAL : 2 hours
 AS A     : user
-I WANT   : To click and drag to define a bounding box, inside which an oval
-           is drawn using the current colour and fill settings.
-SO THAT  : I can create smooth oval shapes similar to those in standard
-           paint programs.
+I WANT   : To undo the most recent action
+SO THAT  : I can correct mistakes without restarting my work
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
-TYPE     : USER STORY US2.006 : royanus1 : Complete
-NAME     : Draw Oval Feedback
-PRIORITY : 2
-ESTIMATE : 2 hours    ACTUAL : 1
+TYPE     : USER STORY US3.004 : kaurjap9 : Complete
+NAME     : Fill Bucket Tool
+PRIORITY : 3
+ESTIMATE : 2 hours     ACTUAL : 4 hours
 AS A     : user
-I WANT   : To see a live outline of the oval as I drag, dynamically showing
-           the shape that will be finalized on mouse release.
-SO THAT  : I can control the proportions and positioning of the oval more easily.
+I WANT   : To fill enclosed areas or shapes with a selected color
+SO THAT  : I can quickly color large regions
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US3.005 : kaurjap9 : Complete
+NAME     : Color selector
+PRIORITY : 3
+ESTIMATE : 2 hours    ACTUAL : 1 day
+AS A     : user
+I WANT   : To be able to select the current drawing color, to be applied
+           to subsequent shapes. Example:
+           		selects color red
+           		mode circle
+           		draw a circle
+           		draw a circle
+           		mode rectangle
+           		draw a rectangle
+           		select color green
+           		draw a rectangle
+           		draw a rectangle
+           		select mode squiggle
+           		draw a squiggle
+           	results in two red circles and a red rectangle as well as
+           	two green rectangles and a green squiggle
+SO THAT  : Shapes drawn afterwards use the chosen color
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
 TYPE     : BUG BUG1.001 : sidd1378 : Complete
@@ -271,6 +332,17 @@ ESTIMATE : 2 hours    ACTUAL : 30 mins
 ISSUE    : The first click should specify the center of the circle, with
            a drag for the radius. This is not the case in the current
            implementation.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : BUG BUG2.003 : kaurjap9 : Complete
+NAME     : Architecture behind choosing selection mode is poor
+PRIORITY : 3
+ESTIMATE : 2 days    ACTUAL :
+ISSUE    : Code is not modular and is difficult to expand. Need a better
+           architecture behind selecting a drawing mode, and handling
+           the drawing events. Consider some design patterns here.
+           Refactor ShapeChooserPanel and PaintPanel to get rid of the
+           'if' blocks in the PaintPanel mouse event code.
 --------------------------------------------------------------------------
 # OMITTED USER STORIES/BUGS BELOW   ###########################################
 

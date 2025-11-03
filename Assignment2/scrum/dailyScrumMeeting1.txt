@@ -72,24 +72,24 @@ Oct 28,2025
 	Obstacles I face: Ensuring equal side lengths when dragging the square.
 
 Oct 29,2025
-	What I did yesterday:
-	What I will do today:
-	Obstacles I face:
+	What I did yesterday: Finished up on US2.002
+	What I will do today: Update sprintBacklog2.txt and product backlog
+	Obstacles I face: n/a
 
 Oct 30,2025
-	What I did yesterday:
-	What I will do today:
-	Obstacles I face:
+	What I did yesterday: Updated my user stories in sprintBacklog2 and product backlog
+	What I will do today: Look over architecture bug for sprint2
+	Obstacles I face: n/a
 
 Oct 31,2025
-	What I did yesterday:
-	What I will do today:
-	Obstacles I face:
+	What I did yesterday: Look over architecture bug for sprint2
+	What I will do today: Look over sprint 3 and claimed US3.002
+	Obstacles I face: n/a
 
 Nov 1,2025
-	What I did yesterday:
-	What I will do today:
-	Obstacles I face:
+	What I did yesterday: Claimed US3.002 and got started on implemented the undo feature.
+	What I will do today: Finish US3.002 and submit a pull request. Look over any pull requests I was assigned to.
+	Obstacles I face: Resolving merge conflicts when merging a pull request.
 
 Nov 2,2025
 	What I did yesterday:

@@ -78,26 +78,26 @@ Oct 29,2025
 
 Oct 30,2025
 	What I did yesterday: work on incorporating design patterns in project.
-	What I will do today:
-	Obstacles I face:
+	What I will do today: finish bug 2.003.
+	Obstacles I face: n/a.
 
 Oct 31,2025
-	What I did yesterday:
-	What I will do today:
-	Obstacles I face:
+	What I did yesterday: finish bug 2.003.
+	What I will do today: start bug3.005.
+	Obstacles I face: n/a
 
 Nov 1,2025
-	What I did yesterday:
-	What I will do today:
-	Obstacles I face:
+	What I did yesterday: start bug3.005.
+	What I will do today: completed hex colour picker.
+	Obstacles I face: changing the colour of all shapes.
 
 Nov 2,2025
-	What I did yesterday:
-	What I will do today:
-	Obstacles I face:
+	What I did yesterday: completed hex colour picker.
+	What I will do today: finished US3.004, adding paint bucket to the app.
+	Obstacles I face: adding changed colours via fill bucket to undo stack.
 
 Nov 3,2025
-	What I did yesterday:
+	What I did yesterday: finished US3.004, adding paint bucket to the app.
 	What I will do today:
 	Obstacles I face:
 
