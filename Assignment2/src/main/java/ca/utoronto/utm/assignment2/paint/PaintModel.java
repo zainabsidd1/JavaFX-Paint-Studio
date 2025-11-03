@@ -121,4 +121,12 @@ public class PaintModel {
                 shapes.remove(last);
                 notifyListeners();
         }
+
+        public void redo(){
+            if (redoStack.isEmpty()) return;
+            Shape last = redoStack.pop();
+            undoStack.push(last);
+            shapes.add(last);
+            notifyListeners();
+        }
 }

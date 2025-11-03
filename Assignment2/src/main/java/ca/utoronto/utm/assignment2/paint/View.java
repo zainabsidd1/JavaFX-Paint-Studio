@@ -142,7 +142,7 @@ public class View {
         copyItem.setOnAction(e -> System.out.println("Copy (not implemented)"));
         pasteItem.setOnAction(e -> System.out.println("Paste (not implemented)"));
         undoItem.setOnAction(e -> paintModel.undo());
-        redoItem.setOnAction(e -> System.out.println("Redo (not implemented)"));
+        redoItem.setOnAction(e -> paintModel.redo());
 
         edit.getItems().addAll(
                 cutItem, copyItem, pasteItem,

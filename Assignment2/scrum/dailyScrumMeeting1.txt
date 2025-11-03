@@ -87,9 +87,9 @@ Oct 31,2025
 	Obstacles I face: n/a
 
 Nov 1,2025
-	What I did yesterday:
-	What I will do today:
-	Obstacles I face:
+	What I did yesterday: Claimed US3.002 and got started on implemented the undo feature.
+	What I will do today: Finish US3.002 and submit a pull request. Look over any pull requests I was assigned to.
+	Obstacles I face: Resolving merge conflicts when merging a pull request.
 
 Nov 2,2025
 	What I did yesterday:

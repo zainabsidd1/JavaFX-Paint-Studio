@@ -45,10 +45,10 @@ I WANT   : To redo an action previously undone
 SO THAT  : I can reapply the last undone change if needed
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
-TYPE     : USER STORY US3.004 : UTORID : NotStarted
+TYPE     : USER STORY US3.004 : kaurjap9 : Complete
 NAME     : Fill Bucket Tool
 PRIORITY : 3
-ESTIMATE : (1 hour, 2 hours, 4 hours, 1 day, 2 days, 4 days)     ACTUAL :
+ESTIMATE : 2 hours     ACTUAL : 4 hours
 AS A     : user
 I WANT   : To fill enclosed areas or shapes with a selected color
 SO THAT  : I can quickly color large regions
@@ -100,7 +100,7 @@ I WANT   : To be able to select the current drawing style (filled or outline), t
 SO THAT  : Shapes are rendered using the chosen style
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
-TYPE     : USER STORY US3.007 : UTORID : NotStarted
+TYPE     : USER STORY US3.007 : sidd1378 : NotStarted
 NAME     : Line thickness selector
 PRIORITY : 3
 ESTIMATE : (1 hour, 2 hours, 4 hours, 1 day, 2 days, 4 days)    ACTUAL :
@@ -131,6 +131,15 @@ ESTIMATE : (1 hour, 2 hours, 4 hours, 1 day, 2 days, 4 days)     ACTUAL :
 AS A     : user
 I WANT   : To cut selected shapes
 SO THAT  : I can remove and move them elsewhere using paste
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US3.009 : UTORID : NotStarted
+NAME     : Copy Function
+PRIORITY : 3
+ESTIMATE : (1 hour, 2 hours, 4 hours, 1 day, 2 days, 4 days)     ACTUAL :
+AS A     : user
+I WANT   : To copy the selected shape
+SO THAT  : I can copy the selected shape
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
 TYPE     : USER STORY US3.010 : UTORID : NotStarted

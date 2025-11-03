@@ -5,12 +5,11 @@ import javafx.event.EventHandler;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.image.WritableImage;
 import javafx.scene.layout.GridPane;
 
 import java.util.List;
 import java.util.Objects;
-import javafx.scene.image.WritableImage;
-import java.net.URL;
 
 public class ShapeChooserPanel extends GridPane implements EventHandler<ActionEvent> {
 
@@ -28,15 +27,13 @@ public class ShapeChooserPanel extends GridPane implements EventHandler<ActionEv
                 new ToolDescriptor("Oval", "/icons/Oval.png", OvalStrategy.class),
                 new ToolDescriptor("Square", "/icons/Square.png", SquareStrategy.class),
                 new ToolDescriptor("Polyline", "/icons/Polyline.png", PolylineStrategy.class),
-                new ToolDescriptor("Triangle", "/icons/Triangle.png", TriangleStrategy.class),
-                new ToolDescriptor("Eraser", "/icons/Eraser.png", EraserStrategy.class)
+                new ToolDescriptor("Triangle", "/icons/Triangle.png", TriangleStrategy.class)
         );
         for (ToolDescriptor td : tools) {
-            ImageView iv = safeIcon(td.iconPath(), 24, 24);
-
+            ImageView iv = loadIconKeepLook(td.iconPath());
             Button button = new Button();         // icon-only button
             button.setGraphic(iv);
-            button.setUserData(td);
+            button.setUserData(td);               // store descriptor for later
             button.setMinWidth(100);
             button.setOnAction(this);
             this.add(button, 0, row++);
@@ -50,24 +47,6 @@ public class ShapeChooserPanel extends GridPane implements EventHandler<ActionEv
         }
     }
 
-    private ImageView safeIcon(String absolutePath, double w, double h) {
-        String path = absolutePath.startsWith("/") ? absolutePath : "/" + absolutePath;
-        URL url = getClass().getResource(path);
-
-        Image img;
-        if (url != null) {
-            img = new Image(url.toExternalForm(), w, h, true, true);
-        } else {
-            System.err.println("Missing icon on classpath: " + path);
-            img = new WritableImage((int) Math.ceil(w), (int) Math.ceil(h));
-        }
-        ImageView iv = new ImageView(img);
-        iv.setFitWidth(w);
-        iv.setFitHeight(h);
-        iv.setPreserveRatio(true);
-        return iv;
-    }
-
     @Override
     public void handle(ActionEvent event) {
         Button btn = (Button) event.getSource();
@@ -76,6 +55,7 @@ public class ShapeChooserPanel extends GridPane implements EventHandler<ActionEv
         activateTool(td);
     }
 
+    /** Create and set the selected tool via reflection. */
     private void activateTool(ToolDescriptor td) {
         try {
             ToolStrategy strategy = td.strategyClass()
@@ -89,6 +69,23 @@ public class ShapeChooserPanel extends GridPane implements EventHandler<ActionEv
         }
     }
 
+    private ImageView loadIconKeepLook(String path) {
+        ImageView iv = new ImageView();
+        iv.setFitWidth(24);
+        iv.setFitHeight(24);
+        iv.setPreserveRatio(true);
+
+        var url = ShapeChooserPanel.class.getResource(path);
+        if (url != null) {
+            iv.setImage(new Image(url.toExternalForm()));
+        } else {
+            System.err.println("[ShapeChooserPanel] Missing icon: " + path);
+            iv.setImage(new WritableImage(24, 24));
+        }
+        return iv;
+    }
+
+    /** Apply old-school yellow highlight to the selected button. */
     private void highlight(Button btn) {
         if (selectedButton != null) {
             selectedButton.setStyle(""); // clear previous
