@@ -16,15 +16,6 @@
 # as appropriate.
 
 --------------------------------------------------------------------------
-TYPE     : USER STORY US3.001 : tatisoha : In Progress
-NAME     : Eraser Tool
-PRIORITY : 3
-ESTIMATE : 1 hour     ACTUAL :
-AS A     : user
-I WANT   : To erase parts of existing drawings
-SO THAT  : I can remove unwanted shapes or sections from the canvas
---------------------------------------------------------------------------
---------------------------------------------------------------------------
 TYPE     : USER STORY US3.003 : sidd1378 : InProgress
 NAME     : Redo Function
 PRIORITY : 3
@@ -257,6 +248,15 @@ AS A     : user
 I WANT   : To see a live outline of the polyline as I drag, dynamically
            showing the shape that will be finalized on mouse release.
 SO THAT  : I can adjust the polyline in real time before finalizing it.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US3.001 : tatisoha : Complete
+NAME     : Eraser Tool
+PRIORITY : 3
+ESTIMATE : 1 hour     ACTUAL : 1 day
+AS A     : user
+I WANT   : To erase parts of existing drawings
+SO THAT  : I can remove unwanted shapes or sections from the canvas
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
 TYPE     : USER STORY US3.002 : sidd1378 : Complete

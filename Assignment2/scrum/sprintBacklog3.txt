@@ -6,10 +6,10 @@
 # Sprint 3 Backlog UserStories go below
 
 --------------------------------------------------------------------------
-TYPE     : BUG BUG3.004 : UTORID : NotStarted
+TYPE     : BUG BUG3.004 : kaurjap9 : NotStarted
 NAME     : Architecture behind Model is poor
 PRIORITY : 3
-ESTIMATE : (1 hour, 2 hours, 4 hours, 1 day, 2 days, 4 days)    ACTUAL :
+ESTIMATE : 1 day    ACTUAL :
 ISSUE    : Having a list of different types of drawable things in the
            model is cumbersome. In fact, it is currently incorrect, with
            Squiggle's not drawing properly. Need to re-architect the Model
@@ -18,10 +18,10 @@ ISSUE    : Having a list of different types of drawable things in the
            here.
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
-TYPE     : USER STORY US3.001 : tatisoha : In Progress
+TYPE     : USER STORY US3.001 : tatisoha : Complete
 NAME     : Eraser Tool
 PRIORITY : 3
-ESTIMATE : 1 hour     ACTUAL :
+ESTIMATE : 1 hour     ACTUAL : 1 day
 AS A     : user
 I WANT   : To erase parts of existing drawings
 SO THAT  : I can remove unwanted shapes or sections from the canvas
