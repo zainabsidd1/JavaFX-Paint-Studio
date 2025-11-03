@@ -28,7 +28,7 @@ public class ShapeChooserPanel extends GridPane implements EventHandler<ActionEv
                 new ToolDescriptor("Square", "/icons/Square.png", SquareStrategy.class),
                 new ToolDescriptor("Polyline", "/icons/Polyline.png", PolylineStrategy.class),
                 new ToolDescriptor("Triangle", "/icons/Triangle.png", TriangleStrategy.class),
-                new ToolDescriptor("Eraser", "/icons/Eraser.png", EraserStrategy.class)
+                new ToolDescriptor("Eraser", "/icons/Eraser.png", EraserStrategy.class),
                 new ToolDescriptor("Triangle", "/icons/Triangle.png", TriangleStrategy.class),
                 new ToolDescriptor("Fill",     "/icons/PaintBucket.png", FillBucketStrategy.class)
         );
