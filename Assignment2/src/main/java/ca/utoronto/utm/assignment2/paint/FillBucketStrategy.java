@@ -15,9 +15,13 @@ public class FillBucketStrategy implements ToolStrategy {
         this.model = model;
         this.panel = panel;
 
-        Image cur = new Image(getClass().getResourceAsStream("/icons/PaintBucket.png"));
-        // tweak hotspot so the “pour tip” is accurate for clicks
-        this.bucketCursor = new ImageCursor(cur, 2, cur.getHeight() - 4);
+        Image original = new Image(
+                getClass().getResourceAsStream("/icons/PaintBucket.png"),
+                20, 20,
+                true,
+                true
+        );
+        this.bucketCursor = new ImageCursor(original, 2, original.getHeight() - 2);
     }
 
     @Override public Cursor getCursor() { return bucketCursor; }
