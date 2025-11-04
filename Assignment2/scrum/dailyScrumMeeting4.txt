@@ -98,9 +98,9 @@ Nov 2,2025
 	Obstacles I face:n/a
 
 Nov 3,2025
-	What I did yesterday:
-	What I will do today:
-	Obstacles I face:
+	What I did yesterday: Implemented eraser tool.
+	What I will do today: Claimed US3.011.
+	Obstacles I face:n/a
 
 Nov 4,2025
 	What I did yesterday:
