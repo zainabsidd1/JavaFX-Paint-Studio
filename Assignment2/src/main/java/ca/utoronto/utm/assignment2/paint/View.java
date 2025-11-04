@@ -11,6 +11,7 @@ import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
+import javafx.scene.control.ComboBox;
 
 import java.util.Locale;
 import java.util.function.UnaryOperator;
@@ -93,7 +94,30 @@ public class View {
             } catch (Exception ignored) {}
         });
 
-        HBox colorBar = new HBox(8, colorLbl, hexField, preview, picker);
+        Label fillLbl = new Label("\uD83D\uDD8C\uFE0F Fill");
+        fillLbl.setStyle("-fx-font-weight:bold; -fx-text-fill:#333;");
+        MenuButton fillBtn = new  MenuButton("Fill Style");
+        fillBtn.setStyle("-fx-background-radius:6;-fx-border-radius:6;");
+        fillBtn.setTooltip(new Tooltip("Fill Style"));
+
+        MenuItem solidItem = new MenuItem("Solid");
+        MenuItem outlineItem = new MenuItem("Outline");
+        paintModel.setFilled(true);
+        fillBtn.setText("Solid");
+
+        // Actions
+        solidItem.setOnAction(e -> {
+            paintModel.setFilled(true);
+            fillBtn.setText("Solid");
+        });
+        outlineItem.setOnAction(e -> {
+            paintModel.setFilled(false);
+            fillBtn.setText("Outline");
+        });
+        fillBtn.getItems().addAll(solidItem, outlineItem);
+
+
+        HBox colorBar = new HBox(8, colorLbl, hexField, preview, picker, fillLbl, fillBtn);
         colorBar.setPadding(new Insets(6, 10, 6, 10));
         colorBar.setStyle(
                 "-fx-background-color: linear-gradient(to right, #fcfcfc, #f2f2f2);" +

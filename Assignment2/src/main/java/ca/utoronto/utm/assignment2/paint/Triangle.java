@@ -9,6 +9,7 @@ public class Triangle implements Shape, Fillable, Hittable {
     private Color strokeColor = Color.DARKRED;
     private Color fillColor   = Color.DARKRED;
     private double[] xvertices, yvertices;
+    private boolean filled=true;
 
     public void addVertex(Point p) {
         if (vertices.size() < 3) {
@@ -32,6 +33,17 @@ public class Triangle implements Shape, Fillable, Hittable {
     @Override
     public Color getFillColor() { return fillColor; }
 
+    public void setFilled(boolean filled) { this.filled = filled; }
+    public boolean getFilled() { return this.filled; }
+
+    @Override
+    public void applyFill(Color c){
+        if(c==null) return;
+        setColor(c);
+        setFillColor(c);
+        this.setFilled(true);
+    }
+
     @Override
     public boolean contains(double x, double y) {
         if (vertices.size() < 3) return false;
@@ -42,8 +54,8 @@ public class Triangle implements Shape, Fillable, Hittable {
 
         double denom = ((y2 - y3) * (x1 - x3)) + ((x3 - x2) * (y1 - y3));
         if (denom == 0) return false;
-        double a = (((y2 - y3) * (x - x3)) + ((x3 - x2) * (y - y3)));
-        double b = (((y3 - y1) * (x - x3)) + ((x1 - x3) * (y - y3)));
+        double a = (((y2 - y3) * (x - x3)) + ((x3 - x2) * (y - y3)))/denom;
+        double b = (((y3 - y1) * (x - x3)) + ((x1 - x3) * (y - y3)))/denom;
         double c = 1 - a - b;
 
         return a >= 0 && b >= 0 && c >= 0;
@@ -59,7 +71,7 @@ public class Triangle implements Shape, Fillable, Hittable {
     public void draw(GraphicsContext g) {
         if (vertices.size() < 3) return;
 
-        if (fillColor != null && fillColor.getOpacity() > 0) {
+        if (filled && fillColor != null && fillColor.getOpacity() > 0) {
             g.setFill(fillColor);
             g.fillPolygon(xvertices, yvertices, 3);
         }

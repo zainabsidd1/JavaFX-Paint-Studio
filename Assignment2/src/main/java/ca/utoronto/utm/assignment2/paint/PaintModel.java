@@ -144,7 +144,6 @@ public class PaintModel {
                 Shape s = findTopmostAt(x, y);
                 if (s instanceof Fillable) {
                         Fillable f = (Fillable) s;
-
                         Color use = (c != null) ? c : this.currentColor;
                         if (use == null) use = Color.BLACK;
 
@@ -152,9 +151,17 @@ public class PaintModel {
                         if (Objects.equals(prev, use)) {
                                 return false;
                         }
+
+                        if(!f.getFilled()){
+                            f.setFillColor(use);
+                            f.applyFill(use);
+                        } else{
+                            f.setFillColor(use);
+                        }
                         undoStack.push(new FillChange(f, prev, use));
                         redoStack.clear();
-                        f.setFillColor(use);
+
+
                         notifyListeners();
                         return true;
                 }
@@ -171,6 +178,16 @@ public class PaintModel {
                 fc.getTarget().setFillColor(fc.getNext());
                 undoStack.push(new FillChange(fc.getTarget(), fc.getNext(), fc.getPrev()));
             }
+            notifyListeners();
+        }
+
+        // Filled/Outline toggle
+        private boolean filled = true;
+        public boolean isFilled() {
+            return filled;
+        }
+        public void setFilled(boolean filled) {
+            this.filled = filled;
             notifyListeners();
         }
 }
