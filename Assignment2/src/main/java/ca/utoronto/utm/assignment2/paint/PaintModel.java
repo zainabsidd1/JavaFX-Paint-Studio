@@ -173,4 +173,14 @@ public class PaintModel {
             }
             notifyListeners();
         }
+
+        // Filled/Outline toggle
+        private boolean filled = true;
+        public boolean isFilled() {
+            return filled;
+        }
+        public void setFilled(boolean filled) {
+            this.filled = filled;
+            notifyListeners();
+        }
 }
