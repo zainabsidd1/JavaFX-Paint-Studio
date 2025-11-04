@@ -25,29 +25,6 @@ I WANT   : To redo an action previously undone
 SO THAT  : I can reapply the last undone change if needed
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
-TYPE     : USER STORY US3.006 : UTORID: sidd1378 : Complete
-NAME     : Fill style selector
-PRIORITY : 3
-ESTIMATE : (1 hour, 2 hours, 4 hours, 1 day, 2 days, 4 days)    ACTUAL : 4 hours
-AS A     : user
-I WANT   : To be able to select the current drawing style (filled or outline), to be applied
-           to subsequent shapes. Example:
-           		selects fill style solid
-           		mode circle
-           		draw a circle
-           		draw a circle
-           		mode rectangle
-           		draw a rectangle
-           		select fill style outline
-           		draw a rectangle
-           		draw a rectangle
-           		select mode squiggle
-           		draw a squiggle
-           	results in two solid circles and a solid rectangle as well as
-           	two outlined rectangles and a squiggle
-SO THAT  : Shapes are rendered using the chosen style
---------------------------------------------------------------------------
---------------------------------------------------------------------------
 TYPE     : USER STORY US3.007 : UTORID : NotStarted
 NAME     : Line thickness selector
 PRIORITY : 3
@@ -99,7 +76,7 @@ I WANT   : To paste previously cut or copied shapes
 SO THAT  : I can reposition or duplicate content
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
-TYPE     : USER STORY US3.011 : UTORID : NotStarted
+TYPE     : USER STORY US3.011 : tatisoha : NotStarted
 NAME     : Mover Tool
 PRIORITY : 3
 ESTIMATE : (1 hour, 2 hours, 4 hours, 1 day, 2 days, 4 days)     ACTUAL :
@@ -108,7 +85,7 @@ I WANT   : To move existing shapes to a different position on the canvas
 SO THAT  : I can reposition elements without redrawing them
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
-TYPE     : BUG BUG3.004 : UTORID : NotStarted
+TYPE     : BUG BUG3.004 : kaurjap9 : NotStarted
 NAME     : Architecture behind Model is poor
 PRIORITY : 3
 ESTIMATE : (1 hour, 2 hours, 4 hours, 1 day, 2 days, 4 days)    ACTUAL :
@@ -298,6 +275,29 @@ I WANT   : To be able to select the current drawing color, to be applied
            	results in two red circles and a red rectangle as well as
            	two green rectangles and a green squiggle
 SO THAT  : Shapes drawn afterwards use the chosen color
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US3.006 : sidd1378 : Complete
+NAME     : Fill style selector
+PRIORITY : 3
+ESTIMATE : 2 hours    ACTUAL : 2 hours
+AS A     : user
+I WANT   : To be able to select the current drawing style (filled or outline), to be applied
+           to subsequent shapes. Example:
+           		selects fill style solid
+           		mode circle
+           		draw a circle
+           		draw a circle
+           		mode rectangle
+           		draw a rectangle
+           		select fill style outline
+           		draw a rectangle
+           		draw a rectangle
+           		select mode squiggle
+           		draw a squiggle
+           	results in two solid circles and a solid rectangle as well as
+           	two outlined rectangles and a squiggle
+SO THAT  : Shapes are rendered using the chosen style
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
 TYPE     : BUG BUG1.001 : sidd1378 : Complete

@@ -77,10 +77,10 @@ I WANT   : To be able to select the current drawing color, to be applied
 SO THAT  : Shapes drawn afterwards use the chosen color
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
-TYPE     : USER STORY US3.006 : UTORID: sidd1378 : NotStarted
+TYPE     : USER STORY US3.006 : sidd1378 : Complete
 NAME     : Fill style selector
 PRIORITY : 3
-ESTIMATE : (1 hour, 2 hours, 4 hours, 1 day, 2 days, 4 days)    ACTUAL :
+ESTIMATE : 2 hours    ACTUAL : 2 hours
 AS A     : user
 I WANT   : To be able to select the current drawing style (filled or outline), to be applied
            to subsequent shapes. Example:
