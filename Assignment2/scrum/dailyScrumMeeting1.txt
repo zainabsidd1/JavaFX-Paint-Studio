@@ -97,9 +97,9 @@ Nov 2,2025
 	Obstacles I face: n/a
 
 Nov 3,2025
-	What I did yesterday:
-	What I will do today:
-	Obstacles I face:
+	What I did yesterday: Looked over US3.006 and US3.007.
+	What I will do today: Worked on fill style selector so that all fillable shapes can be either solid or filled.
+	Obstacles I face: Syncing the fill bucket tool with outlined only shapes.
 
 Nov 4,2025
 	What I did yesterday:
