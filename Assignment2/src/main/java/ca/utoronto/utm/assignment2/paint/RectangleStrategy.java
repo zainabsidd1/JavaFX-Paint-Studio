@@ -26,6 +26,7 @@ public class RectangleStrategy implements ToolStrategy, Colorable {
                 : color;
         rectangle = new Rectangle(p, p, chosen);  // zero-sized start
         rectangle.setColor(chosen);
+        rectangle.setFilled(model.isFilled());
         panel.requestRender();            // repaint to show preview immediately
     }
 
@@ -42,6 +43,7 @@ public class RectangleStrategy implements ToolStrategy, Colorable {
         if (rectangle != null) {
             rectangle.setP2(new Point(e.getX(), e.getY()));
             model.addShape(rectangle); // commit to model
+            rectangle.setFilled(model.isFilled());
             rectangle = null;              // clear preview state
             // Model change will trigger observers -> panel will render
         }
@@ -74,8 +76,11 @@ public class RectangleStrategy implements ToolStrategy, Colorable {
                 ? model.getCurrentColor()
                 : color;
 
-        g.setFill(previewColour);
-        g.fillRect(x, y, w, h);
+        if(model.isFilled()) {
+            g.setFill(previewColour);
+            g.fillRect(x, y, w, h);
+        }
+
         g.setStroke(previewColour);
         g.setLineWidth(2);
         g.strokeRect(x, y, w, h);

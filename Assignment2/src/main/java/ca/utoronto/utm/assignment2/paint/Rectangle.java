@@ -8,6 +8,7 @@ public class Rectangle implements Shape, Fillable, Hittable {
     private Point p2;
     private Color color;
     private Color fillColor;
+    private boolean filled = true;
 
     public Rectangle(Point p1, Point p2, Color color) {
         this.p1 = p1;
@@ -23,6 +24,9 @@ public class Rectangle implements Shape, Fillable, Hittable {
     public double getTop()    { return Math.min(p1.y, p2.y); }
     public double getWidth()  { return Math.abs(p2.x - p1.x); }
     public double getHeight() { return Math.abs(p2.y - p1.y); }
+
+    public void setFilled(boolean filled) { this.filled = filled; }
+    public boolean getFilled() { return this.filled; }
 
     @Override
     public void setFillColor(Color c) {
@@ -52,17 +56,25 @@ public class Rectangle implements Shape, Fillable, Hittable {
     }
 
     @Override
+    public void applyFill(Color c){
+        if(c==null) return;
+        setColor(c);
+        setFillColor(c);
+        this.setFilled(true);
+    }
+
+    @Override
     public void draw(GraphicsContext g) {
         double x = getLeft();
         double y = getTop();
         double w = getWidth();
         double h = getHeight();
-        if (fillColor != null) {
-            g.setFill(fillColor);
+        g.setStroke(getColor());
+        g.setLineWidth(2);
+        if (filled) {
+            g.setFill(fillColor != null ? fillColor : color);
             g.fillRect(x, y, w, h);
         }
-        g.setStroke(fillColor);
-        g.setLineWidth(2);
         g.strokeRect(x, y, w, h);
     }
 }

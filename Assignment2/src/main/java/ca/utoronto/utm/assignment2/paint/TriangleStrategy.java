@@ -31,11 +31,13 @@ public class TriangleStrategy implements ToolStrategy, Colorable {
             Color chosen = chosenOrFallback();
             triangle.setColor(chosen);
             triangle.setFillColor(chosen);
+            triangle.setFilled(model.isFilled());
         }
 
         triangle.addVertex(p);
 
         if (triangle.isComplete()) {
+            triangle.setFilled(model.isFilled());
             Color chosen = chosenOrFallback();
             triangle.setColor(chosen);
             triangle.setFillColor(chosen);

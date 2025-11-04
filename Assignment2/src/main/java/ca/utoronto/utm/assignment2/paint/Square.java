@@ -8,6 +8,7 @@ public class Square implements Shape, Fillable, Hittable {
     private Point p2;
     private Color strokeColor;
     private Color fillColor;
+    private boolean filled=true;
 
     public Square(Point p1, Point p2, Color color) {
         this.p1 = p1;
@@ -15,6 +16,8 @@ public class Square implements Shape, Fillable, Hittable {
         this.strokeColor = color;
         this.fillColor = color; 
     }
+    public void setFilled(boolean filled) { this.filled = filled; }
+    public boolean getFilled() { return this.filled; }
 
     public Point getP1() { return this.p1; }
     public Point getP2() { return this.p2; }
@@ -57,16 +60,25 @@ public class Square implements Shape, Fillable, Hittable {
     }
 
     @Override
+    public void applyFill(Color c){
+        if(c==null) return;
+        setColor(c);
+        setFillColor(c);
+        this.setFilled(true);
+    }
+
+    @Override
     public void draw(GraphicsContext g) {
         double x = getLeft();
         double y = getTop();
         double length = getLength();
-        if (fillColor != null && fillColor.getOpacity() > 0) {
+
+        g.setStroke(fillColor);
+        g.setLineWidth(2);
+        if (filled && fillColor != null && fillColor.getOpacity() > 0) {
             g.setFill(fillColor);
             g.fillRect(x, y, length, length);
         }
-        g.setStroke(fillColor);
-        g.setLineWidth(2);
         g.strokeRect(x, y, length, length);
     }
 }

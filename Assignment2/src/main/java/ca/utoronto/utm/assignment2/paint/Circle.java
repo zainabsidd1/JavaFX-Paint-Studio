@@ -8,6 +8,7 @@ public class Circle implements Shape, Fillable, Hittable {
         private double radius;
         private Color strokeColor;
         private Color fillColor;
+        private boolean filled = true;
 
         public Circle(Point center, double radius, Color color) {
                 this.center = center;
@@ -19,6 +20,9 @@ public class Circle implements Shape, Fillable, Hittable {
         public void setRadius(double radius) { this.radius = radius; }
         public Point getCenter() { return center; }
         public double getRadius() { return radius; }
+
+        public void setFilled(boolean filled) { this.filled = filled; }
+        public boolean getFilled() { return this.filled; }
 
         @Override
         public void setFillColor(Color c) {
@@ -46,18 +50,27 @@ public class Circle implements Shape, Fillable, Hittable {
         }
 
         @Override
+        public void applyFill(Color c){
+            if(c==null) return;
+            setColor(c);
+            setFillColor(c);
+            this.setFilled(true);
+        }
+
+        @Override
         public void draw(GraphicsContext g) {
                 double x = center.x - radius;
                 double y = center.y - radius;
                 double size = radius * 2;
 
-                if (fillColor != null) {
-                        g.setFill(fillColor);
-                        g.fillOval(x, y, size, size);
+                g.setStroke(getColor());
+                g.setLineWidth(2);
+
+                if(filled) {
+                    g.setFill(fillColor != null ? fillColor : strokeColor);
+                    g.fillOval(x, y, size, size);
                 }
 
-                g.setStroke(fillColor);
-                g.setLineWidth(2);
                 g.strokeOval(x, y, size, size);
         }
 }
