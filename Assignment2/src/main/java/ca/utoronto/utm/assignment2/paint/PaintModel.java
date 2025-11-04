@@ -151,13 +151,9 @@ public class PaintModel {
                         if (Objects.equals(prev, use)) {
                                 return false;
                         }
+                        f.applyFill(c);
+                        f.setFillColor(c);
 
-                        if(!f.getFilled()){
-                            f.setFillColor(use);
-                            f.applyFill(use);
-                        } else{
-                            f.setFillColor(use);
-                        }
                         undoStack.push(new FillChange(f, prev, use));
                         redoStack.clear();
 
