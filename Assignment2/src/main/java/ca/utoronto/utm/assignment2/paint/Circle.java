@@ -49,7 +49,7 @@ public class Circle implements Shape, Fillable, Hittable {
                 if (c != null) this.strokeColor = c;
         }
 
-        @Override
+    @Override
         public void applyFill(Color c){
             if(c==null) return;
             setColor(c);
@@ -73,4 +73,12 @@ public class Circle implements Shape, Fillable, Hittable {
 
                 g.strokeOval(x, y, size, size);
         }
+
+    @Override
+    public void translate(double dx, double dy) {
+        center.x += dx;
+        center.y += dy;
+    }
+
+
 }

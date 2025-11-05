@@ -186,4 +186,8 @@ public class PaintModel {
             this.filled = filled;
             notifyListeners();
         }
+        public Shape selectTopMostAt(double x, double y, Color highlightColor) {
+            Shape s = findTopmostAt(x, y);
+            return s;
+        }
 }
