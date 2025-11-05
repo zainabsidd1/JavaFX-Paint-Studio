@@ -83,18 +83,17 @@ public class Triangle implements Shape, Fillable, Hittable {
 
     @Override
     public Triangle copy(){
-        Triangle clone = new Triangle();
-        clone.setColor(this.strokeColor);
-        clone.setFillColor(this.fillColor);
-        clone.setFilled(this.filled);
+        Triangle t = new Triangle();
+        t.setColor(this.strokeColor);
+        t.setFillColor(this.fillColor);
+        t.setFilled(this.filled);
 
-        // If it’s a complete triangle, copy all 3 vertices
         if (this.vertices.size() == 3) {
             for (Point v : this.vertices) {
-                clone.addVertex(new Point(v.x + 10, v.y + 10)); // small offset
+                t.addVertex(new Point(v.x, v.y)); // small offset
             }
         }
-        return clone;
+        return t;
     }
 
     public boolean isComplete() { return vertices.size() == 3; }

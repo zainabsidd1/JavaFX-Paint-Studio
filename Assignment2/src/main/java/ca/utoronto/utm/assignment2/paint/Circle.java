@@ -84,8 +84,6 @@ public class Circle implements Shape, Fillable, Hittable {
 
         @Override
         public Circle copy(){
-        Point newCenter = new Point(this.center.x + 20, this.center.y + 20); // offset
-        Circle c = new Circle(newCenter, this.radius, this.strokeColor);
-        return c;
+        return new Circle(this);
     }
 }

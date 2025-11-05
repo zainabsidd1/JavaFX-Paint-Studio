@@ -92,9 +92,6 @@ public class Square implements Shape, Fillable, Hittable {
 
     @Override
     public Square copy(){
-        Square s = new Square(this);
-        s.p1 = new Point(this.p1.x + 10, this.p1.y + 10);
-        s.p2 = new Point(this.p2.x + 10, this.p2.y + 10);
-        return s;
+        return new Square(this);
     }
 }

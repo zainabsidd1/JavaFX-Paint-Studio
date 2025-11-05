@@ -191,17 +191,11 @@ public class PaintModel {
         return storeShape;
         }
 
+        // Copy
         public void copyShape(){
             if(selectShape == null) return;
             Shape copied = selectShape.copy();
             storeShape = copied;
-        }
-
-        public void pasteShape(){
-            if (storeShape == null) return;
-            Shape newShape = storeShape.copy();
-            addShape(newShape);
-            notifyListeners();
         }
 
         // Filled/Outline toggle

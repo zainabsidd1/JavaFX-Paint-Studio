@@ -103,9 +103,6 @@ public class Oval implements Shape, Fillable, Hittable {
 
     @Override
     public Oval copy(){
-        Oval r = new Oval(this);
-        r.p1 = new Point(this.p1.x + 10, this.p1.y + 10);
-        r.p2 = new Point(this.p2.x + 10, this.p2.y + 10);
-        return r;
+        return new Oval(this);
     }
 }

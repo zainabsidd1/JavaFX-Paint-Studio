@@ -90,11 +90,7 @@ public class Rectangle implements Shape, Fillable, Hittable {
 
     @Override
     public Rectangle copy() {
-        Rectangle r = new Rectangle(this); // use deep copy constructor
-        // offset position so pasted rectangle is visible
-        r.p1 = new Point(this.p1.x + 10, this.p1.y + 10);
-        r.p2 = new Point(this.p2.x + 10, this.p2.y + 10);
-        return r;
+        return new Rectangle(this); // use deep copy constructor
     }
 
 }
