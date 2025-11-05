@@ -37,11 +37,6 @@ public class Squiggle implements Shape, Colorable {
 
     @Override
     public Squiggle copy(){
-        Squiggle clone = new Squiggle();
-        clone.setColor(this.color);
-        for (Point p : this.points) {
-            clone.addPoint(new Point(p.x + 10, p.y + 10));
-        }
-        return clone;
+        return new Squiggle();
     }
 }
