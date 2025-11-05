@@ -26,6 +26,9 @@ public class TriangleStrategy implements ToolStrategy, Colorable {
     public void onMouseClicked(MouseEvent e) {
         Point p = new Point(e.getX(), e.getY());
 
+        Shape clicked = model.findTopmostAt(e.getX(), e.getY());
+        model.setSelectedShape(clicked);
+
         if (triangle == null) {
             triangle = new Triangle();
             Color chosen = chosenOrFallback();

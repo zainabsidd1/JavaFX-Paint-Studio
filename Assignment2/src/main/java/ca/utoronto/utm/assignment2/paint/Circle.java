@@ -80,5 +80,19 @@ public class Circle implements Shape, Fillable, Hittable {
         center.y += dy;
     }
 
+    public Circle(Circle other) {
+        this.center = new Point(other.center.x, other.center.y);
+        this.radius = other.radius;
+        this.strokeColor = other.strokeColor;
+        this.fillColor = other.fillColor;
+        this.filled = other.filled;
+    }
+
+
+    @Override
+    public Circle copy(){return new Circle(this);}
+
+
+
 
 }
