@@ -90,5 +90,4 @@ public class Square implements Shape, Fillable, Hittable {
         p2.x += dx;
         p2.y += dy;
     }
-
 }
