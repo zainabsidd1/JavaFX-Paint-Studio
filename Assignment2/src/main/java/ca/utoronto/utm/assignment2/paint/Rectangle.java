@@ -97,6 +97,6 @@ public class Rectangle implements Shape, Fillable, Hittable {
 
     @Override
     public Rectangle copy() {
-        return new Rectangle(this); // use deep copy constructor
+        return new Rectangle(this);
     }
 }
