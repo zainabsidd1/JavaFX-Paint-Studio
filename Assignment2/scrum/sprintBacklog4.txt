@@ -5,3 +5,7 @@
 # Sprint 4 Nov 7-Nov 13, 2025
 # Sprint 4 Backlog UserStories go below
 
+# BUG : Make undo/redo implement changes made my mover tool
+# BUG : Make mover, copy, cut, paster work on squiggle and polyline
+# US : Allow user to change the background color of canvas
+# US : Make eraser tool "erase" to any colored background set by user (not only white)

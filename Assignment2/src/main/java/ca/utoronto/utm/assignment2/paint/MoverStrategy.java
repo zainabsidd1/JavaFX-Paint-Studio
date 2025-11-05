@@ -27,6 +27,8 @@ public class MoverStrategy implements ToolStrategy{
         this.moverCursor = new ImageCursor(original, 2, original.getHeight() - 2);
     }
 
+    @Override public Cursor getCursor() { return moverCursor; }
+
     @Override
     public String getName() { return "Mover Strategy"; }
 
