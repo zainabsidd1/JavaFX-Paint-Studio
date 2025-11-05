@@ -98,17 +98,17 @@ Nov 2,2025
 
 Nov 3,2025
 	What I did yesterday: Started working on User stories
-	What I will do today:
-	Obstacles I face:
+	What I will do today: Start and Finish US3.009
+	Obstacles I face: n/a
 
 Nov 4,2025
-	What I did yesterday:
-	What I will do today:
-	Obstacles I face:
+	What I did yesterday: Finished US3.009
+	What I will do today: Start working on US3.010
+	Obstacles I face: Some shapes had issues with clicking so the shapes didn't paste properly
 
 Nov 5,2025
-	What I did yesterday:
-	What I will do today:
+	What I did yesterday: Started working on US3.010
+	What I will do today: Complete US3.010 and Start and finish US3.008
 	Obstacles I face:
 
 Nov 6,2025

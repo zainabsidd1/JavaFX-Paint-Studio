@@ -102,9 +102,9 @@ Nov 3,2025
 	Obstacles I face: Syncing the fill bucket tool with outlined only shapes.
 
 Nov 4,2025
-	What I did yesterday:
-	What I will do today:
-	Obstacles I face:
+	What I did yesterday: Implemented the fill style selector tool
+	What I will do today: Minor fixes to the PaintModel class to clean up the code
+	Obstacles I face: n/a
 
 Nov 5,2025
 	What I did yesterday:

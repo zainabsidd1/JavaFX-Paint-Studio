@@ -9,6 +9,7 @@ public class Square implements Shape, Fillable, Hittable {
     private Color strokeColor;
     private Color fillColor;
     private boolean filled=true;
+    private boolean selected = false;
 
     public Square(Point p1, Point p2, Color color) {
         this.p1 = p1;
@@ -81,4 +82,13 @@ public class Square implements Shape, Fillable, Hittable {
         }
         g.strokeRect(x, y, length, length);
     }
+
+    @Override
+    public void translate(double dx, double dy) {
+        p1.x += dx;
+        p1.y += dy;
+        p2.x += dx;
+        p2.y += dy;
+    }
+
 }

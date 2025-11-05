@@ -4,6 +4,7 @@ module ca.utoronto.utm.assignment2 {
     requires java.compiler;
     requires javafx.graphics;
     requires java.xml;
+    requires java.sql;
 
 
     opens ca.utoronto.utm.assignment2 to javafx.fxml;

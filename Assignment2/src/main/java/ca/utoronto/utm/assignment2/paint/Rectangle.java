@@ -9,6 +9,7 @@ public class Rectangle implements Shape, Fillable, Hittable {
     private Color color;
     private Color fillColor;
     private boolean filled = true;
+    private boolean selected = false;
 
     public Rectangle(Point p1, Point p2, Color color) {
         this.p1 = p1;
@@ -76,5 +77,13 @@ public class Rectangle implements Shape, Fillable, Hittable {
             g.fillRect(x, y, w, h);
         }
         g.strokeRect(x, y, w, h);
+    }
+
+    @Override
+    public void translate(double dx, double dy) {
+        p1.x += dx;
+        p1.y += dy;
+        p2.x += dx;
+        p2.y += dy;
     }
 }
