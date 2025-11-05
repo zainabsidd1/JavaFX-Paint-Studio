@@ -107,12 +107,12 @@ Nov 4,2025
 	Obstacles I face: n/a.
 
 Nov 5,2025
-	What I did yesterday:
-	What I will do today:
-	Obstacles I face:
+	What I did yesterday: approved pull request.
+	What I will do today: start thinking of ways to rearchitecture paint model.
+	Obstacles I face: applying the correct design pattern.
 
 Nov 6,2025
-	What I did yesterday:
+	What I did yesterday: start thinking of ways to rearchitecture paint model.
 	What I will do today:
 	Obstacles I face:
 
