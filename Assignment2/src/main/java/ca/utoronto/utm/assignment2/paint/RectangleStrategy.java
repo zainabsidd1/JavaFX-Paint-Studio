@@ -20,11 +20,19 @@ public class RectangleStrategy implements ToolStrategy, Colorable {
 
     @Override
     public void onMousePressed(MouseEvent e) {
+        Shape clicked = model.findTopmostAt(e.getX(), e.getY());
+        if (clicked != null) {
+            model.setSelectedShape(clicked);
+            System.out.println("Selected shape: " + clicked.getClass().getSimpleName());
+            rectangle = null; // no new rectangle
+            return;
+        }
+
         Point p = new Point(e.getX(), e.getY());
         Color chosen = (model.getCurrentColor() != null && !model.getCurrentColor().equals(Color.BLACK))
                 ? model.getCurrentColor()
                 : color;
-        rectangle = new Rectangle(p, p, chosen);  // zero-sized start
+        rectangle = new Rectangle(p, p, chosen, true);  // zero-sized start
         rectangle.setColor(chosen);
         rectangle.setFilled(model.isFilled());
         panel.requestRender();            // repaint to show preview immediately
@@ -48,9 +56,6 @@ public class RectangleStrategy implements ToolStrategy, Colorable {
             // Model change will trigger observers -> panel will render
         }
     }
-
-    @Override public void onMouseMoved(MouseEvent e) { /* no-op */ }
-    @Override public void onMouseClicked(MouseEvent e) { /* no-op */ }
 
     @Override
     public Color getColor() {
@@ -84,5 +89,11 @@ public class RectangleStrategy implements ToolStrategy, Colorable {
         g.setStroke(previewColour);
         g.setLineWidth(2);
         g.strokeRect(x, y, w, h);
+    }
+
+    @Override public void onMouseMoved(MouseEvent e) {/* no-op */ }
+
+    @Override
+    public void onMouseClicked(MouseEvent e) {
     }
 }

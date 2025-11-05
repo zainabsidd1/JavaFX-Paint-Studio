@@ -4,7 +4,7 @@ import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 
 public class Circle implements Shape, Fillable, Hittable {
-        private final Point center;
+        private Point center;
         private double radius;
         private Color strokeColor;
         private Color fillColor;
@@ -73,4 +73,19 @@ public class Circle implements Shape, Fillable, Hittable {
 
                 g.strokeOval(x, y, size, size);
         }
+
+        public Circle(Circle other) {
+        this.center = new Point(other.center.x, other.center.y);
+        this.radius = other.radius;
+        this.strokeColor = other.strokeColor;
+        this.fillColor = other.fillColor;
+        this.filled = other.filled;
+        }
+
+        @Override
+        public Circle copy(){
+        Point newCenter = new Point(this.center.x + 20, this.center.y + 20); // offset
+        Circle c = new Circle(newCenter, this.radius, this.strokeColor);
+        return c;
+    }
 }

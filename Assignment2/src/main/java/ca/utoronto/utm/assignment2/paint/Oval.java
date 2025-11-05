@@ -22,7 +22,6 @@ public class Oval implements Shape, Fillable, Hittable {
 
     public void setPoint1(Point p1) { this.p1 = p1; }
     public void setPoint2(Point p2) { this.p2 = p2; }
-    public boolean isFilled() { return filled; }
 
     public double getLeft()   { return Math.min(p1.x, p2.x); }
     public double getTop()    { return Math.min(p1.y, p2.y); }
@@ -92,5 +91,21 @@ public class Oval implements Shape, Fillable, Hittable {
         }
 
         g.strokeOval(left, top, width, height);
+    }
+
+    public Oval(Oval other) {
+        this.p1 = new Point(other.p1.x, other.p1.y);
+        this.p2 = new Point(other.p2.x, other.p2.y);
+        this.strokeColor = other.strokeColor;
+        this.fillColor = other.fillColor;
+        this.filled = other.filled;
+    }
+
+    @Override
+    public Oval copy(){
+        Oval r = new Oval(this);
+        r.p1 = new Point(this.p1.x + 10, this.p1.y + 10);
+        r.p2 = new Point(this.p2.x + 10, this.p2.y + 10);
+        return r;
     }
 }

@@ -10,11 +10,12 @@ public class Rectangle implements Shape, Fillable, Hittable {
     private Color fillColor;
     private boolean filled = true;
 
-    public Rectangle(Point p1, Point p2, Color color) {
+    public Rectangle(Point p1, Point p2, Color color, boolean filled) {
         this.p1 = p1;
         this.p2 = p2;
         this.color = color;
         this.fillColor = color;
+        this.filled = filled;
     }
 
     public void setP1(Point p1) { this.p1 = p1; }
@@ -40,10 +41,11 @@ public class Rectangle implements Shape, Fillable, Hittable {
 
     @Override
     public boolean contains(double x, double y) {
-        double left = getLeft();
-        double top = getTop();
-        double right = left + getWidth();
-        double bottom = top + getHeight();
+        double left = Math.min(p1.x, p2.x);
+        double right = Math.max(p1.x, p2.x);
+        double top = Math.min(p1.y, p2.y);
+        double bottom = Math.max(p1.y, p2.y);
+
         return x >= left && x <= right && y >= top && y <= bottom;
     }
 
@@ -77,4 +79,22 @@ public class Rectangle implements Shape, Fillable, Hittable {
         }
         g.strokeRect(x, y, w, h);
     }
+
+    public Rectangle(Rectangle other) {
+        this.p1 = new Point(other.p1.x, other.p1.y);
+        this.p2 = new Point(other.p2.x, other.p2.y);
+        this.color = other.color;
+        this.fillColor = other.fillColor;
+        this.filled = other.filled;
+    }
+
+    @Override
+    public Rectangle copy() {
+        Rectangle r = new Rectangle(this); // use deep copy constructor
+        // offset position so pasted rectangle is visible
+        r.p1 = new Point(this.p1.x + 10, this.p1.y + 10);
+        r.p2 = new Point(this.p2.x + 10, this.p2.y + 10);
+        return r;
+    }
+
 }

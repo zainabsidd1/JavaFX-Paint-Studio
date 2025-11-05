@@ -4,5 +4,7 @@ import javafx.scene.canvas.GraphicsContext;
 
 public interface Shape extends Colorable {
     void draw(GraphicsContext g);
+
+    Shape copy();
 }
 

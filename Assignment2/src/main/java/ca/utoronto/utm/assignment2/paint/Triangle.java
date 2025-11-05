@@ -4,7 +4,7 @@ import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 import java.util.ArrayList;
 
-public class Triangle implements Shape, Fillable, Hittable {
+public class Triangle implements Shape, Fillable, Hittable, Movable {
     private final ArrayList<Point> vertices = new ArrayList<>();
     private Color strokeColor = Color.DARKRED;
     private Color fillColor   = Color.DARKRED;
@@ -81,7 +81,47 @@ public class Triangle implements Shape, Fillable, Hittable {
         g.strokePolygon(xvertices, yvertices, 3);
     }
 
+    @Override
+    public Triangle copy(){
+        Triangle clone = new Triangle();
+        clone.setColor(this.strokeColor);
+        clone.setFillColor(this.fillColor);
+        clone.setFilled(this.filled);
+
+        // If it’s a complete triangle, copy all 3 vertices
+        if (this.vertices.size() == 3) {
+            for (Point v : this.vertices) {
+                clone.addVertex(new Point(v.x + 10, v.y + 10)); // small offset
+            }
+        }
+        return clone;
+    }
+
     public boolean isComplete() { return vertices.size() == 3; }
     public boolean isEmpty() { return vertices.isEmpty(); }
     public ArrayList<Point> getVertices() { return vertices; }
+
+    @Override
+    public void moveBy(double x, double y) {
+        for (Point v : vertices) {
+            v.x += x;
+            v.y += y;
+        }
+
+        if (vertices.size() == 3) {
+            for (int i = 0; i < 3; i++) {
+                xvertices[i] = vertices.get(i).x;
+                yvertices[i] = vertices.get(i).y;
+            }
+        }
+    }
+
+    @Override
+    public Point getCenter() {
+        if (vertices.size() < 3) return new Point(0, 0);
+        double cx = (vertices.get(0).x + vertices.get(1).x + vertices.get(2).x) / 3.0;
+        double cy = (vertices.get(0).y + vertices.get(1).y + vertices.get(2).y) / 3.0;
+        return new Point(cx, cy);
+    }
+
 }

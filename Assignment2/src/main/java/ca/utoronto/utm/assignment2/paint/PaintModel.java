@@ -22,6 +22,8 @@ public class PaintModel {
         private Polyline currEraser;
         private final Deque<Object> undoStack = new ArrayDeque<>();
         private final Deque<Object> redoStack = new ArrayDeque<>();
+        private Shape selectShape;
+        private Shape storeShape;
 
 
         // Color
@@ -177,6 +179,68 @@ public class PaintModel {
             notifyListeners();
         }
 
+        public void setSelectedShape(Shape s){
+            this.selectShape = s;
+        }
+
+        public Shape getSelectedShape() {
+        return selectShape;
+        }
+
+        public Shape getStoredShape() {
+        return storeShape;
+        }
+
+        public void copyShape(){
+            /**if(selectShape == null) return;
+            Shape copied = selectShape.copy();
+            storeShape = selectShape.copy();**/
+            if (selectShape == null) {
+                System.out.println("No shape selected to copy!");
+                return;
+            }
+            Shape copied = selectShape.copy();
+            storeShape = selectShape.copy();
+            System.out.println("Copied shape: " + selectShape.getClass().getSimpleName());
+        }
+
+        public void pasteShape(){
+            /**if (storeShape == null) return;
+            Shape newShape = storeShape.copy();
+
+            addShape(newShape);
+            notifyListeners();**/
+            if (storeShape == null) {
+                System.out.println("Nothing to paste!");
+                return;
+            }
+            Shape newShape = storeShape.copy();
+            addShape(newShape);
+            System.out.println("Pasted shape: " + newShape.getClass().getSimpleName());
+            notifyListeners();
+        }
+
+        public void pasteShape(double x, double y) {
+        if (storeShape == null) {
+            System.out.println("Nothing to paste!");
+            return;
+        }
+
+        Shape newShape = storeShape.copy();
+
+        // compute current center of copied shape
+        if (newShape instanceof Movable) { // we'll define this interface below
+            Point center = ((Movable)newShape).getCenter();
+            double dx = x - center.x;
+            double dy = y - center.y;
+            ((Movable)newShape).moveBy(dx, dy);
+        }
+
+        addShape(newShape);
+        System.out.println("Pasted shape at (" + x + ", " + y + ")");
+        notifyListeners();
+    }
+
         // Filled/Outline toggle
         private boolean filled = true;
         public boolean isFilled() {
@@ -186,4 +250,6 @@ public class PaintModel {
             this.filled = filled;
             notifyListeners();
         }
+
+
 }

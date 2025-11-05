@@ -19,6 +19,13 @@ public class CircleStrategy implements ToolStrategy, Colorable {
 
     @Override
     public void onMousePressed(MouseEvent e) {
+        Shape clicked = model.findTopmostAt(e.getX(), e.getY());
+        if (clicked != null) {
+            model.setSelectedShape(clicked);
+            circle = null; // no new circle
+            return;
+        }
+
         Point centre = new Point(e.getX(), e.getY());
         // lambda for if the user picks a color, use it; otherwise use the circle's default
         Color chosen = (model.getCurrentColor() != null && !model.getCurrentColor().equals(Color.BLACK))
@@ -54,9 +61,6 @@ public class CircleStrategy implements ToolStrategy, Colorable {
         }
     }
 
-    @Override public void onMouseMoved(MouseEvent e) { }
-    @Override public void onMouseClicked(MouseEvent e) { }
-
     @Override
     public Color getColor() {
         return color;
@@ -84,6 +88,11 @@ public class CircleStrategy implements ToolStrategy, Colorable {
 
         g.strokeOval(x - r, y - r, r * 2, r * 2);
 
+    }
+
+    @Override public void onMouseMoved(MouseEvent e) { }
+
+    @Override public void onMouseClicked(MouseEvent e) {
     }
 }
 
