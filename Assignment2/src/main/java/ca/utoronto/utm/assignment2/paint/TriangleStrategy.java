@@ -32,6 +32,10 @@ public class TriangleStrategy implements ToolStrategy, Colorable {
             triangle.setColor(chosen);
             triangle.setFillColor(chosen);
             triangle.setFilled(model.isFilled());
+
+            Shape clicked = model.findTopmostAt(e.getX(), e.getY());
+            model.setSelectedShape(clicked);
+
         }
 
         triangle.addVertex(p);

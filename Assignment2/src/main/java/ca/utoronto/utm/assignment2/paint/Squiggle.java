@@ -34,4 +34,9 @@ public class Squiggle implements Shape, Colorable {
 
     @Override
     public Color getColor() { return color; }
+
+    @Override
+    public Squiggle copy() {
+        return new Squiggle();
+    }
 }

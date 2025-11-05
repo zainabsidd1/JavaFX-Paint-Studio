@@ -91,4 +91,21 @@ public class Square implements Shape, Fillable, Hittable {
         p2.y += dy;
     }
 
+    public Square(Square other) {
+        this.p1 = new Point(other.p1.x, other.p1.y);
+        this.p2 = new Point(other.p2.x, other.p2.y);
+        this.strokeColor = other.strokeColor;
+        this.fillColor = other.fillColor;
+        this.filled = other.filled;
+    }
+
+
+    @Override
+    public Square copy(){
+        Square s = new Square(this);
+        s.p1 = new Point(this.p1.x + 10, this.p1.y + 10);
+        s.p2 = new Point(this.p2.x + 10, this.p2.y + 10);
+        return s;
+    }
+
 }

@@ -20,6 +20,13 @@ public class RectangleStrategy implements ToolStrategy, Colorable {
 
     @Override
     public void onMousePressed(MouseEvent e) {
+        Shape clicked = model.findTopmostAt(e.getX(), e.getY());
+        if (clicked != null) {
+            model.setSelectedShape(clicked);
+            rectangle = null;
+            return;
+        }
+
         Point p = new Point(e.getX(), e.getY());
         Color chosen = (model.getCurrentColor() != null && !model.getCurrentColor().equals(Color.BLACK))
                 ? model.getCurrentColor()

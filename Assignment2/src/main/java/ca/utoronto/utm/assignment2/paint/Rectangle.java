@@ -86,4 +86,17 @@ public class Rectangle implements Shape, Fillable, Hittable {
         p2.x += dx;
         p2.y += dy;
     }
+
+    public Rectangle(Rectangle other) {
+        this.p1 = new Point(other.p1.x, other.p1.y);
+        this.p2 = new Point(other.p2.x, other.p2.y);
+        this.color = other.color;
+        this.fillColor = other.fillColor;
+        this.filled = other.filled;
+    }
+
+    @Override
+    public Rectangle copy() {
+        return new Rectangle(this); // use deep copy constructor
+    }
 }

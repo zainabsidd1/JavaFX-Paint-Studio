@@ -102,4 +102,19 @@ public class Oval implements Shape, Fillable, Hittable {
         p2.x += dx;
         p2.y += dy;
     }
+
+    public Oval(Oval other) {
+        this.p1 = new Point(other.p1.x, other.p1.y);
+        this.p2 = new Point(other.p2.x, other.p2.y);
+        this.strokeColor = other.strokeColor;
+        this.fillColor = other.fillColor;
+        this.filled = other.filled;
+    }
+
+    @Override
+    public Oval copy(){
+       return new Oval(this);
+    }
+
+
 }
