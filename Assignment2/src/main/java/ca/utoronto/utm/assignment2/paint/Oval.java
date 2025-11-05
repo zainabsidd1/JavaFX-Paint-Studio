@@ -9,6 +9,7 @@ public class Oval implements Shape, Fillable, Hittable {
     private Color strokeColor;
     private Color fillColor;
     private boolean filled=true;
+    private boolean selected = false;
 
     public Oval(Point p1, Point p2, Color color, boolean filled) {
         this.p1 = p1;
@@ -92,5 +93,13 @@ public class Oval implements Shape, Fillable, Hittable {
         }
 
         g.strokeOval(left, top, width, height);
+    }
+
+    @Override
+    public void translate(double dx, double dy) {
+        p1.x += dx;
+        p1.y += dy;
+        p2.x += dx;
+        p2.y += dy;
     }
 }

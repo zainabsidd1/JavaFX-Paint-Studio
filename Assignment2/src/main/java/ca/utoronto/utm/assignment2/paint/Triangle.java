@@ -7,9 +7,9 @@ import java.util.ArrayList;
 public class Triangle implements Shape, Fillable, Hittable {
     private final ArrayList<Point> vertices = new ArrayList<>();
     private Color strokeColor = Color.DARKRED;
-    private Color fillColor   = Color.DARKRED;
+    private Color fillColor = Color.DARKRED;
     private double[] xvertices, yvertices;
-    private boolean filled=true;
+    private boolean filled = true;
 
     public void addVertex(Point p) {
         if (vertices.size() < 3) {
@@ -81,7 +81,29 @@ public class Triangle implements Shape, Fillable, Hittable {
         g.strokePolygon(xvertices, yvertices, 3);
     }
 
-    public boolean isComplete() { return vertices.size() == 3; }
-    public boolean isEmpty() { return vertices.isEmpty(); }
-    public ArrayList<Point> getVertices() { return vertices; }
+    public boolean isComplete() {
+        return vertices.size() == 3;
+    }
+
+    public boolean isEmpty() {
+        return vertices.isEmpty();
+    }
+
+    public ArrayList<Point> getVertices() {
+        return vertices;
+    }
+
+    @Override
+    public void translate(double dx, double dy) {
+        for (Point p : vertices) {
+            p.setX(p.getX() + dx);
+            p.setY(p.getY() + dy);
+        }
+
+        for (int i = 0; i < 3; i++) {
+            xvertices[i] = vertices.get(i).getX();
+            yvertices[i] = vertices.get(i).getY();
+        }
+    }
 }
+

@@ -161,17 +161,19 @@ public class View {
         MenuItem pasteItem = new MenuItem("Paste");
         MenuItem undoItem  = new MenuItem("Undo");
         MenuItem redoItem  = new MenuItem("Redo");
+        MenuItem moveItem  = new MenuItem("Move");
 
         cutItem.setOnAction(e -> System.out.println("Cut (not implemented)"));
         copyItem.setOnAction(e -> System.out.println("Copy (not implemented)"));
         pasteItem.setOnAction(e -> System.out.println("Paste (not implemented)"));
         undoItem.setOnAction(e -> paintModel.undo());
         redoItem.setOnAction(e -> paintModel.redo());
+        moveItem.setOnAction(e -> {paintPanel.setStrategy(new MoverStrategy(paintModel, paintPanel));});
 
         edit.getItems().addAll(
                 cutItem, copyItem, pasteItem,
                 new SeparatorMenuItem(),
-                undoItem, redoItem
+                undoItem, redoItem, moveItem
         );
 
         menuBar.getMenus().addAll(file, edit);
