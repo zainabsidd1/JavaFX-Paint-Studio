@@ -205,9 +205,9 @@ public class PaintModel {
             storeShape = selectShape.copy();
         }
 
-        public void setSelectedShape(Shape s){
-        this.selectShape = s;
-        }
+        //public void setSelectedShape(Shape s){
+        //this.selectShape = s;
+        //}
 
         public Shape getSelectedShape() {
             return selectShape;
@@ -217,12 +217,6 @@ public class PaintModel {
         return storeShape;
         }
 
-        // Copy
-        public void copyShape(){
-            if(selectShape == null) return;
-            Shape copied = selectShape.copy();
-            storeShape = selectShape.copy();
-        }
 
         //Cut
         public void cutShape() {
