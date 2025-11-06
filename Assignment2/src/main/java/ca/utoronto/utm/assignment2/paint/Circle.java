@@ -90,9 +90,9 @@ public class Circle implements Shape, Fillable, Hittable {
 
 
     @Override
-    public Circle copy(){return new Circle(this);}
+    public Circle copy(){
+        return new Circle(this);
 
-
-
+    }
 
 }

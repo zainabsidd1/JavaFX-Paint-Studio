@@ -106,6 +106,7 @@ public class Triangle implements Shape, Fillable, Hittable {
         }
     }
 
+    @Override
     public Triangle copy(){
         Triangle t = new Triangle();
         t.setColor(this.strokeColor);
@@ -114,7 +115,7 @@ public class Triangle implements Shape, Fillable, Hittable {
 
         if (this.vertices.size() == 3) {
             for (Point v : this.vertices) {
-                t.addVertex(new Point(v.x, v.y ));
+                t.addVertex(new Point(v.x + 10, v.y + 10)); // small offset
             }
         }
         return t;
