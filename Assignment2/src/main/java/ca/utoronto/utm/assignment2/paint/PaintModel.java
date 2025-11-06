@@ -191,9 +191,6 @@ public class PaintModel {
             this.selectShape = s;
         }
 
-        //public Shape getSelectedShape() {
-            //return selectShape;
-        //}
 
         public Shape getStoredShape() {
             return storeShape;
@@ -205,10 +202,6 @@ public class PaintModel {
             Shape copied = selectShape.copy();
             storeShape = selectShape.copy();
         }
-
-        //public void setSelectedShape(Shape s){
-        //this.selectShape = s;
-        //}
 
         public Shape getSelectedShape() {
             return selectShape;
