@@ -196,6 +196,21 @@ public class PaintModel {
             storeShape = selectShape.copy();
         }
 
+        //Cut
+        public void cutShape() {
+            if (selectShape == null) return;
+
+            storeShape = selectShape.copy();
+            shapes.remove(selectShape);
+            undoStack.push(selectShape);
+            redoStack.clear();
+            selectShape = null;
+
+            // Notify listeners to redraw
+            notifyListeners();
+
+        }
+
         // Filled/Outline toggle
         private boolean filled = true;
         public boolean isFilled() {

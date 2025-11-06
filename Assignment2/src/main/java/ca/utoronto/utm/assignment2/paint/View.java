@@ -163,7 +163,7 @@ public class View {
         MenuItem redoItem  = new MenuItem("Redo");
         MenuItem moveItem  = new MenuItem("Move");
 
-        cutItem.setOnAction(e -> System.out.println("Cut (not implemented)"));
+        cutItem.setOnAction(e -> paintModel.cutShape());
         copyItem.setOnAction(e -> paintModel.copyShape());
         pasteItem.setOnAction(e -> System.out.println("Paste (not implemented)"));
         undoItem.setOnAction(e -> paintModel.undo());
