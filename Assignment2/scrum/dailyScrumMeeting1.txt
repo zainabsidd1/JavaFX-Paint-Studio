@@ -107,9 +107,9 @@ Nov 4,2025
 	Obstacles I face: n/a
 
 Nov 5,2025
-	What I did yesterday:
-	What I will do today:
-	Obstacles I face:
+	What I did yesterday: Cleaned up PaintModel class.
+	What I will do today: Accepted pull requests for US3.008, US3.009, and US3.010.
+	Obstacles I face: Merge conflicts with the pull requests
 
 Nov 6,2025
 	What I did yesterday:
