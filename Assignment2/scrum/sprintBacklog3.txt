@@ -100,7 +100,7 @@ I WANT   : To be able to select the current drawing style (filled or outline), t
 SO THAT  : Shapes are rendered using the chosen style
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
-TYPE     : USER STORY US3.007 : : NotStarted
+TYPE     : USER STORY US3.007 : tatisoha : NotStarted
 NAME     : Line thickness selector
 PRIORITY : 3
 ESTIMATE : (1 hour, 2 hours, 4 hours, 1 day, 2 days, 4 days)    ACTUAL :
@@ -124,37 +124,37 @@ I WANT   : To be able to select the current line thickness, to be applied
 SO THAT  : Outlines and strokes appear at the chosen width
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
-TYPE     : USER STORY US3.008 : royanus1 : NotStarted
+TYPE     : USER STORY US3.008 : royanus1 : Complete
 NAME     : Cut Function
 PRIORITY : 3
-ESTIMATE : (1 hour, 2 hours, 4 hours, 1 day, 2 days, 4 days)     ACTUAL :
+ESTIMATE : 2 hours     ACTUAL : 2 hours
 AS A     : user
 I WANT   : To cut selected shapes
 SO THAT  : I can remove and move them elsewhere using paste
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
-TYPE     : USER STORY US3.009 : royanus1 : NotStarted
+TYPE     : USER STORY US3.009 : royanus1 : Complete
 NAME     : Copy Function
 PRIORITY : 3
-ESTIMATE : (1 hour, 2 hours, 4 hours, 1 day, 2 days, 4 days)     ACTUAL :
+ESTIMATE : 2 hours     ACTUAL : 2 hours
 AS A     : user
 I WANT   : To copy the selected shape
 SO THAT  : I can copy the selected shape
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
-TYPE     : USER STORY US3.010 : royanus1 : NotStarted
+TYPE     : USER STORY US3.010 : royanus1 : Complete
 NAME     : Paste Function
 PRIORITY : 3
-ESTIMATE : (1 hour, 2 hours, 4 hours, 1 day, 2 days, 4 days)     ACTUAL :
+ESTIMATE : 2 hours     ACTUAL : 2 hours
 AS A     : user
 I WANT   : To paste previously cut or copied shapes
 SO THAT  : I can reposition or duplicate content
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
-TYPE     : USER STORY US3.011 : tatisoha : NotStarted
+TYPE     : USER STORY US3.011 : tatisoha : Complete
 NAME     : Mover Tool
 PRIORITY : 3
-ESTIMATE : 2 hours     ACTUAL :
+ESTIMATE : 2 hours     ACTUAL : 2 hours
 AS A     : user
 I WANT   : To move existing shapes to a different position on the canvas
 SO THAT  : I can reposition elements without redrawing them

@@ -16,16 +16,7 @@
 # as appropriate.
 
 --------------------------------------------------------------------------
-TYPE     : USER STORY US3.003 : sidd1378 : Complete
-NAME     : Redo Function
-PRIORITY : 3
-ESTIMATE : 2 hours     ACTUAL : 1 hour
-AS A     : user
-I WANT   : To redo an action previously undone
-SO THAT  : I can reapply the last undone change if needed
---------------------------------------------------------------------------
---------------------------------------------------------------------------
-TYPE     : USER STORY US3.007 : UTORID : NotStarted
+TYPE     : USER STORY US3.007 : tatisoha : NotStarted
 NAME     : Line thickness selector
 PRIORITY : 3
 ESTIMATE : (1 hour, 2 hours, 4 hours, 1 day, 2 days, 4 days)    ACTUAL :
@@ -47,42 +38,6 @@ I WANT   : To be able to select the current line thickness, to be applied
            	results in two thinly outlined circles and a thinly outlined
            	rectangle as well as two thickly outlined rectangles and a thick squiggle
 SO THAT  : Outlines and strokes appear at the chosen width
---------------------------------------------------------------------------
---------------------------------------------------------------------------
-TYPE     : USER STORY US3.008 : royanus1 : NotStarted
-NAME     : Cut Function
-PRIORITY : 3
-ESTIMATE : (1 hour, 2 hours, 4 hours, 1 day, 2 days, 4 days)     ACTUAL :
-AS A     : user
-I WANT   : To cut selected shapes
-SO THAT  : I can remove and move them elsewhere using paste
---------------------------------------------------------------------------
---------------------------------------------------------------------------
-TYPE     : USER STORY US3.009 : royanus1 : NotStarted
-NAME     : Copy Function
-PRIORITY : 3
-ESTIMATE : (1 hour, 2 hours, 4 hours, 1 day, 2 days, 4 days)     ACTUAL :
-AS A     : user
-I WANT   : To copy the selected shape
-SO THAT  : I can copy the selected shape
---------------------------------------------------------------------------
---------------------------------------------------------------------------
-TYPE     : USER STORY US3.010 : royanus1 : NotStarted
-NAME     : Paste Function
-PRIORITY : 3
-ESTIMATE : (1 hour, 2 hours, 4 hours, 1 day, 2 days, 4 days)     ACTUAL :
-AS A     : user
-I WANT   : To paste previously cut or copied shapes
-SO THAT  : I can reposition or duplicate content
---------------------------------------------------------------------------
---------------------------------------------------------------------------
-TYPE     : USER STORY US3.011 : tatisoha : NotStarted
-NAME     : Mover Tool
-PRIORITY : 3
-ESTIMATE : (1 hour, 2 hours, 4 hours, 1 day, 2 days, 4 days)     ACTUAL :
-AS A     : user
-I WANT   : To move existing shapes to a different position on the canvas
-SO THAT  : I can reposition elements without redrawing them
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
 TYPE     : BUG BUG3.004 : kaurjap9 : NotStarted
@@ -245,6 +200,15 @@ I WANT   : To undo the most recent action
 SO THAT  : I can correct mistakes without restarting my work
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
+TYPE     : USER STORY US3.003 : sidd1378 : Complete
+NAME     : Redo Function
+PRIORITY : 3
+ESTIMATE : 2 hours     ACTUAL : 1 hour
+AS A     : user
+I WANT   : To redo an action previously undone
+SO THAT  : I can reapply the last undone change if needed
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
 TYPE     : USER STORY US3.004 : kaurjap9 : Complete
 NAME     : Fill Bucket Tool
 PRIORITY : 3
@@ -298,6 +262,66 @@ I WANT   : To be able to select the current drawing style (filled or outline), t
            	results in two solid circles and a solid rectangle as well as
            	two outlined rectangles and a squiggle
 SO THAT  : Shapes are rendered using the chosen style
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US3.007 : tatisoha : NotStarted
+NAME     : Line thickness selector
+PRIORITY : 3
+ESTIMATE : (1 hour, 2 hours, 4 hours, 1 day, 2 days, 4 days)    ACTUAL :
+AS A     : user
+I WANT   : To be able to select the current line thickness, to be applied
+           to subsequent shapes. Example:
+           		select fill style outline
+           		selects line thickness 1
+           		mode circle
+           		draw a circle
+           		draw a circle
+           		mode rectangle
+           		draw a rectangle
+           		select line thickness 9
+           		draw a rectangle
+           		draw a rectangle
+           		select mode squiggle
+           		draw a squiggle
+           	results in two thinly outlined circles and a thinly outlined
+           	rectangle as well as two thickly outlined rectangles and a thick squiggle
+SO THAT  : Outlines and strokes appear at the chosen width
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US3.008 : royanus1 : Complete
+NAME     : Cut Function
+PRIORITY : 3
+ESTIMATE : 2 hours     ACTUAL : 2 hours
+AS A     : user
+I WANT   : To cut selected shapes
+SO THAT  : I can remove and move them elsewhere using paste
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US3.009 : royanus1 : Complete
+NAME     : Copy Function
+PRIORITY : 3
+ESTIMATE : 2 hours     ACTUAL : 2 hours
+AS A     : user
+I WANT   : To copy the selected shape
+SO THAT  : I can copy the selected shape
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US3.010 : royanus1 : Complete
+NAME     : Paste Function
+PRIORITY : 3
+ESTIMATE : 2 hours     ACTUAL : 2 hours
+AS A     : user
+I WANT   : To paste previously cut or copied shapes
+SO THAT  : I can reposition or duplicate content
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US3.011 : tatisoha : Complete
+NAME     : Mover Tool
+PRIORITY : 3
+ESTIMATE : 2 hours     ACTUAL : 2 hours
+AS A     : user
+I WANT   : To move existing shapes to a different position on the canvas
+SO THAT  : I can reposition elements without redrawing them
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
 TYPE     : BUG BUG1.001 : sidd1378 : Complete
