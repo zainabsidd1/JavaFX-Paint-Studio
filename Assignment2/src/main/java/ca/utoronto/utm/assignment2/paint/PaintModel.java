@@ -191,9 +191,10 @@ public class PaintModel {
             this.selectShape = s;
         }
 
-        public Shape getSelectedShape() {
-            return selectShape;
-        }
+        //public Shape getSelectedShape() {
+            //return selectShape;
+        //}
+
         public Shape getStoredShape() {
             return storeShape;
         }
@@ -211,10 +212,6 @@ public class PaintModel {
 
         public Shape getSelectedShape() {
             return selectShape;
-        }
-
-        public Shape getStoredShape() {
-        return storeShape;
         }
 
 
