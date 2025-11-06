@@ -66,6 +66,23 @@ DESIGN PATTERNS USED
         improves readability and makes the class easier to extend.
 
 	Command:
+    Originally, the undo and redo functionality relied on pushing raw
+    `Shape` objects or custom records like `FillChange` and `ShapeRemoved`
+     onto stacks in the `PaintModel`. Each new feature required manual
+     `instanceof` checks and complex reversal logic, making the code
+     hard to extend. So, using a command model, we encapsulate every
+     user action—such as adding, removing, moving, or filling a shape—into
+     its own `Command` object with `apply()` and `unapply()` methods. The
+     `PaintModel` now executes actions through a unified `exec()` method
+     that automatically records them in undo and redo stacks. This removes
+     conditional logic from the model, centralizes state changes into
+     discrete, reversible operations, and allows new features to be added
+     by simply creating a new command class. It also improves adherence
+     to the Open/Closed Principle as the model no longer needs to know
+     how an action is performed, only that it can be done and undone.
+     This makes a model where each action is reusable and consistent.
+
+
 	Singleton:
 	Composite:
 	Factory:
