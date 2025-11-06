@@ -9,6 +9,7 @@ public class CopyStrategy implements ToolStrategy {
     private final PaintModel model;
     private final ImageCursor copyCursor;
 
+
     public CopyStrategy(PaintModel model) {
         this.model = model;
 

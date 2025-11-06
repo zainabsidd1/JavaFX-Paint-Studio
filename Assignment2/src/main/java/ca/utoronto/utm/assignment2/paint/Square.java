@@ -99,7 +99,6 @@ public class Square implements Shape, Fillable, Hittable {
         this.filled = other.filled;
     }
 
-
     @Override
     public Square copy(){
         return new Square(this);
