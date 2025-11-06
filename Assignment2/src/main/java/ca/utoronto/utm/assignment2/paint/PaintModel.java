@@ -122,7 +122,12 @@ public class PaintModel {
                 if (last instanceof Shape s) {
                         shapes.remove(s);
                         redoStack.push(s);
-                } else if (last instanceof FillChange fc) {
+                }
+                else if (last instanceof ShapeRemoved rs) {
+                    shapes.add(rs.shape);
+                    redoStack.push(rs);
+                }
+                else if (last instanceof FillChange fc) {
                         fc.getTarget().setFillColor(fc.getPrev());
                         redoStack.push(new FillChange(fc.getTarget(), fc.getPrev(), fc.getNext()));
                 }
@@ -171,7 +176,12 @@ public class PaintModel {
             if(last instanceof Shape s){
                 shapes.add(s);
                 undoStack.push(s);
-            } else if(last instanceof FillChange fc){
+            }
+            else if(last instanceof ShapeRemoved rs){
+                shapes.remove(rs.shape);
+                undoStack.push(rs);
+            }
+            else if(last instanceof FillChange fc){
                 fc.getTarget().setFillColor(fc.getNext());
                 undoStack.push(new FillChange(fc.getTarget(), fc.getNext(), fc.getPrev()));
             }
@@ -197,6 +207,17 @@ public class PaintModel {
             storeShape = selectShape.copy();
         }
 
+        //Cut
+        public void cutShape() {
+            if (selectShape == null) return;
+            storeShape = selectShape.copy();
+            shapes.remove(selectShape);
+            undoStack.push(new ShapeRemoved(selectShape));
+            redoStack.clear();
+            selectShape = null;
+            notifyListeners();
+        }
+
         //Paste
         public void pasteShape(){
             if (storeShape == null) return;
@@ -218,4 +239,10 @@ public class PaintModel {
             Shape s = findTopmostAt(x, y);
             return s;
         }
+
+        private static class ShapeRemoved {
+        Shape shape;
+        ShapeRemoved(Shape s) {this.shape = s;}
+        }
+
 }
