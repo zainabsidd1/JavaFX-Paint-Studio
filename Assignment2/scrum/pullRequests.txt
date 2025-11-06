@@ -11,4 +11,4 @@ US3.009 author:royanus1 puller:sidd1378 status:Rejected
 US3.008 author:royanus1 puller:sidd1378 status:Completed
 US3.009 author:royanus1 puller:sidd1378 status:Completed
 US3.010 author:royanus1 puller:sidd1378 status:Completed
-BUG3.004 author:kaurjap9 puller:? status:Waiting
+BUG3.004 author:kaurjap9 puller:tatisoha status:Completed
