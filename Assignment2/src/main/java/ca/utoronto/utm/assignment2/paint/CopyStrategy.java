@@ -10,9 +10,7 @@ public class CopyStrategy implements ToolStrategy {
     }
 
     @Override
-    public String getName() {
-        return "Copy";
-    }
+    public String getName() {return "Copy";}
 
     @Override
     public void onMousePressed(MouseEvent e) {
