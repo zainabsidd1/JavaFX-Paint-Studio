@@ -1,15 +1,26 @@
 package ca.utoronto.utm.assignment2.paint;
 
+import javafx.scene.Cursor;
+import javafx.scene.ImageCursor;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.image.Image;
 
 public class PasteStrategy implements ToolStrategy {
     private final PaintModel model;
     private final PaintPanel panel;
+    private final ImageCursor pasteCursor;
 
     public PasteStrategy(PaintModel model, PaintPanel panel) {
         this.model = model;
         this.panel = panel;
+
+        Image img = new Image(
+                getClass().getResourceAsStream("/icons/paste.png"), 20, 20, true, true);
+        this.pasteCursor = new ImageCursor(img, img.getWidth()/2, img.getHeight()/2);
     }
+
+    @Override
+    public Cursor getCursor() { return pasteCursor; }
 
     @Override
     public String getName() { return "Paste"; }
