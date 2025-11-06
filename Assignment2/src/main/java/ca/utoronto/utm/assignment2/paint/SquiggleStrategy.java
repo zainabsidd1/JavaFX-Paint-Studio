@@ -47,7 +47,7 @@ public class SquiggleStrategy implements ToolStrategy, Colorable {
     }
 
     @Override public void onMouseMoved(MouseEvent e) { /* no-op */ }
-    @Override public void onMouseClicked(MouseEvent e) { /* no-op */ }
+    @Override public void onMouseClicked(MouseEvent e) {}
 
     @Override
     public Color getColor() {
