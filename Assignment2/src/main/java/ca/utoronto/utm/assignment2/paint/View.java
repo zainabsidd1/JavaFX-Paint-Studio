@@ -164,7 +164,7 @@ public class View {
         MenuItem moveItem  = new MenuItem("Move");
 
         cutItem.setOnAction(e -> System.out.println("Cut (not implemented)"));
-        copyItem.setOnAction(e -> System.out.println("Copy (not implemented)"));
+        copyItem.setOnAction(e -> paintPanel.setStrategy(new CopyStrategy(paintModel)));
         pasteItem.setOnAction(e -> System.out.println("Paste (not implemented)"));
         undoItem.setOnAction(e -> paintModel.undo());
         redoItem.setOnAction(e -> paintModel.redo());

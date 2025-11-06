@@ -40,4 +40,7 @@ public class Polyline implements Shape, Colorable {
     public void setColor(Color c) {
         if (c != null) this.color = c;
     }
+
+    @Override
+    public Polyline copy() {return new Polyline(color);}
 }

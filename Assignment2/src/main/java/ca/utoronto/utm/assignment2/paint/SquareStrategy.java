@@ -100,5 +100,8 @@ public class SquareStrategy implements ToolStrategy, Colorable {
     @Override
     public void onMouseMoved(MouseEvent e){/* no-op */}
     @Override
-    public void onMouseClicked(MouseEvent e){/* no-op */}
+    public void onMouseClicked(MouseEvent e){
+        Shape clicked = model.findTopmostAt(e.getX(), e.getY());
+        model.setSelectedShape(clicked);
+    }
 }

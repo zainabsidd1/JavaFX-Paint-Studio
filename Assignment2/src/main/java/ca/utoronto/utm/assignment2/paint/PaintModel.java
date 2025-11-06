@@ -22,9 +22,11 @@ public class PaintModel {
         private Polyline currEraser;
         private final Deque<Object> undoStack = new ArrayDeque<>();
         private final Deque<Object> redoStack = new ArrayDeque<>();
+        private Shape selectShape;
+        private Shape storeShape;
 
 
-        // Color
+    // Color
 
         public Color getCurrentColor() {
                 return currentColor; // may be null if user never picked one
@@ -175,6 +177,23 @@ public class PaintModel {
                 undoStack.push(new FillChange(fc.getTarget(), fc.getNext(), fc.getPrev()));
             }
             notifyListeners();
+        }
+        public void setSelectedShape(Shape s){
+            this.selectShape = s;
+        }
+
+        public Shape getSelectedShape() {
+            return selectShape;
+        }
+        public Shape getStoredShape() {
+            return storeShape;
+        }
+
+        //Copy
+        public void copyShape(){
+            if(selectShape == null) return;
+            Shape copied = selectShape.copy();
+            storeShape = selectShape.copy();
         }
 
         // Filled/Outline toggle

@@ -105,5 +105,20 @@ public class Triangle implements Shape, Fillable, Hittable {
             yvertices[i] = vertices.get(i).getY();
         }
     }
+
+    public Triangle copy(){
+        Triangle t = new Triangle();
+        t.setColor(this.strokeColor);
+        t.setFillColor(this.fillColor);
+        t.setFilled(this.filled);
+
+        if (this.vertices.size() == 3) {
+            for (Point v : this.vertices) {
+                t.addVertex(new Point(v.x, v.y ));
+            }
+        }
+        return t;
+    }
+
 }
 

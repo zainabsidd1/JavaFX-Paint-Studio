@@ -11,5 +11,7 @@ public interface Shape extends Colorable {
     default void translate(double dx, double dy) {
         System.out.println("This is not hittable.");
     }
+
+    Shape copy();
 }
 
