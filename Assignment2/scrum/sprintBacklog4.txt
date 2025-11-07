@@ -9,3 +9,6 @@
 # BUG : Make mover, copy, cut, paster work on squiggle and polyline
 # US : Allow user to change the background color of canvas
 # US : Make eraser tool "erase" to any colored background set by user (not only white)
+# US : Make a temporary circle show up in canvas when user changes stroke to show the width
+# US : Do accessibility feature (sound)
+# US : Make spray can tool
