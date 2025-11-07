@@ -28,7 +28,7 @@ public class OvalStrategy implements ToolStrategy, Colorable {
         oval = new Oval(p, p, chosen, true);
         oval.setColor(chosen);
         oval.setFillColor(chosen);
-
+        oval.setStrokeWidth(model.getStrokeWidth());
         panel.requestRender();
     }
 
@@ -68,7 +68,7 @@ public class OvalStrategy implements ToolStrategy, Colorable {
 
         Color preview = chosenOrFallback();
 
-        g.setLineWidth(2);
+        g.setLineWidth(model.getStrokeWidth());
         if(model.isFilled()){
             g.setFill(preview);
             g.fillOval(x, y, w, h);

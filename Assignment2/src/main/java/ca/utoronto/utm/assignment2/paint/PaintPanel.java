@@ -18,7 +18,7 @@ public class PaintPanel extends Canvas implements EventHandler<MouseEvent>, Pain
     private ToolStrategy currentStrategy;
 
     public PaintPanel(PaintModel model) {
-        super(300, 300);
+        super(300, 320);
         this.model = model;
         this.model.addListener(this);
 

@@ -2,6 +2,7 @@ package ca.utoronto.utm.assignment2.paint;
 
 import javafx.application.Platform;
 import javafx.geometry.Insets;
+import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.TextFormatter;
@@ -12,6 +13,7 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.Slider;
 
 import java.util.Locale;
 import java.util.function.UnaryOperator;
@@ -26,7 +28,50 @@ public class View {
         this.paintPanel = new PaintPanel(this.paintModel);
         ShapeChooserPanel shapeChooserPanel = new ShapeChooserPanel(this);
 
+
+        //Textfield to show line current thickness
+        TextField strokeWidthField = new TextField();
+        strokeWidthField.setEditable(false);
+        strokeWidthField.setPrefWidth(70);
+        strokeWidthField.setAlignment(Pos.CENTER);
+        strokeWidthField.setStyle("""
+            -fx-background-color: #f2f2f2;
+            -fx-border-color: #ccc;
+            -fx-border-radius: 4;
+            -fx-background-radius: 4; """);
+        strokeWidthField.setText(String.format("%.1f", paintModel.getStrokeWidth()));
+        paintModel.addListener(() -> {
+            double w = paintModel.getStrokeWidth();
+            strokeWidthField.setText(String.format("%.1f", w));
+        });
+
+        //Slider for line thickness
+        Slider tslider = new Slider(1,20,3);
+        tslider.setShowTickLabels(true);
+        tslider.setShowTickMarks(true);
+        tslider.setMajorTickUnit(1);
+        tslider.setBlockIncrement(5);
+        tslider.valueProperty().addListener((observable, oldValue, newValue) -> {
+            paintModel.setStrokeWidth(newValue.doubleValue());
+        });
+        strokeWidthField.setEditable(true);
+        strokeWidthField.setOnAction(e -> {
+            try {
+                double value = Double.parseDouble(strokeWidthField.getText());
+                tslider.setValue(value); // sync slider + model
+            } catch (NumberFormatException ex) {
+                strokeWidthField.setText(String.format("%.1f", paintModel.getStrokeWidth()));
+            }
+        });
+
+
+        HBox bottomBar = new HBox(10, tslider, strokeWidthField);
+        bottomBar.setAlignment(Pos.CENTER_LEFT);
+        bottomBar.setPadding(new Insets(5, 10, 5, 10));
+
         BorderPane root = new BorderPane();
+        root.setBottom(bottomBar);
+
 
         Label colorLbl = new Label("🎨 Color:");
         colorLbl.setStyle("-fx-font-weight: bold; -fx-text-fill: #333;");

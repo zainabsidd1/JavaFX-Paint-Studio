@@ -3,13 +3,14 @@ package ca.utoronto.utm.assignment2.paint;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 
-public class Square implements Shape, Fillable, Hittable {
+public class Square implements Shape, Fillable, Hittable, Strokeable {
     private Point p1;
     private Point p2;
     private Color strokeColor;
     private Color fillColor;
     private boolean filled=true;
     private boolean selected = false;
+    private double strokeWidth = 2.0;
 
     public Square(Point p1, Point p2, Color color) {
         this.p1 = p1;
@@ -93,5 +94,10 @@ public class Square implements Shape, Fillable, Hittable {
     public Square copy(){
         return new Square(this);
     }
+
+    @Override
+    public double getStrokeWidth() { return strokeWidth; }
+    @Override
+    public void setStrokeWidth(double w) { this.strokeWidth = clampStroke(w); }
 
 }

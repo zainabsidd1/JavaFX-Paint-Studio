@@ -108,16 +108,16 @@ Nov 4,2025
 
 Nov 5,2025
 	What I did yesterday: Started working on US3.010
-	What I will do today: Complete US3.010 and Start and finish US3.008
-	Obstacles I face:
+	What I will do today: Accepted Pull Request for US3.011 + Complete US3.010 and Start and finish US3.008
+	Obstacles I face: the cut function wasn't removing the shape from the panel and undo/redo wasn't working according to cut
 
 Nov 6,2025
-	What I did yesterday:
-	What I will do today:
-	Obstacles I face:
+	What I did yesterday: Completed all my user stories for sprint 3
+	What I will do today: Update sprint backlog
+	Obstacles I face: n/a
 
 Nov 7,2025
-	What I did yesterday:
+	What I did yesterday: Updated sprint backlog
 	What I will do today:
 	Obstacles I face:
 

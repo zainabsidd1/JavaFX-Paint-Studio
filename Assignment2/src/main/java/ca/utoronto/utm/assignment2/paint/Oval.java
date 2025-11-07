@@ -3,13 +3,14 @@ package ca.utoronto.utm.assignment2.paint;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 
-public class Oval implements Shape, Fillable, Hittable {
+public class Oval implements Shape, Fillable, Hittable, Strokeable {
     private Point p1;
     private Point p2;
     private Color strokeColor;
     private Color fillColor;
     private boolean filled=true;
     private boolean selected = false;
+    private double strokeWidth = 2.0;
 
     public Oval(Point p1, Point p2, Color color, boolean filled) {
         this.p1 = p1;
@@ -101,5 +102,10 @@ public class Oval implements Shape, Fillable, Hittable {
 
     @Override
     public Oval copy(){return new Oval(this);}
+
+    @Override
+    public double getStrokeWidth() { return strokeWidth; }
+    @Override
+    public void setStrokeWidth(double w) { this.strokeWidth = clampStroke(w); }
 
 }

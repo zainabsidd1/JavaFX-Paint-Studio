@@ -3,12 +3,13 @@ package ca.utoronto.utm.assignment2.paint;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 
-public class Circle implements Shape, Fillable, Hittable {
+public class Circle implements Shape, Fillable, Hittable, Strokeable {
         private final Point center;
         private double radius;
         private Color strokeColor;
         private Color fillColor;
         private boolean filled = true;
+        private double strokeWidth = 2.0;
 
         public Circle(Point center, double radius, Color color) {
                 this.center = center;
@@ -80,6 +81,13 @@ public class Circle implements Shape, Fillable, Hittable {
         @Override
         public Circle copy(){
             return new Circle(this);
+
+    }
+
+    @Override
+    public double getStrokeWidth() { return strokeWidth; }
+    @Override
+    public void setStrokeWidth(double w) { this.strokeWidth = clampStroke(w); }
 
         }
 }

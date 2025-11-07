@@ -34,6 +34,7 @@ public class SquareStrategy implements ToolStrategy, Colorable {
                 ? model.getCurrentColor()
                 : color;
         square = new Square(p, p, chosen);
+        square.setStrokeWidth(model.getStrokeWidth());
         square.setColor(chosen);
         square.setFillColor(chosen);
         panel.requestRender();
@@ -70,6 +71,7 @@ public class SquareStrategy implements ToolStrategy, Colorable {
         if(square != null){
             square.setFilled(model.isFilled());
             model.addShape(square);
+            model.setStrokeWidth(model.getStrokeWidth());
             square = null;
         }
     }
@@ -95,7 +97,7 @@ public class SquareStrategy implements ToolStrategy, Colorable {
                 ? model.getCurrentColor()
                 : color;
         g.setStroke(previewColour);
-        g.setLineWidth(2);
+        g.setLineWidth(model.getStrokeWidth());
         if(model.isFilled()){
             g.setFill(previewColour);
             g.fillRect(x, y, length, length);

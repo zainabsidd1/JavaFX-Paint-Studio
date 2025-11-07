@@ -35,6 +35,7 @@ public class TriangleStrategy implements ToolStrategy, Colorable {
             triangle.setColor(chosen);
             triangle.setFillColor(chosen);
             triangle.setFilled(model.isFilled());
+            triangle.setStrokeWidth(model.getStrokeWidth());
 
             model.setSelectedShape(clicked);
 
@@ -76,7 +77,7 @@ public class TriangleStrategy implements ToolStrategy, Colorable {
 
         Color preview = chosenOrFallback();
         g.setStroke(preview);
-        g.setLineWidth(1.5);
+        g.setLineWidth(model.getStrokeWidth());
 
         var vertices = triangle.getVertices();
         for (int i = 0; i < vertices.size() - 1; i++) {
