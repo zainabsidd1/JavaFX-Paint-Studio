@@ -21,7 +21,7 @@ public class RenderVisitor implements ShapeVisitor {
         double size = radius * 2;
         // stroke & fill
         g.setStroke(c.getColor());
-        g.setLineWidth(2);
+        g.setLineWidth(c.getStrokeWidth());
         if (c.getFilled()) { // <-- use getFilled()
             g.setFill(c.getFillColor() != null ? c.getFillColor() : c.getColor());
             g.fillOval(x, y, size, size);
@@ -37,7 +37,7 @@ public class RenderVisitor implements ShapeVisitor {
         double height = o.getHeight();
         // stroke & line width
         g.setStroke(o.getColor());
-        g.setLineWidth(2);
+        g.setLineWidth(o.getStrokeWidth());
         if (o.getFilled() && o.getFillColor() != null && o.getFillColor().getOpacity() > 0) {
             g.setFill(o.getFillColor());
             g.fillOval(left, top, width, height);
@@ -49,11 +49,8 @@ public class RenderVisitor implements ShapeVisitor {
     public void visit(Polyline p) {
         List<Point> pts = p.getPoints();
         if (pts == null || pts.size() < 2) return;
-
         g.setStroke(p.getColor());
-        g.setLineWidth(2);
-
-        // draw connected line segments
+        g.setLineWidth(p.getStrokeWidth());
         for (int i = 0; i < pts.size() - 1; i++) {
             Point p1 = pts.get(i);
             Point p2 = pts.get(i + 1);
@@ -68,7 +65,7 @@ public class RenderVisitor implements ShapeVisitor {
         double w = r.getWidth();
         double h = r.getHeight();
         g.setStroke(r.getColor());
-        g.setLineWidth(2);
+        g.setLineWidth(r.getStrokeWidth());
         if (r.getFilled() && r.getFillColor() != null) {
             g.setFill(r.getFillColor());
             g.fillRect(x, y, w, h);
@@ -83,7 +80,7 @@ public class RenderVisitor implements ShapeVisitor {
         double y = s.getTop();
         double len = s.getLength();
         g.setStroke(s.getColor());
-        g.setLineWidth(2);
+        g.setLineWidth(s.getStrokeWidth());
         if (s.getFilled() && s.getFillColor() != null && s.getFillColor().getOpacity() > 0) {
             g.setFill(s.getFillColor());
             g.fillRect(x, y, len, len);
@@ -96,7 +93,7 @@ public class RenderVisitor implements ShapeVisitor {
         List<Point> pts = s.getPoints();
         if (pts.size() < 2) return;
         g.setStroke(s.getColor());
-        g.setLineWidth(2);
+        g.setLineWidth(s.getStrokeWidth());
         for (int i = 0; i < pts.size() - 1; i++) {
             Point p1 = pts.get(i);
             Point p2 = pts.get(i + 1);
@@ -120,7 +117,7 @@ public class RenderVisitor implements ShapeVisitor {
             g.fillPolygon(xs, ys, 3);
         }
         g.setStroke(t.getColor());
-        g.setLineWidth(2);
+        g.setLineWidth(t.getStrokeWidth());
         g.strokePolygon(xs, ys, 3);
     }
 }
