@@ -34,6 +34,7 @@ public class RectangleStrategy implements ToolStrategy, Colorable {
         rectangle = new Rectangle(p, p, chosen);  // zero-sized start
         rectangle.setColor(chosen);
         rectangle.setFilled(model.isFilled());
+        rectangle.setStrokeWidth(model.getStrokeWidth());
         panel.requestRender();            // repaint to show preview immediately
     }
 
@@ -92,7 +93,7 @@ public class RectangleStrategy implements ToolStrategy, Colorable {
         }
 
         g.setStroke(previewColour);
-        g.setLineWidth(2);
+        g.setLineWidth(rectangle.getStrokeWidth());
         g.strokeRect(x, y, w, h);
     }
 }

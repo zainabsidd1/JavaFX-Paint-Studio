@@ -30,8 +30,7 @@ public class PaintModel {
 
     private Squiggle currentSquiggle;
     private Polyline polylineCurr;
-    private Polyline currEraser;
-
+    private Squiggle currEraser;
     private Shape selectShape;
     private Shape storeShape;
 
@@ -71,6 +70,7 @@ public class PaintModel {
     public void startNewSquiggle() {
         currentSquiggle = new Squiggle();
         if (hasUserColor()) currentSquiggle.setColor(currentColor); // only override if user picked
+        applyStrokeWidth(currentSquiggle, strokeWidth);
         exec(new AddShapeCommand(shapes, currentSquiggle));
     }
     public void addPoint(Point p) {
@@ -83,6 +83,7 @@ public class PaintModel {
     public void startNewPolyline() {
         polylineCurr = new Polyline();
         if (hasUserColor()) polylineCurr.setColor(currentColor); // only override if user picked
+        applyStrokeWidth(polylineCurr, strokeWidth);
         exec(new AddShapeCommand(shapes, polylineCurr));
     }
     public void addPolylinePoint(Point p) {
@@ -93,8 +94,9 @@ public class PaintModel {
 
     // Eraser (as a polyline with background colour)
     public void startNewEraser(){
-        currEraser = new Polyline();
+        currEraser = new Squiggle();
         currEraser.setColor(Color.web("#F4F4F4"));
+        applyStrokeWidth(currEraser, strokeWidth);
         exec(new AddShapeCommand(shapes, currEraser));
     }
     public void addEraserPoint(Point p){
@@ -188,5 +190,21 @@ public class PaintModel {
 
     public Shape selectTopMostAt(double x, double y, Color highlightColor) {
         return findTopmostAt(x, y);
+    }
+
+    private double strokeWidth = 2.0;
+
+    public double getStrokeWidth() { return strokeWidth; }
+
+    private void applyStrokeWidth(Shape s, double w) { // helper
+        if (s instanceof Strokeable st) st.setStrokeWidth(w);
+    }
+
+    public void setStrokeWidth(double w) {
+        double clamped = Math.max(1, Math.min(20.1, w)); // to always stay in the bounds
+        if (Double.compare(strokeWidth, clamped) != 0) {
+            strokeWidth = clamped;
+            notifyListeners();
+        }
     }
 }

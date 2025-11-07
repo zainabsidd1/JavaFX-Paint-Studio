@@ -35,6 +35,7 @@ public class CircleStrategy implements ToolStrategy, Colorable {
         circle = new Circle(centre, 0, chosen);
         circle.setColor(chosen);
         circle.setFilled(model.isFilled());
+        circle.setStrokeWidth(model.getStrokeWidth());
 
         panel.requestRender();
     }
@@ -57,6 +58,7 @@ public class CircleStrategy implements ToolStrategy, Colorable {
             double dy = e.getY() - circle.getCenter().y;
             circle.setRadius(Math.sqrt(dx*dx + dy*dy));
             circle.setFilled(model.isFilled());
+            circle.setStrokeWidth(model.getStrokeWidth()); // for safety
             model.addShape(circle);
             circle = null; // clear preview
         }
@@ -87,7 +89,7 @@ public class CircleStrategy implements ToolStrategy, Colorable {
                 : color;
 
         g.setStroke(previewColor);
-        g.setLineWidth(2);
+        g.setLineWidth(circle.getStrokeWidth());
         if(model.isFilled()) {
             g.setFill(previewColor);
             g.fillOval(x - r, y - r, r * 2, r * 2);
