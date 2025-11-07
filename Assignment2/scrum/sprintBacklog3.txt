@@ -100,10 +100,10 @@ I WANT   : To be able to select the current drawing style (filled or outline), t
 SO THAT  : Shapes are rendered using the chosen style
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
-TYPE     : USER STORY US3.007 : tatisoha : NotStarted
+TYPE     : USER STORY US3.007 : tatisoha : Complete
 NAME     : Line thickness selector
 PRIORITY : 3
-ESTIMATE : 1 hour    ACTUAL :
+ESTIMATE : 1 hour    ACTUAL :2 hours
 AS A     : user
 I WANT   : To be able to select the current line thickness, to be applied
            to subsequent shapes. Example:

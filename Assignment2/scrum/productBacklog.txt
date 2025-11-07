@@ -16,30 +16,6 @@
 # as appropriate.
 
 --------------------------------------------------------------------------
-TYPE     : USER STORY US3.007 : tatisoha : NotStarted
-NAME     : Line thickness selector
-PRIORITY : 3
-ESTIMATE : 1 hour    ACTUAL :
-AS A     : user
-I WANT   : To be able to select the current line thickness, to be applied
-           to subsequent shapes. Example:
-           		select fill style outline
-           		selects line thickness 1
-           		mode circle
-           		draw a circle
-           		draw a circle
-           		mode rectangle
-           		draw a rectangle
-           		select line thickness 9
-           		draw a rectangle
-           		draw a rectangle
-           		select mode squiggle
-           		draw a squiggle
-           	results in two thinly outlined circles and a thinly outlined
-           	rectangle as well as two thickly outlined rectangles and a thick squiggle
-SO THAT  : Outlines and strokes appear at the chosen width
---------------------------------------------------------------------------
---------------------------------------------------------------------------
 TYPE     : BUG BUG3.004 : kaurjap9 : NotStarted
 NAME     : Architecture behind Model is poor
 PRIORITY : 3
@@ -264,10 +240,10 @@ I WANT   : To be able to select the current drawing style (filled or outline), t
 SO THAT  : Shapes are rendered using the chosen style
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
-TYPE     : USER STORY US3.007 : tatisoha : NotStarted
+TYPE     : USER STORY US3.007 : tatisoha : Complete
 NAME     : Line thickness selector
 PRIORITY : 3
-ESTIMATE : (1 hour, 2 hours, 4 hours, 1 day, 2 days, 4 days)    ACTUAL :
+ESTIMATE : 1 hour    ACTUAL : 2 hours
 AS A     : user
 I WANT   : To be able to select the current line thickness, to be applied
            to subsequent shapes. Example:
