@@ -88,6 +88,4 @@ public class Circle implements Shape, Fillable, Hittable, Strokeable {
     public double getStrokeWidth() { return strokeWidth; }
     @Override
     public void setStrokeWidth(double w) { this.strokeWidth = clampStroke(w); }
-
-        }
 }
