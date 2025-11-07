@@ -143,6 +143,7 @@ public class PaintModel {
                 return false;
             }
             exec(new FillCommand(f, prev, use));
+            f.applyFill(use);
             return true;
         }
         return false;
