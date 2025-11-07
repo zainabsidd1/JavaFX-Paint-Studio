@@ -4,12 +4,13 @@ import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 import java.util.ArrayList;
 
-public class Triangle implements Shape, Fillable, Hittable {
+public class Triangle implements Shape, Fillable, Hittable, Strokeable {
     private final ArrayList<Point> vertices = new ArrayList<>();
     private Color strokeColor = Color.DARKRED;
     private Color fillColor = Color.DARKRED;
     private double[] xvertices, yvertices;
     private boolean filled = true;
+    private double strokeWidth = 2.0;
 
     public void addVertex(Point p) {
         if (vertices.size() < 3) {
@@ -76,8 +77,8 @@ public class Triangle implements Shape, Fillable, Hittable {
             g.fillPolygon(xvertices, yvertices, 3);
         }
 
-        g.setStroke(fillColor);
-        g.setLineWidth(2);
+        g.setStroke(strokeColor);
+        g.setLineWidth(strokeWidth);
         g.strokePolygon(xvertices, yvertices, 3);
     }
 
@@ -120,6 +121,9 @@ public class Triangle implements Shape, Fillable, Hittable {
         }
         return t;
     }
-
+    @Override
+    public double getStrokeWidth() { return strokeWidth; }
+    @Override
+    public void setStrokeWidth(double w) { this.strokeWidth = clampStroke(w); }
 }
 

@@ -82,7 +82,7 @@ public class PolylineStrategy implements ToolStrategy, Colorable {
             Point last = polyline.getLast();
             g.setLineDashes(0);
             g.setStroke(previewColour);
-            g.setLineWidth(2);
+            g.setLineWidth(model.getStrokeWidth());
             g.strokeLine(last.x, last.y, hoverPoint.x, hoverPoint.y);
         }
         // 2) small dots at each committed vertex

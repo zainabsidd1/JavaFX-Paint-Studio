@@ -5,9 +5,10 @@ import javafx.scene.paint.Color;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Squiggle implements Shape, Colorable {
+public class Squiggle implements Shape, Colorable, Strokeable {
     private final List<Point> points = new ArrayList<>();
     private Color color = Color.RED;
+    private double strokeWidth = 2.0;
 
     public void addPoint(Point p) {
         points.add(p);
@@ -17,7 +18,7 @@ public class Squiggle implements Shape, Colorable {
     public void draw(GraphicsContext g) {
         if (points.size() < 2) return;
         g.setStroke(color);
-        g.setLineWidth(2);
+        g.setLineWidth(strokeWidth);
         for (int i = 0; i < points.size() - 1; i++) {
             Point p1 = points.get(i);
             Point p2 = points.get(i + 1);
@@ -37,4 +38,9 @@ public class Squiggle implements Shape, Colorable {
 
     @Override
     public Squiggle copy() { return new Squiggle(); }
+
+    @Override
+    public double getStrokeWidth() { return strokeWidth; }
+    @Override
+    public void setStrokeWidth(double w) { this.strokeWidth = clampStroke(w); }
 }

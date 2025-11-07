@@ -5,9 +5,10 @@ import javafx.scene.paint.Color;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Polyline implements Shape, Colorable {
+public class Polyline implements Shape, Colorable, Strokeable {
     private final List<Point> pathPoints = new ArrayList<>();
     private Color color = Color.DEEPPINK; // default; will be overwritten by setColor
+    private double strokeWidth = 2.0;
 
     public Polyline() { }
 
@@ -23,7 +24,7 @@ public class Polyline implements Shape, Colorable {
     public void draw(GraphicsContext g) {
         if (pathPoints.size() < 2) return;
         g.setStroke(color);
-        g.setLineWidth(2);
+        g.setLineWidth(strokeWidth);
         for (int i = 0; i < pathPoints.size() - 1; i++) {
             Point p1 = pathPoints.get(i);
             Point p2 = pathPoints.get(i + 1);
@@ -43,4 +44,9 @@ public class Polyline implements Shape, Colorable {
 
     @Override
     public Polyline copy() {return new Polyline(color);}
+
+    @Override
+    public double getStrokeWidth() { return strokeWidth; }
+    @Override
+    public void setStrokeWidth(double w) { this.strokeWidth = clampStroke(w); }
 }

@@ -3,13 +3,14 @@ package ca.utoronto.utm.assignment2.paint;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 
-public class Rectangle implements Shape, Fillable, Hittable {
+public class Rectangle implements Shape, Fillable, Hittable, Strokeable {
     private Point p1;
     private Point p2;
     private Color color;
     private Color fillColor;
     private boolean filled = true;
     private boolean selected = false;
+    private double strokeWidth = 2.0;
 
     public Rectangle(Point p1, Point p2, Color color) {
         this.p1 = p1;
@@ -71,7 +72,7 @@ public class Rectangle implements Shape, Fillable, Hittable {
         double w = getWidth();
         double h = getHeight();
         g.setStroke(getColor());
-        g.setLineWidth(2);
+        g.setLineWidth(strokeWidth);
         if (filled) {
             g.setFill(fillColor != null ? fillColor : color);
             g.fillRect(x, y, w, h);
@@ -98,5 +99,10 @@ public class Rectangle implements Shape, Fillable, Hittable {
 
     @Override
     public Rectangle copy() {return new Rectangle(this);}
+
+    @Override
+    public double getStrokeWidth() { return strokeWidth; }
+    @Override
+    public void setStrokeWidth(double w) { this.strokeWidth = clampStroke(w); }
 
 }
