@@ -20,16 +20,8 @@ public class Polyline implements Shape, Colorable, Strokeable {
         pathPoints.add(p);
     }
 
-    @Override
-    public void draw(GraphicsContext g) {
-        if (pathPoints.size() < 2) return;
-        g.setStroke(color);
-        g.setLineWidth(strokeWidth);
-        for (int i = 0; i < pathPoints.size() - 1; i++) {
-            Point p1 = pathPoints.get(i);
-            Point p2 = pathPoints.get(i + 1);
-            g.strokeLine(p1.x, p1.y, p2.x, p2.y);
-        }
+    public List<Point> getPoints() {
+        return pathPoints;
     }
 
     @Override
@@ -40,6 +32,11 @@ public class Polyline implements Shape, Colorable, Strokeable {
     @Override
     public void setColor(Color c) {
         if (c != null) this.color = c;
+    }
+
+    @Override
+    public void accept(ShapeVisitor visitor) {
+        visitor.visit(this);
     }
 
     @Override

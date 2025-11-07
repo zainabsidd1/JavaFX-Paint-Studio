@@ -70,18 +70,8 @@ public class Square implements Shape, Fillable, Hittable, Strokeable {
     }
 
     @Override
-    public void draw(GraphicsContext g) {
-        double x = getLeft();
-        double y = getTop();
-        double length = getLength();
-
-        g.setStroke(fillColor);
-        g.setLineWidth(strokeWidth);
-        if (filled && fillColor != null && fillColor.getOpacity() > 0) {
-            g.setFill(fillColor);
-            g.fillRect(x, y, length, length);
-        }
-        g.strokeRect(x, y, length, length);
+    public void accept(ShapeVisitor visitor) {
+        visitor.visit(this);
     }
 
     @Override

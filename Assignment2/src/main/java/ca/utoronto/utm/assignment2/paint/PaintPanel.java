@@ -93,8 +93,9 @@ public class PaintPanel extends Canvas implements EventHandler<MouseEvent>, Pain
     private void render() {
         GraphicsContext g = getGraphicsContext2D();
         g.clearRect(0, 0, getWidth(), getHeight());
+        RenderVisitor visitor = new RenderVisitor(g); // visitor used
         for (Shape s : model.getShapes()) {
-            s.draw(g);
+            s.accept(visitor);
         }
         if (currentStrategy != null) {
             currentStrategy.drawPreview(g);

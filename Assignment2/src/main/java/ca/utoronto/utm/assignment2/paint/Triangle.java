@@ -69,17 +69,8 @@ public class Triangle implements Shape, Fillable, Hittable, Strokeable {
     public void setColor(Color c) { if (c != null) this.strokeColor = c; }
 
     @Override
-    public void draw(GraphicsContext g) {
-        if (vertices.size() < 3) return;
-
-        if (filled && fillColor != null && fillColor.getOpacity() > 0) {
-            g.setFill(fillColor);
-            g.fillPolygon(xvertices, yvertices, 3);
-        }
-
-        g.setStroke(strokeColor);
-        g.setLineWidth(strokeWidth);
-        g.strokePolygon(xvertices, yvertices, 3);
+    public void accept(ShapeVisitor visitor) {
+        visitor.visit(this);
     }
 
     public boolean isComplete() {
