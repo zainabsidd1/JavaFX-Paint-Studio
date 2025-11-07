@@ -6,7 +6,7 @@
 # Sprint 3 Backlog UserStories go below
 
 --------------------------------------------------------------------------
-TYPE     : BUG BUG3.004 : kaurjap9 : NotStarted
+TYPE     : BUG BUG3.004 : kaurjap9 : Complete
 NAME     : Architecture behind Model is poor
 PRIORITY : 3
 ESTIMATE : 1 day    ACTUAL :
