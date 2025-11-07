@@ -78,21 +78,8 @@ public class Oval implements Shape, Fillable, Hittable {
     }
 
     @Override
-    public void draw(GraphicsContext g) {
-        double left = getLeft();
-        double top = getTop();
-        double width = getWidth();
-        double height = getHeight();
-
-        g.setStroke(fillColor);
-        g.setLineWidth(2);
-
-        if (filled && fillColor != null && fillColor.getOpacity() > 0) {
-            g.setFill(fillColor);
-            g.fillOval(left, top, width, height);
-        }
-
-        g.strokeOval(left, top, width, height);
+    public void accept(ShapeVisitor visitor) {
+        visitor.visit(this);
     }
 
     @Override

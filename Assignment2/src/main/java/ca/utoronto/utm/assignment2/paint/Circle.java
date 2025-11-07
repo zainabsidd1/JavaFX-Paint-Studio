@@ -49,50 +49,37 @@ public class Circle implements Shape, Fillable, Hittable {
                 if (c != null) this.strokeColor = c;
         }
 
-    @Override
-        public void applyFill(Color c){
-            if(c==null) return;
-            setColor(c);
-            setFillColor(c);
-            this.setFilled(true);
-        }
+        @Override
+            public void applyFill(Color c){
+                if(c==null) return;
+                setColor(c);
+                setFillColor(c);
+                this.setFilled(true);
+            }
+
+            @Override
+            public void accept(ShapeVisitor visitor) {
+                visitor.visit(this);
+            }
 
         @Override
-        public void draw(GraphicsContext g) {
-                double x = center.x - radius;
-                double y = center.y - radius;
-                double size = radius * 2;
-
-                g.setStroke(getColor());
-                g.setLineWidth(2);
-
-                if(filled) {
-                    g.setFill(fillColor != null ? fillColor : strokeColor);
-                    g.fillOval(x, y, size, size);
-                }
-
-                g.strokeOval(x, y, size, size);
+        public void translate(double dx, double dy) {
+            center.x += dx;
+            center.y += dy;
         }
 
-    @Override
-    public void translate(double dx, double dy) {
-        center.x += dx;
-        center.y += dy;
-    }
-
-    public Circle(Circle other) {
-        this.center = new Point(other.center.x, other.center.y);
-        this.radius = other.radius;
-        this.strokeColor = other.strokeColor;
-        this.fillColor = other.fillColor;
-        this.filled = other.filled;
-    }
+        public Circle(Circle other) {
+            this.center = new Point(other.center.x, other.center.y);
+            this.radius = other.radius;
+            this.strokeColor = other.strokeColor;
+            this.fillColor = other.fillColor;
+            this.filled = other.filled;
+        }
 
 
-    @Override
-    public Circle copy(){
-        return new Circle(this);
+        @Override
+        public Circle copy(){
+            return new Circle(this);
 
-    }
-
+        }
 }

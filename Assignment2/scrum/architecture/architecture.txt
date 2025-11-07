@@ -114,6 +114,23 @@ DESIGN PATTERNS USED
     maintain. The model now focuses purely on data management, while the
     panel handles rendering, resulting in a cleaner MVC-aligned architecture.
 
+    Visitor:
+    Originally, each shape class (e.g., Circle, Rectangle, Oval, Squiggle,
+    etc.) contained its own draw(GraphicsContext g) method, directly
+    handling how it was rendered on the canvas. This approach tightly
+    coupled the shape data to JavaFX’s drawing API, making the model
+    dependent on the view layer and harder to extend or reuse. We
+    refactored the rendering process using the Visitor design pattern,
+    introducing a centralized RenderVisitor class that knows how to draw
+    every shape through visit() methods. Each shape now simply implements
+    accept(ShapeVisitor visitor), delegating rendering to the visitor
+    instead of doing it internally. This change removed all JavaFX
+    dependencies from the shape classes, ensuring they focus purely
+    on the model aspect while the visitor handles view. The result
+    is a much cleaner MVC separation: the model remains framework-independent,
+    the RenderVisitor contains all drawing logic, and adding new shape
+    types requires only extending the visitor—not modifying existing shapes.
+
 	... (any others you find useful) ...
 
 OTHER ARCHITECTURE DISCUSSIONS

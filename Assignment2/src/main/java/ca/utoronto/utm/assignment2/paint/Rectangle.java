@@ -65,18 +65,8 @@ public class Rectangle implements Shape, Fillable, Hittable {
     }
 
     @Override
-    public void draw(GraphicsContext g) {
-        double x = getLeft();
-        double y = getTop();
-        double w = getWidth();
-        double h = getHeight();
-        g.setStroke(getColor());
-        g.setLineWidth(2);
-        if (filled) {
-            g.setFill(fillColor != null ? fillColor : color);
-            g.fillRect(x, y, w, h);
-        }
-        g.strokeRect(x, y, w, h);
+    public void accept(ShapeVisitor visitor) {
+        visitor.visit(this);
     }
 
     @Override
