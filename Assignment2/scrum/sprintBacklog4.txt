@@ -26,7 +26,7 @@ ISSUE    : The selection, copy, and movement tools currently only support
            reference point handling, causing tool failures.
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
-TYPE     : USER STORY US4.001 : UTORID : NotStarted
+TYPE     : USER STORY US4.001 : UTORID sidd1378 : InProgress
 NAME     : Change background color of canvas
 PRIORITY : 3
 ESTIMATE : (1 hour, 2 hours, 4 hours)                         ACTUAL :
@@ -36,7 +36,7 @@ SO THAT  : I can customize the workspace or create colored backdrops for
            drawings
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
-TYPE     : USER STORY US4.002 : UTORID :  NotStarted
+TYPE     : USER STORY US4.002 : UTORID sidd1378:  NotStarted
 NAME     : Eraser adapts to colored background
 PRIORITY : 3
 ESTIMATE : (2 hours, 4 hours, 1 day)                       ACTUAL :
