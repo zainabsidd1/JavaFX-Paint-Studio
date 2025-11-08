@@ -16,7 +16,6 @@ ISSUE    : The current Undo/Redo logic only tracks creation and deletion
            position, and Redo should restore the new position.
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
-
 TYPE     : BUG BUG4.002 : UTORID  : NotStarted
 NAME     : Mover, Copy, Cut, Paste not working for Squiggle and Polyline
 PRIORITY : 3
@@ -45,7 +44,6 @@ I WANT   : The eraser to erase to any background color set by me
 SO THAT  : it behaves correctly when the background is not white
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
-
 TYPE     : USER STORY US4.003 : UTORID : NotStarted
 NAME     : Stroke width preview indicator
 PRIORITY : 2
@@ -78,7 +76,7 @@ I WANT   : A spray can tool that scatters small dots of color in a circular
 SO THAT  : I can create soft, randomized spray-paint effects
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
-TYPE     : USER STORY US4.006 : UTORID : NotStarted
+TYPE     : USER STORY US4.006 : kaurjap9 : InProgress
 NAME     : AI random shape generator
 PRIORITY : 3
 ESTIMATE : (1 day, 2 days)                                   ACTUAL :
