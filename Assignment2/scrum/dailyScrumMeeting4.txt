@@ -118,9 +118,9 @@ Nov 6,2025
 	Obstacles I face: Finding a way to concisely and efficiently add the feature.
 
 Nov 7,2025
-	What I did yesterday:
-	What I will do today:
-	Obstacles I face:
+	What I did yesterday: Implemented line thickness tool, US3.007.
+	What I will do today: Added sprint 4 user stories ideas.
+	Obstacles I face:n/a
 
 Nov 8,2025
 	What I did yesterday:
