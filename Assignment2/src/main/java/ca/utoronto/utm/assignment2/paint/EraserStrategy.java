@@ -56,8 +56,10 @@ public class EraserStrategy implements ToolStrategy {
         if (eraser == null || eraser.size() < 2) {
             return;
         }
-        Color chosen = Color.web("#F4F4F4");
-        g.setStroke(chosen);
+        Color backgroundColor = model.getBackgroundColor();
+        if (backgroundColor == null) backgroundColor = Color.WHITE;
+        g.setStroke(backgroundColor);
+
         g.setLineDashes(0);
         g.setGlobalAlpha(1.0);
         for (int i=0; i<eraser.size()-1; i++) {
