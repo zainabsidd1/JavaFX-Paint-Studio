@@ -73,7 +73,7 @@ I WANT   : To see a temporary circle preview showing my selected stroke width
 SO THAT  : I can visualize how thick the next shape’s outline will be
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
-TYPE     : USER STORY US4.004 : UTORID : sidd1378 : NotStarted
+TYPE     : USER STORY US4.004 : sidd1378 : NotStarted
 NAME     : Accessibility Color Description Label
 PRIORITY : 3
 ESTIMATE : 3 hours     ACTUAL :
