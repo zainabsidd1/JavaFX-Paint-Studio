@@ -11,7 +11,6 @@ public final class RandomArtGenerator {
 
     private RandomArtGenerator() {}
 
-    /** Generate N shapes fully inside [0..W]×[0..H]. */
     public static List<Shape> generate(
             int count, double W, double H,
             Long seedOrNull,
@@ -21,8 +20,7 @@ public final class RandomArtGenerator {
             FillMode fillMode,
             Color currentColor,
             double strokeWidth
-    )
-    {
+    ) {
         Random rng = (seedOrNull == null) ? new Random() : new Random(seedOrNull);
         List<Shape> out = new ArrayList<>(count);
         List<double[]> bboxes = new ArrayList<>();
@@ -31,20 +29,24 @@ public final class RandomArtGenerator {
 
         for (int i=0;i<count;i++) {
             String type = types[rng.nextInt(types.length)];
+            FillMode effFm = (fillMode == FillMode.BOTH)
+                    ? (rng.nextBoolean() ? FillMode.FILL : FillMode.STROKE)
+                    : fillMode;
+            if ((type.equals("Polyline") || type.equals("Squiggle")) && effFm == FillMode.FILL) {
+                effFm = FillMode.STROKE;
+            }
+
             double s = lerp(minSize, maxSize, rng.nextDouble());
             double w = s, h = s;
-
             if (type.equals("Rectangle") || type.equals("Oval")) {
                 double aspect = 0.6 + rng.nextDouble()*0.8;
                 if (rng.nextBoolean()) h = s*aspect; else w = s*aspect;
             } else if (type.equals("Polyline") || type.equals("Squiggle") || type.equals("Triangle")) {
-                // use a local bbox to contain all points
                 w = s; h = s;
             }
 
             double x = rng.nextDouble()*Math.max(1, W - w);
             double y = rng.nextDouble()*Math.max(1, H - h);
-
             if (!allowOverlap) {
                 int attempts = 0;
                 while (intersectsAny(x,y,w,h,bboxes) && attempts < 12) {
@@ -58,24 +60,25 @@ public final class RandomArtGenerator {
                 case ANY -> randomHSV(rng);
                 case TINTS_OF_CURRENT -> tintOf(currentColor, rng);
             };
+
             Shape shape;
             switch (type) {
                 case "Circle" -> {
                     double r = Math.min(w, h)/2.0;
-                    shape = makeCircle(x+r, y+r, r, color, fillMode, strokeWidth);
+                    shape = makeCircle(x+r, y+r, r, color, effFm, strokeWidth);
                     bboxes.add(new double[]{x,y,2*r,2*r});
                 }
                 case "Rectangle" -> {
-                    shape = makeRectangle(x, y, w, h, color, fillMode, strokeWidth);
+                    shape = makeRectangle(x, y, w, h, color, effFm, strokeWidth);
                     bboxes.add(new double[]{x,y,w,h});
                 }
                 case "Square" -> {
                     double sSide = Math.min(w,h);
-                    shape = makeSquare(x, y, sSide, color, fillMode, strokeWidth);
+                    shape = makeSquare(x, y, sSide, color, effFm, strokeWidth);
                     bboxes.add(new double[]{x,y,sSide,sSide});
                 }
                 case "Oval" -> {
-                    shape = makeOval(x, y, w, h, color, fillMode, strokeWidth);
+                    shape = makeOval(x, y, w, h, color, effFm, strokeWidth);
                     bboxes.add(new double[]{x,y,w,h});
                 }
                 case "Polyline" -> {
@@ -87,7 +90,7 @@ public final class RandomArtGenerator {
                     bboxes.add(new double[]{x,y,w,h});
                 }
                 case "Triangle" -> {
-                    shape = makeTriangle(x, y, w, h, color, fillMode, strokeWidth, rng);
+                    shape = makeTriangle(x, y, w, h, color, effFm, strokeWidth, rng);
                     bboxes.add(new double[]{x,y,w,h});
                 }
                 default -> throw new IllegalStateException("Unknown type: "+type);
@@ -97,7 +100,6 @@ public final class RandomArtGenerator {
         return out;
     }
 
-    // shape builders for AI
     private static Shape makeCircle(double cx, double cy, double r, Color c, FillMode fm, double sw) {
         Circle circle = new Circle(new Point(cx,cy), r, c);
         circle.setStrokeWidth(sw);
@@ -120,11 +122,9 @@ public final class RandomArtGenerator {
     }
 
     private static Shape makeOval(double x, double y, double w, double h, Color c, FillMode fm, double sw) {
-        // your Oval has (Point p1, Point p2, Color color, boolean filled)
-        boolean filled = (fm != FillMode.STROKE);
-        Oval ov = new Oval(new Point(x,y), new Point(x+w,y+h), c, filled);
+        Oval ov = new Oval(new Point(x,y), new Point(x+w,y+h), c, false);
         ov.setStrokeWidth(sw);
-        if (filled) ov.setFillColor(c);
+        applyFillMode(ov, c, fm);
         return ov;
     }
 
@@ -158,12 +158,7 @@ public final class RandomArtGenerator {
         t.addVertex(new Point(x + rng.nextDouble()*w, y + rng.nextDouble()*h));
         t.addVertex(new Point(x + rng.nextDouble()*w, y + rng.nextDouble()*h));
         t.setStrokeWidth(sw);
-        if (fm == FillMode.STROKE) {
-            t.setColor(c);
-            t.setFilled(false);
-        } else {
-            t.applyFill(c); // sets fill + stroke + filled=true in your class
-        }
+        applyFillMode(t, c, fm);
         return t;
     }
 
@@ -173,28 +168,28 @@ public final class RandomArtGenerator {
             f.setFilled(false);
         } else if (fm == FillMode.FILL) {
             f.applyFill(c);
-        } else { // BOTH
+        } else {
             f.applyFill(c);
             if (f instanceof Colorable col) col.setColor(c);
         }
     }
 
-    // ----- helpers -----
     private static boolean intersectsAny(double x,double y,double w,double h,List<double[]> bb) {
         for (double[] r : bb) {
-            if (x < r[0] + r[2] && x + w > r[0] && y < r[1] + r[3] && y + h > r[1]) {
-                return true;
-            }
+            if (x < r[0] + r[2] && x + w > r[0] && y + h > r[1]) return true;
         }
         return false;
     }
+
     private static double lerp(double a,double b,double t){ return a + (b-a)*t; }
+
     private static Color randomHSV(Random rng) {
         double h = rng.nextDouble()*360.0;
         double s = 0.35 + rng.nextDouble()*0.6;
         double v = 0.30 + rng.nextDouble()*0.65;
         return Color.hsb(h, s, v);
     }
+
     private static Color tintOf(Color base, Random rng) {
         if (base == null) return randomHSV(rng);
         double h = base.getHue();
@@ -205,6 +200,7 @@ public final class RandomArtGenerator {
         v = clamp(v + (rng.nextDouble()*0.4 - 0.2), 0, 1);
         return Color.hsb(h, s, v);
     }
+
     private static double clamp(double v,double lo,double hi){
         return Math.max(lo, Math.min(hi, v));
     }
