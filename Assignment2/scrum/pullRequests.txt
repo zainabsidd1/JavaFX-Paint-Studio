@@ -8,11 +8,11 @@ US3.001 author:tatisoha puller:kaurjap9 status:Complete
 US3.006 author:sidd1378 puller:kaurjap9 status:Complete
 US3.011 author:tatisoha puller: royanus1 status:Complete
 US3.009 author:royanus1 puller:sidd1378 status:Rejected
-US3.008 author:royanus1 puller:sidd1378 status:Completed
-US3.009 author:royanus1 puller:sidd1378 status:Completed
-US3.010 author:royanus1 puller:sidd1378 status:Completed
-BUG3.004 author:kaurjap9 puller:tatisoha status:Completed
-US3.007 author:tatisoha puller:sidd1378 status:Completed
-BUG3.004 author:kaurjap9 puller:royanus1 status:Completed
-US4.003 author:tatisoha puller:? status:Waiting
-US4.001 author:sidd1378 puller:tatisoha status:Completed
+US3.008 author:royanus1 puller:sidd1378 status:Complete
+US3.009 author:royanus1 puller:sidd1378 status:Complete
+US3.010 author:royanus1 puller:sidd1378 status:Complete
+BUG3.004 author:kaurjap9 puller:tatisoha status:Complete
+US3.007 author:tatisoha puller:sidd1378 status:Complete
+BUG3.004 author:kaurjap9 puller:royanus1 status:Complete
+US4.003 author:tatisoha puller:kaurjap9 status:Complete
+US4.001 author:sidd1378 puller:tatisoha status:Complete

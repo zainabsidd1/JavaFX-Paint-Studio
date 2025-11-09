@@ -9,7 +9,7 @@
 TYPE     : BUG BUG4.001 : royanus1 :  NotStarted
 NAME     : Undo/Redo not implementing mover tool changes
 PRIORITY : 2
-ESTIMATE : 3          ACTUAL :
+ESTIMATE : 2 hours     ACTUAL :
 ISSUE    : The current Undo/Redo logic only tracks creation and deletion
            of shapes, but not movement changes done using the Mover tool.
            Moving a shape and pressing Undo should revert to the previous
@@ -19,36 +19,35 @@ ISSUE    : The current Undo/Redo logic only tracks creation and deletion
 TYPE     : BUG BUG4.002 : royanus1  : NotStarted
 NAME     : Mover, Copy, Cut, Paste not working for Squiggle and Polyline
 PRIORITY : 3
-ESTIMATE : 4                          ACTUAL :
+ESTIMATE : 2 hours     ACTUAL :
 ISSUE    : The selection, copy, and movement tools currently only support
            basic shapes. Squiggle and Polyline lack proper bounding box or
            reference point handling, causing tool failures.
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
-TYPE     : USER STORY US4.001 : UTORID sidd1378 : Complete
+TYPE     : USER STORY US4.001 : sidd1378 : Complete
 NAME     : Change background color of canvas
 PRIORITY : 3
-ESTIMATE : 2 hours                        ACTUAL : 2 hours
+ESTIMATE : 2 hours     ACTUAL : 2 hours
 AS A     : user
 I WANT   : To change the background color of the drawing canvas
 SO THAT  : I can customize the workspace or create colored backdrops for
            drawings
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
-TYPE     : USER STORY US4.002 : UTORID sidd1378:  InProgress
+TYPE     : USER STORY US4.002 : sidd1378:  InProgress
 NAME     : Eraser adapts to colored background
 PRIORITY : 3
-ESTIMATE : (2 hours, 4 hours, 1 day)                       ACTUAL :
+ESTIMATE : 2 hours     ACTUAL :
 AS A     : user
 I WANT   : The eraser to erase to any background color set by me
 SO THAT  : it behaves correctly when the background is not white
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
-
-TYPE     : USER STORY US4.003 : tatisoha : In Progress
+TYPE     : USER STORY US4.003 : tatisoha : Complete
 NAME     : Stroke width preview indicator
 PRIORITY : 2
-ESTIMATE : 1 hour                               ACTUAL :
+ESTIMATE : 1 hour     ACTUAL : 1 hour
 AS A     : user
 I WANT   : To see a temporary circle preview showing my selected stroke width
 SO THAT  : I can visualize how thick the next shape’s outline will be
@@ -57,7 +56,7 @@ SO THAT  : I can visualize how thick the next shape’s outline will be
 TYPE     : USER STORY US4.004 : UTORID : NotStarted
 NAME     : Accessibility feedback for user actions
 PRIORITY : 3
-ESTIMATE : (2 hours, 4 hours, 1 day)                          ACTUAL :
+ESTIMATE : 2 hours     ACTUAL :
 AS A     : visually-impaired user
 I WANT   : Audible feedback for key actions (draw, cut, copy, paste, shape selection)
 SO THAT  : I can navigate and use the application more effectively
@@ -70,7 +69,7 @@ EXAMPLE:
 TYPE     : USER STORY US4.005 : tatisoha : NotStarted
 NAME     : Spray Can Tool
 PRIORITY : 3
-ESTIMATE : (2 hours, 4 hours, 1 day)                          ACTUAL :
+ESTIMATE : 2 hours     ACTUAL :
 AS A     : user
 I WANT   : A spray can tool that scatters small dots of color in a circular
            area
@@ -80,7 +79,7 @@ SO THAT  : I can create soft, randomized spray-paint effects
 TYPE     : USER STORY US4.006 : kaurjap9 : InProgress
 NAME     : AI random shape generator
 PRIORITY : 3
-ESTIMATE : (1 day, 2 days)                                   ACTUAL :
+ESTIMATE : 8 hours     ACTUAL :
 AS A     : user
 I WANT   : An AI paint feature that randomly generates shapes of different
            types, colors, sizes, and fill styles
