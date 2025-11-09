@@ -34,6 +34,17 @@ ISSUE    : The current files have various unused imports, duplicate lines
            no or minimal warnings for perfectly structured code.
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
+TYPE     : BUG BUG4.004 : kaurjap9 :  NotStarted
+NAME     : Architecture Discussion
+PRIORITY : 2
+ESTIMATE : 4 hours     ACTUAL :
+ISSUE    : The current architecture model only mentions the high level MVC
+           design pattern used, does not mention the connection between
+           panels and does not mention all design patterns used. The panel
+           should be updated so it mentions all patterns and associations
+           used.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
 TYPE     : USER STORY US4.001 : sidd1378 : Complete
 NAME     : Change background color of canvas
 PRIORITY : 3
