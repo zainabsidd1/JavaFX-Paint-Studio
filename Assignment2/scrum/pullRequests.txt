@@ -16,4 +16,4 @@ US3.007 author:tatisoha puller:sidd1378 status:Complete
 BUG3.004 author:kaurjap9 puller:royanus1 status:Complete
 US4.003 author:tatisoha puller:kaurjap9 status:Complete
 US4.001 author:sidd1378 puller:tatisoha status:Complete
-US4.006 author:kaurjap9 puller:? status:Waiting
+US4.006 author:kaurjap9 puller:tatisoha status:Complete
