@@ -33,7 +33,14 @@ public class FillBucketStrategy implements ToolStrategy {
 
     @Override
     public void onMousePressed(MouseEvent e) {
-        model.fillTopmostAt(e.getX(), e.getY(), model.getCurrentColor());
+        double x = e.getX();
+        double y = e.getY();
+        Color color = model.getCurrentColor();
+        boolean shapeFill = model.fillTopmostAt(x, y, color);
+
+        if(!shapeFill) {
+            model.setBackgroundColor(color!=null ? color : Color.WHITE);
+        }
         panel.requestRender();
     }
 

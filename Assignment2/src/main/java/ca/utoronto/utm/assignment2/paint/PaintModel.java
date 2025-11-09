@@ -33,6 +33,15 @@ public class PaintModel {
     private Squiggle currEraser;
     private Shape selectShape;
     private Shape storeShape;
+    private Color backgroundColor = Color.WHITE;
+
+    //Background color
+    public Color getBackgroundColor() { return backgroundColor; }
+    public void setBackgroundColor(Color backgroundColor) {
+        if(backgroundColor == null) return;
+        this.backgroundColor = backgroundColor;
+        notifyListeners();
+    }
 
     // Color
     public Color getCurrentColor() {
