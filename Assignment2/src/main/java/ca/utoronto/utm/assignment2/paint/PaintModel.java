@@ -27,6 +27,9 @@ public class PaintModel {
         redoStack.clear();
         notifyListeners();
     }
+    public void executeCommand(Command c){
+        exec(c);
+    }
 
     private Squiggle currentSquiggle;
     private Polyline polylineCurr;

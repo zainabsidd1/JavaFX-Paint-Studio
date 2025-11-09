@@ -36,10 +36,12 @@ public class FillBucketStrategy implements ToolStrategy {
         double x = e.getX();
         double y = e.getY();
         Color color = model.getCurrentColor();
+
         boolean shapeFill = model.fillTopmostAt(x, y, color);
 
         if(!shapeFill) {
-            model.setBackgroundColor(color!=null ? color : Color.WHITE);
+            model.executeCommand(new ChangeBackgroundCommand(model, color));
+            //model.setBackgroundColor(color!=null ? color : Color.WHITE);
         }
         panel.requestRender();
     }
