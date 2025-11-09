@@ -122,14 +122,14 @@ Nov 7,2025
 	Obstacles I face: coming up with creative user stories and identifying bugs.
 
 Nov 8,2025
-	What I did yesterday:
-	What I will do today:
-	Obstacles I face:
+	What I did yesterday: create user stories and bugs for sprint 4.
+	What I will do today: pick US4.006 and start working on it.
+	Obstacles I face: determining which features to put in the ai.
 
 Nov 9,2025
-	What I did yesterday:
-	What I will do today:
-	Obstacles I face:
+	What I did yesterday: pick US4.006 and start working on it.
+	What I will do today: finish US4.006 and create a pull request.
+	Obstacles I face: n/a.
 
 Nov 10,2025
 	What I did yesterday:

@@ -76,10 +76,10 @@ I WANT   : A spray can tool that scatters small dots of color in a circular
 SO THAT  : I can create soft, randomized spray-paint effects
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
-TYPE     : USER STORY US4.006 : kaurjap9 : InProgress
+TYPE     : USER STORY US4.006 : kaurjap9 : Complete
 NAME     : AI random shape generator
 PRIORITY : 3
-ESTIMATE : 8 hours     ACTUAL :
+ESTIMATE : 8 hours     ACTUAL : 4 hours
 AS A     : user
 I WANT   : An AI paint feature that randomly generates shapes of different
            types, colors, sizes, and fill styles
