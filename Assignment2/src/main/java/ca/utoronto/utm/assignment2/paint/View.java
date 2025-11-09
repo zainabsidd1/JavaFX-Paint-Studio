@@ -13,6 +13,7 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
 import javafx.scene.control.ComboBox;
+import javafx.scene.layout.GridPane;
 import javafx.scene.control.Slider;
 
 import java.util.Locale;
@@ -187,7 +188,74 @@ public class View {
                 undoItem, redoItem, moveItem
         );
 
+        // AI menu
+        Menu ai = new Menu("AI");
+        MenuItem randomGen = new MenuItem("Random Generate…");
+        ai.getItems().add(randomGen);
+
+        randomGen.setOnAction(e -> {
+            Dialog<ButtonType> dlg = new Dialog<>();
+            dlg.setTitle("AI: Random Generate");
+            dlg.getDialogPane().getButtonTypes().addAll(ButtonType.OK, ButtonType.CANCEL);
+
+            TextField tfCount = new TextField("100");
+            TextField tfSeed  = new TextField(); tfSeed.setPromptText("seed (optional)");
+            TextField tfMin   = new TextField("16");
+            TextField tfMax   = new TextField("120");
+            CheckBox cbOverlap = new CheckBox("Allow overlaps"); cbOverlap.setSelected(true);
+
+            ComboBox<RandomArtGenerator.ColorMode> cbColor = new ComboBox<>();
+            cbColor.getItems().addAll(RandomArtGenerator.ColorMode.values());
+            cbColor.getSelectionModel().select(RandomArtGenerator.ColorMode.ANY);
+
+            ComboBox<RandomArtGenerator.FillMode> cbFill = new ComboBox<>();
+            cbFill.getItems().addAll(RandomArtGenerator.FillMode.values());
+            cbFill.getSelectionModel().select(RandomArtGenerator.FillMode.BOTH);
+
+            GridPane gp = new GridPane();
+            gp.setHgap(10); gp.setVgap(8); gp.setPadding(new Insets(12));
+            int r=0;
+            gp.addRow(r++, new Label("Count"), tfCount);
+            gp.addRow(r++, new Label("Seed"),  tfSeed);
+            gp.addRow(r++, new Label("Min size (px)"), tfMin);
+            gp.addRow(r++, new Label("Max size (px)"), tfMax);
+            gp.addRow(r++, new Label("Color mode"), cbColor);
+            gp.addRow(r++, new Label("Fill mode"),  cbFill);
+            gp.addRow(r++, new Label(""), cbOverlap);
+            dlg.getDialogPane().setContent(gp);
+
+            var res = dlg.showAndWait();
+            if (res.isEmpty() || res.get() != ButtonType.OK) return;
+
+            try {
+                int count = Integer.parseInt(tfCount.getText().trim());
+                Long seed  = tfSeed.getText().isBlank() ? null : Long.parseLong(tfSeed.getText().trim());
+                double minS = Double.parseDouble(tfMin.getText().trim());
+                double maxS = Double.parseDouble(tfMax.getText().trim());
+                boolean allowOverlap = cbOverlap.isSelected();
+
+                double W = getPaintPanel().getWidth();
+                double H = getPaintPanel().getHeight();
+                var cmode = cbColor.getValue();
+                var fmode = cbFill.getValue();
+
+                var shapes = RandomArtGenerator.generate(
+                        count, W, H, seed, minS, maxS, allowOverlap,
+                        cmode, fmode,
+                        getPaintModel().getCurrentColor(),
+                        getPaintModel().getStrokeWidth()
+                );
+
+                // single undo entry:
+                getPaintModel().executeCommand(new BatchAddCommand(getPaintModel(), shapes));
+
+            } catch (Exception ex) {
+                new Alert(Alert.AlertType.ERROR, "Invalid inputs: "+ex.getMessage()).showAndWait();
+            }
+        });
         menuBar.getMenus().addAll(file, edit);
+        menuBar.getMenus().add(ai);
         return menuBar;
+
     }
 }
