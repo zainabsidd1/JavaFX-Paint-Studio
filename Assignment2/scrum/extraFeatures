@@ -4,85 +4,120 @@ FeatureName: Eraser Tool
 Description:
     Erases parts of existing drawings to remove unwanted sections from the canvas.
 Reference:
-	US3.001
+	US3.001, US4.002
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 FeatureName: Undo
 
 Description:
-	To undo the most recent action.
+	Reverts the most recent action performed on the canvas.
 
 Reference:
-	US3.002
+	US3.002, BUG4.001
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 FeatureName: Redo
 
 Description:
-	To redo an action previously undone.
+	Reapplies the last undone action to restore previous work.
 
 
 Reference:
-	US3.003
+	US3.003, BUG4.001
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
-FeatureName: (name)
+FeatureName: Fill Bucket Tool
 
 Description:
-	(describe the feature)
+	Fills enclosed areas or shapes with a selected color for faster coloring of large regions.
 
 
 Reference:
-	(list of the BUG/US involved in creating this feature)
+	US3.004
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
-FeatureName: (name)
+FeatureName: Color Selector
 
 Description:
-	(describe the feature)
+	Allows users to choose a drawing color that applies to all subsequent shapes.
+	The color selector allows the user to enter hex codes, select from the pre-chosen
+	shapes, or the user can select their own custom color.
 
 
 Reference:
-	(list of the BUG/US involved in creating this feature)
+	US3.005
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
-FeatureName: (name)
+FeatureName: Fill Style Selector
 
 Description:
-	(describe the feature)
+	Enables users to choose between filled or outlined drawing styles for shapes.
 
 
 Reference:
-	(list of the BUG/US involved in creating this feature)
+	US3.006
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
-FeatureName: (name)
+FeatureName: Line Thickness Selector
 
 Description:
-	(describe the feature)
+	Allows adjustment of stroke width for outlines and shape borders.
+	While selecting the thickness, the user can see a visualization of the stroke size.
 
 
 Reference:
-	(list of the BUG/US involved in creating this feature)
+	US3.007, US4.003
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
-FeatureName: (name)
+FeatureName: Cut
 
 Description:
-	(describe the feature)
+	Removes selected shapes from the canvas while storing them for later pasting.
 
 
 Reference:
-	(list of the BUG/US involved in creating this feature)
+	US3.008, BUG4.002
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
-FeatureName: (name)
+FeatureName: Copy
 
 Description:
-	(describe the feature)
+	Duplicates selected shapes to the clipboard for later pasting.
 
 
 Reference:
-	(list of the BUG/US involved in creating this feature)
+	US3.009, BUG4.002
 --------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+FeatureName: Paste
+
+Description:
+	Inserts previously cut or copied shapes back onto the canvas at a new position.
+
+
+Reference:
+	US3.010
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+FeatureName: Mover Tool
+
+Description:
+	Moves existing shapes to new positions on the canvas without redrawing.
+
+
+Reference:
+	US3.011, BUG4.002
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+FeatureName: AI Random Shape Generator
+
+Description:
+	Implements an AI feature that randomly generates shapes with varying types,
+	colors, sizes, and fill styles for automatic creative compositions.
+
+
+Reference:
+	US4.006
+--------------------------------------------------------------------------------
+
 ...
