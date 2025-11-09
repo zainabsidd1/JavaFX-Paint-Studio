@@ -28,7 +28,6 @@ public class View {
         this.paintPanel = new PaintPanel(this.paintModel);
         ShapeChooserPanel shapeChooserPanel = new ShapeChooserPanel(this);
 
-
         //Textfield to show line current thickness
         TextField strokeWidthField = new TextField();
         strokeWidthField.setEditable(false);
@@ -43,7 +42,6 @@ public class View {
         paintModel.addListener(() -> {
             double w = paintModel.getStrokeWidth();
             strokeWidthField.setText(String.format("%.1f", w));
-            paintModel.displayStrokeSize(w);
         });
 
         //Slider for line thickness
@@ -52,9 +50,19 @@ public class View {
         tslider.setShowTickMarks(true);
         tslider.setMajorTickUnit(1);
         tslider.setBlockIncrement(5);
+        tslider.setOnMousePressed(e ->
+                model.setStrokePreviewWidth(tslider.getValue())
+        );
+        tslider.setOnMouseReleased(e ->
+                model.hideStrokePreview()
+        );
         tslider.valueProperty().addListener((observable, oldValue, newValue) -> {
-            paintModel.setStrokeWidth(newValue.doubleValue());
+            double w = newValue.doubleValue();
+            paintModel.setStrokeWidth(w);
+            model.setStrokeWidth(w);
+            model.setStrokePreviewWidth(w);
         });
+
         strokeWidthField.setEditable(true);
         strokeWidthField.setOnAction(e -> {
             try {

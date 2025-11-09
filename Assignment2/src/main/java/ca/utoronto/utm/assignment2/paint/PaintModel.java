@@ -208,8 +208,30 @@ public class PaintModel {
         }
     }
 
-    public void displayStrokeSize(double w) {
-        Circle stroke = new Circle(new Point (200, 200), w, Color.BLACK);
-        stroke.setFilled(false);
+    // Stroke display circle
+    private Shape overlay;
+    public Shape getOverlay(){return overlay;}
+    public void setStrokePreviewWidth(double w) {
+        double r = Math.max(0.5, w / 2.0);
+        if (overlay instanceof Circle c) {
+            c.setRadius(r);
+            notifyListeners();
+            return;
+        }
+        Circle c = new Circle(new Point(50, 275), r, Color.BLACK);
+        c.setColor(Color.BLACK);
+        c.setFilled(false);
+        c.setStrokeWidth(1);
+        overlay = c;
+        notifyListeners();
     }
+
+    // To hide the stroke preview when the user stops interacting with the slider.
+    public void hideStrokePreview() {
+        if (overlay != null) {
+            overlay = null;
+            notifyListeners();
+        }
+    }
+
 }
