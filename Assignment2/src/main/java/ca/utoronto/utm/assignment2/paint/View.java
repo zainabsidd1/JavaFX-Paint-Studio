@@ -14,7 +14,6 @@ import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
 import javafx.scene.control.ComboBox;
 import javafx.scene.layout.GridPane;
-import javafx.scene.control.Slider;
 
 import java.util.Locale;
 import java.util.function.UnaryOperator;
@@ -253,8 +252,38 @@ public class View {
                 new Alert(Alert.AlertType.ERROR, "Invalid inputs: "+ex.getMessage()).showAndWait();
             }
         });
+
+        // Scenery menu: beach flower garden, city
+        Menu scenery = new Menu("Scenery");
+        MenuItem scene1 = new MenuItem("Beach Sunset");
+        MenuItem scene2 = new MenuItem("Flower Garden");
+        MenuItem scene3 = new MenuItem("City Night");
+        MenuItem random = new MenuItem("Random Scene");
+        scenery.getItems().addAll(scene1, scene2, scene3, new SeparatorMenuItem(), random);
+        scene1.setOnAction(e -> {
+            double W = getPaintPanel().getWidth(), H = getPaintPanel().getHeight();
+            paintModel.executeCommand(new LoadSceneryCommand(paintModel, SceneryLibrary.beachSunset(W, H)));
+        });
+        scene2.setOnAction(e -> {
+            double W = getPaintPanel().getWidth(), H = getPaintPanel().getHeight();
+            paintModel.executeCommand(new LoadSceneryCommand(paintModel, SceneryLibrary.flowerGarden(W, H)));
+        });
+        scene3.setOnAction(e -> {
+            double W = getPaintPanel().getWidth(), H = getPaintPanel().getHeight();
+            paintModel.executeCommand(new LoadSceneryCommand(paintModel, SceneryLibrary.cityNight(W, H)));
+        });
+        random.setOnAction(e -> {
+            double W = getPaintPanel().getWidth(), H = getPaintPanel().getHeight();
+            int pick = new java.util.Random().nextInt(3);
+            switch (pick) {
+                case 0 -> paintModel.executeCommand(new LoadSceneryCommand(paintModel, SceneryLibrary.beachSunset(W, H)));
+                case 1 -> paintModel.executeCommand(new LoadSceneryCommand(paintModel, SceneryLibrary.flowerGarden(W, H)));
+                default -> paintModel.executeCommand(new LoadSceneryCommand(paintModel, SceneryLibrary.cityNight(W, H)));
+            }
+        });
         menuBar.getMenus().addAll(file, edit);
         menuBar.getMenus().add(ai);
+        menuBar.getMenus().add(scenery);
         return menuBar;
 
     }
