@@ -162,6 +162,7 @@ public class View {
 
     private static final HashMap<String, Color> colorMap = new HashMap<>();
     static{
+        colorMap.put("Pink", Color.web("#FF0077"));
         colorMap.put("Red", Color.RED);
         colorMap.put("Blue", Color.BLUE);
         colorMap.put("Cyan", Color.CYAN);
@@ -169,15 +170,14 @@ public class View {
         colorMap.put("Yellow",Color.YELLOW);
         colorMap.put("Orange",Color.ORANGE);
         colorMap.put("Purple",Color.PURPLE);
-        colorMap.put("Pink", Color.PINK);
-        colorMap.put("Pink", Color.web("#FF0077"));
         colorMap.put("White",Color.WHITE);
         colorMap.put("Black",Color.BLACK);
         colorMap.put("Brown",Color.BROWN);
         colorMap.put("Grey",Color.GRAY);
+        colorMap.put("Sage Green", Color.web("#008080"));
 
         //Extra colors
-        colorMap.put("Sage Green", Color.web("#808000"));
+        colorMap.put("Olive Green", Color.web("#808000"));
         colorMap.put("Light Blue", Color.web("#8080FF"));
         colorMap.put("Light Purple", Color.web("#8099FF"));
         colorMap.put("Light Pink", Color.web("#CC99CC"));
@@ -185,27 +185,12 @@ public class View {
         colorMap.put("Light Orange", Color.web("#FFE6B3"));
         colorMap.put("Light Yellow", Color.web("#FFFF99"));
         colorMap.put("Light Green", Color.web("#E6E699"));
-        colorMap.put("Light Green", Color.web("#B3E6B3"));
         colorMap.put("Sky Blue", Color.web("#CCFFFF"));
         colorMap.put("Dark Green", Color.web("#003300"));
-        colorMap.put("Brown", Color.web("#996600"));
         colorMap.put("Maroon", Color.web("#4D001A"));
-        colorMap.put("Blue", Color.web("#334DB3"));
-        colorMap.put("Red", Color.web("#B31A1A"));
-        colorMap.put("Light Green", Color.web("#E6E6B3"));
-        colorMap.put("Purple", Color.web("#9980E6"));
         colorMap.put("Dark Purple", Color.web("#1A0068"));
         colorMap.put("Dark Blue", Color.web("#001A80"));
-        colorMap.put("Green", Color.web("#669966"));
-        colorMap.put("Pink", Color.web("#FFCCE6"));
-        colorMap.put("Purple", Color.web("#4D3399"));
         colorMap.put("Mauve", Color.web("#804D80"));
-        colorMap.put("Green", Color.web("#99CC99"));
-        colorMap.put("Grey", Color.web("#B3B3B3"));
-        colorMap.put("Grey", Color.web("#4D4D4D"));
-        colorMap.put("Green", Color.web("#00FF00"));
-        colorMap.put("Grey", Color.web("#B3B3B3"));
-        colorMap.put("Purple", Color.web("#9980E6"));
 
     }
 
@@ -214,6 +199,13 @@ public class View {
         double minDistance = Double.MAX_VALUE;
         double maxDistance = Double.MIN_VALUE;
         String closestColor = "Unknown";
+
+        for(String colorName:colorMap.keySet()){
+            Color currColor = colorMap.get(colorName);
+            if(currColor.equals(c)){
+                return colorName;
+            }
+        }
 
         double red = c.getRed();
         double blue = c.getBlue();
@@ -224,6 +216,7 @@ public class View {
             double dred = currColor.getRed() - red;
             double dblue = currColor.getBlue() - blue;
             double dgreen = currColor.getGreen() - green;
+
 
             double distance = (dred*dred) + (dblue*dblue) + (dgreen*dgreen);
             if(distance < minDistance){
