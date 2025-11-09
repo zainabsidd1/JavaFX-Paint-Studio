@@ -17,4 +17,5 @@ BUG3.004 author:kaurjap9 puller:royanus1 status:Complete
 US4.003 author:tatisoha puller:kaurjap9 status:Complete
 US4.001 author:sidd1378 puller:tatisoha status:Complete
 US4.006 author:kaurjap9 puller:tatisoha status:Complete
-US4.002 author:sidd1378 puller:? status:Waiting
+US4.002 author:sidd1378 puller:? status:InProgress
+US4.007 author:kaurjap9 puller:? status:Waiting
