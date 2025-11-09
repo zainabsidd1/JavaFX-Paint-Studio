@@ -158,6 +158,13 @@ public class View {
         MenuItem newItem  = new MenuItem("New");
         MenuItem openItem = new MenuItem("Open");
         MenuItem saveItem = new MenuItem("Save");
+
+        newItem.setOnAction(e -> {
+            paintModel.executeCommand(new ClearAllShapesCommand(paintModel));
+            paintModel.executeCommand(new ChangeBackgroundCommand(paintModel, Color.WHITE));
+            paintPanel.requestRender();
+        });
+
         saveItem.setOnAction(e -> System.out.println("Save (not implemented)"));
         file.getItems().addAll(newItem, openItem, saveItem, new SeparatorMenuItem());
 
