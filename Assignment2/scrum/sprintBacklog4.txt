@@ -46,7 +46,7 @@ SO THAT  : it behaves correctly when the background is not white
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
 
-TYPE     : USER STORY US4.003 : UTORID : NotStarted
+TYPE     : USER STORY US4.003 : tatisoha : NotStarted
 NAME     : Stroke width preview indicator
 PRIORITY : 2
 ESTIMATE : (1 hour, 2 hours)                                 ACTUAL :
@@ -68,7 +68,7 @@ EXAMPLE:
   - click “copy” → sound plays “Copied”
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
-TYPE     : USER STORY US4.005 : UTORID : NotStarted
+TYPE     : USER STORY US4.005 : tatisoha : NotStarted
 NAME     : Spray Can Tool
 PRIORITY : 3
 ESTIMATE : (2 hours, 4 hours, 1 day)                          ACTUAL :
