@@ -83,5 +83,18 @@ ESTIMATE : 8 hours     ACTUAL : 4 hours
 AS A     : user
 I WANT   : An AI paint feature that randomly generates shapes of different
            types, colors, sizes, and fill styles
+           A seed command that lets me create that stores the location and
+           type of shapes and lets me recreate it when the same number is
+           entered
 SO THAT  : I can explore creative, randomized art compositions automatically
+---------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US4.007 : kaurjap9 : InProgress
+NAME     : Random scenery generator
+PRIORITY : 3
+ESTIMATE : 4 hours     ACTUAL : 4 hours
+AS A     : user
+I WANT   : A scenery menu that when clicked generates a random scenery for
+           me from a list of hardcoded sceneries.
+SO THAT  : I can have a created random picture on my paint
 ---------------------------------------------------------------------------
