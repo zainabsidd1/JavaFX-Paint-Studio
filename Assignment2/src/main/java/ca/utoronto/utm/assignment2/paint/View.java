@@ -14,7 +14,9 @@ import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
 import javafx.scene.control.ComboBox;
 import javafx.scene.layout.GridPane;
+import javafx.scene.control.Label;
 
+import java.util.HashMap;
 import java.util.Locale;
 import java.util.function.UnaryOperator;
 
@@ -71,6 +73,8 @@ public class View {
         ColorPicker picker = new ColorPicker(initial);
         picker.setStyle("-fx-color-label-visible:false;-fx-background-radius:6;-fx-border-radius:6;");
 
+        Label colorDesc = new Label(colorDescription(initial));
+
         hexField.textProperty().addListener((obs, oldV, newV) -> {
             if (newV != null && newV.matches("^#[0-9A-F]{6}$")) {
                 try {
@@ -79,6 +83,7 @@ public class View {
                     preview.setFill(c);
                     if (!picker.getValue().equals(c)) picker.setValue(c);
                     hexField.setStyle("-fx-border-color: transparent;");
+                    colorDesc.setText(colorDescription(c));
                     paintPanel.requestRender();
                 } catch (Exception ignored) {
                     hexField.setStyle("-fx-border-color:#ff8080;-fx-border-width:1;");
@@ -100,10 +105,13 @@ public class View {
                             (int)(c.getGreen()*255),
                             (int)(c.getBlue()*255));
                     if (!hx.equalsIgnoreCase(hexField.getText())) hexField.setText(hx);
+                    colorDesc.setText(colorDescription(c));
                     paintPanel.requestRender();
                 }
             } catch (Exception ignored) {}
         });
+
+
 
         Label fillLbl = new Label("\uD83D\uDD8C\uFE0F Fill");
         fillLbl.setStyle("-fx-font-weight:bold; -fx-text-fill:#333;");
@@ -128,8 +136,8 @@ public class View {
         fillBtn.getItems().addAll(solidItem, outlineItem);
 
 
-        HBox colorBar = new HBox(8, colorLbl, hexField, preview, picker, fillLbl, fillBtn);
-        colorBar.setPadding(new Insets(6, 10, 6, 10));
+        HBox colorBar = new HBox(8, colorLbl, hexField, preview, picker, colorDesc, fillLbl, fillBtn);
+        colorBar.setPadding(new Insets(12, 20, 12, 20));
         colorBar.setStyle(
                 "-fx-background-color: linear-gradient(to right, #fcfcfc, #f2f2f2);" +
                         "-fx-border-color: #d0d0d0; -fx-border-width: 0 0 1 0;"
@@ -141,7 +149,9 @@ public class View {
         root.setCenter(this.paintPanel);
         root.setLeft(shapeChooserPanel);
 
-        Scene scene = new Scene(root);
+        Scene scene = new Scene(root,450,450);
+        stage.setMinWidth(450);
+        stage.setMinHeight(450);
         stage.setScene(scene);
         stage.setTitle("Paint");
         stage.show();
@@ -149,6 +159,77 @@ public class View {
 
     public PaintModel getPaintModel() { return this.paintModel; }
     public PaintPanel getPaintPanel() { return this.paintPanel; }
+
+    private static final HashMap<String, Color> colorMap = new HashMap<>();
+    static{
+        colorMap.put("Red", Color.RED);
+        colorMap.put("Blue", Color.BLUE);
+        colorMap.put("Cyan", Color.CYAN);
+        colorMap.put("Green", Color.GREEN);
+        colorMap.put("Yellow",Color.YELLOW);
+        colorMap.put("Orange",Color.ORANGE);
+        colorMap.put("Purple",Color.PURPLE);
+        colorMap.put("Pink", Color.PINK);
+        colorMap.put("Pink", Color.web("#FF0077"));
+        colorMap.put("White",Color.WHITE);
+        colorMap.put("Black",Color.BLACK);
+        colorMap.put("Brown",Color.BROWN);
+        colorMap.put("Grey",Color.GRAY);
+
+        //Extra colors
+        colorMap.put("Sage Green", Color.web("#808000"));
+        colorMap.put("Light Blue", Color.web("#8080FF"));
+        colorMap.put("Light Purple", Color.web("#8099FF"));
+        colorMap.put("Light Pink", Color.web("#CC99CC"));
+        colorMap.put("Peach", Color.web("#FF9999"));
+        colorMap.put("Light Orange", Color.web("#FFE6B3"));
+        colorMap.put("Light Yellow", Color.web("#FFFF99"));
+        colorMap.put("Light Green", Color.web("#E6E699"));
+        colorMap.put("Light Green", Color.web("#B3E6B3"));
+        colorMap.put("Sky Blue", Color.web("#CCFFFF"));
+        colorMap.put("Dark Green", Color.web("#003300"));
+        colorMap.put("Brown", Color.web("#996600"));
+        colorMap.put("Maroon", Color.web("#4D001A"));
+        colorMap.put("Blue", Color.web("#334DB3"));
+        colorMap.put("Red", Color.web("#B31A1A"));
+        colorMap.put("Light Green", Color.web("#E6E6B3"));
+        colorMap.put("Purple", Color.web("#9980E6"));
+        colorMap.put("Dark Purple", Color.web("#1A0068"));
+        colorMap.put("Dark Blue", Color.web("#001A80"));
+        colorMap.put("Green", Color.web("#669966"));
+        colorMap.put("Pink", Color.web("#FFCCE6"));
+        colorMap.put("Purple", Color.web("#4D3399"));
+        colorMap.put("Mauve", Color.web("#804D80"));
+        colorMap.put("Green", Color.web("#99CC99"));
+        colorMap.put("Grey", Color.web("#B3B3B3"));
+        colorMap.put("Grey", Color.web("#4D4D4D"));
+
+    }
+
+    private String colorDescription(Color c){
+        if(c==null) return "";
+        double minDistance = Double.MAX_VALUE;
+        double maxDistance = Double.MIN_VALUE;
+        String closestColor = "Unknown";
+
+        double red = c.getRed();
+        double blue = c.getBlue();
+        double green = c.getGreen();
+
+        for(String colorName: colorMap.keySet()){
+            Color currColor = colorMap.get(colorName);
+            double dred = currColor.getRed() - red;
+            double dblue = currColor.getBlue() - blue;
+            double dgreen = currColor.getGreen() - green;
+
+            double distance = (dred*dred) + (dblue*dblue) + (dgreen*dgreen);
+            if(distance < minDistance){
+                minDistance = distance;
+                closestColor = colorName;
+            }
+        }
+        return closestColor;
+    }
 
     private MenuBar createMenuBar() {
         MenuBar menuBar = new MenuBar();
