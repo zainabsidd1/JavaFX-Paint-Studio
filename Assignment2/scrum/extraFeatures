@@ -1,0 +1,88 @@
+--------------------------------------------------------------------------------
+FeatureName: Eraser Tool
+
+Description:
+    Erases parts of existing drawings to remove unwanted sections from the canvas.
+Reference:
+	US3.001
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+FeatureName: Undo
+
+Description:
+	To undo the most recent action.
+
+Reference:
+	US3.002
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+FeatureName: Redo
+
+Description:
+	To redo an action previously undone.
+
+
+Reference:
+	US3.003
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+FeatureName: (name)
+
+Description:
+	(describe the feature)
+
+
+Reference:
+	(list of the BUG/US involved in creating this feature)
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+FeatureName: (name)
+
+Description:
+	(describe the feature)
+
+
+Reference:
+	(list of the BUG/US involved in creating this feature)
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+FeatureName: (name)
+
+Description:
+	(describe the feature)
+
+
+Reference:
+	(list of the BUG/US involved in creating this feature)
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+FeatureName: (name)
+
+Description:
+	(describe the feature)
+
+
+Reference:
+	(list of the BUG/US involved in creating this feature)
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+FeatureName: (name)
+
+Description:
+	(describe the feature)
+
+
+Reference:
+	(list of the BUG/US involved in creating this feature)
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+FeatureName: (name)
+
+Description:
+	(describe the feature)
+
+
+Reference:
+	(list of the BUG/US involved in creating this feature)
+--------------------------------------------------------------------------------
+...
