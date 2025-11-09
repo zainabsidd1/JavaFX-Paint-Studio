@@ -203,6 +203,9 @@ public class View {
         colorMap.put("Green", Color.web("#99CC99"));
         colorMap.put("Grey", Color.web("#B3B3B3"));
         colorMap.put("Grey", Color.web("#4D4D4D"));
+        colorMap.put("Green", Color.web("#00FF00"));
+        colorMap.put("Grey", Color.web("#B3B3B3"));
+        colorMap.put("Purple", Color.web("#9980E6"));
 
     }
 
