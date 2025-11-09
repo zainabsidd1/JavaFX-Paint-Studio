@@ -25,6 +25,15 @@ ISSUE    : The selection, copy, and movement tools currently only support
            reference point handling, causing tool failures.
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
+TYPE     : BUG BUG4.003 : kaurjap9 :  NotStarted
+NAME     : Remove warnings
+PRIORITY : 2
+ESTIMATE : 4 hours     ACTUAL :
+ISSUE    : The current files have various unused imports, duplicate lines
+           of code and formatting errors. The files should be clean with
+           no or minimal warnings for perfectly structured code.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
 TYPE     : USER STORY US4.001 : sidd1378 : Complete
 NAME     : Change background color of canvas
 PRIORITY : 3
@@ -97,4 +106,13 @@ AS A     : user
 I WANT   : A scenery menu that when clicked generates a random scenery for
            me from a list of hardcoded sceneries.
 SO THAT  : I can have a created random picture on my paint
+---------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US4.008 : kaurjap9 : InProgress
+NAME     : New Function
+PRIORITY : 3
+ESTIMATE : 1 hour     ACTUAL : 4 hours
+AS A     : user
+I WANT   : When the new button is clicked a clear canvas is generated
+SO THAT  : I can clear the app without having to shut it down or undo
 ---------------------------------------------------------------------------
