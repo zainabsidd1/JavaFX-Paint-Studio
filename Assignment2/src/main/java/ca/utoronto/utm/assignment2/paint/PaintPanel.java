@@ -86,6 +86,7 @@ public class PaintPanel extends Canvas implements EventHandler<MouseEvent>, Pain
         else if (type == MouseEvent.MOUSE_RELEASED) currentStrategy.onMouseReleased(e);
         else if (type == MouseEvent.MOUSE_MOVED)    currentStrategy.onMouseMoved(e);
         else if (type == MouseEvent.MOUSE_CLICKED)  currentStrategy.onMouseClicked(e);
+
     }
 
     // Rendering
@@ -105,8 +106,12 @@ public class PaintPanel extends Canvas implements EventHandler<MouseEvent>, Pain
         for (Shape s : model.getShapes()) {
             s.accept(visitor);
         }
+        Shape hud = model.getOverlay();
+        if (hud != null) {hud.accept(visitor);}
+
         if (currentStrategy != null) {
             currentStrategy.drawPreview(g);
         }
+
     }
 }
