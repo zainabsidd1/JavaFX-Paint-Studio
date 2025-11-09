@@ -443,4 +443,153 @@ public final class SceneryLibrary {
 
         return s;
     }
+
+    //Toronto Skyline
+    public static List<Shape> torontoSkyline(double W, double H){
+        List<Shape> s = new ArrayList<>();
+
+        // Sky
+        s.add(new Rectangle(new Point(0, 0), new Point(W, H*0.55), Color.web("#86C9FF")));
+        s.add(new Rectangle(new Point(0, H*0.35), new Point(W, H*0.55), Color.web("#BFE4FF")));
+
+        // Clouds
+        java.util.function.BiConsumer<Double,Double> cloud = (cx, cy) -> {
+            s.add(new Oval(new Point(cx-80, cy-18), new Point(cx+80, cy+18), Color.web("#F6F9FF"), true));
+            s.add(new Oval(new Point(cx-120, cy-10), new Point(cx-20, cy+20), Color.web("#F6F9FF"), true));
+            s.add(new Oval(new Point(cx+20, cy-12), new Point(cx+120, cy+20), Color.web("#F6F9FF"), true));
+        };
+        cloud.accept(W*0.30, H*0.13);
+        cloud.accept(W*0.70, H*0.10);
+
+
+
+        double baseY = H*0.55;
+
+        // ---------- BUILDINGS ----------
+        // helper to sprinkle windows
+        java.util.function.BiConsumer<Rectangle, Boolean> addWindows = (rect, warm) -> {
+            double x1 = rect.getLeft(), y1 = rect.getTop();
+            double x2 = x1 + rect.getWidth(), y2 = y1 + rect.getHeight();
+            double w = x2 - x1, h = y2 - y1;
+            double wx = x1 + w*0.06;
+            while (wx + w*0.05 < x2 - w*0.04) {
+                double wy = y1 + h*0.06;
+                while (wy + w*0.04 < y2 - h*0.05) {
+                    boolean lit = ((((int)((wx-x1)/(w*0.10))) + ((int)((wy-y1)/(h*0.12)))) & 1) == 0;
+                    Color c = lit ? (warm ? Color.web("#FFE27A") : Color.web("#D6F2FF")) : Color.web("#2B3A4B");
+                    s.add(new Square(new Point(wx, wy), new Point(wx + w*0.05, wy + w*0.05), c));
+                    wy += h*0.12;
+                }
+                wx += w*0.10;
+            }
+        };
+
+        class Bld {
+            Bld(double fx, double width, double height, String col, boolean warmWin){
+                double x1 = W*fx, x2 = x1 + W*width;
+                double y2 = baseY, y1 = baseY - H*height;
+                Rectangle r = new Rectangle(new Point(x1, y1), new Point(x2, y2), Color.web(col));
+                s.add(r);
+                addWindows.accept(r, warmWin);
+            }
+        }
+
+        // buildings
+        new Bld(0.52, 0.08, 0.34, "#6A8DAA", false);
+        new Bld(0.60, 0.06, 0.30, "#5E7F9B", true);
+        new Bld(0.67, 0.07, 0.33, "#6D90AE", false);
+        new Bld(0.75, 0.06, 0.28, "#5A7A95", true);
+        new Bld(0.82, 0.05, 0.27, "#5F86A3", false);
+        new Bld(0.40, 0.07, 0.31, "#5E7F9B", true);
+        new Bld(0.33, 0.06, 0.26, "#6B8EAB", false);
+        new Bld(0.25, 0.055, 0.24, "#607F9A", true);
+        new Bld(0.18, 0.05, 0.21, "#6C8BA6", false);
+        new Bld(0.06, 0.055, 0.23, "#6487A4", true);
+        new Bld(0.10, 0.05,  0.20, "#5D7E98", false);
+        new Bld(0.90, 0.05,  0.26, "#6A8DAA", true);
+        new Bld(0.95, 0.04,  0.22, "#577793", false);
+
+        // BMO-like white tower
+        double bmoX1 = W*0.58, bmoX2 = bmoX1 + W*0.05;
+        double bmoY2 = baseY, bmoY1 = baseY - H*0.36;
+        Rectangle bmo = new Rectangle(new Point(bmoX1, bmoY1), new Point(bmoX2, bmoY2), Color.web("#E8EFF7"));
+        s.add(bmo);
+        addWindows.accept(bmo, false);
+        s.add(new Rectangle(new Point((bmoX1+bmoX2)/2 - W*0.002, bmoY1 - H*0.06),
+                new Point((bmoX1+bmoX2)/2 + W*0.002, bmoY1), Color.web("#D8DFEA")));
+        s.add(new Rectangle(new Point((bmoX1+bmoX2)/2 + W*0.012 - W*0.002, bmoY1 - H*0.045),
+                new Point((bmoX1+bmoX2)/2 + W*0.012 + W*0.002, bmoY1), Color.web("#D8DFEA")));
+
+        // CN Tower
+        double towerBaseY = baseY;
+        double towerX = W*0.30;
+        s.add(new Rectangle(new Point(towerX - W*0.004, towerBaseY - H*0.58),
+                new Point(towerX + W*0.004, towerBaseY), Color.web("#C7C9CE")));
+        Triangle butt = new Triangle();
+        butt.addVertex(new Point(towerX, towerBaseY - H*0.22));
+        butt.addVertex(new Point(towerX - W*0.02, towerBaseY));
+        butt.addVertex(new Point(towerX + W*0.02, towerBaseY));
+        try { butt.applyFill(Color.web("#B9BCC2")); } catch (Exception ignore) {}
+        s.add(butt);
+        s.add(new Oval(new Point(towerX - W*0.05, towerBaseY - H*0.34),
+                new Point(towerX + W*0.05, towerBaseY - H*0.305), Color.web("#8B8F96"), true));
+        s.add(new Oval(new Point(towerX - W*0.042, towerBaseY - H*0.338),
+                new Point(towerX + W*0.042, towerBaseY - H*0.315), Color.web("#E6EBF2"), true));
+        s.add(new Oval(new Point(towerX - W*0.028, towerBaseY - H*0.355),
+                new Point(towerX + W*0.028, towerBaseY - H*0.342), Color.web("#A7ACB5"), true));
+        s.add(new Rectangle(new Point(towerX - W*0.002, towerBaseY - H*0.58 - H*0.08),
+                new Point(towerX + W*0.002, towerBaseY - H*0.58), Color.web("#D5D8DE")));
+        s.add(new Rectangle(new Point(towerX - W*0.002, towerBaseY - H*0.62),
+                new Point(towerX + W*0.002, towerBaseY - H*0.61), Color.web("#D32F2F")));
+        s.add(new Rectangle(new Point(towerX - W*0.002, towerBaseY - H*0.605),
+                new Point(towerX + W*0.002, towerBaseY - H*0.595), Color.web("#FFFFFF")));
+
+        // Rogers Centre
+        double domeCx = W*0.20, domeCy = baseY - H*0.03;
+        s.add(new Oval(new Point(domeCx - W*0.11, domeCy - H*0.07),
+                new Point(domeCx + W*0.11, domeCy + H*0.07), Color.web("#E9EFF6"), true));
+        s.add(new Rectangle(new Point(domeCx - W*0.12, baseY - H*0.045),
+                new Point(domeCx + W*0.12, baseY), Color.web("#B5C8DA")));
+        // Water
+        s.add(new Rectangle(new Point(0, H*0.55), new Point(W, H), Color.web("#3AA0E6")));
+
+          // Shoreline/viaduct band that covers the dome’s lower half
+        double shoreY1 = baseY - H*0.035;
+        s.add(new Rectangle(new Point(0, shoreY1+10), new Point(W, shoreY1 + H*0.02), Color.web("#2C6CA4")));
+
+        // Boats and ripples (unchanged)
+        java.util.function.BiConsumer<Double,Double> sailboat = (bx, by) -> {
+            double hullW = W*0.06, hullH = H*0.015;
+            s.add(new Rectangle(new Point(bx, by), new Point(bx + hullW, by + hullH), Color.web("#2D3142")));
+            s.add(new Rectangle(new Point(bx + hullW*0.5 - 1.5, by - H*0.06),
+                    new Point(bx + hullW*0.5 + 1.5, by), Color.web("#6F7785")));
+            Polyline sail = new Polyline(Color.web("#FFFFFF"));
+            sail.addPoint(new Point(bx + hullW*0.5, by - H*0.06));
+            sail.addPoint(new Point(bx + hullW*0.88, by - H*0.01));
+            sail.addPoint(new Point(bx + hullW*0.5, by - H*0.01));
+            sail.addPoint(new Point(bx + hullW*0.5, by - H*0.06));
+            if (sail instanceof Strokeable st) st.setStrokeWidth(2);
+            s.add(sail);
+        };
+        sailboat.accept(W*0.42, H*0.62);
+        sailboat.accept(W*0.65, H*0.60);
+
+        for (int i = 0; i < 14; i++) {
+            double y = H*0.58 + i*(H*0.02);
+            Polyline ripple = new Polyline(Color.web("#E5F4FF"));
+            if (ripple instanceof Strokeable st) st.setStrokeWidth(1.5);
+            ripple.addPoint(new Point(W*0.05, y));
+            ripple.addPoint(new Point(W*0.20, y + Math.sin(i*0.6)*2));
+            ripple.addPoint(new Point(W*0.35, y));
+            ripple.addPoint(new Point(W*0.50, y + Math.cos(i*0.5)*2));
+            ripple.addPoint(new Point(W*0.65, y));
+            ripple.addPoint(new Point(W*0.80, y + Math.sin(i*0.7)*2));
+            ripple.addPoint(new Point(W*0.95, y));
+            s.add(ripple);
+        }
+
+        return s;
+    }
+
+
 }

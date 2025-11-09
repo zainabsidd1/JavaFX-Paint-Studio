@@ -265,8 +265,9 @@ public class View {
         MenuItem scene1 = new MenuItem("Beach Sunset");
         MenuItem scene2 = new MenuItem("Flower Garden");
         MenuItem scene3 = new MenuItem("City Night");
+        MenuItem scene4 = new MenuItem("Toronto Skyline");
         MenuItem random = new MenuItem("Random Scene");
-        scenery.getItems().addAll(scene1, scene2, scene3, new SeparatorMenuItem(), random);
+        scenery.getItems().addAll(scene1, scene2, scene3, scene4, new SeparatorMenuItem(), random);
         scene1.setOnAction(e -> {
             double W = getPaintPanel().getWidth(), H = getPaintPanel().getHeight();
             paintModel.executeCommand(new LoadSceneryCommand(paintModel, SceneryLibrary.beachSunset(W, H)));
@@ -279,13 +280,19 @@ public class View {
             double W = getPaintPanel().getWidth(), H = getPaintPanel().getHeight();
             paintModel.executeCommand(new LoadSceneryCommand(paintModel, SceneryLibrary.cityNight(W, H)));
         });
+        // NEW: wire Toronto Skyline
+        scene4.setOnAction(e -> {
+            double W = getPaintPanel().getWidth(), H = getPaintPanel().getHeight();
+            paintModel.executeCommand(new LoadSceneryCommand(paintModel, SceneryLibrary.torontoSkyline(W, H)));
+        });
         random.setOnAction(e -> {
             double W = getPaintPanel().getWidth(), H = getPaintPanel().getHeight();
-            int pick = new java.util.Random().nextInt(3);
+            int pick = new java.util.Random().nextInt(5);
             switch (pick) {
                 case 0 -> paintModel.executeCommand(new LoadSceneryCommand(paintModel, SceneryLibrary.beachSunset(W, H)));
                 case 1 -> paintModel.executeCommand(new LoadSceneryCommand(paintModel, SceneryLibrary.flowerGarden(W, H)));
                 default -> paintModel.executeCommand(new LoadSceneryCommand(paintModel, SceneryLibrary.cityNight(W, H)));
+                case 4 -> paintModel.executeCommand(new LoadSceneryCommand(paintModel, SceneryLibrary.torontoSkyline(W, H)));
             }
         });
         menuBar.getMenus().addAll(file, edit);
