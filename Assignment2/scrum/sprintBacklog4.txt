@@ -55,10 +55,10 @@ SO THAT  : I can customize the workspace or create colored backdrops for
            drawings
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
-TYPE     : USER STORY US4.002 : sidd1378:  InProgress
+TYPE     : USER STORY US4.002 : sidd1378:  Complete
 NAME     : Eraser adapts to colored background
 PRIORITY : 3
-ESTIMATE : 2 hours     ACTUAL :
+ESTIMATE : 2 hours     ACTUAL : 1 hour
 AS A     : user
 I WANT   : The eraser to erase to any background color set by me
 SO THAT  : it behaves correctly when the background is not white
@@ -112,7 +112,7 @@ SO THAT  : I can explore creative, randomized art compositions automatically
 TYPE     : USER STORY US4.007 : kaurjap9 : Complete
 NAME     : Random scenery generator
 PRIORITY : 3
-ESTIMATE : 4 hours     ACTUAL : 4 hours
+ESTIMATE : 4 hours     ACTUAL : 3 hours
 AS A     : user
 I WANT   : A scenery menu that when clicked generates a random scenery for
            me from a list of hardcoded sceneries.
