@@ -28,55 +28,12 @@ public class View {
         this.paintPanel = new PaintPanel(this.paintModel);
         ShapeChooserPanel shapeChooserPanel = new ShapeChooserPanel(this);
 
-        //Textfield to show line current thickness
-        TextField strokeWidthField = new TextField();
-        strokeWidthField.setEditable(false);
-        strokeWidthField.setPrefWidth(70);
-        strokeWidthField.setAlignment(Pos.CENTER);
-        strokeWidthField.setStyle("""
-            -fx-background-color: #f2f2f2;
-            -fx-border-color: #ccc;
-            -fx-border-radius: 4;
-            -fx-background-radius: 4; """);
-        strokeWidthField.setText(String.format("%.1f", paintModel.getStrokeWidth()));
-        paintModel.addListener(() -> {
-            double w = paintModel.getStrokeWidth();
-            strokeWidthField.setText(String.format("%.1f", w));
-        });
-
-        //Slider for line thickness
-        Slider tslider = new Slider(1,20,3);
-        tslider.setShowTickLabels(true);
-        tslider.setShowTickMarks(true);
-        tslider.setMajorTickUnit(1);
-        tslider.setBlockIncrement(5);
-        tslider.setOnMousePressed(e ->
-                model.setStrokePreviewWidth(tslider.getValue())
-        );
-        tslider.setOnMouseReleased(e ->
-                model.hideStrokePreview()
-        );
-        tslider.valueProperty().addListener((observable, oldValue, newValue) -> {
-            double w = newValue.doubleValue();
-            paintModel.setStrokeWidth(w);
-            model.setStrokeWidth(w);
-            model.setStrokePreviewWidth(w);
-        });
-
-        strokeWidthField.setEditable(true);
-        strokeWidthField.setOnAction(e -> {
-            try {
-                double value = Double.parseDouble(strokeWidthField.getText());
-                tslider.setValue(value); // sync slider + model
-            } catch (NumberFormatException ex) {
-                strokeWidthField.setText(String.format("%.1f", paintModel.getStrokeWidth()));
-            }
-        });
+        StrokeControls strokeControls = new StrokeControls(paintModel);
 
 
-        HBox bottomBar = new HBox(10, tslider, strokeWidthField);
+        HBox bottomBar = new HBox(strokeControls.getNode());
         bottomBar.setAlignment(Pos.CENTER_LEFT);
-        bottomBar.setPadding(new Insets(5, 10, 5, 10));
+        bottomBar.setPadding(new Insets(0));
 
         BorderPane root = new BorderPane();
         root.setBottom(bottomBar);

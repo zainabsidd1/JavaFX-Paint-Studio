@@ -218,7 +218,7 @@ public class PaintModel {
             notifyListeners();
             return;
         }
-        Circle c = new Circle(new Point(50, 275), r, Color.BLACK);
+        Circle c = new Circle(new Point(50, 295), r, Color.BLACK);
         c.setColor(Color.BLACK);
         c.setFilled(false);
         c.setStrokeWidth(1);
