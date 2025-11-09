@@ -119,5 +119,13 @@ Description:
 Reference:
 	US4.006
 --------------------------------------------------------------------------------
+FeatureName: Accessibility Color Description Label
 
+Description:
+    Displays a text label describing the currently selected color. This label updates whenever
+    a user chooses a new color, providing responsive feedback to users with color vision deficiencies or
+    impairments.
+
+Reference:
+    US4.004
 ...

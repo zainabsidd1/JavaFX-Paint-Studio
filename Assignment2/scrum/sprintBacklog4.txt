@@ -54,16 +54,16 @@ SO THAT  : I can visualize how thick the next shape’s outline will be
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
 TYPE     : USER STORY US4.004 : UTORID : NotStarted
-NAME     : Accessibility feedback for user actions
+NAME     : Accessibility Color Description Label
 PRIORITY : 3
 ESTIMATE : 2 hours     ACTUAL :
 AS A     : visually-impaired user
-I WANT   : Audible feedback for key actions (draw, cut, copy, paste, shape selection)
-SO THAT  : I can navigate and use the application more effectively
+I WANT   : The application to display a text label describing the current color selected.
+SO THAT  : I can understand which color is being used without relying on color perception.
 
 EXAMPLE:
-  - select “rectangle” → app announces “Rectangle selected”
-  - click “copy” → sound plays “Copied”
+  - selecting the color red with hex value #FF0000 → label shows "Selected Color: Red"
+  - picking a custom color close to blue → label shows "Selected Color: Blue"
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
 TYPE     : USER STORY US4.005 : tatisoha : NotStarted
