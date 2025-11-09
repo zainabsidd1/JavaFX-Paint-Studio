@@ -19,12 +19,12 @@ public class CircleStrategy implements ToolStrategy, Colorable {
 
     @Override
     public void onMousePressed(MouseEvent e) {
-        Shape clicked = model.findTopmostAt(e.getX(), e.getY());
-        if (clicked != null) {
-            model.setSelectedShape(clicked);
-            circle = null;
-            return;
-        }
+//        Shape clicked = model.findTopmostAt(e.getX(), e.getY());
+//        if (clicked != null) {
+//            model.setSelectedShape(clicked);
+//            circle = null;
+//            return;
+//        }
 
         Point centre = new Point(e.getX(), e.getY());
 
