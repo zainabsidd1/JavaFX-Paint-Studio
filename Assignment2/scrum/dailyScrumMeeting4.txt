@@ -123,9 +123,9 @@ Nov 7,2025
 	Obstacles I face:n/a
 
 Nov 8,2025
-	What I did yesterday:
-	What I will do today:
-	Obstacles I face:
+	What I did yesterday: Added sprint 4 user stories ideas.
+	What I will do today: Implemented US4.003, but still need to make some minor changes.
+	Obstacles I face: Finding a way to display the stroke circle without grouping it with the shapes list.
 
 Nov 9,2025
 	What I did yesterday:

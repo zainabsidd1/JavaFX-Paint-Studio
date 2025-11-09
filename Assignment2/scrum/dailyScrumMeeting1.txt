@@ -122,9 +122,9 @@ Nov 7,2025
 	Obstacles I face: n/a
 
 Nov 8,2025
-	What I did yesterday:
-	What I will do today:
-	Obstacles I face:
+	What I did yesterday: Claim US4.001 and US4.002 from sprint backlog 4.
+	What I will do today: Work on implementing background color changing feature (US4.001).
+	Obstacles I face: Applying undo/redo functionality with the background color change.
 
 Nov 9,2025
 	What I did yesterday:

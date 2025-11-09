@@ -59,7 +59,11 @@ public class PaintPanel extends Canvas implements EventHandler<MouseEvent>, Pain
 
     // set colour
 
-    public void setColor(Color c) { this.currentColor = c; requestRender(); }
+    public void setColor(Color c) {
+        this.currentColor = c;
+        model.setCurrentColor(c);
+        requestRender();
+    }
     public Color getColor()       { return this.currentColor; }
 
     // Model → View (Observer)
@@ -94,6 +98,10 @@ public class PaintPanel extends Canvas implements EventHandler<MouseEvent>, Pain
     private void render() {
         GraphicsContext g = getGraphicsContext2D();
         g.clearRect(0, 0, getWidth(), getHeight());
+
+        g.setFill(model.getBackgroundColor());
+        g.fillRect(0, 0, getWidth(), getHeight());
+
         RenderVisitor visitor = new RenderVisitor(g); // visitor used
         for (Shape s : model.getShapes()) {
             s.accept(visitor);
