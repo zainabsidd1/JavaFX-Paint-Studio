@@ -119,10 +119,10 @@ I WANT   : A scenery menu that when clicked generates a random scenery for
 SO THAT  : I can have a created random picture on my paint
 ---------------------------------------------------------------------------
 --------------------------------------------------------------------------
-TYPE     : USER STORY US4.008 : kaurjap9 : InProgress
+TYPE     : USER STORY US4.008 : kaurjap9 : Complete
 NAME     : New Function
 PRIORITY : 3
-ESTIMATE : 1 hour     ACTUAL : 4 hours
+ESTIMATE : 1 hour     ACTUAL : 1 hour
 AS A     : user
 I WANT   : When the new button is clicked a clear canvas is generated
 SO THAT  : I can clear the app without having to shut it down or undo
