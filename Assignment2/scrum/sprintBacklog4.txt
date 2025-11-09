@@ -6,20 +6,20 @@
 # Sprint 4 Backlog UserStories go below
 
 --------------------------------------------------------------------------
-TYPE     : BUG BUG4.001 : UTORID :  NotStarted
+TYPE     : BUG BUG4.001 : royanus1 :  NotStarted
 NAME     : Undo/Redo not implementing mover tool changes
 PRIORITY : 2
-ESTIMATE : (1 hour, 2 hours, 4 hours, 1 day, 2 days)          ACTUAL :
+ESTIMATE : 3          ACTUAL :
 ISSUE    : The current Undo/Redo logic only tracks creation and deletion
            of shapes, but not movement changes done using the Mover tool.
            Moving a shape and pressing Undo should revert to the previous
            position, and Redo should restore the new position.
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
-TYPE     : BUG BUG4.002 : UTORID  : NotStarted
+TYPE     : BUG BUG4.002 : royanus1  : NotStarted
 NAME     : Mover, Copy, Cut, Paste not working for Squiggle and Polyline
 PRIORITY : 3
-ESTIMATE : (2 hours, 4 hours, 1 day)                          ACTUAL :
+ESTIMATE : 4                          ACTUAL :
 ISSUE    : The selection, copy, and movement tools currently only support
            basic shapes. Squiggle and Polyline lack proper bounding box or
            reference point handling, causing tool failures.
