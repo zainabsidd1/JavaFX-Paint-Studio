@@ -207,4 +207,9 @@ public class PaintModel {
             notifyListeners();
         }
     }
+
+    public void displayStrokeSize(double w) {
+        Circle stroke = new Circle(new Point (200, 200), w, Color.BLACK);
+        stroke.setFilled(false);
+    }
 }

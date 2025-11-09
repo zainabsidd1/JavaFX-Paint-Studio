@@ -43,6 +43,7 @@ public class View {
         paintModel.addListener(() -> {
             double w = paintModel.getStrokeWidth();
             strokeWidthField.setText(String.format("%.1f", w));
+            paintModel.displayStrokeSize(w);
         });
 
         //Slider for line thickness
