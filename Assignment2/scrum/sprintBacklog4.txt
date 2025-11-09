@@ -53,10 +53,10 @@ I WANT   : To see a temporary circle preview showing my selected stroke width
 SO THAT  : I can visualize how thick the next shape’s outline will be
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
-TYPE     : USER STORY US4.004 : UTORID : NotStarted
+TYPE     : USER STORY US4.004 : UTORID : sidd1378 : NotStarted
 NAME     : Accessibility Color Description Label
 PRIORITY : 3
-ESTIMATE : 2 hours     ACTUAL :
+ESTIMATE : 3 hours     ACTUAL :
 AS A     : visually-impaired user
 I WANT   : The application to display a text label describing the current color selected.
 SO THAT  : I can understand which color is being used without relying on color perception.
