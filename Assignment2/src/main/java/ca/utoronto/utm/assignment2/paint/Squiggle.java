@@ -7,8 +7,17 @@ import java.util.List;
 
 public class Squiggle implements Shape, Colorable, Strokeable {
     private final List<Point> points = new ArrayList<>();
+    private boolean isEraser = false;
     private Color color = Color.RED;
     private double strokeWidth = 2.0;
+
+    public boolean isEraser() {
+        return isEraser;
+    }
+
+    public void setEraser(boolean isEraser) {
+        this.isEraser = isEraser;
+    }
 
     public void addPoint(Point p) {
         points.add(p);

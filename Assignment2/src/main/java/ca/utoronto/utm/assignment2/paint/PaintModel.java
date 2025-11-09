@@ -42,7 +42,15 @@ public class PaintModel {
     public Color getBackgroundColor() { return backgroundColor; }
     public void setBackgroundColor(Color backgroundColor) {
         if(backgroundColor == null) return;
-        this.backgroundColor = backgroundColor;
+        if(!Objects.equals(this.backgroundColor, backgroundColor)){
+            this.backgroundColor = backgroundColor;
+            for (Shape s : shapes) {
+                if(s instanceof Squiggle squiggle && squiggle.isEraser()) {
+                    squiggle.setColor(backgroundColor);
+                }
+            }
+        }
+
         notifyListeners();
     }
 
@@ -109,6 +117,7 @@ public class PaintModel {
         currEraser = new Squiggle();
         Color backgroundColor = (this.backgroundColor!=null) ? this.backgroundColor : Color.WHITE;
         currEraser.setColor(backgroundColor);
+        currEraser.setEraser(true);
         applyStrokeWidth(currEraser, strokeWidth);
         exec(new AddShapeCommand(shapes, currEraser));
     }
@@ -118,6 +127,7 @@ public class PaintModel {
         currEraser.addPoint(p);
         notifyListeners();
     }
+
 
     // Undo/Redo via Command
     public void undo() {
