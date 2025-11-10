@@ -123,9 +123,9 @@ Reference:
 FeatureName: Accessibility Color Description Label
 
 Description:
-    Displays a text label describing the current color selected. This label updates whenever
-    a user chooses a new color, providing responsive feedback to users with color vision deficiencies or
-    impairments.
+    Displays a text label describing the current color selected out of the 12 colors in the main color palette.
+    This label updates whenever a user chooses a new color from the palette, providing responsive feedback to
+    users with color vision deficiencies or impairments.
 
 Reference:
     US4.004
