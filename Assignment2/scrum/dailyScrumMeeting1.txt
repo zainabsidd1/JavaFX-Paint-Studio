@@ -127,9 +127,9 @@ Nov 8,2025
 	Obstacles I face: Applying undo/redo functionality with the background color change.
 
 Nov 9,2025
-	What I did yesterday:
-	What I will do today:
-	Obstacles I face:
+	What I did yesterday: Worked on US4.001
+	What I will do today: Work on the accessibility feature that displays the color selected.
+	Obstacles I face: n/a
 
 Nov 10,2025
 	What I did yesterday:
