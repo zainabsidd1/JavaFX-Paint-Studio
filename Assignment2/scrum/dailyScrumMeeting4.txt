@@ -49,43 +49,43 @@ Oct 23,2025
 Oct 24,2025
 	What I did yesterday: helping with git fixes and reverts.
 	What I will do today: Reviewed sprint2 and selected userstories.
-	Obstacles I face: n/a
+	Obstacles I face: n/a.
 
 Oct 25,2025
 	What I did yesterday: Reviewed sprint2 and selected userstories.
 	What I will do today: Review sprint2 and selected userstories.
-	Obstacles I face: n/a
+	Obstacles I face: n/a.
 
 Oct 26,2025
-	What I did yesterday: Reviewed sprint2 and selected userstories
+	What I did yesterday: Reviewed sprint2 and selected userstories.
 	What I will do today: Refactored PaintChooserPanel to remove hardcoding the
 	                      paint tool chooser in BUG2.003.
-	Obstacles I face: n/a
+	Obstacles I face: n/a.
 
 Oct 27,2025
 	What I did yesterday: Refactored PaintChooserPanel to remove hardcoding the paint tool chooser in BUG2.003.
 	What I will do today: Implmented US2.007 to create polylines.
-	Obstacles I face:  n/a
+	Obstacles I face:  n/a.
 
 Oct 28,2025
 	What I did yesterday: Implmented US2.007 to create polylines.
 	What I will do today: Implemented US2.003 and US2.004 to satisfy triangle and triangle feedback.
-	Obstacles I face: n/a
+	Obstacles I face: n/a.
 
 Oct 29,2025
 	What I did yesterday: Implemented US2.003 and US2.004 to satisfy triangle and triangle feedback.
 	What I will do today: Looked over architecture logs and backlogs.
-	Obstacles I face: n/a
+	Obstacles I face: n/a.
 
 Oct 30,2025
 	What I did yesterday: Looked over architecture and backlogs.
 	What I will do today: Looked over sprint3 requirements.
-	Obstacles I face: n/a
+	Obstacles I face: n/a.
 
 Oct 31,2025
 	What I did yesterday: Looked over sprint3.
 	What I will do today: Chose US3.001 to implement an eraser tool.
-	Obstacles I face: n/a
+	Obstacles I face: n/a.
 
 Nov 1,2025
 	What I did yesterday:Chose US3.001 to implement an eraser tool.
@@ -95,22 +95,22 @@ Nov 1,2025
 Nov 2,2025
 	What I did yesterday:Worked on eraser tool.
 	What I will do today:Implemented eraser tool.
-	Obstacles I face:n/a
+	Obstacles I face:n/a.
 
 Nov 3,2025
 	What I did yesterday: Implemented eraser tool.
 	What I will do today: Claimed US3.011.
-	Obstacles I face:n/a
+	Obstacles I face:n/a.
 
 Nov 4,2025
 	What I did yesterday: Claimed US3.011.
 	What I will do today: Implemented mover tool.
-	Obstacles I face:n/a
+	Obstacles I face:n/a.
 
 Nov 5,2025
 	What I did yesterday:Implemented mover tool.
 	What I will do today: Found bugs and made possible user story outlines for sprint 4.
-	Obstacles I face:n/a
+	Obstacles I face:n/a.
 
 Nov 6,2025
 	What I did yesterday:Found bugs and made possible user story outlines for sprint 4.
@@ -120,7 +120,7 @@ Nov 6,2025
 Nov 7,2025
 	What I did yesterday: Implemented line thickness tool, US3.007.
 	What I will do today: Added sprint 4 user stories ideas.
-	Obstacles I face:n/a
+	Obstacles I face:n/a.
 
 Nov 8,2025
 	What I did yesterday: Added sprint 4 user stories ideas.

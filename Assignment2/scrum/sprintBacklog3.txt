@@ -9,7 +9,7 @@
 TYPE     : BUG BUG3.004 : kaurjap9 : Complete
 NAME     : Architecture behind Model is poor
 PRIORITY : 3
-ESTIMATE : 1 day    ACTUAL :
+ESTIMATE : 1 day    ACTUAL : 1 day
 ISSUE    : Having a list of different types of drawable things in the
            model is cumbersome. In fact, it is currently incorrect, with
            Squiggle's not drawing properly. Need to re-architect the Model
@@ -103,7 +103,7 @@ SO THAT  : Shapes are rendered using the chosen style
 TYPE     : USER STORY US3.007 : tatisoha : Complete
 NAME     : Line thickness selector
 PRIORITY : 3
-ESTIMATE : 1 hour    ACTUAL :2 hours
+ESTIMATE : 1 hour    ACTUAL : 2 hours
 AS A     : user
 I WANT   : To be able to select the current line thickness, to be applied
            to subsequent shapes. Example:

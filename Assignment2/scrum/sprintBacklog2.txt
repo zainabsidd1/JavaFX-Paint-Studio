@@ -9,7 +9,7 @@
 TYPE     : BUG BUG2.003 : kaurjap9 : Complete
 NAME     : Architecture behind choosing selection mode is poor
 PRIORITY : 3
-ESTIMATE : 2 days    ACTUAL :
+ESTIMATE : 2 days    ACTUAL : 2 days
 ISSUE    : Code is not modular and is difficult to expand. Need a better
            architecture behind selecting a drawing mode, and handling
            the drawing events. Consider some design patterns here.
@@ -31,7 +31,7 @@ SO THAT  : I can easily draw perfect squares on my canvas.
 TYPE     : USER STORY US2.002 : sidd1378 : Complete
 NAME     : Draw Square Feedback
 PRIORITY : 2
-ESTIMATE : 2 hours    ACTUAL : 1
+ESTIMATE : 2 hours    ACTUAL : 1 hour
 AS A     : user
 I WANT   : To see a live preview of the square as I drag, showing the
            current square outline updating in real time.
@@ -62,7 +62,7 @@ SO THAT  : I can adjust the shape in real time before finalizing it.
 TYPE     : USER STORY US2.005 : royanus1 : Complete
 NAME     : Draw Oval
 PRIORITY : 2
-ESTIMATE : 3 hours    ACTUAL : 3
+ESTIMATE : 3 hours    ACTUAL : 3 hours
 AS A     : user
 I WANT   : To click and drag to define an oval is drawn using the current
            colour and fill settings.
@@ -73,7 +73,7 @@ SO THAT  : I can create smooth oval shapes similar to those in standard
 TYPE     : USER STORY US2.006 : royanus1 : Complete
 NAME     : Draw Oval Feedback
 PRIORITY : 2
-ESTIMATE : 2 hours    ACTUAL : 1
+ESTIMATE : 2 hours    ACTUAL : 1 hour
 AS A     : user
 I WANT   : To see a live outline of the oval as I drag, dynamically showing
            the shape that will be finalized on mouse release.

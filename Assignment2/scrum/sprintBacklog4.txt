@@ -69,7 +69,8 @@ NAME     : Stroke width preview indicator
 PRIORITY : 2
 ESTIMATE : 1 hour     ACTUAL : 1 hour
 AS A     : user
-I WANT   : To see a temporary circle preview showing my selected stroke width
+I WANT   : To see a temporary circle preview showing my selected stroke
+           width
 SO THAT  : I can visualize how thick the next shape’s outline will be
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
@@ -78,13 +79,17 @@ NAME     : Accessibility Color Description Label
 PRIORITY : 3
 ESTIMATE : 3 hours     ACTUAL : 2 hours
 AS A     : visually-impaired user
-I WANT   : The application to display a text label describing the current color selected (limited to the
-            12 basic colors in the main palette).
-SO THAT  : I can understand which color is being used without relying on color perception.
+I WANT   : The application to display a text label describing the current color
+           selected (limited to the
+           12 basic colors in the main palette).
+SO THAT  : I can understand which color is being used without relying on color
+           perception.
 
 EXAMPLE:
-  - selecting the color red with hex value #FF0000 → label shows "Selected Color: Red"
-  - picking a custom color close to blue → label shows "Selected Color: Blue"
+  - selecting the color red with hex value #FF0000 → label shows
+    "Selected Color: Red"
+  - picking a custom color close to blue → label shows
+    "Selected Color: Blue"
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
 TYPE     : USER STORY US4.005 : tatisoha : NotStarted
@@ -107,7 +112,8 @@ I WANT   : An AI paint feature that randomly generates shapes of different
            A seed command that lets me create that stores the location and
            type of shapes and lets me recreate it when the same number is
            entered
-SO THAT  : I can explore creative, randomized art compositions automatically
+SO THAT  : I can explore creative, randomized art compositions
+           automatically
 ---------------------------------------------------------------------------
 --------------------------------------------------------------------------
 TYPE     : USER STORY US4.007 : kaurjap9 : Complete

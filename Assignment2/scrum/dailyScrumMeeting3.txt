@@ -132,12 +132,12 @@ Nov 9,2025
 	Obstacles I face: n/a.
 
 Nov 10,2025
-	What I did yesterday:
-	What I will do today:
-	Obstacles I face:
+	What I did yesterday: finished US4.006, US4.007, and US4.008.
+	What I will do today: sprint + product backlog cleanup for all sprints.
+	Obstacles I face: n/a.
 
 Nov 11,2025
-	What I did yesterday:
+	What I did yesterday: sprint + product backlog cleanup for all sprints.
 	What I will do today:
 	Obstacles I face:
 

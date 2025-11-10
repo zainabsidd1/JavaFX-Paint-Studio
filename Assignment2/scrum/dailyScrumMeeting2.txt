@@ -64,72 +64,72 @@ Oct 26,2025
 Oct 27,2025
 	What I did yesterday: updated sprint backlog and product backlog.
 	What I will do today: Start working on an user story.
-	Obstacles I face:
+	Obstacles I face: n/a.
 
 Oct 28,2025
 	What I did yesterday: Start working on an user story.
-	What I will do today: Complete US2.005
-	Obstacles I face: making the bounding box
+	What I will do today: Complete US2.005.
+	Obstacles I face: making the bounding box.
 
 Oct 29,2025
-	What I did yesterday: Mostly finished US2.005
-	What I will do today: Complete US2.005 and U2.006
-	Obstacles I face: n/a
+	What I did yesterday: Mostly finished US2.005.
+	What I will do today: Complete US2.005 and U2.006.
+	Obstacles I face: n/a.
 
 Oct 30,2025
-	What I did yesterday: Complete user stories + sprint/product backlog/scrum update
-	What I will do today: Remove bounding box
-	Obstacles I face: n/a
+	What I did yesterday: Complete user stories + sprint/product backlog/scrum update.
+	What I will do today: Remove bounding box.
+	Obstacles I face: n/a.
 
 Oct 31,2025
-	What I did yesterday: Remove bounding box
-	What I will do today: n/a
-	Obstacles I face: n/a
+	What I did yesterday: Remove bounding box.
+	What I will do today: n/a.
+	Obstacles I face: n/a.
 
 Nov 1,2025
-	What I did yesterday: n/a
-	What I will do today: look over sprint 3 user stories
-	Obstacles I face: n/a
+	What I did yesterday: n/a.
+	What I will do today: look over sprint 3 user stories.
+	Obstacles I face: n/a.
 
 Nov 2,2025
-	What I did yesterday: looked over sprint 3 US
-	What I will do today: Started working on User stories + update sprint and product back log
-	Obstacles I face: n/a
+	What I did yesterday: looked over sprint 3 US.
+	What I will do today: Started working on User stories + update sprint and product backlog.
+	Obstacles I face: n/a.
 
 Nov 3,2025
-	What I did yesterday: Started working on User stories
-	What I will do today: Start and Finish US3.009
-	Obstacles I face: n/a
+	What I did yesterday: Started working on User stories.
+	What I will do today: Start and Finish US3.009.
+	Obstacles I face: n/a.
 
 Nov 4,2025
-	What I did yesterday: Finished US3.009
-	What I will do today: Start working on US3.010
-	Obstacles I face: Some shapes had issues with clicking so the shapes didn't paste properly
+	What I did yesterday: Finished US3.009.
+	What I will do today: Start working on US3.010.
+	Obstacles I face: Some shapes had issues with clicking so the shapes didn't paste properly.
 
 Nov 5,2025
-	What I did yesterday: Started working on US3.010
-	What I will do today: Accepted Pull Request for US3.011 + Complete US3.010 and Start and finish US3.008
-	Obstacles I face: the cut function wasn't removing the shape from the panel and undo/redo wasn't working according to cut
+	What I did yesterday: Started working on US3.010.
+	What I will do today: Accepted Pull Request for US3.011 + Complete US3.010 and Start and finish US3.008.
+	Obstacles I face: the cut function wasn't removing the shape from the panel and undo/redo wasn't working according to cut.
 
 Nov 6,2025
-	What I did yesterday: Completed all my user stories for sprint 3
-	What I will do today: Update sprint backlog
-	Obstacles I face: n/a
+	What I did yesterday: Completed all my user stories for sprint 3.
+	What I will do today: Update sprint backlog.
+	Obstacles I face: n/a.
 
 Nov 7,2025
-	What I did yesterday: Updated sprint backlog
-	What I will do today: Accepted Pull request for BUG3.004
-	Obstacles I face: n/a
+	What I did yesterday: Updated sprint backlog.
+	What I will do today: Accepted Pull request for BUG3.004.
+	Obstacles I face: n/a.
 
 Nov 8,2025
-	What I did yesterday: Accepted Pull request for BUG3.004
-	What I will do today: Complete sprint 3
-	Obstacles I face: n/a
+	What I did yesterday: Accepted Pull request for BUG3.004.
+	What I will do today: Complete sprint 3.
+	Obstacles I face: n/a.
 
 Nov 9,2025
-	What I did yesterday: Look over sprint 4 user stories
-	What I will do today: Start BUG4.001 + update sprint backlog
-	Obstacles I face:
+	What I did yesterday: Look over sprint 4 user stories.
+	What I will do today: Start BUG4.001 + update sprint backlog.
+	Obstacles I face: n/a.
 
 Nov 10,2025
 	What I did yesterday:

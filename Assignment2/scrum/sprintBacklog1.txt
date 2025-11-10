@@ -25,7 +25,7 @@ ISSUE    : Currently, you can't tell which mode "Circle", "Rectangle", ...
 TYPE     : BUG BUG1.005 : tatisoha : Complete
 NAME     : Squiggle is broken
 PRIORITY : 1
-ESTIMATE : 2 hours    ACTUAL : 30 mins
+ESTIMATE : 2 hours    ACTUAL : 1 hour
 ISSUE    : Squiggles are connected to each other by a straight line. Each drag
                    of the mouse should be a separate squiggle. Possibly
            the issue is with the representation of the squiggles in the Model.
@@ -34,7 +34,7 @@ ISSUE    : Squiggles are connected to each other by a straight line. Each drag
 TYPE     : BUG BUG1.006 : royanus1 : Complete
 NAME     : Circle drawing is broken
 PRIORITY : 1
-ESTIMATE : 2 hours   ACTUAL : 30 mins
+ESTIMATE : 2 hours   ACTUAL : 1 hour
 ISSUE    : The first click should specify the center of the circle, with
            a drag for the radius. This is not the case in the current
            implementation.
@@ -43,7 +43,7 @@ ISSUE    : The first click should specify the center of the circle, with
 TYPE     : USER STORY US1.002 : royanus1 : Complete
 NAME     : Draw Circle Feedback
 PRIORITY : 2
-ESTIMATE : 2 hours    ACTUAL : 2 hour
+ESTIMATE : 2 hours    ACTUAL : 2 hours
 AS A     : user
 I WANT   : As a user is specifying a Circle, during the drag, a 'current'
            circle should be on display. As the user drags, the 'current'

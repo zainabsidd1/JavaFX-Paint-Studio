@@ -15,6 +15,55 @@
 #     NotStarted,InProgress, Incomplete,Complete
 # as appropriate.
 
+--------------------------------------------------------------------------
+TYPE     : BUG BUG4.001 : royanus1 :  NotStarted
+NAME     : Undo/Redo not implementing mover tool changes
+PRIORITY : 2
+ESTIMATE : 2 hours     ACTUAL :
+ISSUE    : The current Undo/Redo logic only tracks creation and deletion
+           of shapes, but not movement changes done using the Mover tool.
+           Moving a shape and pressing Undo should revert to the previous
+           position, and Redo should restore the new position.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : BUG BUG4.002 : royanus1  : NotStarted
+NAME     : Mover, Copy, Cut, Paste not working for Squiggle and Polyline
+PRIORITY : 3
+ESTIMATE : 2 hours     ACTUAL :
+ISSUE    : The selection, copy, and movement tools currently only support
+           basic shapes. Squiggle and Polyline lack proper bounding box or
+           reference point handling, causing tool failures.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : BUG BUG4.003 : kaurjap9 :  NotStarted
+NAME     : Remove warnings
+PRIORITY : 2
+ESTIMATE : 4 hours     ACTUAL :
+ISSUE    : The current files have various unused imports, duplicate lines
+           of code and formatting errors. The files should be clean with
+           no or minimal warnings for perfectly structured code.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : BUG BUG4.004 : kaurjap9 :  NotStarted
+NAME     : Architecture Discussion
+PRIORITY : 2
+ESTIMATE : 4 hours     ACTUAL :
+ISSUE    : The current architecture model only mentions the high level MVC
+           design pattern used, does not mention the connection between
+           panels and does not mention all design patterns used. The panel
+           should be updated so it mentions all patterns and associations
+           used.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US4.005 : tatisoha : NotStarted
+NAME     : Spray Can Tool
+PRIORITY : 3
+ESTIMATE : 2 hours     ACTUAL :
+AS A     : user
+I WANT   : A spray can tool that scatters small dots of color in a circular
+           area
+SO THAT  : I can create soft, randomized spray-paint effects
+--------------------------------------------------------------------------
 
 # COMPLETED USER STORIES/BUGS BELOW ###########################################
 --------------------------------------------------------------------------
@@ -75,7 +124,7 @@ SO THAT  : I can easily draw perfect squares on my canvas.
 TYPE     : USER STORY US2.002 : sidd1378 : Complete
 NAME     : Draw Square Feedback
 PRIORITY : 2
-ESTIMATE : 2 hours    ACTUAL : 1
+ESTIMATE : 2 hours    ACTUAL : 1 hour
 AS A     : user
 I WANT   : To see a live preview of the square as I drag, showing the
            current square outline updating in real time.
@@ -106,7 +155,7 @@ SO THAT  : I can adjust the shape in real time before finalizing it.
 TYPE     : USER STORY US2.005 : royanus1 : Complete
 NAME     : Draw Oval
 PRIORITY : 2
-ESTIMATE : 3 hours    ACTUAL : 3
+ESTIMATE : 3 hours    ACTUAL : 3 hours
 AS A     : user
 I WANT   : To click and drag to define an oval is drawn using the current
            colour and fill settings.
@@ -117,7 +166,7 @@ SO THAT  : I can create smooth oval shapes similar to those in standard
 TYPE     : USER STORY US2.006 : royanus1 : Complete
 NAME     : Draw Oval Feedback
 PRIORITY : 2
-ESTIMATE : 2 hours    ACTUAL : 1
+ESTIMATE : 2 hours    ACTUAL : 1 hour
 AS A     : user
 I WANT   : To see a live outline of the oval as I drag, dynamically showing
            the shape that will be finalized on mouse release.
@@ -288,6 +337,80 @@ I WANT   : To move existing shapes to a different position on the canvas
 SO THAT  : I can reposition elements without redrawing them
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
+TYPE     : USER STORY US4.001 : sidd1378 : Complete
+NAME     : Change background color of canvas
+PRIORITY : 3
+ESTIMATE : 2 hours     ACTUAL : 2 hours
+AS A     : user
+I WANT   : To change the background color of the drawing canvas
+SO THAT  : I can customize the workspace or create colored backdrops for
+           drawings
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US4.002 : sidd1378:  Complete
+NAME     : Eraser adapts to colored background
+PRIORITY : 3
+ESTIMATE : 2 hours     ACTUAL : 1 hour
+AS A     : user
+I WANT   : The eraser to erase to any background color set by me
+SO THAT  : it behaves correctly when the background is not white
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US4.003 : tatisoha : Complete
+NAME     : Stroke width preview indicator
+PRIORITY : 2
+ESTIMATE : 1 hour     ACTUAL : 1 hour
+AS A     : user
+I WANT   : To see a temporary circle preview showing my selected stroke width
+SO THAT  : I can visualize how thick the next shape’s outline will be
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US4.004 : sidd1378 : Complete
+NAME     : Accessibility Color Description Label
+PRIORITY : 3
+ESTIMATE : 3 hours     ACTUAL : 2 hours
+AS A     : visually-impaired user
+I WANT   : The application to display a text label describing the current color selected (limited to the
+            12 basic colors in the main palette).
+SO THAT  : I can understand which color is being used without relying on color perception.
+
+EXAMPLE:
+  - selecting the color red with hex value #FF0000 → label shows "Selected Color: Red"
+  - picking a custom color close to blue → label shows "Selected Color: Blue"
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US4.006 : kaurjap9 : Complete
+NAME     : AI random shape generator
+PRIORITY : 3
+ESTIMATE : 8 hours     ACTUAL : 4 hours
+AS A     : user
+I WANT   : An AI paint feature that randomly generates shapes of different
+           types, colors, sizes, and fill styles
+           A seed command that lets me create that stores the location and
+           type of shapes and lets me recreate it when the same number is
+           entered
+SO THAT  : I can explore creative, randomized art compositions automatically
+---------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US4.007 : kaurjap9 : Complete
+NAME     : Random scenery generator
+PRIORITY : 3
+ESTIMATE : 4 hours     ACTUAL : 3 hours
+AS A     : user
+I WANT   : A scenery menu that when clicked generates a random scenery for
+           me from a list of hardcoded sceneries.
+SO THAT  : I can have a created random picture on my paint
+---------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US4.008 : kaurjap9 : Complete
+NAME     : New Function
+PRIORITY : 3
+ESTIMATE : 1 hour     ACTUAL : 1 hour
+AS A     : user
+I WANT   : When the new button is clicked a clear canvas is generated
+SO THAT  : I can clear the app without having to shut it down or undo
+---------------------------------------------------------------------------
+--------------------------------------------------------------------------
 TYPE     : BUG BUG1.001 : sidd1378 : Complete
 NAME     : Icons instead of text for drawing mode selection
 PRIORITY : 1
@@ -307,7 +430,7 @@ ISSUE    : Currently, you can't tell which mode "Circle", "Rectangle", ...
 TYPE     : BUG BUG1.005 : tatisoha : Complete
 NAME     : Squiggle is broken
 PRIORITY : 1
-ESTIMATE : 2 hours    ACTUAL : 30 mins
+ESTIMATE : 2 hours    ACTUAL : 1 hour
 ISSUE    : Squiggles are connected to each other by a straight line. Each drag
 		   of the mouse should be a separate squiggle. Possibly
            the issue is with the representation of the squiggles in the Model.
@@ -316,7 +439,7 @@ ISSUE    : Squiggles are connected to each other by a straight line. Each drag
 TYPE     : BUG BUG1.006 : royanus1 : Complete
 NAME     : Circle drawing is broken
 PRIORITY : 1
-ESTIMATE : 2 hours    ACTUAL : 30 mins
+ESTIMATE : 2 hours    ACTUAL : 1 hour
 ISSUE    : The first click should specify the center of the circle, with
            a drag for the radius. This is not the case in the current
            implementation.

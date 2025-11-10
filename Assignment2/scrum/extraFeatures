@@ -2,7 +2,8 @@
 FeatureName: Eraser Tool
 
 Description:
-    Erases parts of existing drawings to remove unwanted sections from the canvas.
+    Erases parts of existing drawings to remove unwanted sections from the
+    canvas.
 Reference:
 	US3.001, US4.002
 --------------------------------------------------------------------------------
@@ -29,7 +30,8 @@ Reference:
 FeatureName: Fill Bucket Tool
 
 Description:
-	Fills enclosed areas or shapes with a selected color for faster coloring of large regions.
+	Fills enclosed areas or shapes with a selected color for faster coloring
+	of large regions.
 
 
 Reference:
@@ -40,8 +42,8 @@ FeatureName: Color Selector
 
 Description:
 	Allows users to choose a drawing color that applies to all subsequent shapes.
-	The color selector allows the user to enter hex codes, select from the pre-chosen
-	shapes, or the user can select their own custom color.
+	The color selector allows the user to enter hex codes, select from the
+	pre-chosen shapes, or the user can select their own custom color.
 
 
 Reference:
@@ -62,7 +64,8 @@ FeatureName: Line Thickness Selector
 
 Description:
 	Allows adjustment of stroke width for outlines and shape borders.
-	While selecting the thickness, the user can see a visualization of the stroke size.
+	While selecting the thickness, the user can see a visualization of the
+	stroke size.
 
 
 Reference:
@@ -123,9 +126,10 @@ Reference:
 FeatureName: Accessibility Color Description Label
 
 Description:
-    Displays a text label describing the current color selected out of the 12 colors in the main color palette.
-    This label updates whenever a user chooses a new color from the palette, providing responsive feedback to
-    users with color vision deficiencies or impairments.
+    Displays a text label describing the current color selected out of the 12
+    colors in the main color palette. This label updates whenever a user chooses
+    a new color from the palette, providing responsive feedback to users with
+    color vision deficiencies or impairments.
 
 Reference:
     US4.004

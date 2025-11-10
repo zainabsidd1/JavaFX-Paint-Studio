@@ -72,19 +72,19 @@ Oct 28,2025
 	Obstacles I face: Ensuring equal side lengths when dragging the square.
 
 Oct 29,2025
-	What I did yesterday: Finished up on US2.002
-	What I will do today: Update sprintBacklog2.txt and product backlog
-	Obstacles I face: n/a
+	What I did yesterday: Finished up on US2.002.
+	What I will do today: Update sprintBacklog2.txt and product backlog.
+	Obstacles I face: n/a.
 
 Oct 30,2025
-	What I did yesterday: Updated my user stories in sprintBacklog2 and product backlog
-	What I will do today: Look over architecture bug for sprint2
-	Obstacles I face: n/a
+	What I did yesterday: Updated my user stories in sprintBacklog2 and product backlog.
+	What I will do today: Look over architecture bug for sprint2.
+	Obstacles I face: n/a.
 
 Oct 31,2025
-	What I did yesterday: Look over architecture bug for sprint2
-	What I will do today: Look over sprint 3 and claimed US3.002
-	Obstacles I face: n/a
+	What I did yesterday: Look over architecture bug for sprint2.
+	What I will do today: Look over sprint 3 and claimed US3.002.
+	Obstacles I face: n/a.
 
 Nov 1,2025
 	What I did yesterday: Claimed US3.002 and got started on implemented the undo feature.
@@ -102,24 +102,24 @@ Nov 3,2025
 	Obstacles I face: Syncing the fill bucket tool with outlined only shapes.
 
 Nov 4,2025
-	What I did yesterday: Implemented the fill style selector tool
-	What I will do today: Minor fixes to the PaintModel class to clean up the code
-	Obstacles I face: n/a
+	What I did yesterday: Implemented the fill style selector tool.
+	What I will do today: Minor fixes to the PaintModel class to clean up the code.
+	Obstacles I face: n/a.
 
 Nov 5,2025
 	What I did yesterday: Cleaned up PaintModel class.
 	What I will do today: Accepted pull requests for US3.008, US3.009, and US3.010.
-	Obstacles I face: Merge conflicts with the pull requests
+	Obstacles I face: Merge conflicts with the pull requests.
 
 Nov 6,2025
-	What I did yesterday: Accepted pull requests for 3 user stories
-	What I will do today: Accepted pull requests for US3.007
+	What I did yesterday: Accepted pull requests for 3 user stories.
+	What I will do today: Accepted pull requests for US3.007.
 	Obstacles I face: merge conflicts with the fill bucket code.
 
 Nov 7,2025
 	What I did yesterday: Accepted and merged 3 pull requests.
-	What I will do today: Look over sprint 4 and claim user stories
-	Obstacles I face: n/a
+	What I will do today: Look over sprint 4 and claim user stories.
+	Obstacles I face: n/a.
 
 Nov 8,2025
 	What I did yesterday: Claim US4.001 and US4.002 from sprint backlog 4.
@@ -127,9 +127,9 @@ Nov 8,2025
 	Obstacles I face: Applying undo/redo functionality with the background color change.
 
 Nov 9,2025
-	What I did yesterday: Worked on US4.001
+	What I did yesterday: Worked on US4.001.
 	What I will do today: Work on the accessibility feature that displays the color selected.
-	Obstacles I face: n/a
+	Obstacles I face: n/a.
 
 Nov 10,2025
 	What I did yesterday:
