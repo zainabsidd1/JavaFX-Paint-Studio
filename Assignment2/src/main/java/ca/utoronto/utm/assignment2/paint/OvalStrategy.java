@@ -78,8 +78,5 @@ public class OvalStrategy implements ToolStrategy, Colorable {
     }
 
     @Override public void onMouseMoved(MouseEvent e) {}
-    @Override public void onMouseClicked(MouseEvent e) {
-        Shape clicked = model.findTopmostAt(e.getX(), e.getY());
-        model.setSelectedShape(clicked);
-    }
+    @Override public void onMouseClicked(MouseEvent e) {}
 }

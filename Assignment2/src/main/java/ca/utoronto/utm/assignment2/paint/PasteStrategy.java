@@ -62,6 +62,23 @@ public class PasteStrategy implements ToolStrategy {
             double dy = e.getY() - ref.y;
             t.translate(dx, dy);
         }
+        else if (pasted instanceof Squiggle sq) {
+            // Move by first point
+            if (!sq.getPoints().isEmpty()) {
+                Point ref = sq.getPoints().get(0);
+                double dx = e.getX() - ref.x;
+                double dy = e.getY() - ref.y;
+                sq.translate(dx, dy);
+            }
+        }
+        else if (pasted instanceof Polyline pl) {
+            if (!pl.getPoints().isEmpty()) {
+                Point ref = pl.getPoints().get(0);
+                double dx = e.getX() - ref.x;
+                double dy = e.getY() - ref.y;
+                pl.translate(dx, dy);
+            }
+        }
 
         model.addShape(pasted);
         panel.requestRender(); // trigger redraw
