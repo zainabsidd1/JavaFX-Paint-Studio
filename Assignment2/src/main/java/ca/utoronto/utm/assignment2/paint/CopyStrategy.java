@@ -31,6 +31,7 @@ public class CopyStrategy implements ToolStrategy {
         if (clicked != null) {
             model.setSelectedShape(clicked);
             model.copyShape();
+
         }
     }
 
