@@ -30,7 +30,7 @@ public class CopyStrategy implements ToolStrategy {
         Shape clicked = model.findTopmostAt(e.getX(), e.getY());
         if (clicked != null) {
             model.setSelectedShape(clicked);
-            model.copyShape(); // 📋 perform copy on click
+            model.copyShape();
 
         }
     }
