@@ -39,8 +39,6 @@ public class Polyline implements Shape, Colorable, Strokeable, Hittable {
         visitor.visit(this);
     }
 
-    //@Override
-    //public Polyline copy() {return new Polyline(color);}
     @Override
     public Polyline copy() {
         Polyline copy = new Polyline(color);
@@ -51,40 +49,29 @@ public class Polyline implements Shape, Colorable, Strokeable, Hittable {
         return copy;
     }
 
-
     @Override
     public double getStrokeWidth() { return strokeWidth; }
+
     @Override
     public void setStrokeWidth(double w) { this.strokeWidth = clampStroke(w); }
 
     @Override
     public boolean contains(double x, double y) {
-        if (pathPoints.size() < 2) return false;
+        double margin = 4.0;
 
-        double tolerance = 5.0; // click distance tolerance
         for (int i = 0; i < pathPoints.size() - 1; i++) {
             Point p1 = pathPoints.get(i);
             Point p2 = pathPoints.get(i + 1);
-            if (distanceFromSegment(p1, p2, x, y) <= tolerance) {
+            double minX = Math.min(p1.x, p2.x) - margin;
+            double maxX = Math.max(p1.x, p2.x) + margin;
+            double minY = Math.min(p1.y, p2.y) - margin;
+            double maxY = Math.max(p1.y, p2.y) + margin;
+
+            if (x >= minX && x <= maxX && y >= minY && y <= maxY) {
                 return true;
             }
         }
         return false;
-    }
-
-    private double distanceFromSegment(Point p1, Point p2, double x, double y) {
-        double dx = p2.x - p1.x;
-        double dy = p2.y - p1.y;
-        double lengthSquared = dx * dx + dy * dy;
-        if (lengthSquared == 0) {
-            // degenerate segment (single point)
-            return Math.hypot(x - p1.x, y - p1.y);
-        }
-        double t = ((x - p1.x) * dx + (y - p1.y) * dy) / lengthSquared;
-        t = Math.max(0, Math.min(1, t));
-        double projX = p1.x + t * dx;
-        double projY = p1.y + t * dy;
-        return Math.hypot(x - projX, y - projY);
     }
 
     @Override
