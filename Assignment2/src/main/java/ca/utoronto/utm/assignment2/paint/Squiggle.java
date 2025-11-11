@@ -40,6 +40,7 @@ public class Squiggle implements Shape, Colorable, Strokeable, Hittable {
 
     public Squiggle copy() {
         Squiggle copy = new Squiggle();
+        copy.setColor(this.color);
         copy.setStrokeWidth(this.strokeWidth);
         for (Point p : this.points) {
             copy.addPoint(new Point(p.x, p.y));
