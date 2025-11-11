@@ -92,7 +92,7 @@ EXAMPLE:
     "Selected Color: Blue"
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
-TYPE     : USER STORY US4.005 : tatisoha : NotStarted
+TYPE     : USER STORY US4.005 : tatisoha : In Progress
 NAME     : Spray Can Tool
 PRIORITY : 3
 ESTIMATE : 2 hours     ACTUAL :

@@ -128,9 +128,9 @@ Nov 8,2025
 	Obstacles I face: Finding a way to display the stroke circle without grouping it with the shapes list.
 
 Nov 9,2025
-	What I did yesterday:
-	What I will do today:
-	Obstacles I face:
+	What I did yesterday: Created and added information of extraFeatures.txt, completed US4.006/US4.008 pull requests, and added Toronto Skyline to Scenery Library.
+	What I will do today: Started working on US4.005 - the spray can tool.
+	Obstacles I face: n/a
 
 Nov 10,2025
 	What I did yesterday:
