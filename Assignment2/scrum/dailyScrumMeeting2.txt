@@ -132,14 +132,14 @@ Nov 9,2025
 	Obstacles I face: n/a.
 
 Nov 10,2025
-	What I did yesterday:
-	What I will do today:
-	Obstacles I face:
+	What I did yesterday: Completed BUG4.001
+	What I will do today: Start and finish BUG4.002
+	Obstacles I face: figuring out how to undo/redo moved shape by shifting them to prev/next position
 
 Nov 11,2025
-	What I did yesterday:
-	What I will do today:
-	Obstacles I face:
+	What I did yesterday: Started BUG4.002
+	What I will do today: updated + completed BUG4.002
+	Obstacles I face: making sure polyline and squiggle is hittable even if it doesn't hit the line exactly
 
 Nov 12,2025
 	What I did yesterday:
