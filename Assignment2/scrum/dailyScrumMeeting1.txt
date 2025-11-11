@@ -132,9 +132,9 @@ Nov 9,2025
 	Obstacles I face: n/a.
 
 Nov 10,2025
-	What I did yesterday:
-	What I will do today:
-	Obstacles I face:
+	What I did yesterday: Finished the accessibility feature (US4.004).
+	What I will do today: Look over code architecture.
+	Obstacles I face: n/a
 
 Nov 11,2025
 	What I did yesterday:
