@@ -1,6 +1,5 @@
 package ca.utoronto.utm.assignment2.paint;
 
-import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 
 public class Square implements Shape, Fillable, Hittable, Strokeable {
@@ -22,7 +21,6 @@ public class Square implements Shape, Fillable, Hittable, Strokeable {
     public boolean getFilled() { return this.filled; }
 
     public Point getP1() { return this.p1; }
-    public Point getP2() { return this.p2; }
 
     public void setP1(Point p1) { this.p1 = p1; }
     public void setP2(Point p2) { this.p2 = p2; }
@@ -88,6 +86,8 @@ public class Square implements Shape, Fillable, Hittable, Strokeable {
         this.strokeColor = other.strokeColor;
         this.fillColor = other.fillColor;
         this.filled = other.filled;
+        this.strokeWidth = other.strokeWidth;
+        this.selected = other.selected;
     }
 
     @Override
@@ -100,4 +100,11 @@ public class Square implements Shape, Fillable, Hittable, Strokeable {
     @Override
     public void setStrokeWidth(double w) { this.strokeWidth = clampStroke(w); }
 
+    public boolean isSelected() {
+        return selected;
+    }
+
+    public void setSelected(boolean selected) {
+        this.selected = selected;
+    }
 }

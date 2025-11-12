@@ -9,7 +9,6 @@ import javafx.scene.image.WritableImage;
 import javafx.scene.layout.GridPane;
 
 import java.util.List;
-import java.util.Objects;
 
 public class ShapeChooserPanel extends GridPane implements EventHandler<ActionEvent> {
 

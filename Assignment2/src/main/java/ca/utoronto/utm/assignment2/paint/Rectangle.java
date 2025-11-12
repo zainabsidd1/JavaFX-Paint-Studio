@@ -1,6 +1,5 @@
 package ca.utoronto.utm.assignment2.paint;
 
-import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 
 public class Rectangle implements Shape, Fillable, Hittable, Strokeable {
@@ -84,6 +83,8 @@ public class Rectangle implements Shape, Fillable, Hittable, Strokeable {
         this.color = other.color;
         this.fillColor = other.fillColor;
         this.filled = other.filled;
+        this.strokeWidth = other.strokeWidth;
+        this.selected = other.selected;
     }
 
 
@@ -95,4 +96,11 @@ public class Rectangle implements Shape, Fillable, Hittable, Strokeable {
     @Override
     public void setStrokeWidth(double w) { this.strokeWidth = clampStroke(w); }
 
+    public boolean isSelected() {
+        return selected;
+    }
+
+    public void setSelected(boolean selected) {
+        this.selected = selected;
+    }
 }

@@ -1,6 +1,5 @@
 package ca.utoronto.utm.assignment2.paint;
 
-import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 import java.util.ArrayList;
 

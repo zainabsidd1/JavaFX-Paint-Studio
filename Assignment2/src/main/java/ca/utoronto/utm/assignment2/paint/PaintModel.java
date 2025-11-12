@@ -7,13 +7,14 @@ public class PaintModel {
     // Observer Pattern
     private Color currentColor = null;
     private final List<PaintModelListener> listeners = new ArrayList<>();
+    private Color highlightColor;
+
     private void notifyListeners() {
         for (PaintModelListener l : listeners) {
             l.modelChanged();
         }
     }
     public void addListener(PaintModelListener l) { listeners.add(l); }
-    public void removeListener(PaintModelListener l) { listeners.remove(l); }
 
     // Model State
     private final List<Shape> shapes = new ArrayList<>();
@@ -34,7 +35,6 @@ public class PaintModel {
     private Squiggle currentSquiggle;
     private Polyline polylineCurr;
     private Squiggle currEraser;
-    private SprayCan currentSpray;
     private Shape selectShape;
     private Shape storeShape;
     private Color backgroundColor = Color.WHITE;
@@ -77,29 +77,11 @@ public class PaintModel {
         return Collections.unmodifiableList(shapes);
     }
 
-    public void clearAll() {
-        shapes.clear();
-        currentSquiggle = null;
-        polylineCurr = null;
-        currEraser = null;
-        undoStack.clear();
-        redoStack.clear();
-        notifyListeners();
-    }
-
     // Squiggle
     public void startNewSquiggle() {
         currentSquiggle = new Squiggle();
         if (hasUserColor()) currentSquiggle.setColor(currentColor); // only override if user picked
         applyStrokeWidth(currentSquiggle, strokeWidth);
-        exec(new AddShapeCommand(shapes, currentSquiggle));
-    }
-   //Spraycan
-    public void startNewSpray() {
-        double opacity = 50; double stroke = strokeWidth; Color color = currentColor;
-        currentSpray = new SprayCan(color, stroke, opacity);
-        shapes.add(currentSquiggle);
-        notifyListeners();
         exec(new AddShapeCommand(shapes, currentSquiggle));
     }
 
@@ -169,8 +151,7 @@ public class PaintModel {
     /** Fill the top-most Fillable shape at (x,y) with the given color (or currentColor if null). */
     public boolean fillTopmostAt(double x, double y, Color c) {
         Shape s = findTopmostAt(x, y);
-        if (s instanceof Fillable) {
-            Fillable f = (Fillable) s;
+        if (s instanceof Fillable f) {
             Color use = (c != null) ? c : this.currentColor;
             if (use == null) use = Color.BLACK;
 
@@ -188,7 +169,6 @@ public class PaintModel {
     public void setSelectedShape(Shape s){
         this.selectShape = s;
     }
-    public Shape getSelectedShape() { return selectShape; }
 
     public Shape getStoredShape() { return storeShape; }
 
@@ -206,14 +186,6 @@ public class PaintModel {
         selectShape = null;
     }
 
-    // Paste
-    public void pasteShape(){
-        if (storeShape == null) return;
-        Shape newShape = storeShape.copy();
-        try { newShape.translate(10, 10); } catch (Exception ignored) {}
-        addShape(newShape); // goes through exec(AddShapeCmd)
-    }
-
     // Filled/Outline toggle
     private boolean filled = true;
     public boolean isFilled() { return filled; }
@@ -223,6 +195,7 @@ public class PaintModel {
     }
 
     public Shape selectTopMostAt(double x, double y, Color highlightColor) {
+        this.highlightColor = highlightColor;
         return findTopmostAt(x, y);
     }
 

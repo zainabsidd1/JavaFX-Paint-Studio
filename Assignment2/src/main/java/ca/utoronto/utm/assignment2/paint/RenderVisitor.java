@@ -50,10 +50,12 @@ public class RenderVisitor implements ShapeVisitor {
         if (pts == null || pts.size() < 2) return;
         g.setStroke(p.getColor());
         g.setLineWidth(p.getStrokeWidth());
-        for (int i = 0; i < pts.size() - 1; i++) {
+        int i = 0;
+        while (i < pts.size() - 1) {
             Point p1 = pts.get(i);
             Point p2 = pts.get(i + 1);
             g.strokeLine(p1.x, p1.y, p2.x, p2.y);
+            i++;
         }
     }
 
@@ -93,6 +95,10 @@ public class RenderVisitor implements ShapeVisitor {
         if (pts.size() < 2) return;
         g.setStroke(s.getColor());
         g.setLineWidth(s.getStrokeWidth());
+        visitHelper(pts, g);
+    }
+
+    static void visitHelper(List<Point> pts, GraphicsContext g) {
         for (int i = 0; i < pts.size() - 1; i++) {
             Point p1 = pts.get(i);
             Point p2 = pts.get(i + 1);

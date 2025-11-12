@@ -10,13 +10,11 @@ import javafx.scene.layout.HBox;
 import java.util.function.UnaryOperator;
 
 public class StrokeControls {
-    private PaintModel model;
-    private HBox root = new HBox(10);
-    private Slider tslider;
-    private TextField field;
+    private final HBox root = new HBox(10);
+    private final Slider tslider;
+    private final TextField field;
 
     public StrokeControls(PaintModel model) {
-        this.model = model;
 
         // Text field
         field = new TextField(String.format("%.1f", model.getStrokeWidth()));
@@ -56,9 +54,9 @@ public class StrokeControls {
         tslider.setShowTickMarks(true);
         tslider.setMajorTickUnit(2);
         tslider.setBlockIncrement(5);
-        tslider.setOnMousePressed(e -> model.setStrokePreviewWidth(tslider.getValue()));
-        tslider.setOnMouseReleased(e -> model.hideStrokePreview());
-        tslider.valueProperty().addListener((observable, oldValue, newValue) -> {
+        tslider.setOnMousePressed(_ -> model.setStrokePreviewWidth(tslider.getValue()));
+        tslider.setOnMouseReleased(_ -> model.hideStrokePreview());
+        tslider.valueProperty().addListener((_, _, newValue) -> {
             double w = restrictW(newValue.doubleValue());
             model.setStrokeWidth(w);
             model.setStrokePreviewWidth(w);
@@ -66,7 +64,7 @@ public class StrokeControls {
         });
 
         // Text field : show/update preview while typing
-        field.textProperty().addListener((o, oldText, newText) -> {
+        field.textProperty().addListener((_, _, newText) -> {
             try {
                 double w = restrictW(Double.parseDouble(newText));
                 model.setStrokePreviewWidth(w);         // radisu <= 10
@@ -74,7 +72,7 @@ public class StrokeControls {
         });
 
 
-        field.setOnAction(e -> {
+        field.setOnAction(_ -> {
             try {
                 double w = restrictW(Double.parseDouble(field.getText()));
                 model.setStrokeWidth(w);
@@ -89,7 +87,7 @@ public class StrokeControls {
 
 
         // Stop displaying circle when the textfield is released
-        field.focusedProperty().addListener((observer, wasFocused, isFocused) -> {
+        field.focusedProperty().addListener((_, _, isFocused) -> {
             if (!isFocused) model.hideStrokePreview();
         });
 
@@ -98,8 +96,7 @@ public class StrokeControls {
         root.setPadding(new Insets(5, 10, 5, 10));
     }
     public Node getNode() { return root; }
-    public Slider getSlider() { return tslider; }
-    public TextField getField() { return field; }
+
     private static double restrictW(double w) { return Math.max(1.0, Math.min(20.0, w)); }
     private static String fmt1(double v) { return String.format("%.1f", v); }
 

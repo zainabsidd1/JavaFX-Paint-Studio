@@ -66,15 +66,15 @@ public class View {
         preview.setStroke(Color.web("#777"));
         preview.setArcWidth(6);
         preview.setArcHeight(6);
-        preview.setOnMouseEntered(e -> preview.setStroke(Color.DARKGRAY));
-        preview.setOnMouseExited(e -> preview.setStroke(Color.web("#777")));
+        preview.setOnMouseEntered(_ -> preview.setStroke(Color.DARKGRAY));
+        preview.setOnMouseExited(_ -> preview.setStroke(Color.web("#777")));
 
         ColorPicker picker = new ColorPicker(initial);
         picker.setStyle("-fx-color-label-visible:false;-fx-background-radius:6;-fx-border-radius:6;");
 
         Label colorDesc = new Label(colorDescription(initial));
 
-        hexField.textProperty().addListener((obs, oldV, newV) -> {
+        hexField.textProperty().addListener((_, _, newV) -> {
             if (newV != null && newV.matches("^#[0-9A-F]{6}$")) {
                 try {
                     Color c = Color.web(newV);
@@ -93,7 +93,7 @@ public class View {
             }
         });
 
-        picker.setOnAction(e -> {
+        picker.setOnAction(_ -> {
             try {
                 Color c = picker.getValue();
                 if (c != null) {
@@ -112,7 +112,7 @@ public class View {
 
 
 
-        Label fillLbl = new Label("\uD83D\uDD8C\uFE0F Fill");
+        Label fillLbl = new Label("\uD83D\uDD8C️ Fill");
         fillLbl.setStyle("-fx-font-weight:bold; -fx-text-fill:#333;");
         MenuButton fillBtn = new  MenuButton("Fill Style");
         fillBtn.setStyle("-fx-background-radius:6;-fx-border-radius:6;");
@@ -124,11 +124,11 @@ public class View {
         fillBtn.setText("Solid");
 
         // Actions
-        solidItem.setOnAction(e -> {
+        solidItem.setOnAction(_ -> {
             paintModel.setFilled(true);
             fillBtn.setText("Solid");
         });
-        outlineItem.setOnAction(e -> {
+        outlineItem.setOnAction(_ -> {
             paintModel.setFilled(false);
             fillBtn.setText("Outline");
         });
@@ -196,7 +196,6 @@ public class View {
     private String colorDescription(Color c){
         if(c==null) return "";
         double minDistance = Double.MAX_VALUE;
-        double maxDistance = Double.MIN_VALUE;
         String closestColor = "Unknown";
 
         for(String colorName:colorMap.keySet()){
@@ -235,17 +234,17 @@ public class View {
         MenuItem openItem = new MenuItem("Open");
         MenuItem saveItem = new MenuItem("Save");
 
-        newItem.setOnAction(e -> {
+        newItem.setOnAction(_ -> {
             paintModel.executeCommand(new ClearAllShapesCommand(paintModel));
             paintModel.executeCommand(new ChangeBackgroundCommand(paintModel, Color.WHITE));
             paintPanel.requestRender();
         });
 
-        saveItem.setOnAction(e -> System.out.println("Save (not implemented)"));
+        saveItem.setOnAction(_ -> System.out.println("Save (not implemented)"));
         file.getItems().addAll(newItem, openItem, saveItem, new SeparatorMenuItem());
 
         MenuItem exitItem = new MenuItem("Exit");
-        exitItem.setOnAction(e -> Platform.exit());
+        exitItem.setOnAction(_ -> Platform.exit());
         file.getItems().add(exitItem);
 
         // Edit
@@ -257,12 +256,12 @@ public class View {
         MenuItem redoItem  = new MenuItem("Redo");
         MenuItem moveItem  = new MenuItem("Move");
 
-        cutItem.setOnAction(e -> paintPanel.setStrategy(new CutStrategy(paintModel)));
-        copyItem.setOnAction(e -> paintPanel.setStrategy(new CopyStrategy(paintModel)));
-        pasteItem.setOnAction(e -> paintPanel.setStrategy(new PasteStrategy(paintModel, paintPanel)));
-        undoItem.setOnAction(e -> paintModel.undo());
-        redoItem.setOnAction(e -> paintModel.redo());
-        moveItem.setOnAction(e -> {paintPanel.setStrategy(new MoverStrategy(paintModel, paintPanel));});
+        cutItem.setOnAction(_ -> paintPanel.setStrategy(new CutStrategy(paintModel)));
+        copyItem.setOnAction(_ -> paintPanel.setStrategy(new CopyStrategy(paintModel)));
+        pasteItem.setOnAction(_ -> paintPanel.setStrategy(new PasteStrategy(paintModel, paintPanel)));
+        undoItem.setOnAction(_ -> paintModel.undo());
+        redoItem.setOnAction(_ -> paintModel.redo());
+        moveItem.setOnAction(_ -> paintPanel.setStrategy(new MoverStrategy(paintModel, paintPanel)));
 
         edit.getItems().addAll(
                 cutItem, copyItem, pasteItem,
@@ -275,7 +274,7 @@ public class View {
         MenuItem randomGen = new MenuItem("Random Generate…");
         ai.getItems().add(randomGen);
 
-        randomGen.setOnAction(e -> {
+        randomGen.setOnAction(_ -> {
             Dialog<ButtonType> dlg = new Dialog<>();
             dlg.setTitle("AI: Random Generate");
             dlg.getDialogPane().getButtonTypes().addAll(ButtonType.OK, ButtonType.CANCEL);
@@ -344,31 +343,31 @@ public class View {
         MenuItem scene4 = new MenuItem("Toronto Skyline");
         MenuItem random = new MenuItem("Random Scene");
         scenery.getItems().addAll(scene1, scene2, scene3, scene4, new SeparatorMenuItem(), random);
-        scene1.setOnAction(e -> {
+        scene1.setOnAction(_ -> {
             double W = getPaintPanel().getWidth(), H = getPaintPanel().getHeight();
             paintModel.executeCommand(new LoadSceneryCommand(paintModel, SceneryLibrary.beachSunset(W, H)));
         });
-        scene2.setOnAction(e -> {
+        scene2.setOnAction(_ -> {
             double W = getPaintPanel().getWidth(), H = getPaintPanel().getHeight();
             paintModel.executeCommand(new LoadSceneryCommand(paintModel, SceneryLibrary.flowerGarden(W, H)));
         });
-        scene3.setOnAction(e -> {
+        scene3.setOnAction(_ -> {
             double W = getPaintPanel().getWidth(), H = getPaintPanel().getHeight();
             paintModel.executeCommand(new LoadSceneryCommand(paintModel, SceneryLibrary.cityNight(W, H)));
         });
         // NEW: wire Toronto Skyline
-        scene4.setOnAction(e -> {
+        scene4.setOnAction(_ -> {
             double W = getPaintPanel().getWidth(), H = getPaintPanel().getHeight();
             paintModel.executeCommand(new LoadSceneryCommand(paintModel, SceneryLibrary.torontoSkyline(W, H)));
         });
-        random.setOnAction(e -> {
+        random.setOnAction(_ -> {
             double W = getPaintPanel().getWidth(), H = getPaintPanel().getHeight();
             int pick = new java.util.Random().nextInt(5);
             switch (pick) {
                 case 0 -> paintModel.executeCommand(new LoadSceneryCommand(paintModel, SceneryLibrary.beachSunset(W, H)));
                 case 1 -> paintModel.executeCommand(new LoadSceneryCommand(paintModel, SceneryLibrary.flowerGarden(W, H)));
-                default -> paintModel.executeCommand(new LoadSceneryCommand(paintModel, SceneryLibrary.cityNight(W, H)));
                 case 4 -> paintModel.executeCommand(new LoadSceneryCommand(paintModel, SceneryLibrary.torontoSkyline(W, H)));
+                default -> paintModel.executeCommand(new LoadSceneryCommand(paintModel, SceneryLibrary.cityNight(W, H)));
             }
         });
         menuBar.getMenus().addAll(file, edit);

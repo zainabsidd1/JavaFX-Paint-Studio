@@ -1,9 +1,10 @@
 package ca.utoronto.utm.assignment2.paint;
 
-import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 import java.util.ArrayList;
 import java.util.List;
+
+import static ca.utoronto.utm.assignment2.paint.Polyline.containsPoint;
 
 public class Squiggle implements Shape, Colorable, Strokeable, Hittable {
     private final List<Point> points = new ArrayList<>();
@@ -57,21 +58,7 @@ public class Squiggle implements Shape, Colorable, Strokeable, Hittable {
     @Override
     public boolean contains(double x, double y) {
         if (isEraser) {return false;}
-        double margin = 4.0;
-
-        for (int i = 0; i < points.size() - 1; i++) {
-            Point p1 = points.get(i);
-            Point p2 = points.get(i + 1);
-            double minX = Math.min(p1.x, p2.x) - margin;
-            double maxX = Math.max(p1.x, p2.x) + margin;
-            double minY = Math.min(p1.y, p2.y) - margin;
-            double maxY = Math.max(p1.y, p2.y) + margin;
-
-            if (x >= minX && x <= maxX && y >= minY && y <= maxY) {
-                return true;
-            }
-        }
-        return false;
+        return containsPoint(x, y, points);
     }
 
     @Override

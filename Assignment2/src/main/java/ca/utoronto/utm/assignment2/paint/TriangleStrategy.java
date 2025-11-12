@@ -91,10 +91,10 @@ public class TriangleStrategy implements ToolStrategy, Colorable {
             g.strokeOval(v.x - 3, v.y - 3, 6, 6);
         }
         if (hoverPoint != null && vertices.size() < 3) {
-            Point last = vertices.get(vertices.size() - 1);
+            Point last = vertices.getLast();
             g.strokeLine(last.x, last.y, hoverPoint.x, hoverPoint.y);
             if (vertices.size() == 1) {
-                Point first = vertices.get(0);
+                Point first = vertices.getFirst();
                 g.strokeLine(first.x, first.y, hoverPoint.x, hoverPoint.y);
             }
         }

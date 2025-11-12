@@ -12,7 +12,6 @@ public class PaintPanel extends Canvas implements EventHandler<MouseEvent>, Pain
 
     private final PaintModel model;
     private Color currentColor = Color.LIGHTBLUE;
-    private ToolStrategy activeTool;
 
     // Active drawing tool (Strategy)
     private ToolStrategy currentStrategy;
@@ -29,20 +28,15 @@ public class PaintPanel extends Canvas implements EventHandler<MouseEvent>, Pain
         this.addEventHandler(MouseEvent.MOUSE_MOVED,    this);
         this.addEventHandler(MouseEvent.MOUSE_CLICKED,  this);
         // cursor updates when mouse enters canvas
-        this.setOnMouseEntered(e -> {
+        this.setOnMouseEntered(_ -> {
             if (currentStrategy != null) setCursor(currentStrategy.getCursor());
         });
         // Repaint when the canvas is resized
-        widthProperty().addListener((obs, o, n) -> requestRender());
-        heightProperty().addListener((obs, o, n) -> requestRender());
+        widthProperty().addListener((_, _, _) -> requestRender());
+        heightProperty().addListener((_, _, _) -> requestRender());
 
         // Initial paint with nothing on it
         requestRender();
-    }
-
-    public void setActiveTool(ToolStrategy tool) {
-        this.activeTool = tool;
-        this.setCursor(tool.getCursor());
     }
 
 
@@ -53,12 +47,7 @@ public class PaintPanel extends Canvas implements EventHandler<MouseEvent>, Pain
         requestRender(); // clear any stale preview
     }
 
-    public ToolStrategy getStrategy() {
-        return this.currentStrategy;
-    }
-
     // set colour
-
     public void setColor(Color c) {
         this.currentColor = c;
         model.setCurrentColor(c);

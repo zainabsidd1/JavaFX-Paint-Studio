@@ -1,14 +1,13 @@
 package ca.utoronto.utm.assignment2.paint;
 
-import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 
 public class Oval implements Shape, Fillable, Hittable, Strokeable {
-    private Point p1;
+    private final Point p1;
     private Point p2;
     private Color strokeColor;
     private Color fillColor;
-    private boolean filled=true;
+    private boolean filled;
     private boolean selected = false;
     private double strokeWidth = 2.0;
 
@@ -21,8 +20,6 @@ public class Oval implements Shape, Fillable, Hittable, Strokeable {
     }
 
 
-
-    public void setPoint1(Point p1) { this.p1 = p1; }
     public void setPoint2(Point p2) { this.p2 = p2; }
     public boolean isFilled() { return filled; }
 
@@ -97,6 +94,8 @@ public class Oval implements Shape, Fillable, Hittable, Strokeable {
         this.strokeColor = other.strokeColor;
         this.fillColor = other.fillColor;
         this.filled = other.filled;
+        this.strokeWidth = other.strokeWidth;
+        this.selected = other.selected;
     }
 
 
@@ -108,4 +107,11 @@ public class Oval implements Shape, Fillable, Hittable, Strokeable {
     @Override
     public void setStrokeWidth(double w) { this.strokeWidth = clampStroke(w); }
 
+    public boolean isSelected() {
+        return selected;
+    }
+
+    public void setSelected(boolean selected) {
+        this.selected = selected;
+    }
 }
