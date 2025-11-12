@@ -34,6 +34,7 @@ public class PaintModel {
     private Squiggle currentSquiggle;
     private Polyline polylineCurr;
     private Squiggle currEraser;
+    private SprayCan currentSpray;
     private Shape selectShape;
     private Shape storeShape;
     private Color backgroundColor = Color.WHITE;
@@ -93,6 +94,15 @@ public class PaintModel {
         applyStrokeWidth(currentSquiggle, strokeWidth);
         exec(new AddShapeCommand(shapes, currentSquiggle));
     }
+   //Spraycan
+    public void startNewSpray() {
+        double opacity = 50; double stroke = strokeWidth; Color color = currentColor;
+        currentSpray = new SprayCan(color, stroke, opacity);
+        shapes.add(currentSquiggle);
+        notifyListeners();
+        exec(new AddShapeCommand(shapes, currentSquiggle));
+    }
+
     public void addPoint(Point p) {
         if (currentSquiggle == null) startNewSquiggle();
         currentSquiggle.addPoint(p);

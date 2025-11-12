@@ -32,7 +32,6 @@ public class View {
 
         StrokeControls strokeControls = new StrokeControls(paintModel);
 
-
         HBox bottomBar = new HBox(strokeControls.getNode());
         bottomBar.setAlignment(Pos.CENTER_LEFT);
         bottomBar.setPadding(new Insets(0));

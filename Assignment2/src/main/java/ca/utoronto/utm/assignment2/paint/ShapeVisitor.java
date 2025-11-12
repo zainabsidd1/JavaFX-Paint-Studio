@@ -8,4 +8,5 @@ public interface ShapeVisitor {
     void visit(Square s);
     void visit(Triangle t);
     void visit(Oval o);
+    void visit(SprayCan s);
 }
