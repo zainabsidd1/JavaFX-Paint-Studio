@@ -94,7 +94,7 @@ public class SprayStrategy implements ToolStrategy{
             double y = cy + r * Math.sin(th);
             sprayCan.addPoint(x, y);
         }
-        Color current = panel.getColor();
+        Color current = model.getCurrentColor();
         if (current != null) sprayCan.setColor(current);
 
         panel.requestRender();
