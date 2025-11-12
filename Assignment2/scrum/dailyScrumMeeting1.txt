@@ -137,9 +137,9 @@ Nov 10,2025
 	Obstacles I face: n/a
 
 Nov 11,2025
-	What I did yesterday:
-	What I will do today:
-	Obstacles I face:
+	What I did yesterday: Looked over code architecture
+	What I will do today: Accept pull request for the spray can implementation (US4.005)
+	Obstacles I face: Resolving merge conflicts
 
 Nov 12,2025
 	What I did yesterday:
