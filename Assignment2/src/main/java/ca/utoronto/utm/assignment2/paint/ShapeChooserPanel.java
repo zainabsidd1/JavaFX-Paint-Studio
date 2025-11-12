@@ -9,12 +9,14 @@ import javafx.scene.image.WritableImage;
 import javafx.scene.layout.GridPane;
 
 import java.util.List;
-import java.util.Objects;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class ShapeChooserPanel extends GridPane implements EventHandler<ActionEvent> {
 
     private final View view;
     private Button selectedButton;
+    private static final Logger logger = Logger.getLogger(ShapeChooserPanel.class.getName());
 
     public ShapeChooserPanel(View view) {
         this.view = view;
@@ -67,8 +69,7 @@ public class ShapeChooserPanel extends GridPane implements EventHandler<ActionEv
             view.getPaintPanel().setStrategy(strategy);
             System.out.println("Tool selected: " + td.name());
         } catch (Exception e) {
-            e.printStackTrace();
-            System.err.println("Failed to instantiate tool: " + td.name());
+            logger.log(Level.SEVERE, "An error occurred", e);
         }
     }
 

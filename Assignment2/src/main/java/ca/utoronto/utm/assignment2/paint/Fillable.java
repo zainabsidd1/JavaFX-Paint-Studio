@@ -5,6 +5,6 @@ public interface Fillable {
     void setFillColor(Color c);
     Color getFillColor();
     void applyFill(Color c);
-    public void setFilled(boolean filled);
-    public boolean getFilled();
+    void setFilled(boolean filled);
+    boolean getFilled();
 }

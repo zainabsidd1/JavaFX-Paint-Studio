@@ -41,14 +41,12 @@ public final class SceneryLibrary {
         Polyline stripe1 = new Polyline(Color.web("#F44336"));
         stripe1.addPoint(new Point(ballCX - ballR, ballCY));
         stripe1.addPoint(new Point(ballCX + ballR, ballCY));
-        Strokeable st4 = (Strokeable) stripe1;
-        st4.setStrokeWidth(3);
+        stripe1.setStrokeWidth(3);
         s.add(stripe1);
         Polyline stripe2 = new Polyline(Color.web("#2196F3"));
         stripe2.addPoint(new Point(ballCX, ballCY - ballR));
         stripe2.addPoint(new Point(ballCX, ballCY + ballR));
-        Strokeable st5 = (Strokeable) stripe2;
-        st5.setStrokeWidth(3);
+        stripe2.setStrokeWidth(3);
         s.add(stripe2);
 
         // Birds
@@ -80,8 +78,7 @@ public final class SceneryLibrary {
         sail.addPoint(new Point(hullX + hullW*0.85, hullY - H*0.02));
         sail.addPoint(new Point(hullX + hullW*0.5, hullY - H*0.02));
         sail.addPoint(new Point(hullX + hullW*0.5, hullY - H*0.08));
-        Strokeable st1 = (Strokeable) sail;
-        st1.setStrokeWidth(2);
+        sail.setStrokeWidth(2);
         s.add(sail);
 
         // Umbrella + Towel
@@ -110,7 +107,7 @@ public final class SceneryLibrary {
             tri.addVertex(rim.get(i+1));
             Color fill = (i % 2 == 0) ? c1 : c2;
             tri.applyFill(fill);
-            if (tri instanceof Strokeable st) st.setStrokeWidth(1.5);
+            tri.setStrokeWidth(1.5);
             s.add(tri);
         }
         for (int i=0; i<panels; i++) {
@@ -126,7 +123,7 @@ public final class SceneryLibrary {
             Polyline rib = new Polyline(Color.web("#4F5D75"));
             rib.addPoint(new Point(apexX, apexY));
             rib.addPoint(rim.get(i));
-            if (rib instanceof Strokeable st) st.setStrokeWidth(2);
+            rib.setStrokeWidth(2);
             s.add(rib);
         }
         s.add(new Circle(new Point(apexX, apexY), Math.min(W,H)*0.006, Color.web("#4F5D75")));
@@ -151,7 +148,7 @@ public final class SceneryLibrary {
         // Garden path
         s.add(new Rectangle(new Point(W*0.12, H*0.62), new Point(W*0.88, H*0.74), Color.web("#E6D4B8")));
         Squiggle pathEdge = new Squiggle(); pathEdge.setColor(Color.web("#D1BF9B"));
-        if (pathEdge instanceof Strokeable pst) pst.setStrokeWidth(2);
+        pathEdge.setStrokeWidth(2);
         for (int i=0;i<=20;i++) {
             double x = W*(0.12 + (0.76*i/20.0));
             double y = H*(0.68 + Math.sin(i*0.5)*0.02);
@@ -179,7 +176,7 @@ public final class SceneryLibrary {
                 // fill green
                 try { t.applyFill(Color.web("#2E7D32")); }
                 catch (Exception ignore) { /* fallback */ }
-                if (t instanceof Strokeable st) st.setStrokeWidth(1);
+                t.setStrokeWidth(1);
                 s.add(t);
             }
         };
@@ -212,16 +209,29 @@ public final class SceneryLibrary {
 
             // 6 pointed petals made via triangles to simulate star shape
             Color petal = Color.web("#F8BBD0");
-            for (int i=0;i<6;i++) {
-                double ang = Math.toRadians(i*60.0);
-                double rx = Math.cos(ang), ry = Math.sin(ang);
-                Triangle p = new Triangle();
-                p.addVertex(new Point(cx, cy));
-                p.addVertex(new Point(cx + rx*20 - ry*6, cy + ry*20 + rx*6));
-                p.addVertex(new Point(cx + rx*34,          cy + ry*34));
-                try { p.applyFill(petal); } catch (Exception ignore) {}
-                if (p instanceof Strokeable st) st.setStrokeWidth(1.2);
-                s.add(p);
+            {
+                double ang = Math.toRadians(0 * 60.0);
+                triangleShapeBuilder(s, cx, cy, petal, ang);
+            }
+            {
+                double ang = Math.toRadians(1 * 60.0);
+                triangleShapeBuilder(s, cx, cy, petal, ang);
+            }
+            {
+                double ang = Math.toRadians(2 * 60.0);
+                triangleShapeBuilder(s, cx, cy, petal, ang);
+            }
+            {
+                double ang = Math.toRadians(3 * 60.0);
+                triangleShapeBuilder(s, cx, cy, petal, ang);
+            }
+            {
+                double ang = Math.toRadians(4 * 60.0);
+                triangleShapeBuilder(s, cx, cy, petal, ang);
+            }
+            {
+                double ang = Math.toRadians(5 * 60.0);
+                triangleShapeBuilder(s, cx, cy, petal, ang);
             }
             // pistil
             s.add(new Circle(new Point(cx, cy), 4.5, Color.web("#FFEB3B")));
@@ -277,11 +287,11 @@ public final class SceneryLibrary {
             // antennae
             Polyline antL = new Polyline(Color.web("#4E342E"));
             antL.addPoint(new Point(bx, by-6)); antL.addPoint(new Point(bx-6, by-12));
-            if (antL instanceof Strokeable st) st.setStrokeWidth(1.5);
+            antL.setStrokeWidth(1.5);
             s.add(antL);
             Polyline antR = new Polyline(Color.web("#4E342E"));
             antR.addPoint(new Point(bx, by-6)); antR.addPoint(new Point(bx+6, by-12));
-            if (antR instanceof Strokeable st2) st2.setStrokeWidth(1.5);
+            antR.setStrokeWidth(1.5);
             s.add(antR);
         };
         butterfly.accept(W*0.28, H*0.40);
@@ -297,6 +307,20 @@ public final class SceneryLibrary {
         cloud.accept(W*0.60, H*0.12);
 
         return s;
+    }
+
+    private static void triangleShapeBuilder(List<Shape> s, Double cx, Double cy, Color petal, double ang) {
+        double rx = Math.cos(ang), ry = Math.sin(ang);
+        Triangle p = new Triangle();
+        p.addVertex(new Point(cx, cy));
+        p.addVertex(new Point(cx + rx * 20 - ry * 6, cy + ry * 20 + rx * 6));
+        p.addVertex(new Point(cx + rx * 34, cy + ry * 34));
+        try {
+            p.applyFill(petal);
+        } catch (Exception ignore) {
+        }
+        p.setStrokeWidth(1.2);
+        s.add(p);
     }
 
     /** Scene 3: City Night (enhanced) */
@@ -345,9 +369,8 @@ public final class SceneryLibrary {
         for (int i=0; i<xs.length; i++) {
             double x1 = W*xs[i];
             double x2 = x1 + W*bw[i];
-            double y2 = baseY;
             double y1 = baseY - H*hs[i];
-            s.add(new Rectangle(new Point(x1, y1), new Point(x2, y2), Color.web("#1E1E1E")));
+            s.add(new Rectangle(new Point(x1, y1), new Point(x2, baseY), Color.web("#1E1E1E")));
 
             // Different rooftops --> triangle, oval, antennas
             if (i % 3 == 0) {
@@ -383,7 +406,7 @@ public final class SceneryLibrary {
             double cx = x1 + W*0.012;
             while (cx + W*0.012 < x2 - W*0.01) {
                 double cy = y1 + H*0.02;
-                while (cy + W*0.012 < y2 - H*0.02) {
+                while (cy + W*0.012 < baseY - H*0.02) {
                     // alternate lit/unlit windows
                     boolean lit = (((int)((cx - x1) / (W*0.02))) + ((int)((cy - y1) / (H*0.04)))) % 2 == 0;
                     Color wcol = lit ? Color.web("#FFD54F") : Color.web("#1A1A1A");
@@ -421,7 +444,7 @@ public final class SceneryLibrary {
 
         // center lane dashes
         for (int i=0;i<12;i++) {
-            double segW = W*0.05, segH = H*0.01, gap2 = W*0.03;
+            double segW = W*0.05, gap2 = W*0.03;
             double x = i*(segW+gap2) + W*0.02;
             s.add(new Rectangle(new Point(x, H*0.83), new Point(x+segW, H*0.84), Color.web("#E0E0E0")));
         }
@@ -487,8 +510,8 @@ public final class SceneryLibrary {
         class Bld {
             Bld(double fx, double width, double height, String col, boolean warmWin){
                 double x1 = W*fx, x2 = x1 + W*width;
-                double y2 = baseY, y1 = baseY - H*height;
-                Rectangle r = new Rectangle(new Point(x1, y1), new Point(x2, y2), Color.web(col));
+                double y1 = baseY - H*height;
+                Rectangle r = new Rectangle(new Point(x1, y1), new Point(x2, baseY), Color.web(col));
                 s.add(r);
                 addWindows.accept(r, warmWin);
             }
@@ -511,8 +534,8 @@ public final class SceneryLibrary {
 
         // BMO-like white tower
         double bmoX1 = W*0.58, bmoX2 = bmoX1 + W*0.05;
-        double bmoY2 = baseY, bmoY1 = baseY - H*0.36;
-        Rectangle bmo = new Rectangle(new Point(bmoX1, bmoY1), new Point(bmoX2, bmoY2), Color.web("#E8EFF7"));
+        double bmoY1 = baseY - H*0.36;
+        Rectangle bmo = new Rectangle(new Point(bmoX1, bmoY1), new Point(bmoX2, baseY), Color.web("#E8EFF7"));
         s.add(bmo);
         addWindows.accept(bmo, false);
         s.add(new Rectangle(new Point((bmoX1+bmoX2)/2 - W*0.002, bmoY1 - H*0.06),
@@ -521,28 +544,27 @@ public final class SceneryLibrary {
                 new Point((bmoX1+bmoX2)/2 + W*0.012 + W*0.002, bmoY1), Color.web("#D8DFEA")));
 
         // CN Tower
-        double towerBaseY = baseY;
         double towerX = W*0.30;
-        s.add(new Rectangle(new Point(towerX - W*0.004, towerBaseY - H*0.58),
-                new Point(towerX + W*0.004, towerBaseY), Color.web("#C7C9CE")));
+        s.add(new Rectangle(new Point(towerX - W*0.004, baseY - H*0.58),
+                new Point(towerX + W*0.004, baseY), Color.web("#C7C9CE")));
         Triangle butt = new Triangle();
-        butt.addVertex(new Point(towerX, towerBaseY - H*0.22));
-        butt.addVertex(new Point(towerX - W*0.02, towerBaseY));
-        butt.addVertex(new Point(towerX + W*0.02, towerBaseY));
+        butt.addVertex(new Point(towerX, baseY - H*0.22));
+        butt.addVertex(new Point(towerX - W*0.02, baseY));
+        butt.addVertex(new Point(towerX + W*0.02, baseY));
         try { butt.applyFill(Color.web("#B9BCC2")); } catch (Exception ignore) {}
         s.add(butt);
-        s.add(new Oval(new Point(towerX - W*0.05, towerBaseY - H*0.34),
-                new Point(towerX + W*0.05, towerBaseY - H*0.305), Color.web("#8B8F96"), true));
-        s.add(new Oval(new Point(towerX - W*0.042, towerBaseY - H*0.338),
-                new Point(towerX + W*0.042, towerBaseY - H*0.315), Color.web("#E6EBF2"), true));
-        s.add(new Oval(new Point(towerX - W*0.028, towerBaseY - H*0.355),
-                new Point(towerX + W*0.028, towerBaseY - H*0.342), Color.web("#A7ACB5"), true));
-        s.add(new Rectangle(new Point(towerX - W*0.002, towerBaseY - H*0.58 - H*0.08),
-                new Point(towerX + W*0.002, towerBaseY - H*0.58), Color.web("#D5D8DE")));
-        s.add(new Rectangle(new Point(towerX - W*0.002, towerBaseY - H*0.62),
-                new Point(towerX + W*0.002, towerBaseY - H*0.61), Color.web("#D32F2F")));
-        s.add(new Rectangle(new Point(towerX - W*0.002, towerBaseY - H*0.605),
-                new Point(towerX + W*0.002, towerBaseY - H*0.595), Color.web("#FFFFFF")));
+        s.add(new Oval(new Point(towerX - W*0.05, baseY - H*0.34),
+                new Point(towerX + W*0.05, baseY - H*0.305), Color.web("#8B8F96"), true));
+        s.add(new Oval(new Point(towerX - W*0.042, baseY - H*0.338),
+                new Point(towerX + W*0.042, baseY - H*0.315), Color.web("#E6EBF2"), true));
+        s.add(new Oval(new Point(towerX - W*0.028, baseY - H*0.355),
+                new Point(towerX + W*0.028, baseY - H*0.342), Color.web("#A7ACB5"), true));
+        s.add(new Rectangle(new Point(towerX - W*0.002, baseY - H*0.58 - H*0.08),
+                new Point(towerX + W*0.002, baseY - H*0.58), Color.web("#D5D8DE")));
+        s.add(new Rectangle(new Point(towerX - W*0.002, baseY - H*0.62),
+                new Point(towerX + W*0.002, baseY - H*0.61), Color.web("#D32F2F")));
+        s.add(new Rectangle(new Point(towerX - W*0.002, baseY - H*0.605),
+                new Point(towerX + W*0.002, baseY - H*0.595), Color.web("#FFFFFF")));
 
         // Rogers Centre
         double domeCx = W*0.20, domeCy = baseY - H*0.03;
@@ -568,7 +590,7 @@ public final class SceneryLibrary {
             sail.addPoint(new Point(bx + hullW*0.88, by - H*0.01));
             sail.addPoint(new Point(bx + hullW*0.5, by - H*0.01));
             sail.addPoint(new Point(bx + hullW*0.5, by - H*0.06));
-            if (sail instanceof Strokeable st) st.setStrokeWidth(2);
+            sail.setStrokeWidth(2);
             s.add(sail);
         };
         sailboat.accept(W*0.42, H*0.62);
@@ -577,7 +599,7 @@ public final class SceneryLibrary {
         for (int i = 0; i < 14; i++) {
             double y = H*0.58 + i*(H*0.02);
             Polyline ripple = new Polyline(Color.web("#E5F4FF"));
-            if (ripple instanceof Strokeable st) st.setStrokeWidth(1.5);
+            ripple.setStrokeWidth(1.5);
             ripple.addPoint(new Point(W*0.05, y));
             ripple.addPoint(new Point(W*0.20, y + Math.sin(i*0.6)*2));
             ripple.addPoint(new Point(W*0.35, y));

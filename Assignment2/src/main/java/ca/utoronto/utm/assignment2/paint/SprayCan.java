@@ -1,7 +1,6 @@
 package ca.utoronto.utm.assignment2.paint;
 
 import javafx.geometry.Point2D;
-import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 import java.util.ArrayList;
 import java.util.List;
@@ -9,8 +8,8 @@ import java.util.List;
 public class SprayCan implements Shape {
     private final List<Point2D> points = new ArrayList<>();
     private Color color;
-    private double strokeWidth;
-    private double opacity;
+    private final double strokeWidth;
+    private final double opacity;
 
     public SprayCan(Color color, double stroke, double opacity) {
         this.color = color;

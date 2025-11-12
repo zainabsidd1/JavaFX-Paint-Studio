@@ -5,6 +5,8 @@ import javafx.scene.ImageCursor;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.image.Image;
 
+import java.util.Objects;
+
 public class CopyStrategy implements ToolStrategy {
     private final PaintModel model;
     private final ImageCursor copyCursor;
@@ -14,7 +16,7 @@ public class CopyStrategy implements ToolStrategy {
         this.model = model;
 
         Image img = new Image(
-                getClass().getResourceAsStream("/icons/copy.png"), 20, 20, true, true);
+                Objects.requireNonNull(getClass().getResourceAsStream("/icons/copy.png")), 20, 20, true, true);
         this.copyCursor = new ImageCursor(img, img.getWidth()/2, img.getHeight()/2);
 
     }

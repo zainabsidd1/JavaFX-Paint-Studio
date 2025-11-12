@@ -7,7 +7,6 @@ public final class CompositeCommand implements Command {
     private final List<Command> children = new ArrayList<>();
 
     public CompositeCommand add(Command c) { children.add(c); return this; }
-    public List<Command> children() { return children; }
 
     @Override public void apply() {
         for (Command c : children) c.apply();

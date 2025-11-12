@@ -5,6 +5,8 @@ import javafx.scene.ImageCursor;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.image.Image;
 
+import java.util.Objects;
+
 public class PasteStrategy implements ToolStrategy {
     private final PaintModel model;
     private final PaintPanel panel;
@@ -15,7 +17,7 @@ public class PasteStrategy implements ToolStrategy {
         this.panel = panel;
 
         Image img = new Image(
-                getClass().getResourceAsStream("/icons/paste.png"), 20, 20, true, true);
+                Objects.requireNonNull(getClass().getResourceAsStream("/icons/paste.png")), 20, 20, true, true);
         this.pasteCursor = new ImageCursor(img, img.getWidth()/2, img.getHeight()/2);
     }
 
@@ -32,32 +34,28 @@ public class PasteStrategy implements ToolStrategy {
 
         Shape pasted = copied.copy();
         // move to click location
-        if (pasted instanceof Rectangle) {
-            Rectangle r = (Rectangle) pasted;
+        if (pasted instanceof Rectangle r) {
             double dx = e.getX() - r.getLeft();
             double dy = e.getY() - r.getTop();
             r.translate(dx, dy);
         }
-        else if (pasted instanceof Circle) {
-            Circle c = (Circle) pasted;
+        else if (pasted instanceof Circle c) {
             double dx = e.getX() - c.getCenter().x;
             double dy = e.getY() - c.getCenter().y;
             c.translate(dx, dy);
         }
-        else if (pasted instanceof Oval) {
-            Oval o = (Oval) pasted;
+        else if (pasted instanceof Oval o) {
             double dx = e.getX() - o.getLeft();
             double dy = e.getY() - o.getTop();
             o.translate(dx, dy);
         }
-        else if (pasted instanceof Square) {
-            Square s = (Square) pasted;
+        else if (pasted instanceof Square s) {
             double dx = e.getX() - s.getLeft();
             double dy = e.getY() - s.getTop();
             s.translate(dx, dy);
         }
         else if (pasted instanceof Triangle t) {
-            Point ref = t.getVertices().get(0);
+            Point ref = t.getVertices().getFirst();
             double dx = e.getX() - ref.x;
             double dy = e.getY() - ref.y;
             t.translate(dx, dy);
@@ -65,7 +63,7 @@ public class PasteStrategy implements ToolStrategy {
         else if (pasted instanceof Squiggle sq) {
             // Move by first point
             if (!sq.getPoints().isEmpty()) {
-                Point ref = sq.getPoints().get(0);
+                Point ref = sq.getPoints().getFirst();
                 double dx = e.getX() - ref.x;
                 double dy = e.getY() - ref.y;
                 sq.translate(dx, dy);
@@ -73,7 +71,7 @@ public class PasteStrategy implements ToolStrategy {
         }
         else if (pasted instanceof Polyline pl) {
             if (!pl.getPoints().isEmpty()) {
-                Point ref = pl.getPoints().get(0);
+                Point ref = pl.getPoints().getFirst();
                 double dx = e.getX() - ref.x;
                 double dy = e.getY() - ref.y;
                 pl.translate(dx, dy);

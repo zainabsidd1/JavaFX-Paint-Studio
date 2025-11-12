@@ -6,6 +6,8 @@ import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Color;
 
+import java.util.Objects;
+
 public class FillBucketStrategy implements ToolStrategy {
     private final PaintModel model;
     private final PaintPanel panel;
@@ -16,7 +18,7 @@ public class FillBucketStrategy implements ToolStrategy {
         this.panel = panel;
 
         Image original = new Image(
-                getClass().getResourceAsStream("/icons/PaintBucket.png"),
+                Objects.requireNonNull(getClass().getResourceAsStream("/icons/PaintBucket.png")),
                 20, 20,
                 true,
                 true

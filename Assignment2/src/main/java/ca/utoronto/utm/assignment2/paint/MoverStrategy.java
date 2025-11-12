@@ -2,10 +2,10 @@ package ca.utoronto.utm.assignment2.paint;
 
 import javafx.scene.Cursor;
 import javafx.scene.ImageCursor;
-import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.paint.Color;
+
+import java.util.Objects;
 
 public class MoverStrategy implements ToolStrategy{
     private final PaintModel model;
@@ -20,7 +20,7 @@ public class MoverStrategy implements ToolStrategy{
         this.panel = panel;
 
         Image original = new Image(
-                getClass().getResourceAsStream("/icons/mover.png"),
+                Objects.requireNonNull(getClass().getResourceAsStream("/icons/mover.png")),
                 20, 20,
                 true,
                 true
@@ -35,7 +35,7 @@ public class MoverStrategy implements ToolStrategy{
 
     @Override
     public void onMousePressed(MouseEvent e) {
-        selectedShape = model.selectTopMostAt(e.getX(), e.getY(), Color.YELLOW);
+        selectedShape = model.selectTopMostAt(e.getX(), e.getY());
         panel.requestRender();
         startX = e.getX();
         startY = e.getY();

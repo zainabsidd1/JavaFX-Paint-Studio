@@ -1,6 +1,5 @@
 package ca.utoronto.utm.assignment2.paint;
 
-import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 import java.util.ArrayList;
 import java.util.List;
@@ -57,6 +56,10 @@ public class Polyline implements Shape, Colorable, Strokeable, Hittable {
 
     @Override
     public boolean contains(double x, double y) {
+        return containsPoint(x, y, pathPoints);
+    }
+
+    static boolean containsPoint(double x, double y, List<Point> pathPoints) {
         double margin = 4.0;
 
         for (int i = 0; i < pathPoints.size() - 1; i++) {

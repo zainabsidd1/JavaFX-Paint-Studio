@@ -58,14 +58,22 @@ public class EraserStrategy implements ToolStrategy {
         }
         Color backgroundColor = model.getBackgroundColor();
         if (backgroundColor == null) backgroundColor = Color.WHITE;
+        colorSetBackground(g, backgroundColor, eraser);
+    }
+
+    static void colorSetBackground(GraphicsContext g, Color backgroundColor, ArrayList<Point> eraser) {
         g.setStroke(backgroundColor);
 
         g.setLineDashes(0);
         g.setGlobalAlpha(1.0);
-        for (int i=0; i<eraser.size()-1; i++) {
-            Point p1 = eraser.get(i);
-            Point p2 = eraser.get(i+1);
-            g.strokeLine(p1.x, p1.y, p2.x, p2.y);
-        }
+        RenderVisitor.visitHelper(eraser, g);
+    }
+
+    public Color getColor() {
+        return color;
+    }
+
+    public void setColor(Color color) {
+        this.color = color;
     }
 }
