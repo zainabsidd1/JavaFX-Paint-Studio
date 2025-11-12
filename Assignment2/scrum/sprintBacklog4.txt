@@ -92,10 +92,10 @@ EXAMPLE:
     "Selected Color: Blue"
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
-TYPE     : USER STORY US4.005 : tatisoha : In Progress
+TYPE     : USER STORY US4.005 : tatisoha : Completed
 NAME     : Spray Can Tool
 PRIORITY : 3
-ESTIMATE : 2 hours     ACTUAL :
+ESTIMATE : 2 hours     ACTUAL : 1 day
 AS A     : user
 I WANT   : A spray can tool that scatters small dots of color in a circular
            area
