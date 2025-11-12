@@ -25,7 +25,7 @@ ISSUE    : The selection, copy, and movement tools currently only support
            reference point handling, causing tool failures.
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
-TYPE     : BUG BUG4.003 : kaurjap9 :  NotStarted
+TYPE     : BUG BUG4.003 : kaurjap9 :  Complete
 NAME     : Remove warnings
 PRIORITY : 2
 ESTIMATE : 4 hours     ACTUAL :
