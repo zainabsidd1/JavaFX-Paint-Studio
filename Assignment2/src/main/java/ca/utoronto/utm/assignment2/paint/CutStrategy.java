@@ -5,6 +5,8 @@ import javafx.scene.ImageCursor;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.image.Image;
 
+import java.util.Objects;
+
 public class CutStrategy implements ToolStrategy {
     private final PaintModel model;
     private final ImageCursor cutCursor;
@@ -13,7 +15,7 @@ public class CutStrategy implements ToolStrategy {
         this.model = model;
 
         Image img = new Image(
-                getClass().getResourceAsStream("/icons/cut.png"), 20, 20, true, true);
+                Objects.requireNonNull(getClass().getResourceAsStream("/icons/cut.png")), 20, 20, true, true);
         this.cutCursor = new ImageCursor(img, img.getWidth()/2, img.getHeight()/2);
     }
 

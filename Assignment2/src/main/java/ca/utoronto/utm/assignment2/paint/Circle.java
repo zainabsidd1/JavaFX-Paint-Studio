@@ -1,6 +1,5 @@
 package ca.utoronto.utm.assignment2.paint;
 
-import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 
 public class Circle implements Shape, Fillable, Hittable, Strokeable {
@@ -75,6 +74,7 @@ public class Circle implements Shape, Fillable, Hittable, Strokeable {
             this.strokeColor = other.strokeColor;
             this.fillColor = other.fillColor;
             this.filled = other.filled;
+            this.strokeWidth = other.strokeWidth;
         }
 
 

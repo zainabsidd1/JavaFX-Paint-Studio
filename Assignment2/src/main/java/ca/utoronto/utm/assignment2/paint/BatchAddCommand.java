@@ -1,7 +1,6 @@
 package ca.utoronto.utm.assignment2.paint;
 
 import java.lang.reflect.Field;
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -17,6 +16,7 @@ public final class BatchAddCommand implements Command {
             batch.add(new AddShapeCommand(internalList, s));
         }
     }
+
     @SuppressWarnings("unchecked")
     private static List<Shape> getInternalList(PaintModel model) {
         try {

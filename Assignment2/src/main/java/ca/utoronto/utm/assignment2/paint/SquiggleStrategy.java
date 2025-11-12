@@ -67,14 +67,7 @@ public class SquiggleStrategy implements ToolStrategy, Colorable {
         Color chosen = (model.getCurrentColor() != null && !model.getCurrentColor().equals(Color.BLACK))
                 ? model.getCurrentColor()
                 : color;
-        g.setStroke(chosen);
-        g.setLineDashes(0);
-        g.setGlobalAlpha(1.0);
-        for (int i=0; i<squiggle.size()-1; i++) {
-            Point p1 = squiggle.get(i);
-            Point p2 = squiggle.get(i+1);
-            g.strokeLine(p1.x, p1.y, p2.x, p2.y);
-        }
+        EraserStrategy.colorSetBackground(g, chosen, squiggle);
     }
 }
 
