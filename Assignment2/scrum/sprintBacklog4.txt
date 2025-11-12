@@ -45,6 +45,15 @@ ISSUE    : The current architecture model only mentions the high level MVC
            used.
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
+TYPE     : BUG BUG4.005 : tatisoha :  NotStarted
+NAME     : Eraser shouldn't be able to be moved
+PRIORITY : 2
+ESTIMATE : 30 minutes     ACTUAL :
+ISSUE    : The eraser leaves a movable shape that can be dragged, distorting
+            the canvas. It should erase permanently without creating any
+            selectable or movable object.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
 TYPE     : USER STORY US4.001 : sidd1378 : Complete
 NAME     : Change background color of canvas
 PRIORITY : 3
