@@ -56,6 +56,7 @@ public class Squiggle implements Shape, Colorable, Strokeable, Hittable {
 
     @Override
     public boolean contains(double x, double y) {
+        if (isEraser) {return false;}
         double margin = 4.0;
 
         for (int i = 0; i < points.size() - 1; i++) {
@@ -75,6 +76,7 @@ public class Squiggle implements Shape, Colorable, Strokeable, Hittable {
 
     @Override
     public void translate(double dx, double dy) {
+        if (isEraser) {return;}
         for (Point p : points) {
             p.x += dx;
             p.y += dy;
