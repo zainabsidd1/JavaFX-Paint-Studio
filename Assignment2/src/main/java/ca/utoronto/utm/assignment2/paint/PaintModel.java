@@ -7,7 +7,6 @@ public class PaintModel {
     // Observer Pattern
     private Color currentColor = null;
     private final List<PaintModelListener> listeners = new ArrayList<>();
-    private Color highlightColor;
 
     private void notifyListeners() {
         for (PaintModelListener l : listeners) {
@@ -194,8 +193,7 @@ public class PaintModel {
         notifyListeners();
     }
 
-    public Shape selectTopMostAt(double x, double y, Color highlightColor) {
-        this.highlightColor = highlightColor;
+    public Shape selectTopMostAt(double x, double y) {
         return findTopmostAt(x, y);
     }
 

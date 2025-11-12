@@ -302,7 +302,7 @@ public class View {
             gp.addRow(r++, new Label("Max size (px)"), tfMax);
             gp.addRow(r++, new Label("Color mode"), cbColor);
             gp.addRow(r++, new Label("Fill mode"),  cbFill);
-            gp.addRow(r++, new Label(""), cbOverlap);
+            gp.addRow(r, new Label(""), cbOverlap);
             dlg.getDialogPane().setContent(gp);
 
             var res = dlg.showAndWait();

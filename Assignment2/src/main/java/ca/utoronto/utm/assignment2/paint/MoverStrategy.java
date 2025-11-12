@@ -4,7 +4,6 @@ import javafx.scene.Cursor;
 import javafx.scene.ImageCursor;
 import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.paint.Color;
 
 import java.util.Objects;
 
@@ -36,7 +35,7 @@ public class MoverStrategy implements ToolStrategy{
 
     @Override
     public void onMousePressed(MouseEvent e) {
-        selectedShape = model.selectTopMostAt(e.getX(), e.getY(), Color.YELLOW);
+        selectedShape = model.selectTopMostAt(e.getX(), e.getY());
         panel.requestRender();
         startX = e.getX();
         startY = e.getY();
