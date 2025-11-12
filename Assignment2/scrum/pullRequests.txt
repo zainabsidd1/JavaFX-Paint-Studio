@@ -24,3 +24,4 @@ US4.004 author:sidd1378 puller:kaurjap9 status:Complete
 BUG4.001 author: royanus1 puller:kaurjap9 status:Complete
 BUG4.002 author: royanus1 puller:kaurjap9 status:Complete
 US4.005 author:tatisoha puller:sidd1378 status:Complete
+BUG4.005 author: tatisoha puller:? status:Waiting
