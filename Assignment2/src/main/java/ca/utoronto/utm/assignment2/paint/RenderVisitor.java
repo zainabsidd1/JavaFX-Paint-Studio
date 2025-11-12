@@ -120,4 +120,18 @@ public class RenderVisitor implements ShapeVisitor {
         g.setLineWidth(t.getStrokeWidth());
         g.strokePolygon(xs, ys, 3);
     }
+
+    @Override
+    public void visit(SprayCan s) {
+        double oldAlpha = g.getGlobalAlpha();
+        g.setGlobalAlpha(s.getOpacity());
+        g.setFill(s.getColor());
+
+        // Draw small dots for each spray point
+        for (var p : s.getPoints()) {
+            g.fillOval(p.getX() - 0.5, p.getY() - 0.5, 1.0, 1.0);
+        }
+
+        g.setGlobalAlpha(oldAlpha);
+    }
 }
