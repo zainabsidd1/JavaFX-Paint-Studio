@@ -142,7 +142,7 @@ Nov 11,2025
 	Obstacles I face: making sure polyline and squiggle is hittable even if it doesn't hit the line exactly
 
 Nov 12,2025
-	What I did yesterday:
+	What I did yesterday: completed sprint 4 user stories + update spring backlog
 	What I will do today:
 	Obstacles I face:
 

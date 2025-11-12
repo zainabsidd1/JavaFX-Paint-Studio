@@ -16,25 +16,6 @@
 # as appropriate.
 
 --------------------------------------------------------------------------
-TYPE     : BUG BUG4.001 : royanus1 :  NotStarted
-NAME     : Undo/Redo not implementing mover tool changes
-PRIORITY : 2
-ESTIMATE : 2 hours     ACTUAL :
-ISSUE    : The current Undo/Redo logic only tracks creation and deletion
-           of shapes, but not movement changes done using the Mover tool.
-           Moving a shape and pressing Undo should revert to the previous
-           position, and Redo should restore the new position.
---------------------------------------------------------------------------
---------------------------------------------------------------------------
-TYPE     : BUG BUG4.002 : royanus1  : NotStarted
-NAME     : Mover, Copy, Cut, Paste not working for Squiggle and Polyline
-PRIORITY : 3
-ESTIMATE : 2 hours     ACTUAL :
-ISSUE    : The selection, copy, and movement tools currently only support
-           basic shapes. Squiggle and Polyline lack proper bounding box or
-           reference point handling, causing tool failures.
---------------------------------------------------------------------------
---------------------------------------------------------------------------
 TYPE     : BUG BUG4.003 : kaurjap9 :  NotStarted
 NAME     : Remove warnings
 PRIORITY : 2
@@ -466,6 +447,25 @@ ISSUE    : Having a list of different types of drawable things in the
            so that it is more flexible, and easier to work with.
            Consider some design patterns, or change of responsibility
            here.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : BUG BUG4.001 : royanus1 :  Complete
+NAME     : Undo/Redo not implementing mover tool changes
+PRIORITY : 2
+ESTIMATE : 2 hours     ACTUAL : 1
+ISSUE    : The current Undo/Redo logic only tracks creation and deletion
+           of shapes, but not movement changes done using the Mover tool.
+           Moving a shape and pressing Undo should revert to the previous
+           position, and Redo should restore the new position.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : BUG BUG4.002 : royanus1  : Complete
+NAME     : Mover, Copy, Cut, Paste not working for Squiggle and Polyline
+PRIORITY : 3
+ESTIMATE : 2 hours     ACTUAL : 3
+ISSUE    : The selection, copy, and movement tools currently only support
+           basic shapes. Squiggle and Polyline lack proper bounding box or
+           reference point handling, causing tool failures.
 --------------------------------------------------------------------------
 # OMITTED USER STORIES/BUGS BELOW   ###########################################
 
