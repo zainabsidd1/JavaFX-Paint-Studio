@@ -1,136 +1,299 @@
-# Please discuss your architectural decisions below.
+HIGH LEVEL ARCHITECTURE
 
-High Level Architecture:
+MVC
+To keep the code simple, a partial MVC was implemented.
 
-	MVC
-	To keep the code simple, a partial MVC was implemented.
-	
-	Model
-	The Model captures enough information to re-draw the sketch of
-	the user.
-	
-	View+Controller
-	There is a View class as well as a few, what we call, view components.
-	The View class containing the BorderPane as well as containing all of its components.
-	View components are meant to be contained in the main View.
-	Examples of view components are PaintPanel and ShapeChooserPanel.
-	
-	The View class, and view components all implements their own controller.
-	For example, the PaintPanel listens to its own MouseEvents.
-	This is instead of separating out the Controller from the View. This choice
-	was made to simplify the code, yet still keep it modular and clear.
-	
-	Each view component can see the containing View as well as the Model
-	as appropriate. This means that each view component can speak to the
-	other view components. An example of this is when the ShapeChooserPanel
-	buttons are clicked, resulting in a mode change in the PaintPanel.
-	
----------------------------------------------------------------------
-TODO!!! Add in more architecture and discussion. For example, 
-do you do something interesting to fix the association between the 
-ShapeChooser and the PaintPanel? How about the PaintModel, something
-is clearly wrong with it. Can you come up with a better architecture?
----------------------------------------------------------------------
+Model
+The Model (PaintModel) captures enough information to re-draw the
+sketch and reconstruct user actions:
+- the list of shapes currently on the canvas,
+- selection state (which shape is selected, if any),
+- display options such as current color, fill/outline toggle, stroke width,
+- background color and scenery,
+- temporary overlay shapes (e.g., stroke-width preview),
+- undo/redo stacks of Command objects.
 
+The model never talks to JavaFX directly. Shapes are plain Java objects
+that know only their own geometry and colors, and the model exposes
+methods that represent user-level actions (add shape, move shape,
+fill shape, load scenery, clear canvas, undo, redo, etc.). Each
+state-changing operation is expressed as a Command and executed through
+a single exec() method, which keeps the model logic cohesive and easy
+to reason about.
+
+View + Controller
+There is a View class as well as several “view components.”
+The View class owns the main BorderPane and wires together all UI
+controls: menu bar, tool buttons, color pickers, stroke slider,
+background controls, and the central PaintPanel canvas.
+
+View components are meant to be contained in the main View.
+Examples of view components are:
+- PaintPanel: the drawing surface where shapes are rendered,
+- ShapeChooserPanel: the grid of buttons for selecting tools,
+- StrokeControls: the slider + text field that controls stroke width.
+
+Each view component implements its own controller logic by listening
+to UI events locally (e.g., mouse events on PaintPanel, button clicks
+in ShapeChooserPanel, slider changes in StrokeControls). We deliberately
+did not pull these into a separate Controller class; instead we treat
+each view component as a View+Controller pair. This keeps wiring simple,
+while still keeping responsibilities modular and readable.
+
+Communication between components
+Each view component has a reference to the shared PaintModel and,
+where needed, to the parent View. This allows components to coordinate
+indirectly through the model instead of tightly coupling to each other.
+Typical flow:
+1. User clicks a tool button in ShapeChooserPanel.
+2. ShapeChooserPanel creates the corresponding ToolStrategy and calls
+   view.setCurrentTool(...), which updates PaintPanel’s active tool.
+3. User draws on PaintPanel; the current ToolStrategy interprets mouse
+   events and calls model.exec(new AddShapeCommand(...)) or other
+   commands.
+4. The model mutates its internal state and notifies its listeners.
+5. PaintPanel, as a PaintModelListener, repaints by visiting all
+   shapes with a RenderVisitor.
+
+This “speak via the model” approach reduces cross-component coupling:
+ShapeChooserPanel does not need to know how drawing happens; it just
+switches tools. PaintPanel does not need to know how undo/redo stacks
+are managed; it simply asks the model to exec commands or undo/redo.
+The model does not know anything about JavaFX; it just stores shapes
+and executes Commands.
+
+Shape and scenery architecture
+All concrete shapes (Circle, Rectangle, Square, Triangle, Oval,
+Squiggle, Polyline, SprayCan) implement the Shape interface and:
+- participate in the Visitor pattern via accept(ShapeVisitor),
+- implement domain-specific interfaces such as Colorable, Fillable,
+  Strokeable, Hittable when applicable.
+
+The SceneryLibrary is a separate, stateless utility that builds
+predefined scenes (e.g., beach, cityscape) as Lists of Shape objects.
+This keeps the model generic (it only sees “a list of shapes”) and
+makes it easy to add or change scenery without touching core logic.
+
+RandomArtGenerator similarly produces a batch of randomly generated
+shapes based on parameters (count, size range, color mode, fill mode,
+allowOverlap, etc.). The model can then incorporate those shapes with
+a single CompositeCommand, treating “generate N shapes” as one logical
+action for undo/redo.
+---------------------------------------------------------------------------
 DESIGN PATTERNS USED
-	TODO!!! If you introduce a Design Pattern to solve a problem, 
-	discuss it below. Only add design patterns if they simplify and improve
-	the code. I see at least two that would greatly improve code. 
-		
-	Strategy:
-	Originally, all mouse-handling logic for drawing shapes
-	(circles, rectangles, squiggles, etc.) was crammed inside the
-	PaintPanel class under one large switch(mode) statement.
-    Each case handled how to:
-        - respond to mouse presses, drags, and releases,
-        - preview the shape being drawn, and
-        - update the model once the shape was finished.
-    This made the class long, hard to read, and violated the Open/Closed
-    Principle — every time we added a new tool or shape, we had to edit
-    the same PaintPanel file and extend the switch block. The code was
-    tightly coupled and not modular.
-    We introduced the Strategy pattern by creating a ToolStrategy
-    interface that defines how all drawing tools behave:
-    Each shape (e.g., Circle, Rectangle, Squiggle) now has its own concrete
-    strategy class:
-        CircleStrategy
-        RectangleStrategy
-        SquiggleStrategy
-    Each of these classes encapsulates:
-        how that shape responds to mouse events, and
-        how it draws its live preview while being created.
-        For example, CircleStrategy handles calculating the radius while
-        dragging, and RectangleStrategy handles the second corner. The
-        PaintPanel no longer contains any shape-specific logic — instead,
-        it delegates all event handling to the current strategy which
-        improves readability and makes the class easier to extend.
 
-	Command:
-    Originally, the undo and redo functionality relied on pushing raw
-    `Shape` objects or custom records like `FillChange` and `ShapeRemoved`
-     onto stacks in the `PaintModel`. Each new feature required manual
-     `instanceof` checks and complex reversal logic, making the code
-     hard to extend. So, using a command model, we encapsulate every
-     user action—such as adding, removing, moving, or filling a shape—into
-     its own `Command` object with `apply()` and `unapply()` methods. The
-     `PaintModel` now executes actions through a unified `exec()` method
-     that automatically records them in undo and redo stacks. This removes
-     conditional logic from the model, centralizes state changes into
-     discrete, reversible operations, and allows new features to be added
-     by simply creating a new command class. It also improves adherence
-     to the Open/Closed Principle as the model no longer needs to know
-     how an action is performed, only that it can be done and undone.
-     This makes a model where each action is reusable and consistent.
+Strategy:
+Originally, all mouse-handling logic for drawing shapes
+(circles, rectangles, squiggles, etc.) was crammed inside the
+PaintPanel class under one large switch(mode) statement.
+Each case handled how to:
+	- respond to mouse presses, drags, and releases,
+	- preview the shape being drawn, and
+	- update the model once the shape was finished.
+This made the class long, hard to read, and violated the Open/Closed
+Principle — every time we added a new tool or shape, we had to edit
+the same PaintPanel file and extend the switch block. The code was
+tightly coupled and not modular.
 
+We introduced the Strategy pattern by creating a ToolStrategy
+interface that defines how all drawing tools behave. Each strategy
+implements handlers like onMousePressed, onMouseDragged, and
+onMouseReleased, and can call into the model when a shape is completed.
 
-	Singleton:
-	Composite:
-	Factory:
-	Originally, the shape buttons were hard-wired to modes and PaintPanel
-	logic, so adding a new tool meant editing multiple places (button
-	wiring, mode switch, and event handling). We introduced a Factory
-	model by registering each tool as a ToolDescriptor (name, icon path,
-	ToolStrategy class). When a button is clicked, the panel instantiates
-	the correct strategy via the descriptor (reflection) and sets it on
-	the PaintPanel. This removes shape-specific conditionals from the UI,
-	centralizes tool metadata in one list, and supports adding tools by
-	appending a single descriptor, and better adherence to the Open/Closed
-	Principle. It also keeps MVC cleaner: the chooser creates tools; the
-	panel uses them and the model stays uninvolved.
+Each shape (e.g., Circle, Rectangle, Squiggle) now has its own concrete
+strategy class:
+	CircleStrategy
+	RectangleStrategy
+	SquiggleStrategy
+	PolylineStrategy
+	SquareStrategy
+	TriangleStrategy
+	OvalStrategy
+	SprayStrategy
+	MoverStrategy, CopyStrategy, CutStrategy, PasteStrategy
+	FillBucketStrategy, EraserStrategy
+Each of these classes encapsulates:
+	- how that tool responds to mouse events, and
+	- how it draws its live preview while being created (if needed).
 
-	Builder:
-	Observer/Observable:
-    Originally, the `PaintModel` class extended Java’s built-in `Observable`
-    and relied on the deprecated `notifyObservers()` and `setChanged()`
-    methods to update the view. This approach made the model tightly coupled
-    to Java’s outdated observer implementation and less flexible for expansion.
-    We refactored it using a custom **Observer design pattern**, introducing
-    a simple `PaintModelListener` interface with a single `modelChanged()`
-    method. The `PaintModel` now maintains a list of listeners and notifies
-    them directly whenever its internal state changes (such as when a shape
-    is added or cleared). The `PaintPanel` implements this listener and
-    updates its canvas whenever the model changes. This refactor made the
-    communication between model and view explicit, modular, and easier to
-    maintain. The model now focuses purely on data management, while the
-    panel handles rendering, resulting in a cleaner MVC-aligned architecture.
+For example, CircleStrategy handles calculating the radius while
+dragging, while RectangleStrategy tracks the opposite corner of the
+rectangle. The PaintPanel no longer contains any shape-specific logic;
+instead, it delegates all event handling to the current ToolStrategy.
+This improves readability, makes PaintPanel much smaller, and allows
+new tools to be added by simply introducing a new strategy class
+without touching existing ones.
 
-    Visitor:
-    Originally, each shape class (e.g., Circle, Rectangle, Oval, Squiggle,
-    etc.) contained its own draw(GraphicsContext g) method, directly
-    handling how it was rendered on the canvas. This approach tightly
-    coupled the shape data to JavaFX’s drawing API, making the model
-    dependent on the view layer and harder to extend or reuse. We
-    refactored the rendering process using the Visitor design pattern,
-    introducing a centralized RenderVisitor class that knows how to draw
-    every shape through visit() methods. Each shape now simply implements
-    accept(ShapeVisitor visitor), delegating rendering to the visitor
-    instead of doing it internally. This change removed all JavaFX
-    dependencies from the shape classes, ensuring they focus purely
-    on the model aspect while the visitor handles view. The result
-    is a much cleaner MVC separation: the model remains framework-independent,
-    the RenderVisitor contains all drawing logic, and adding new shape
-    types requires only extending the visitor—not modifying existing shapes.
+Command:
+Originally, undo and redo functionality would have relied on pushing
+raw Shape objects or ad-hoc records like FillChange or ShapeRemoved
+onto stacks in the PaintModel. Each new feature would have required
+manual instanceof checks and complex reversal logic, making the code
+hard to extend and error-prone.
 
-	... (any others you find useful) ...
+We implemented a Command pattern instead. Every user action that
+changes the model is encapsulated in a Command object with:
+	void apply();
+	void unapply();
+Examples include:
+	AddShapeCommand
+	RemoveShapeCommand
+	MoveShapeCommand
+	FillCommand
+	BatchAddCommand (for random art / scenery)
+	ChangeBackgroundCommand
+	ClearAllShapesCommand
 
-OTHER ARCHITECTURE DISCUSSIONS
+The PaintModel exposes a single exec(Command c) method. This:
+	- calls c.apply(),
+	- pushes the command onto the undo stack, and
+	- clears the redo stack.
+The undo() and redo() methods then simply pop a command and call
+unapply() or apply() respectively.
+
+This removes conditional logic from the model, centralizes state
+changes into discrete, reversible operations, and allows new features
+to be added by creating new command classes. It adheres to the
+Open/Closed Principle, because the model doesn’t need to know how an
+action is performed, only that it can be done and undone. It also
+makes complex actions reusable and consistent.
+
+Composite:
+Some user operations logically consist of several smaller commands.
+For example:
+	- loading a scenery (which adds many shapes at once),
+	- generating a batch of random shapes with RandomArtGenerator,
+	- performing a compound edit that moves and recolors multiple shapes.
+We introduced a CompositeCommand that implements Command and owns a
+list of child commands. apply() iterates over children in order; unapply()
+iterates backward to correctly undo.
+
+This allows us to treat a group of actions as one “atomic” command for
+the user’s perspective: pressing undo after generating 50 random shapes
+will remove all of them in one step instead of requiring 50 undos.
+It also keeps individual command classes simple and composable.
+
+Factory:
+Originally, the shape buttons were hard-wired to modes and PaintPanel
+logic, so adding a new tool meant editing multiple places (button
+wiring, mode switch, and event handling).
+
+We introduced a factory-style model by registering each tool as a
+ToolDescriptor:
+	(name, icon path, ToolStrategy class).
+The ShapeChooserPanel holds a List<ToolDescriptor> and, for each
+descriptor, creates a Button with the corresponding icon. When a
+button is clicked, the panel uses the descriptor to instantiate the
+appropriate ToolStrategy (via reflection) and sets it as the current tool
+on the PaintPanel.
+
+This achieves several things:
+	- removes shape-specific conditionals from the UI code,
+	- centralizes tool metadata (name/icon/implementation) in one list,
+	- allows adding a new tool by appending a single descriptor,
+	- keeps MVC cleaner: the chooser creates tools, the panel uses them,
+	  and the model remains uninvolved.
+
+We also use a factory-like approach for scenery via SceneryLibrary:
+each static method creates a full List<Shape> for a given scene.
+The model can then add that whole scene through a BatchAddCommand,
+decoupling “how to build a scene” from “how to store shapes.”
+
+Observer:
+Originally, the PaintModel class extended Java’s built-in Observable
+and relied on the deprecated notifyObservers() and setChanged()
+methods to update the view. This approach made the model less flexible
+for expansion.
+
+We refactored it using a custom Observer design pattern, introducing
+a simple PaintModelListener interface with a single modelChanged()
+method. The PaintModel now maintains a list of listeners and notifies
+them directly whenever its internal state changes (such as when a shape
+is added, removed, moved, filled, or when the stroke preview changes).
+
+The PaintPanel (and potentially other components) implements this
+listener and updates its canvas whenever the model changes. This
+refactor made the communication between model and view explicit,
+modular, and easier to maintain. The model now focuses purely on
+data management, while the panel handles rendering, resulting in a
+cleaner MVC-aligned architecture.
+
+Visitor:
+Originally, each shape class (e.g., Circle, Rectangle, Oval, Squiggle)
+could easily drift toward including its own draw(GraphicsContext g)
+method, directly handling how it is rendered on the canvas. This would
+tightly couple shape data to JavaFX’s drawing API, making the model
+dependent on the view layer and harder to extend or reuse.
+
+We refactored the rendering process using the Visitor design pattern,
+introducing a centralized RenderVisitor class that knows how to draw
+every shape through visit() methods. Each shape now simply implements
+accept(ShapeVisitor visitor), delegating rendering to the visitor
+instead of doing it internally.
+
+This change removes JavaFX dependencies from the shape classes,
+ensuring they focus purely on geometry and style data while the
+RenderVisitor handles all drawing. The result is a much cleaner MVC
+separation:
+	- the model remains framework-independent,
+	- RenderVisitor contains all drawing logic,
+	- adding new shape types requires only extending the visitor and
+	  adding a visit() overload, not modifying existing shapes.
+
+Other patterns (Singleton, Builder)
+We deliberately did not introduce Singletons or Builders in this
+project. Most shared objects (like PaintModel and View) are passed
+around explicitly or constructed in main, which keeps dependencies
+visible and avoids global state. Similarly, the combination of
+factory-style helpers (ToolDescriptor, SceneryLibrary,
+RandomArtGenerator) and simple constructors for shapes made a full
+Builder pattern unnecessary.
+---------------------------------------------------------------------------
+EXTENSIBILITY
+
+Separation of concerns and testability
+By keeping the model pure (no JavaFX classes) and pushing rendering
+into RenderVisitor, most of PaintModel’s logic could, in principle,
+be tested without a GUI. Commands are also easy to test in isolation:
+apply() must make a change and unapply() must revert it. This design
+helps catch regressions around undo/redo and complex operations like
+batch adds or fills.
+
+Extensibility
+The combination of Strategy + Command + Factory makes the system
+easy to extend:
+- To add a new drawing tool, we add:
+	(1) a new Shape (if needed),
+	(2) a ToolStrategy implementation, and
+	(3) a ToolDescriptor entry.
+Existing classes remain unchanged.
+- To add a new operation (like “lock shape” or “group shapes”), we
+	can introduce a new Command and, if needed, a corresponding tool
+	strategy, without touching PaintModel’s internal undo/redo logic.
+- To add a new scenery or random art mode, we can add another
+	factory method and/or adjust RandomArtGenerator, while reusing
+	BatchAddCommand.
+
+Performance and rendering
+The model stores shapes in a simple List<Shape>. On repaint,
+PaintPanel clears the canvas, then iterates through the list and
+calls accept(visitor) on each shape. For the scale of this assignment
+this is more than efficient enough, and it keeps the drawing order
+explicit (later shapes appear on top). The eraser is implemented as a
+special kind of squiggle painted with the background color, which
+allows it to be treated like any other shape and fully integrated into
+undo/redo.
+
+Stroke and fill abstractions
+Interfaces like Colorable, Fillable, Strokeable, and Hittable allow
+us to give shapes capabilities only where they make sense. For example,
+non-filled shapes don’t have to implement Fillable. The fill bucket and
+selection tools can then operate generically on “anything that is
+Fillable” or “anything that is Hittable,” which keeps the code flexible
+and avoids long instanceof chains in higher-level logic.
+
+Overall, the final architecture trades a bit of upfront structure
+(interfaces, strategies, visitors, and commands) for a much simpler
+story: new shapes, tools, and operations plug into the existing
+framework instead of forcing large switch statements and tightly
+coupled code.
