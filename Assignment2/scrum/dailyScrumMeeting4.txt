@@ -145,15 +145,15 @@ Nov 11,2025
 Nov 12,2025
 	What I did yesterday: Implemented Spray can tool Us4.005.
 	What I will do today: Helped refactor code to remove redundancies.
-	Obstacles I face: n/a
+	Obstacles I face: n/a.
 
 Nov 13,2025
 	What I did yesterday: Helped refactor code to remove redundancies.
-	What I will do today: n/a
-	Obstacles I face: n/a
+	What I will do today: n/a.
+	Obstacles I face: n/a.
 
 Nov 14,2025
-	What I did yesterday:
-	What I will do today:
-	Obstacles I face:
+	What I did yesterday: n/a.
+	What I will do today: project submitted!
+	Obstacles I face: n/a.
 
