@@ -143,11 +143,11 @@ Nov 11,2025
 
 Nov 12,2025
 	What I did yesterday: completed sprint 4 user stories + update spring backlog
-	What I will do today:
-	Obstacles I face:
+	What I will do today: update product backlog
+	Obstacles I face: n/a
 
 Nov 13,2025
-	What I did yesterday:
+	What I did yesterday: updated product backlog
 	What I will do today:
 	Obstacles I face:
 
