@@ -178,10 +178,7 @@ Description:
     restoring the default white background so users can begin a new drawing
     without manually undoing multiple actions. When clicked, the button triggers
     a CompositeCommand that removes all existing shapes from the model and
-    reinitializes the background color to white. The previous canvas is saved as
-    an undoable action, allowing the user to restore their work if “New” was
-    clicked accidentally. This creates a clean and intuitive workflow for
-    starting fresh projects or experimenting freely.
+    reinitializes the background color to white.
 
 Reference:
     US4.008
