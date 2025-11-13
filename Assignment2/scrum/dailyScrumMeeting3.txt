@@ -138,21 +138,21 @@ Nov 10,2025
 
 Nov 11,2025
 	What I did yesterday: sprint + product backlog cleanup for all sprints.
-	What I will do today:
-	Obstacles I face:
+	What I will do today: start resolving all warnings on the code.
+	Obstacles I face: making helpers for duplicated code fragments.
 
 Nov 12,2025
-	What I did yesterday:
-	What I will do today:
-	Obstacles I face:
+	What I did yesterday: start resolving all warnings on the code.
+	What I will do today: finish architecture discussion and resolving all warnings.
+	Obstacles I face: n/a.
 
 Nov 13,2025
-	What I did yesterday:
-	What I will do today:
-	Obstacles I face:
+	What I did yesterday: finish architecture discussion and resolving all warnings.
+	What I will do today: updated extra features + backlogs + scrum cleanup.
+	Obstacles I face: n/a.
 
 Nov 14,2025
-	What I did yesterday:
-	What I will do today:
-	Obstacles I face:
+	What I did yesterday: updated extra features + backlogs + scrum cleanup.
+	What I will do today: project submitted!
+	Obstacles I face: n/a.
 

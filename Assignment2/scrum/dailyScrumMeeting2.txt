@@ -132,22 +132,22 @@ Nov 9,2025
 	Obstacles I face: n/a.
 
 Nov 10,2025
-	What I did yesterday: Completed BUG4.001
-	What I will do today: Start and finish BUG4.002
-	Obstacles I face: figuring out how to undo/redo moved shape by shifting them to prev/next position
+	What I did yesterday: Completed BUG4.001.
+	What I will do today: Start and finish BUG4.002.
+	Obstacles I face: figuring out how to undo/redo moved shape by shifting them to prev/next position.
 
 Nov 11,2025
-	What I did yesterday: Started BUG4.002
-	What I will do today: updated + completed BUG4.002
-	Obstacles I face: making sure polyline and squiggle is hittable even if it doesn't hit the line exactly
+	What I did yesterday: Started BUG4.002.
+	What I will do today: updated + completed BUG4.002.
+	Obstacles I face: making sure polyline and squiggle is hittable even if it doesn't hit the line exactly.
 
 Nov 12,2025
-	What I did yesterday: completed sprint 4 user stories + update spring backlog
-	What I will do today: update product backlog
-	Obstacles I face: n/a
+	What I did yesterday: completed sprint 4 user stories + update spring backlog.
+	What I will do today: update product backlog.
+	Obstacles I face: n/a.
 
 Nov 13,2025
-	What I did yesterday: updated product backlog
+	What I did yesterday: updated product backlog.
 	What I will do today:
 	Obstacles I face:
 

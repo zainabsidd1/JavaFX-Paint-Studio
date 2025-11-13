@@ -28,16 +28,16 @@ ISSUE    : The selection, copy, and movement tools currently only support
 TYPE     : BUG BUG4.003 : kaurjap9 :  Complete
 NAME     : Remove warnings
 PRIORITY : 2
-ESTIMATE : 4 hours     ACTUAL :
+ESTIMATE : 4 hours     ACTUAL : 2 hours
 ISSUE    : The current files have various unused imports, duplicate lines
            of code and formatting errors. The files should be clean with
            no or minimal warnings for perfectly structured code.
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
-TYPE     : BUG BUG4.004 : kaurjap9 :  NotStarted
+TYPE     : BUG BUG4.004 : kaurjap9 :  Complete
 NAME     : Architecture Discussion
 PRIORITY : 2
-ESTIMATE : 4 hours     ACTUAL :
+ESTIMATE : 4 hours     ACTUAL : 2 hours
 ISSUE    : The current architecture model only mentions the high level MVC
            design pattern used, does not mention the connection between
            panels and does not mention all design patterns used. The panel
@@ -45,10 +45,10 @@ ISSUE    : The current architecture model only mentions the high level MVC
            used.
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
-TYPE     : BUG BUG4.005 : tatisoha :  NotStarted
+TYPE     : BUG BUG4.005 : tatisoha :  Complete
 NAME     : Eraser shouldn't be able to be moved
 PRIORITY : 2
-ESTIMATE : 30 minutes     ACTUAL :
+ESTIMATE : 1 hour      ACTUAL : 1 hour
 ISSUE    : The eraser leaves a movable shape that can be dragged, distorting
             the canvas. It should erase permanently without creating any
             selectable or movable object.
@@ -101,7 +101,7 @@ EXAMPLE:
     "Selected Color: Blue"
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
-TYPE     : USER STORY US4.005 : tatisoha : Completed
+TYPE     : USER STORY US4.005 : tatisoha : Complete
 NAME     : Spray Can Tool
 PRIORITY : 3
 ESTIMATE : 2 hours     ACTUAL : 1 day

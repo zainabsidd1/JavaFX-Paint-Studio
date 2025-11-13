@@ -15,27 +15,6 @@
 #     NotStarted,InProgress, Incomplete,Complete
 # as appropriate.
 
---------------------------------------------------------------------------
-TYPE     : BUG BUG4.003 : kaurjap9 :  NotStarted
-NAME     : Remove warnings
-PRIORITY : 2
-ESTIMATE : 4 hours     ACTUAL :
-ISSUE    : The current files have various unused imports, duplicate lines
-           of code and formatting errors. The files should be clean with
-           no or minimal warnings for perfectly structured code.
---------------------------------------------------------------------------
---------------------------------------------------------------------------
-TYPE     : BUG BUG4.004 : kaurjap9 :  NotStarted
-NAME     : Architecture Discussion
-PRIORITY : 2
-ESTIMATE : 4 hours     ACTUAL :
-ISSUE    : The current architecture model only mentions the high level MVC
-           design pattern used, does not mention the connection between
-           panels and does not mention all design patterns used. The panel
-           should be updated so it mentions all patterns and associations
-           used.
---------------------------------------------------------------------------
-
 # COMPLETED USER STORIES/BUGS BELOW ###########################################
 --------------------------------------------------------------------------
 TYPE     : USER STORY US1.001 : rosenbl6 : Complete
@@ -332,7 +311,8 @@ NAME     : Stroke width preview indicator
 PRIORITY : 2
 ESTIMATE : 1 hour     ACTUAL : 1 hour
 AS A     : user
-I WANT   : To see a temporary circle preview showing my selected stroke width
+I WANT   : To see a temporary circle preview showing my selected stroke
+           width
 SO THAT  : I can visualize how thick the next shape’s outline will be
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
@@ -341,16 +321,20 @@ NAME     : Accessibility Color Description Label
 PRIORITY : 3
 ESTIMATE : 3 hours     ACTUAL : 2 hours
 AS A     : visually-impaired user
-I WANT   : The application to display a text label describing the current color selected (limited to the
-            12 basic colors in the main palette).
-SO THAT  : I can understand which color is being used without relying on color perception.
+I WANT   : The application to display a text label describing the current color
+           selected (limited to the
+           12 basic colors in the main palette).
+SO THAT  : I can understand which color is being used without relying on color
+           perception.
 
 EXAMPLE:
-  - selecting the color red with hex value #FF0000 → label shows "Selected Color: Red"
-  - picking a custom color close to blue → label shows "Selected Color: Blue"
+  - selecting the color red with hex value #FF0000 → label shows
+    "Selected Color: Red"
+  - picking a custom color close to blue → label shows
+    "Selected Color: Blue"
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
-TYPE     : USER STORY US4.005 : tatisoha : Completed
+TYPE     : USER STORY US4.005 : tatisoha : Complete
 NAME     : Spray Can Tool
 PRIORITY : 3
 ESTIMATE : 2 hours     ACTUAL : 1 day
@@ -370,7 +354,8 @@ I WANT   : An AI paint feature that randomly generates shapes of different
            A seed command that lets me create that stores the location and
            type of shapes and lets me recreate it when the same number is
            entered
-SO THAT  : I can explore creative, randomized art compositions automatically
+SO THAT  : I can explore creative, randomized art compositions
+           automatically
 ---------------------------------------------------------------------------
 --------------------------------------------------------------------------
 TYPE     : USER STORY US4.007 : kaurjap9 : Complete
@@ -466,6 +451,35 @@ ESTIMATE : 2 hours     ACTUAL : 3
 ISSUE    : The selection, copy, and movement tools currently only support
            basic shapes. Squiggle and Polyline lack proper bounding box or
            reference point handling, causing tool failures.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : BUG BUG4.003 : kaurjap9 :  Complete
+NAME     : Remove warnings
+PRIORITY : 2
+ESTIMATE : 4 hours     ACTUAL : 2 hours
+ISSUE    : The current files have various unused imports, duplicate lines
+           of code and formatting errors. The files should be clean with
+           no or minimal warnings for perfectly structured code.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : BUG BUG4.004 : kaurjap9 :  Complete
+NAME     : Architecture Discussion
+PRIORITY : 2
+ESTIMATE : 4 hours     ACTUAL : 2 hours
+ISSUE    : The current architecture model only mentions the high level MVC
+           design pattern used, does not mention the connection between
+           panels and does not mention all design patterns used. The panel
+           should be updated so it mentions all patterns and associations
+           used.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : BUG BUG4.005 : tatisoha :  Complete
+NAME     : Eraser shouldn't be able to be moved
+PRIORITY : 2
+ESTIMATE : 1 hour      ACTUAL : 1 hour
+ISSUE    : The eraser leaves a movable shape that can be dragged, distorting
+            the canvas. It should erase permanently without creating any
+            selectable or movable object.
 --------------------------------------------------------------------------
 # OMITTED USER STORIES/BUGS BELOW   ###########################################
 

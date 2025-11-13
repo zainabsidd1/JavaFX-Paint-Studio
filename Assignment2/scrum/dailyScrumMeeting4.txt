@@ -130,17 +130,17 @@ Nov 8,2025
 Nov 9,2025
 	What I did yesterday: Created and added information of extraFeatures.txt, completed US4.006/US4.008 pull requests, and added Toronto Skyline to Scenery Library.
 	What I will do today: Started working on US4.005 - the spray can tool.
-	Obstacles I face: n/a
+	Obstacles I face: n/a.
 
 Nov 10,2025
 	What I did yesterday: Started working on US4.005 - the spray can tool.
-	What I will do today: Added spray class and spray strategy and implemented a fe methods.
-	Obstacles I face: n/a
+	What I will do today: Added spray class and spray strategy and implemented a few methods.
+	Obstacles I face: n/a.
 
 Nov 11,2025
 	What I did yesterday:Added spray class and spray strategy and implemented a fe methods.
 	What I will do today:Implemented Spray can tool US4.005.
-	Obstacles I face: n/a
+	Obstacles I face: n/a.
 
 Nov 12,2025
 	What I did yesterday:

@@ -112,17 +112,6 @@ Reference:
 	US3.011, BUG4.002
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
-FeatureName: AI Random Shape Generator
-
-Description:
-	Implements an AI feature that randomly generates shapes with varying types,
-	colors, sizes, and fill styles for automatic creative compositions.
-
-
-Reference:
-	US4.006
---------------------------------------------------------------------------------
---------------------------------------------------------------------------------
 FeatureName: Accessibility Color Description Label
 
 Description:
@@ -133,5 +122,68 @@ Description:
 
 Reference:
     US4.004
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+FeatureName: Spray Can Tool
+
+Description:
+    The spray can tool simulates aerosol-style painting by scattering many small
+    dots of the current color within a circular radius around the cursor. As the
+    user drags the mouse, the tool continuously generates randomized points,
+    creating a soft, diffused spray-paint effect similar to digital art software.
+    The density, size, and distribution of spray particles reflect the current
+    stroke width setting, allowing for fine misting or heavier spray patterns.
+    All dots created during a spray action are stored as a single SprayCan shape
+    to support consistent undo/redo and efficient rendering.
+
+Reference:
+    US4.005
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+FeatureName: AI Random Shape Generator
+
+Description:
+	Implements an AI feature that randomly generates shapes with varying types,
+	colors, sizes, and fill styles for automatic creative compositions.
+	The seed feature allows the user to keep a record of the previous randomly
+	generated shape based on the number entered and when the number is re-entered
+	those same shapes are generated at the same position in the same size
+	with the users chosen colours, outlines, etc.
+
+Reference:
+	US4.006
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+FeatureName: Random Scenery Generator
+
+Description:
+    The scenery feature allows users to instantly generate a prebuilt, themed
+    background on the canvas. A library of hardcoded sceneries—such as beaches,
+    cities, gardens, etc is stored in the SceneryLibrary. When the user selects a
+    scenery option, the system loads the corresponding list of Shapes and adds
+    them to the model using a BatchAddCommand. This means the entire scenery counts
+    as one undoable action, and all shapes are drawn in the correct order to form
+    a cohesive scene. The feature provides an easy starting point for creative
+    drawing, allowing users to sketch on top of a complete background without
+    constructing it manually.
+
+Reference:
+    US4.007
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+FeatureName: New Function (Clear Canvas)
+
+Description:
+    The “New” feature resets the canvas instantly, clearing all shapes and
+    restoring the default white background so users can begin a new drawing
+    without manually undoing multiple actions. When clicked, the button triggers
+    a CompositeCommand that removes all existing shapes from the model and
+    reinitializes the background color to white. The previous canvas is saved as
+    an undoable action, allowing the user to restore their work if “New” was
+    clicked accidentally. This creates a clean and intuitive workflow for
+    starting fresh projects or experimenting freely.
+
+Reference:
+    US4.008
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------

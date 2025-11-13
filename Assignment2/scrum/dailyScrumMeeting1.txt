@@ -134,17 +134,17 @@ Nov 9,2025
 Nov 10,2025
 	What I did yesterday: Finished the accessibility feature (US4.004).
 	What I will do today: Look over code architecture.
-	Obstacles I face: n/a
+	Obstacles I face: n/a.
 
 Nov 11,2025
-	What I did yesterday: Looked over code architecture
-	What I will do today: Accept pull request for the spray can implementation (US4.005)
-	Obstacles I face: Resolving merge conflicts
+	What I did yesterday: Looked over code architecture.
+	What I will do today: Accept pull request for the spray can implementation (US4.005).
+	Obstacles I face: Resolving merge conflicts.
 
 Nov 12,2025
-	What I did yesterday: Accepted pull requests for spray can implementation
-	What I will do today: Accept pull request for architecture bug (BUG4.004)
-	Obstacles I face: n/a
+	What I did yesterday: Accepted pull requests for spray can implementation.
+	What I will do today: Accept pull request for architecture bug (BUG4.004).
+	Obstacles I face: n/a.
 
 Nov 13,2025
 	What I did yesterday:
