@@ -1,0 +1,127 @@
+--------------------------------------------------------------------
+ kaurjap9 
+--------------------------------------------------------------------
+CONTRIBUTION TO sprint1 
+TYPE     : USER STORY US1.003 : kaurjap9 : Complete
+TYPE     : USER STORY US1.004 : kaurjap9 : Complete
+CONTRIBUTION TO sprint2 
+TYPE     : BUG BUG2.003 : kaurjap9 : Complete
+TYPE     : USER STORY US2.008 : kaurjap9 : Complete
+CONTRIBUTION TO sprint3 
+TYPE     : BUG BUG3.004 : kaurjap9 : Complete
+TYPE     : USER STORY US3.004 : kaurjap9 : Complete
+TYPE     : USER STORY US3.005 : kaurjap9 : Complete
+CONTRIBUTION TO sprint4 
+TYPE     : BUG BUG4.003 : kaurjap9 :  Complete
+TYPE     : BUG BUG4.004 : kaurjap9 :  Complete
+TYPE     : USER STORY US4.006 : kaurjap9 : Complete
+TYPE     : USER STORY US4.007 : kaurjap9 : Complete
+TYPE     : USER STORY US4.008 : kaurjap9 : Complete
+SPRINT_CONTRIBUTION:kaurjap9:(2, 2, 3, 5)
+CONTRIBUTION TO project 
+TYPE     : USER STORY US1.003 : kaurjap9 : Complete
+TYPE     : USER STORY US1.004 : kaurjap9 : Complete
+TYPE     : USER STORY US2.008 : kaurjap9 : Complete
+TYPE     : USER STORY US3.004 : kaurjap9 : Complete
+TYPE     : USER STORY US3.005 : kaurjap9 : Complete
+TYPE     : USER STORY US4.006 : kaurjap9 : Complete
+TYPE     : USER STORY US4.007 : kaurjap9 : Complete
+TYPE     : USER STORY US4.008 : kaurjap9 : Complete
+TYPE     : BUG BUG2.003 : kaurjap9 : Complete
+TYPE     : BUG BUG3.004 : kaurjap9 : Complete
+TYPE     : BUG BUG4.003 : kaurjap9 :  Complete
+TYPE     : BUG BUG4.004 : kaurjap9 :  Complete
+PRODUCT_CONTRIBUTION:kaurjap9:12
+--------------------------------------------------------------------
+ royanus1 
+--------------------------------------------------------------------
+CONTRIBUTION TO sprint1 
+TYPE     : BUG BUG1.006 : royanus1 : Complete
+TYPE     : USER STORY US1.002 : royanus1 : Complete
+CONTRIBUTION TO sprint2 
+TYPE     : USER STORY US2.005 : royanus1 : Complete
+TYPE     : USER STORY US2.006 : royanus1 : Complete
+CONTRIBUTION TO sprint3 
+TYPE     : USER STORY US3.008 : royanus1 : Complete
+TYPE     : USER STORY US3.009 : royanus1 : Complete
+TYPE     : USER STORY US3.010 : royanus1 : Complete
+CONTRIBUTION TO sprint4 
+TYPE     : BUG BUG4.001 : royanus1 :  Complete
+TYPE     : BUG BUG4.002 : royanus1  : Complete
+SPRINT_CONTRIBUTION:royanus1:(2, 2, 3, 2)
+CONTRIBUTION TO project 
+TYPE     : USER STORY US1.002 : royanus1 : Complete
+TYPE     : USER STORY US2.005 : royanus1 : Complete
+TYPE     : USER STORY US2.006 : royanus1 : Complete
+TYPE     : USER STORY US3.008 : royanus1 : Complete
+TYPE     : USER STORY US3.009 : royanus1 : Complete
+TYPE     : USER STORY US3.010 : royanus1 : Complete
+TYPE     : BUG BUG1.006 : royanus1 : Complete
+TYPE     : BUG BUG4.001 : royanus1 :  Complete
+TYPE     : BUG BUG4.002 : royanus1  : Complete
+PRODUCT_CONTRIBUTION:royanus1:9
+--------------------------------------------------------------------
+ sidd1378 
+--------------------------------------------------------------------
+CONTRIBUTION TO sprint1 
+TYPE     : BUG BUG1.001 : sidd1378 : Complete
+TYPE     : BUG BUG1.002 : sidd1378 : Complete
+CONTRIBUTION TO sprint2 
+TYPE     : USER STORY US2.001 : sidd1378 : Complete
+TYPE     : USER STORY US2.002 : sidd1378 : Complete
+CONTRIBUTION TO sprint3 
+TYPE     : USER STORY US3.002 : sidd1378 : Complete
+TYPE     : USER STORY US3.003 : sidd1378 : Complete
+TYPE     : USER STORY US3.006 : sidd1378 : Complete
+CONTRIBUTION TO sprint4 
+TYPE     : USER STORY US4.001 : sidd1378 : Complete
+TYPE     : USER STORY US4.002 : sidd1378:  Complete
+TYPE     : USER STORY US4.004 : sidd1378 : Complete
+SPRINT_CONTRIBUTION:sidd1378:(2, 2, 3, 3)
+CONTRIBUTION TO project 
+TYPE     : USER STORY US2.001 : sidd1378 : Complete
+TYPE     : USER STORY US2.002 : sidd1378 : Complete
+TYPE     : USER STORY US3.002 : sidd1378 : Complete
+TYPE     : USER STORY US3.003 : sidd1378 : Complete
+TYPE     : USER STORY US3.006 : sidd1378 : Complete
+TYPE     : USER STORY US4.001 : sidd1378 : Complete
+TYPE     : USER STORY US4.002 : sidd1378:  Complete
+TYPE     : USER STORY US4.004 : sidd1378 : Complete
+TYPE     : BUG BUG1.001 : sidd1378 : Complete
+TYPE     : BUG BUG1.002 : sidd1378 : Complete
+PRODUCT_CONTRIBUTION:sidd1378:10
+--------------------------------------------------------------------
+ tatisoha 
+--------------------------------------------------------------------
+CONTRIBUTION TO sprint1 
+TYPE     : BUG BUG1.005 : tatisoha : Complete
+CONTRIBUTION TO sprint2 
+TYPE     : USER STORY US2.003 : tatisoha : Complete
+TYPE     : USER STORY US2.004 : tatisoha : Complete
+TYPE     : USER STORY US2.007 : tatisoha : Complete
+CONTRIBUTION TO sprint3 
+TYPE     : USER STORY US3.001 : tatisoha : Complete
+TYPE     : USER STORY US3.007 : tatisoha : Complete
+TYPE     : USER STORY US3.011 : tatisoha : Complete
+CONTRIBUTION TO sprint4 
+TYPE     : BUG BUG4.005 : tatisoha :  Complete
+TYPE     : USER STORY US4.003 : tatisoha : Complete
+TYPE     : USER STORY US4.005 : tatisoha : Complete
+SPRINT_CONTRIBUTION:tatisoha:(1, 3, 3, 3)
+CONTRIBUTION TO project 
+TYPE     : USER STORY US2.003 : tatisoha : Complete
+TYPE     : USER STORY US2.004 : tatisoha : Complete
+TYPE     : USER STORY US2.007 : tatisoha : Complete
+TYPE     : USER STORY US3.001 : tatisoha : Complete
+TYPE     : USER STORY US3.007 : tatisoha : Complete
+TYPE     : USER STORY US3.011 : tatisoha : Complete
+TYPE     : USER STORY US4.003 : tatisoha : Complete
+TYPE     : USER STORY US4.005 : tatisoha : Complete
+TYPE     : BUG BUG1.005 : tatisoha : Complete
+TYPE     : BUG BUG4.005 : tatisoha :  Complete
+PRODUCT_CONTRIBUTION:tatisoha:10
+--------------------------------------------------------------------
+ TOTALS 
+--------------------------------------------------------------------
+TOTAL_SPRINT:(7, 9, 12, 13)
+TOTAL_WORK:41

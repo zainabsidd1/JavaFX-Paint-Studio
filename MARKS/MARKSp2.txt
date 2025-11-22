@@ -1,0 +1,61 @@
+FUNCTIONALITY_START
+Functionality Basics: Tested by running your code.
+	Mark with E for error
+	[0E] ERROR: 
+	
+	[YN] Icons for drawing modes
+		BUG1.001 Icons instead of text for drawing mode selection
+
+	[YN] Very easy to see which drawing mode is selected
+		BUG1.002 Drawing selection mode not indicated
+
+	[YN] Can create multiple, disconnected squiggles 
+		without clicking on the drawing mode again.
+
+		BUG1.005 Squiggle is broken
+		Fix was to create multiple squiggle objects
+
+	[YN] Draw a circle by clicking on center and dragging radius.
+		BUG1.006 Circle drawing is broken
+		
+	[YN] Feedback as drag on radius happen
+		US1.002 Draw Circle Feedback
+		Show drag on circle radius. 
+
+	[YN] Rectangle drawing works, with second corner in any location
+		US1.003 Draw Rectangle
+
+	[YN] Feedback as dragging second point
+		US1.004 Draw Rectangle Feedback
+
+	[YN] Square 
+	[YN] Triangle
+	[YN] Oval
+
+FUNCTIONALITY_END
+FUNCTIONALITY: /10
+
+
+EXTRAFEATURES_START
+10% of the mark will be competitive, for the collection of interesting features your group comes up with. 
+	This will appear in sprints 2,3,4. 
+
+	See: https://docs.google.com/document/d/1Nffz_hrN4fhQdobX7iOFBK0gVWbhKdwFUOtqgywxi48/edit?tab=t.0
+
+	1) repo_a2_XXX/Assignment2/scrum/extraFeatures.txt
+		Categorize these and check each for whether they have
+		effectively implemented the feature.
+
+		MARKER: Look up in shared google doc and write down its difficulty and name below.
+
+		Mark with F for feature error
+		[0F] ERROR: 
+
+		Feature: DIFFICULTY:[123] OUR_NAME
+		FeatureName: THEIR_NAME
+
+		TOTAL FEATURE SCORE: [] = sum(difficulty)
+		TOTAL FEATURE ERRORS: [] = sum(errors)
+		FEATURE SCORE: [] = TOTAL FEATURE SCORE - TOTAL FEATURE ERRORS
+EXTRAFEATURES_END
+EXTRAFEATURES: 000

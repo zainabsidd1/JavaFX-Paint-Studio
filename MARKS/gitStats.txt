@@ -1,0 +1,2500 @@
+--------------------------------------------------------------------
+ git branches 
+--------------------------------------------------------------------
+* MARKS
+  master
+  remotes/origin/BUG1.001
+  remotes/origin/BUG1.002
+  remotes/origin/BUG1.005
+  remotes/origin/BUG1.006
+  remotes/origin/BUG2.003
+  remotes/origin/BUG3.004
+  remotes/origin/BUG4.001
+  remotes/origin/BUG4.002
+  remotes/origin/BUG4.003
+  remotes/origin/BUG4.004
+  remotes/origin/BUG4.005
+  remotes/origin/HEAD -> origin/master
+  remotes/origin/MARKS
+  remotes/origin/US1.002
+  remotes/origin/US1.003
+  remotes/origin/US1.004
+  remotes/origin/US2.001
+  remotes/origin/US2.002
+  remotes/origin/US2.003
+  remotes/origin/US2.004
+  remotes/origin/US2.005
+  remotes/origin/US2.006
+  remotes/origin/US2.007
+  remotes/origin/US2.008
+  remotes/origin/US3.001
+  remotes/origin/US3.002
+  remotes/origin/US3.003
+  remotes/origin/US3.004
+  remotes/origin/US3.005
+  remotes/origin/US3.006
+  remotes/origin/US3.007
+  remotes/origin/US3.008
+  remotes/origin/US3.009
+  remotes/origin/US3.010
+  remotes/origin/US3.011
+  remotes/origin/US4.001
+  remotes/origin/US4.002
+  remotes/origin/US4.003
+  remotes/origin/US4.004
+  remotes/origin/US4.005
+  remotes/origin/US4.006
+  remotes/origin/US4.007
+  remotes/origin/US4.008
+  remotes/origin/master
+--------------------------------------------------------------------
+ git log --graph 
+--------------------------------------------------------------------
+* commit 157698620299d9ef9c66af2ef36bbb53d4c940d4
+| Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+| Date:   Thu Nov 13 13:41:03 2025 -0500
+| 
+|     cleanup
+| 
+* commit c98a0dd90e0b2d2e3eb919e3040554a6c5f9b367
+| Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+| Date:   Thu Nov 13 13:38:23 2025 -0500
+| 
+|     scrum cleanup
+| 
+* commit 156d7db57159e103bb9c4a3f852e8055aebbae0e
+| Author: Anushka Roy <anushka.roy@mail.utoronto.ca>
+| Date:   Thu Nov 13 13:33:00 2025 -0500
+| 
+|     daily scrum
+| 
+* commit 25bf9ca9a5851e18a52873f319419db76c8acbe6
+| Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+| Date:   Thu Nov 13 12:34:02 2025 -0500
+| 
+|     scrum cleanup
+|   
+*   commit de9437d78333a4d3bab91eae83df795c84e86ccd
+|\  Merge: 26f7981 cdfc986
+| | Author: sidd1378 <zainabb.siddiqui@mail.utoronto.ca>
+| | Date:   Thu Nov 13 10:40:23 2025 -0500
+| | 
+| |     Merge branch 'master' of https://mcsscm.utm.utoronto.ca:9999/git/207/25f/repo_a2_888
+| | 
+| * commit cdfc986f0ac2e2fd21cf6486f93d8a7d9b1cb8cd
+| | Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+| | Date:   Thu Nov 13 10:37:33 2025 -0500
+| | 
+| |     final code cleanup!
+| | 
+* | commit 26f7981eb994ad6f81924bcaad1ef0d7b43cf1b5
+|/  Author: sidd1378 <zainabb.siddiqui@mail.utoronto.ca>
+|   Date:   Thu Nov 13 10:38:14 2025 -0500
+|   
+|       sidd1378 - daily scrum 13/11/2025
+| 
+* commit efa07d1d44b1accbcc6763bf5167e2f4602cb89e
+| Author: tatisoha <s.tati@mail.utoronto.ca>
+| Date:   Thu Nov 13 10:29:03 2025 -0500
+| 
+|     tatisoha - daily scrum 13/11/2025
+| 
+* commit f3b9076603d81baa2ae70f1d0605c638b8fb2b32
+| Author: tatisoha <s.tati@mail.utoronto.ca>
+| Date:   Wed Nov 12 23:17:34 2025 -0500
+| 
+|     tatisoha - daily scrum 12/11/2025
+| 
+* commit 6fb52dbe23313aaee4f096b3e7adcd76a5e27079
+| Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+| Date:   Wed Nov 12 22:48:55 2025 -0500
+| 
+|     final code cleanup!
+| 
+* commit 9dadc91ec25d3542db3283d7e88eefd6d2728fd7
+| Author: sidd1378 <zainabb.siddiqui@mail.utoronto.ca>
+| Date:   Wed Nov 12 22:34:01 2025 -0500
+| 
+|     sidd1378 - daily scrum 12/11/2025
+| 
+* commit 923aa78599d48177db80b6dd2494a11f11bdaf99
+| Author: sidd1378 <zainabb.siddiqui@mail.utoronto.ca>
+| Date:   Wed Nov 12 22:32:56 2025 -0500
+| 
+|     sidd1378 - Merged BUG4.004
+|   
+*   commit f6a760c1ef50be0e87d518be808cae41560fb431
+|\  Merge: f33ba3a 077e46e
+| | Author: sidd1378 <zainabb.siddiqui@mail.utoronto.ca>
+| | Date:   Wed Nov 12 22:31:25 2025 -0500
+| | 
+| |     Merge branch 'BUG4.004'
+| | 
+| * commit 077e46eb54082b56779664e28ca4ed79698cbbb1
+| | Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+| | Date:   Wed Nov 12 22:24:43 2025 -0500
+| | 
+| |     BUG4.004 complete.
+| | 
+* | commit f33ba3a5fc0a998ca0ba33850a72bc8407179e15
+|/  Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+|   Date:   Wed Nov 12 22:28:39 2025 -0500
+|   
+|       BUG4.004 pull request
+| 
+* commit 199bbe7d3f7659b4895de7386c991b957e3144bd
+| Author: Anushka Roy <anushka.roy@mail.utoronto.ca>
+| Date:   Wed Nov 12 20:06:42 2025 -0500
+| 
+|     daily scrum
+| 
+* commit ad8acf912b2669facdc17b52924eb97860a2f6d5
+| Author: tatisoha <s.tati@mail.utoronto.ca>
+| Date:   Wed Nov 12 16:50:40 2025 -0500
+| 
+|     Completed pull request.
+|   
+*   commit aa5d3ff8fdb5355916a20e8c1a8c7d8e5c9a8bfa
+|\  Merge: fbd5332 374be94
+| | Author: tatisoha <s.tati@mail.utoronto.ca>
+| | Date:   Wed Nov 12 16:50:08 2025 -0500
+| | 
+| |     Merge branch 'BUG4.003'
+| | 
+| * commit 374be94d291efce820ab7119ba4888b78b8eb3c1
+| | Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+| | Date:   Wed Nov 12 16:44:26 2025 -0500
+| | 
+| |     all warnings resolved
+| | 
+| * commit ef15bb7de291ee2c356d1027f2fdc4eb4ee456c1
+| | Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+| | Date:   Wed Nov 12 16:29:28 2025 -0500
+| | 
+| |     code without warnings
+| | 
+| * commit d12735f6f5e9b523b3d38045e852de08baafbcb1
+| | Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+| | Date:   Wed Nov 12 15:29:23 2025 -0500
+| | 
+| |     pull request BUG4.005
+| | 
+* | commit fbd5332aa820c2c0a5197b7150a5b450e8d27265
+|/  Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+|   Date:   Wed Nov 12 16:46:29 2025 -0500
+|   
+|       BUG4.003 pull request
+| 
+* commit ea209d49f9761877f1710137e15da4ec4e028647
+| Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+| Date:   Wed Nov 12 10:24:53 2025 -0500
+| 
+|     pull request BUG4.005
+| 
+* commit 7c1a5f3d0326380814c6a7843e62fb8a0276fbbc
+| Author: tatisoha <s.tati@mail.utoronto.ca>
+| Date:   Wed Nov 12 09:33:00 2025 -0500
+| 
+|     Added pull request
+| 
+* commit e5a07b456230b203a289e29cf284c5a108f2948c
+| Author: tatisoha <s.tati@mail.utoronto.ca>
+| Date:   Wed Nov 12 09:31:06 2025 -0500
+| 
+|     Implemented eraser to be non-moveable
+| 
+* commit dcdf5ce095144005c918f09df2f2c0459fca7d3c
+| Author: tatisoha <s.tati@mail.utoronto.ca>
+| Date:   Wed Nov 12 09:23:21 2025 -0500
+| 
+|     Added BUS4.005 to many eraser non-moveable.
+|   
+*   commit 021d58aaebc809af6909659dadf9bc8021adc4fe
+|\  Merge: 0baa9d6 467253c
+| | Author: tatisoha <s.tati@mail.utoronto.ca>
+| | Date:   Tue Nov 11 23:32:12 2025 -0500
+| | 
+| |     Merge branch 'master' of https://mcsscm.utm.utoronto.ca:9999/git/207/25f/repo_a2_888
+| | 
+| * commit 467253c9d99e76628fc2ef79905f9b22189b0745
+| | Author: sidd1378 <zainabb.siddiqui@mail.utoronto.ca>
+| | Date:   Tue Nov 11 23:31:05 2025 -0500
+| | 
+| |     sidd1378 - daily scrum 11/11/2025
+| | 
+| * commit e59f3448baf2da4a65106da7a89e30208d2335ed
+| | Author: sidd1378 <zainabb.siddiqui@mail.utoronto.ca>
+| | Date:   Tue Nov 11 23:29:53 2025 -0500
+| | 
+| |     sidd1378 - accepted pull request for US4.005
+| | 
+* | commit 0baa9d6561216a08a842f4d081a9e7dec5f4ddf3
+| | Author: tatisoha <s.tati@mail.utoronto.ca>
+| | Date:   Tue Nov 11 23:31:55 2025 -0500
+| | 
+| |     daily scrum + updated backlogs
+| | 
+* | commit 8b99ddc11ed62102cbc304a48e93a032af33cded
+|\| Merge: 551159f b34061e
+| | Author: tatisoha <s.tati@mail.utoronto.ca>
+| | Date:   Tue Nov 11 23:29:04 2025 -0500
+| | 
+| |     Merge branch 'master' of https://mcsscm.utm.utoronto.ca:9999/git/207/25f/repo_a2_888
+| |   
+| *   commit b34061ea3a81b340a6503c5d10c61f9dee6819b3
+| |\  Merge: 7b212a0 347c77d
+| | | Author: sidd1378 <zainabb.siddiqui@mail.utoronto.ca>
+| | | Date:   Tue Nov 11 23:28:05 2025 -0500
+| | | 
+| | |     Merge branch 'US4.005'
+| | |     
+| | |     # Conflicts:
+| | |     #       Assignment2/scrum/pullRequests.txt
+| | | 
+| | * commit 347c77d909c7f1f91551e6c70723f77aae57ac46
+| | | Author: tatisoha <s.tati@mail.utoronto.ca>
+| | | Date:   Tue Nov 11 23:24:52 2025 -0500
+| | | 
+| | |     minor fix
+| | | 
+| | * commit e885a1e1b3fc0e73a60accd519bde50cef44856f
+| | | Author: tatisoha <s.tati@mail.utoronto.ca>
+| | | Date:   Tue Nov 11 23:15:54 2025 -0500
+| | | 
+| | |     Added pull request
+| | | 
+| | * commit b44de4e53cd91d5328936ef9ee2578a9119b4887
+| | | Author: tatisoha <s.tati@mail.utoronto.ca>
+| | | Date:   Tue Nov 11 23:07:28 2025 -0500
+| | | 
+| | |     Implemented spray strategy and nozzle.
+| | | 
+| | * commit c59bf070f2a292cfbbe9a85d770921623a776d22
+| | | Author: tatisoha <s.tati@mail.utoronto.ca>
+| | | Date:   Mon Nov 10 22:47:35 2025 -0500
+| | | 
+| | |     Added spraycan.java and spraystrategy classes.
+| | | 
+* | | commit 551159f34fcab5d751f806c042eb85746644f8ab
+|/ /  Author: tatisoha <s.tati@mail.utoronto.ca>
+| |   Date:   Tue Nov 11 23:28:56 2025 -0500
+| |   
+| |       tatisoha - Daily scrum 11/11/2025
+| | 
+* | commit 7b212a0190f89dae29a61e718654e62da1b3337e
+| | Author: Anushka Roy <anushka.roy@mail.utoronto.ca>
+| | Date:   Tue Nov 11 20:24:34 2025 -0500
+| | 
+| |     updated sprint and product backlog
+| | 
+* | commit a8b38057a823e8609a8404e7fe45fe413d021061
+| | Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+| | Date:   Tue Nov 11 19:11:43 2025 -0500
+| | 
+| |     pull request BUG4.002
+| |   
+* |   commit ab886ca8625d368391153ff92f82b1465ba564b5
+|\ \  Merge: 5ba7c73 250c74f
+| | | Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+| | | Date:   Tue Nov 11 18:59:21 2025 -0500
+| | | 
+| | |     Merge branch 'BUG4.002'
+| | |   
+| * |   commit 250c74f7544fc0f3e94739c61281c0159bf86a50
+| |\ \  Merge: d19821f d60b20e
+| | | | Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+| | | | Date:   Tue Nov 11 18:57:01 2025 -0500
+| | | | 
+| | | |     Merge branch 'BUG4.001' into BUG4.002
+| | | |     
+| | | |     # Conflicts:
+| | | |     #       Assignment2/src/main/java/ca/utoronto/utm/assignment2/paint/CopyStrategy.java
+| | | | 
+| * | | commit d19821fefbb40c57132ff3c482473c4d564902ba
+| | | | Author: Anushka Roy <anushka.roy@mail.utoronto.ca>
+| | | | Date:   Tue Nov 11 16:01:23 2025 -0500
+| | | | 
+| | | |     Implement Squiggle copy() - BUG4.002
+| | | | 
+| * | | commit 705d26d47d8201d02f406a4767ae6aa3ee83c607
+| | | | Author: Anushka Roy <anushka.roy@mail.utoronto.ca>
+| | | | Date:   Tue Nov 11 11:46:07 2025 -0500
+| | | | 
+| | | |     BUG4.002 complete
+| | | | 
+| * | | commit e39fd05297157fd7c0ab86605e92f2164aed0e36
+| | | | Author: Anushka Roy <anushka.roy@mail.utoronto.ca>
+| | | | Date:   Tue Nov 11 02:09:25 2025 -0500
+| | | | 
+| | | |     BUG4.002 in progress
+| | | | 
+* | | | commit 5ba7c73f54cf304d8e7bdf23222e8668d04f3172
+| | | | Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+| | | | Date:   Tue Nov 11 15:47:04 2025 -0500
+| | | | 
+| | | |     pull request BUG4.001
+| | | |   
+* | | |   commit 41a35420f15269e0d4da1178f7faf553a3b0b623
+|\ \ \ \  Merge: f665d35 d60b20e
+| | |/ /  Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+| |/| |   Date:   Tue Nov 11 15:41:14 2025 -0500
+| | | |   
+| | | |       Merge branch 'BUG4.001'
+| | | | 
+| * | | commit d60b20e7e80ca7616a633a610e8113da30cda335
+| | | | Author: Anushka Roy <anushka.roy@mail.utoronto.ca>
+| | | | Date:   Tue Nov 11 01:24:24 2025 -0500
+| | | | 
+| | | |     Completed BUG4.001
+| | | | 
+* | | | commit f665d354e77645dcf235c9dc7ec62bfffa815d97
+| | | | Author: Anushka Roy <anushka.roy@mail.utoronto.ca>
+| | | | Date:   Tue Nov 11 15:07:38 2025 -0500
+| | | | 
+| | | |     scrum update
+| | | | 
+* | | | commit 33f7062577b6abd37e093e8eaba34e8ceb90f123
+| | | | Author: sidd1378 <zainabb.siddiqui@mail.utoronto.ca>
+| | | | Date:   Tue Nov 11 12:42:12 2025 -0500
+| | | | 
+| | | |     sidd1378 - daily scrum 10/11/2025
+| | | | 
+* | | | commit a62429e1c45387828010e1ff19b21f0bf580751c
+| |/ /  Author: Anushka Roy <anushka.roy@mail.utoronto.ca>
+|/| |   Date:   Tue Nov 11 11:51:18 2025 -0500
+| | |   
+| | |       BUG4.002 pull request - waiting
+| | | 
+* | | commit 30b9bda6c06e8105c87857d334a5d84e50609fd5
+|/ /  Author: Anushka Roy <anushka.roy@mail.utoronto.ca>
+| |   Date:   Tue Nov 11 01:28:51 2025 -0500
+| |   
+| |       BUG4.001 pull request
+| | 
+* | commit 2131797d5fefb257b3c7fee0a994b7238b0a3947
+|/  Author: tatisoha <s.tati@mail.utoronto.ca>
+|   Date:   Mon Nov 10 22:07:57 2025 -0500
+|   
+|       tatisoha - Daily scrum 10/11/2025
+| 
+* commit 9027f69c01f9c3070b43c23f47914be71a276806
+| Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+| Date:   Mon Nov 10 10:09:51 2025 -0500
+| 
+|     sprint + product backlogs + scrum cleanup
+| 
+* commit 1f13cad323dfdf8a3a32f3e237f6b39f1e6ca1f3
+| Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+| Date:   Sun Nov 9 23:09:34 2025 -0500
+| 
+|     pull request US4.004
+|   
+*   commit 09dd5316b471827ce18aca462b8e731b6c416c46
+|\  Merge: a331e63 ec276ee
+| | Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+| | Date:   Sun Nov 9 23:08:58 2025 -0500
+| | 
+| |     Merge branch 'US4.004'
+| | 
+| * commit ec276ee1c9a69cdf0d897badd2ff0c12efa979d1
+| | Author: sidd1378 <zainabb.siddiqui@mail.utoronto.ca>
+| | Date:   Sun Nov 9 17:45:24 2025 -0500
+| | 
+| |     sidd1378 - minor fix
+| | 
+| * commit 6d5cc7b142ec114163c2d913e6a0db822114e798
+| | Author: sidd1378 <zainabb.siddiqui@mail.utoronto.ca>
+| | Date:   Sun Nov 9 17:35:13 2025 -0500
+| | 
+| |     sidd1378 - added more colors
+| | 
+| * commit dd9751801f1c978d732f06c1b2449736199b8f86
+| | Author: sidd1378 <zainabb.siddiqui@mail.utoronto.ca>
+| | Date:   Sun Nov 9 17:29:27 2025 -0500
+| | 
+| |     sidd1378 - Created Color Descriptions
+| | 
+* | commit a331e63a11a6926029ddd19cc3df5e72f2c526a2
+| | Author: sidd1378 <zainabb.siddiqui@mail.utoronto.ca>
+| | Date:   Sun Nov 9 20:23:36 2025 -0500
+| | 
+| |     sidd1378 - daily scrum 09/11/2025
+| | 
+* | commit 8a21068ae4006aff5ff14bf475c93739efb7465d
+| | Author: sidd1378 <zainabb.siddiqui@mail.utoronto.ca>
+| | Date:   Sun Nov 9 20:22:30 2025 -0500
+| | 
+| |     sidd1378 - updated product backlog
+| |   
+* |   commit 340d6a26e1463f58784987b027ff834c63644d56
+|\ \  Merge: eba0ec2 7c56d58
+| | | Author: tatisoha <s.tati@mail.utoronto.ca>
+| | | Date:   Sun Nov 9 17:08:41 2025 -0500
+| | | 
+| | |     Merge branch 'master' of https://mcsscm.utm.utoronto.ca:9999/git/207/25f/repo_a2_888
+| | | 
+| * | commit 7c56d5802f0d0d97464dff6238feb0a835af4dfe
+| |/  Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+| |   Date:   Sun Nov 9 16:43:50 2025 -0500
+| |   
+| |       minor fix in US4.006
+| | 
+* | commit eba0ec2f4cfb0fae23f6a1d9d069a7922de3139f
+|/  Author: tatisoha <s.tati@mail.utoronto.ca>
+|   Date:   Sun Nov 9 17:08:19 2025 -0500
+|   
+|       Added Toronto Skyline to Scenery Library.
+| 
+* commit 4639bef2c3767e76249bd2af54e82d72520c0bd9
+| Author: tatisoha <s.tati@mail.utoronto.ca>
+| Date:   Sun Nov 9 15:00:33 2025 -0500
+| 
+|      Completed US4.008 pull request.
+|   
+*   commit ee62585c6f47beb96461e849d441201dc2a3ea31
+|\  Merge: ad31ff8 f950f73
+| | Author: tatisoha <s.tati@mail.utoronto.ca>
+| | Date:   Sun Nov 9 14:59:34 2025 -0500
+| | 
+| |     Merge branch 'US4.008'
+| | 
+| * commit f950f732a84f81036b1645f13b21dcd60a770eb5
+| | Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+| | Date:   Sun Nov 9 14:20:28 2025 -0500
+| | 
+| |     US4.008 Complete
+| | 
+* | commit ad31ff895a39398156f61a7c22a7e4851422069e
+| | Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+| | Date:   Sun Nov 9 14:23:39 2025 -0500
+| | 
+| |     backlog updated
+| | 
+* | commit 04afe0ed846ac36195495fa80632e73660f828bb
+|/  Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+|   Date:   Sun Nov 9 14:21:52 2025 -0500
+|   
+|       pull request US4.008
+| 
+* commit bf8701d545488625181a2e3059adbb7b7b32309c
+| Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+| Date:   Sun Nov 9 14:14:21 2025 -0500
+| 
+|     minor fix
+| 
+* commit 67f7b9059e4b15e3b376b0776c5029320782a056
+| Author: sidd1378 <zainabb.siddiqui@mail.utoronto.ca>
+| Date:   Sun Nov 9 13:42:51 2025 -0500
+| 
+|     sidd1378 - accepted pull request for US4.007
+|   
+*   commit 1c7544875f61f867105ba3aba98b8931d9e4455c
+|\  Merge: 4b6408e 2e7337a
+| | Author: sidd1378 <zainabb.siddiqui@mail.utoronto.ca>
+| | Date:   Sun Nov 9 13:40:28 2025 -0500
+| | 
+| |     Merge branch 'US4.007'
+| | 
+| * commit 2e7337a1af6f53b0c7d7975405b808c0c84af8c2
+| | Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+| | Date:   Sun Nov 9 13:14:55 2025 -0500
+| | 
+| |     completed 3 sceneries for US4.007
+| | 
+* | commit 4b6408ec068893826c41cc5cf5c32c80e53f1672
+| | Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+| | Date:   Sun Nov 9 13:39:26 2025 -0500
+| | 
+| |     pull request complete
+| |   
+* |   commit 3115d55a5ea4929a5b4806bfe604348a8af859b1
+|\ \  Merge: 44e83ad bbdb8dc
+| | | Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+| | | Date:   Sun Nov 9 13:36:48 2025 -0500
+| | | 
+| | |     Merge branch 'US4.002'
+| | | 
+| * | commit bbdb8dcadbca83e8f616a41489f08288e92e91cc
+| | | Author: sidd1378 <zainabb.siddiqui@mail.utoronto.ca>
+| | | Date:   Sun Nov 9 13:33:48 2025 -0500
+| | | 
+| | |     sidd1378 - Update: Eraser squiggles change with background color
+| | | 
+| * | commit 13edcba0b436a65e30270b6a0cd8b27dce99086a
+| | | Author: sidd1378 <zainabb.siddiqui@mail.utoronto.ca>
+| | | Date:   Sun Nov 9 12:48:06 2025 -0500
+| | | 
+| | |     sidd1378 - Implemented eraser adapting to background color
+| | | 
+* | | commit 44e83adfb788cb4714e5df1779a72deac3464a33
+| | | Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+| | | Date:   Sun Nov 9 13:30:28 2025 -0500
+| | | 
+| | |     new bugs/us
+| | | 
+* | | commit efbf40ba6ec14b86da4ab2fdeb932420e3864d01
+| | | Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+| | | Date:   Sun Nov 9 13:27:32 2025 -0500
+| | | 
+| | |     new bugs/us
+| | | 
+* | | commit c7cc34395d1f194e93b8285e52602c011f95aec5
+| | | Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+| | | Date:   Sun Nov 9 13:21:49 2025 -0500
+| | | 
+| | |     pull request US4.007
+| | | 
+* | | commit ac4c699f6587c54a3c3348e8c318ff4355c9cce6
+|/ /  Author: sidd1378 <zainabb.siddiqui@mail.utoronto.ca>
+| |   Date:   Sun Nov 9 12:49:01 2025 -0500
+| |   
+| |       sidd1378 - Created pull request for US4.002
+| | 
+* | commit 51e84b3a7859f68b9ac6d2f23a4dd9475e38f967
+| | Author: sidd1378 <zainabb.siddiqui@mail.utoronto.ca>
+| | Date:   Sun Nov 9 12:30:04 2025 -0500
+| | 
+| |     sidd1378 - minor fix
+| | 
+* | commit 1ee67b7fa201c4ac598b6ac6e04f59d9f9eac51c
+| | Author: sidd1378 <zainabb.siddiqui@mail.utoronto.ca>
+| | Date:   Sun Nov 9 12:27:02 2025 -0500
+| | 
+| |     sidd1378 - claimed US4.004
+| | 
+* | commit 3176af2303936784afcd623e13f964d302046d9d
+| | Author: sidd1378 <zainabb.siddiqui@mail.utoronto.ca>
+| | Date:   Sun Nov 9 12:26:13 2025 -0500
+| | 
+| |     sidd1378 - added accessibility feature
+| | 
+* | commit 29905871a53329b25aeb35fc8f65b80452589ed7
+|\| Merge: 8b05a55 7bc3bfa
+| | Author: tatisoha <s.tati@mail.utoronto.ca>
+| | Date:   Sun Nov 9 11:51:38 2025 -0500
+| | 
+| |     Merge branch 'master' of https://mcsscm.utm.utoronto.ca:9999/git/207/25f/repo_a2_888
+| | 
+| * commit 7bc3bfa583efb003393497b71c5576368db64ead
+| | Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+| | Date:   Sun Nov 9 11:39:49 2025 -0500
+| | 
+| |     backlog updated
+| | 
+* | commit 8b05a556966ec2fad40c94d391f5f4027197add9
+|/  Author: tatisoha <s.tati@mail.utoronto.ca>
+|   Date:   Sun Nov 9 11:51:27 2025 -0500
+|   
+|       Added current list of extra features to extraFeatures.txt.
+| 
+* commit 900ef840ab90691e2f1b3434e1efb592d6d3e5f0
+| Author: tatisoha <s.tati@mail.utoronto.ca>
+| Date:   Sun Nov 9 11:31:24 2025 -0500
+| 
+|     Completed pull request US4.006
+|   
+*   commit e4c6b3bc16a854a87e3a4f44900b79e27058d2ce
+|\  Merge: 312aab1 ca58944
+| | Author: tatisoha <s.tati@mail.utoronto.ca>
+| | Date:   Sun Nov 9 11:30:49 2025 -0500
+| | 
+| |     Merge branch 'US4.006'
+| | 
+| * commit ca58944f9db8247de4370923d761e419c8a93561
+| | Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+| | Date:   Sun Nov 9 11:05:30 2025 -0500
+| | 
+| |     finished US4.006
+| |   
+* |   commit 312aab17ba1c743f6a29e775594251362997c525
+|\ \  Merge: 4eb9a83 121e424
+| | | Author: tatisoha <s.tati@mail.utoronto.ca>
+| | | Date:   Sun Nov 9 11:22:35 2025 -0500
+| | | 
+| | |     Merge branch 'master' of https://mcsscm.utm.utoronto.ca:9999/git/207/25f/repo_a2_888
+| | | 
+| * | commit 121e42478000466bc7056613cd536857f173b849
+| | | Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+| | | Date:   Sun Nov 9 11:12:39 2025 -0500
+| | | 
+| | |     scrum 9/11/25
+| | | 
+| * | commit d7255ae86c59b4782645efe91449284386815b61
+| |/  Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+| |   Date:   Sun Nov 9 11:06:36 2025 -0500
+| |   
+| |       pull request us4.006
+| | 
+| * commit ad5cb19183f211eeff70da344bc4e191ea864854
+| | Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+| | Date:   Sun Nov 9 10:42:16 2025 -0500
+| | 
+| |     pull request US4.003 Complete
+| |   
+| *   commit 7eb2fb1b05092ef31e1d0308a222f3c9e04bd600
+| |\  Merge: 2fe38fa a4a97bd
+| | | Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+| | | Date:   Sun Nov 9 10:37:03 2025 -0500
+| | | 
+| | |     Merge branch 'master' into US4.003
+| | |     
+| | |     # Conflicts:
+| | |     #       Assignment2/scrum/pullRequests.txt
+| | | 
+| * | commit 2fe38fa577eb151519580dd51e600e82b9244c0f
+| | | Author: tatisoha <s.tati@mail.utoronto.ca>
+| | | Date:   Sun Nov 9 10:28:36 2025 -0500
+| | | 
+| | |     Created pull request,
+| | | 
+| * | commit ec92e065fd3cbf2fc069a5f9e291e81a0a477216
+| | | Author: tatisoha <s.tati@mail.utoronto.ca>
+| | | Date:   Sun Nov 9 10:22:15 2025 -0500
+| | | 
+| | |     Moved stroke controls to new class, added max 20px thickness restriction
+| | | 
+| * | commit 322c96654c3b8c7614f047f8ce7a3267a3d1f474
+| | | Author: tatisoha <s.tati@mail.utoronto.ca>
+| | | Date:   Sun Nov 9 02:08:19 2025 -0500
+| | | 
+| | |     Implemented US4.003
+| | | 
+| * | commit 5cd9482f2852a84e58e7d34fa6f0be6c04d7535d
+| | | Author: tatisoha <s.tati@mail.utoronto.ca>
+| | | Date:   Sat Nov 8 21:53:33 2025 -0500
+| | | 
+| | |     Started implementation
+| | | 
+* | | commit 4eb9a838a50cb5cd5cc64b68b56099e1e6901893
+| |/  Author: tatisoha <s.tati@mail.utoronto.ca>
+|/|   Date:   Sun Nov 9 11:22:15 2025 -0500
+| |   
+| |       Added extraFeatures.txt and added a few features from sprint 3.
+| | 
+* | commit a4a97bd404fd0894762df1561136c0ecc8df9d0f
+| | Author: Anushka Roy <anushka.roy@mail.utoronto.ca>
+| | Date:   Sun Nov 9 10:28:47 2025 -0500
+| | 
+| |     scrum update
+| | 
+* | commit ee68cb0fc85a1148f483e9b48a087456cac282ad
+| | Author: tatisoha <s.tati@mail.utoronto.ca>
+| | Date:   Sun Nov 9 02:12:11 2025 -0500
+| | 
+| |     tatisoha - daily scrum + updated sprint 4 backlog
+| | 
+* | commit 2e1286a340fa892f9b6d05ab593f801e58917ed6
+| | Author: sidd1378 <zainabb.siddiqui@mail.utoronto.ca>
+| | Date:   Sun Nov 9 01:05:38 2025 -0500
+| | 
+| |     sidd1378 - daily scrum 08/11/2025
+| | 
+* | commit 742681bbdf842c844eb444e4120803a6a6e75511
+| | Author: sidd1378 <zainabb.siddiqui@mail.utoronto.ca>
+| | Date:   Sat Nov 8 22:53:32 2025 -0500
+| | 
+| |     sidd1378 - updated sprint backlog 4
+| | 
+* | commit dc4d79376ea257fc196c0bfd96a5074be944b61f
+| | Author: tatisoha <s.tati@mail.utoronto.ca>
+| | Date:   Sat Nov 8 22:00:42 2025 -0500
+| | 
+| |     Completed git pull request for US4.001
+| |   
+* |   commit 0c9bad08799cdb8be0322cf5aad54bcc6a90d2cc
+|\ \  Merge: 0f15406 d19969b
+| | | Author: tatisoha <s.tati@mail.utoronto.ca>
+| | | Date:   Sat Nov 8 22:00:06 2025 -0500
+| | | 
+| | |     Merge branch 'US4.001'
+| | | 
+| * | commit d19969bc5ed232ce89430b069f4e2ff882c76228
+| | | Author: sidd1378 <zainabb.siddiqui@mail.utoronto.ca>
+| | | Date:   Sat Nov 8 21:49:39 2025 -0500
+| | | 
+| | |     sidd1378 - minor fix
+| | | 
+| * | commit aeb1d1f24498caa0ca3fa65a74082fc0ee08a834
+| |/  Author: sidd1378 <zainabb.siddiqui@mail.utoronto.ca>
+| |   Date:   Sat Nov 8 21:38:40 2025 -0500
+| |   
+| |       sidd1378 - Finished US4.001 (Fill background color)
+| | 
+* | commit 0f154067195c33d7b061ba2befdcd83d9a36f29b
+|/  Author: sidd1378 <zainabb.siddiqui@mail.utoronto.ca>
+|   Date:   Sat Nov 8 21:40:35 2025 -0500
+|   
+|       sidd1378 - Created US4.001 pull request
+|   
+*   commit 4794b14bbe7994bbf2c19eba2889825807ec2e63
+|\  Merge: d08bbfb f0b5e56
+| | Author: tatisoha <s.tati@mail.utoronto.ca>
+| | Date:   Sat Nov 8 20:39:15 2025 -0500
+| | 
+| |     Updated backlogs
+| | 
+| * commit f0b5e56e42656a8f9ad7c93928e29e43a7f2e063
+| | Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+| | Date:   Sat Nov 8 18:58:53 2025 -0500
+| | 
+| |     updated backlog
+| | 
+* | commit d08bbfbc743e2048a29c5f1859c81cd13eee95c0
+|/  Author: tatisoha <s.tati@mail.utoronto.ca>
+|   Date:   Sat Nov 8 20:37:36 2025 -0500
+|   
+|       Claimed sprint 4 tasks
+| 
+* commit 751c87e4409c6e5603e73250d3b19e21089881fb
+| Author: sidd1378 <zainabb.siddiqui@mail.utoronto.ca>
+| Date:   Sat Nov 8 00:48:19 2025 -0500
+| 
+|     sidd1378 - daily scrum 07/11/2025
+| 
+* commit 35eebd1a05e51b942e8d4f1e6189b9f40f9dc18e
+| Author: tatisoha <s.tati@mail.utoronto.ca>
+| Date:   Sat Nov 8 00:23:30 2025 -0500
+| 
+|     tatisoha - daily scrum 08/11/2025
+| 
+* commit 6964330d7b6cd3151b6e2449b60f35362e6fa43c
+| Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+| Date:   Fri Nov 7 19:55:47 2025 -0500
+| 
+|     currently discussed sprint 4 user stories
+| 
+* commit 8c94c78dc749b323c288f2839917ca9d03205883
+| Author: sidd1378 <zainabb.siddiqui@mail.utoronto.ca>
+| Date:   Fri Nov 7 17:52:47 2025 -0500
+| 
+|     sidd1378 - daily scrum 06/11/2025
+| 
+* commit 2583865794f841e222a9aba32cd6e37059ca016b
+| Author: tatisoha <s.tati@mail.utoronto.ca>
+| Date:   Fri Nov 7 09:34:49 2025 -0500
+| 
+|     Added US ideas to sprint 4.
+| 
+* commit 9b19a3f41c4920ce567eab448238e54ab6086669
+| Author: Anushka Roy <anushka.roy@mail.utoronto.ca>
+| Date:   Fri Nov 7 00:43:28 2025 -0500
+| 
+|     scrum update
+|   
+*   commit 8a1068e5836f4c7e3b7a4130b8111c3a74d57da8
+|\  Merge: b1b0d47 e1286c1
+| | Author: Anushka Roy <anushka.roy@mail.utoronto.ca>
+| | Date:   Fri Nov 7 00:36:02 2025 -0500
+| | 
+| |     Merge branch 'BUG3.004'
+| | 
+| * commit e1286c1d5205ee0139be793217951b8f16518d6f
+| | Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+| | Date:   Fri Nov 7 00:03:35 2025 -0500
+| | 
+| |     updated visitor
+| | 
+| * commit b065b3a6bdea83f18d9863aadd01f4eefb3885fd
+| | Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+| | Date:   Thu Nov 6 23:53:45 2025 -0500
+| | 
+| |     tab issue
+| |   
+| *   commit af0320532885313554766e47c02e2bfd17508b87
+| |\  Merge: 9837dc1 a1ec217
+| | | Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+| | | Date:   Thu Nov 6 23:51:51 2025 -0500
+| | | 
+| | |     Merge branch 'refs/heads/master' into BUG3.004
+| | |     
+| | |     # Conflicts:
+| | |     #       Assignment2/src/main/java/ca/utoronto/utm/assignment2/paint/Circle.java
+| | |     #       Assignment2/src/main/java/ca/utoronto/utm/assignment2/paint/Oval.java
+| | |     #       Assignment2/src/main/java/ca/utoronto/utm/assignment2/paint/Polyline.java
+| | |     #       Assignment2/src/main/java/ca/utoronto/utm/assignment2/paint/Rectangle.java
+| | |     #       Assignment2/src/main/java/ca/utoronto/utm/assignment2/paint/Square.java
+| | |     #       Assignment2/src/main/java/ca/utoronto/utm/assignment2/paint/Squiggle.java
+| | |     #       Assignment2/src/main/java/ca/utoronto/utm/assignment2/paint/Triangle.java
+| | | 
+| * | commit 9837dc185292c868ecb6f80ef54c9394f89ed155
+| | | Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+| | | Date:   Thu Nov 6 23:47:12 2025 -0500
+| | | 
+| | |     visitor design pattern added
+| | | 
+* | | commit b1b0d475716fa6333155d56231cfd8b357ece60f
+| | | Author: Anushka Roy <anushka.roy@mail.utoronto.ca>
+| | | Date:   Fri Nov 7 00:35:13 2025 -0500
+| | | 
+| | |     approved BUG3.004 pull request
+| | | 
+* | | commit 48ef8d9415c0af6828e6929aae4401f3a773c4b8
+| |/  Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+|/|   Date:   Fri Nov 7 00:08:14 2025 -0500
+| |   
+| |       pull request
+| | 
+* | commit a1ec21763a49bd23c7863bb2af098e8f865f7c13
+| | Author: tatisoha <s.tati@mail.utoronto.ca>
+| | Date:   Thu Nov 6 23:00:16 2025 -0500
+| | 
+| |     tatisoha - Daily scrum 06/11/2025 + updated backogs.
+| | 
+* | commit c42caaaa94a49667b8a0cfff9325ae7d9d3f590d
+| | Author: sidd1378 <zainabb.siddiqui@mail.utoronto.ca>
+| | Date:   Thu Nov 6 22:24:44 2025 -0500
+| | 
+| |     sidd1378 - accepted pull request for US3.007
+| |   
+* |   commit 5da544877d02eccec7d49d5c2fca0a4a282a2cd3
+|\ \  Merge: 06d13ec c2cf4e3
+| | | Author: sidd1378 <zainabb.siddiqui@mail.utoronto.ca>
+| | | Date:   Thu Nov 6 22:22:49 2025 -0500
+| | | 
+| | |     Merge branch 'US3.007'
+| | | 
+| * | commit c2cf4e350219f4ae0244e7f7d1668789e1d26b3f
+| | | Author: sidd1378 <zainabb.siddiqui@mail.utoronto.ca>
+| | | Date:   Thu Nov 6 22:20:42 2025 -0500
+| | | 
+| | |     sidd1378 - minor fix
+| | | 
+| * | commit 446378a17baf6dd47e11d1800025d48ca926c3cd
+| | | Author: tatisoha <s.tati@mail.utoronto.ca>
+| | | Date:   Thu Nov 6 21:02:56 2025 -0500
+| | | 
+| | |     Pull request created for US3.007
+| | | 
+| * | commit fde0999502bdea25b6f16e21676766d84a63f635
+| | | Author: tatisoha <s.tati@mail.utoronto.ca>
+| | | Date:   Thu Nov 6 21:00:35 2025 -0500
+| | | 
+| | |     Implemented US3.007
+| | | 
+* | | commit 06d13ecc52abf98ca7f1553832d763839476cfa7
+| | | Author: sidd1378 <zainabb.siddiqui@mail.utoronto.ca>
+| | | Date:   Thu Nov 6 22:21:16 2025 -0500
+| | | 
+| | |     sidd1378 - minor fix
+| | | 
+* | | commit 86f641ec777f09b8d3e3c64631bf4e10ae521af5
+|/ /  Author: Anushka Roy <anushka.roy@mail.utoronto.ca>
+| |   Date:   Thu Nov 6 20:02:07 2025 -0500
+| |   
+| |       daily scrum
+| | 
+* | commit 1e247b1303c08c531e37745b5f5f739a9c5c064b
+| | Author: tatisoha <s.tati@mail.utoronto.ca>
+| | Date:   Thu Nov 6 18:58:22 2025 -0500
+| | 
+| |     Updated backlogs
+| | 
+* | commit 9d9fb1a0d121e47a7e392ae038b0dd2f34d7cdbb
+| | Author: tatisoha <s.tati@mail.utoronto.ca>
+| | Date:   Thu Nov 6 14:31:59 2025 -0500
+| | 
+| |     tatisoha - Completed pull request
+| | 
+* | commit c0639c7763e7db47fa6c0e4446c497cd924d18b0
+|\| Merge: 9305c7f d44bdcb
+| | Author: tatisoha <s.tati@mail.utoronto.ca>
+| | Date:   Thu Nov 6 14:30:40 2025 -0500
+| | 
+| |     Merge branch 'BUG3.004'
+| | 
+| * commit d44bdcb3231eb9959b8e09a3ec91a375173e6b8c
+| | Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+| | Date:   Thu Nov 6 14:08:18 2025 -0500
+| | 
+| |     command design pattern applied
+| | 
+| * commit 5c747a7c7e1a637e65059b82bd7cc63c446a0c80
+| | Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+| | Date:   Thu Nov 6 08:59:59 2025 -0500
+| | 
+| |     command design pattern applied
+| | 
+* | commit 9305c7fc3742323bf691fc14c527e65cbf14fe77
+| | Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+| | Date:   Thu Nov 6 14:14:06 2025 -0500
+| | 
+| |     pull request BUG3.004
+| | 
+* | commit 84e62cf08fad86171080c1f2bca3d6ace1031556
+| | Author: sidd1378 <zainabb.siddiqui@mail.utoronto.ca>
+| | Date:   Thu Nov 6 14:10:31 2025 -0500
+| | 
+| |     sidd1378 - daily scrum 05/11/2025
+| | 
+* | commit 31e770f7c28b8ccda8809111d57c1cf44ba6aa2a
+|/  Author: tatisoha <s.tati@mail.utoronto.ca>
+|   Date:   Wed Nov 5 23:14:53 2025 -0500
+|   
+|       tatisoha - daily scrum 05/11/2025
+| 
+* commit 9e22e0eaab40bd3928b1e56dd2a9545878e0e9fe
+| Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+| Date:   Wed Nov 5 23:06:40 2025 -0500
+| 
+|     backlog maintenance
+| 
+* commit cbf6ac2d1365015fca403e7e6f33712c1b7ece53
+| Author: sidd1378 <zainabb.siddiqui@mail.utoronto.ca>
+| Date:   Wed Nov 5 22:42:24 2025 -0500
+| 
+|     sidd1378 - accepted US3.008 pull request
+|   
+*   commit b9c2161a29acd0daa40effd0aed860bdc378cc55
+|\  Merge: 9efc8bc 6804334
+| | Author: sidd1378 <zainabb.siddiqui@mail.utoronto.ca>
+| | Date:   Wed Nov 5 22:40:46 2025 -0500
+| | 
+| |     Merge branch 'US3.008'
+| | 
+| * commit 68043346be7573e8da77692647c00c82ca22dc6a
+| | Author: Anushka Roy <anushka.roy@mail.utoronto.ca>
+| | Date:   Wed Nov 5 21:06:31 2025 -0500
+| | 
+| |     small changes in US3.008
+| | 
+| * commit e507bb55153522c2add36e67c817749ac4b72ac7
+| | Author: Anushka Roy <anushka.roy@mail.utoronto.ca>
+| | Date:   Wed Nov 5 20:35:22 2025 -0500
+| | 
+| |     add CopyStrategy and CutStrategy to US3.008
+| | 
+| * commit 98e16f4d50463e5d1b3b8db3f017785fd4192178
+| | Author: Anushka Roy <anushka.roy@mail.utoronto.ca>
+| | Date:   Wed Nov 5 20:01:57 2025 -0500
+| | 
+| |     update US3.008
+| | 
+| * commit a8519c3672f7586cdaac1cb4fca0ce6ce8dda4db
+| | Author: Anushka Roy <anushka.roy@mail.utoronto.ca>
+| | Date:   Wed Nov 5 19:14:46 2025 -0500
+| | 
+| |     updated US3.008
+| | 
+* | commit 9efc8bc435f6862999bdba2c9c1f4f9803dcdbbc
+| | Author: sidd1378 <zainabb.siddiqui@mail.utoronto.ca>
+| | Date:   Wed Nov 5 22:28:35 2025 -0500
+| | 
+| |     sidd1378 - accepted US3.010 pull request
+| | 
+* | commit d6a5982cdb01ae44631b10538b034909946a3bcd
+| | Author: sidd1378 <zainabb.siddiqui@mail.utoronto.ca>
+| | Date:   Wed Nov 5 22:24:06 2025 -0500
+| | 
+| |     minor fix
+| | 
+* | commit 925ceaabdbe70753374cc7f91239c1f0d89cb314
+| | Author: sidd1378 <zainabb.siddiqui@mail.utoronto.ca>
+| | Date:   Wed Nov 5 22:21:29 2025 -0500
+| | 
+| |     minor fix
+| |   
+* |   commit 826fe6482818647ed1c6637cd097a0bb4960b774
+|\ \  Merge: cda1db4 5fd6086
+| | | Author: sidd1378 <zainabb.siddiqui@mail.utoronto.ca>
+| | | Date:   Wed Nov 5 22:19:38 2025 -0500
+| | | 
+| | |     Resolving merge conflicts for 'US3.010'
+| | | 
+| * | commit 5fd60864d89e443a1c4db025343fe7c6b842734f
+| | | Author: Anushka Roy <anushka.roy@mail.utoronto.ca>
+| | | Date:   Wed Nov 5 21:10:20 2025 -0500
+| | | 
+| | |     small changes in US3.010
+| | | 
+| * | commit a6226b04a58ca1677ed214c27969df9a52ec5e0f
+| | | Author: Anushka Roy <anushka.roy@mail.utoronto.ca>
+| | | Date:   Wed Nov 5 20:44:02 2025 -0500
+| | | 
+| | |     small changes in US3.010
+| | | 
+| * | commit a9173a3adcb4349660d2b27ee0bef0528037e6ed
+| | | Author: Anushka Roy <anushka.roy@mail.utoronto.ca>
+| | | Date:   Wed Nov 5 20:28:37 2025 -0500
+| | | 
+| | |     add CopyStrategy to US3.010
+| | | 
+| * | commit 94819973d0e9beb3a87014ca06ff107565ab1afb
+| | | Author: Anushka Roy <anushka.roy@mail.utoronto.ca>
+| | | Date:   Wed Nov 5 18:18:19 2025 -0500
+| | | 
+| | |     Small changes to US3.010
+| | | 
+| * | commit d1e482410b7a103a66b46a1d372c084c463f49b2
+| | | Author: Anushka Roy <anushka.roy@mail.utoronto.ca>
+| | | Date:   Wed Nov 5 18:13:45 2025 -0500
+| | | 
+| | |     Completed US3.010
+| | | 
+* | | commit cda1db481ddaf3331f837d6a95fe57fbb0760216
+| | | Author: sidd1378 <zainabb.siddiqui@mail.utoronto.ca>
+| | | Date:   Wed Nov 5 22:09:13 2025 -0500
+| | | 
+| | |     sidd1378 - Accepted US3.009 pull request
+| | |   
+* | |   commit 385b49393252aa6ffe03f85626dda7a358edf319
+|\ \ \  Merge: 4d8d032 84d6c3f
+| | | | Author: sidd1378 <zainabb.siddiqui@mail.utoronto.ca>
+| | | | Date:   Wed Nov 5 22:07:58 2025 -0500
+| | | | 
+| | | |     Merge branch 'US3.009'
+| | | | 
+| * | | commit 84d6c3ffea0fa83a3f40b35ff4a93e2c67a465ad
+| | | | Author: Anushka Roy <anushka.roy@mail.utoronto.ca>
+| | | | Date:   Wed Nov 5 20:55:55 2025 -0500
+| | | | 
+| | | |     small changes in US3.009
+| | | | 
+| * | | commit 7f42215c545c4479399b950d732d4407afecf63d
+| | | | Author: Anushka Roy <anushka.roy@mail.utoronto.ca>
+| | | | Date:   Wed Nov 5 20:38:29 2025 -0500
+| | | | 
+| | | |     addCutStrategy to US3.009
+| | | |   
+| * | |   commit 65b357f98c6e141413d43836cb55ea01a7ad0bcd
+| |\ \ \  Merge: 6c0e4cb f1f8dbc
+| | | | | Author: Anushka Roy <anushka.roy@mail.utoronto.ca>
+| | | | | Date:   Wed Nov 5 20:16:11 2025 -0500
+| | | | | 
+| | | | |     Merge branch 'US3.009' of https://mcsscm.utm.utoronto.ca:9999/git/207/25f/repo_a2_888 into US3.009
+| | | | | 
+| | * | | commit f1f8dbc4e53bed31f6eb8e03f9f4134f6e1e37fb
+| | | | | Author: Anushka Roy <anushka.roy@mail.utoronto.ca>
+| | | | | Date:   Wed Nov 5 18:35:11 2025 -0500
+| | | | | 
+| | | | |     Small changes to US3.009
+| | | | | 
+| | * | | commit 4e270e98b9cacc861a2eb1a012db46f62e320d71
+| | | | | Author: Anushka Roy <anushka.roy@mail.utoronto.ca>
+| | | | | Date:   Wed Nov 5 15:24:57 2025 -0500
+| | | | | 
+| | | | |     update US3.009
+| | | | | 
+| | * | | commit 836d301c41c180d82312cbc7337f7b3988fdc584
+| | | | | Author: Anushka Roy <anushka.roy@mail.utoronto.ca>
+| | | | | Date:   Wed Nov 5 01:24:30 2025 -0500
+| | | | | 
+| | | | |     Updated US3.009
+| | | | | 
+| * | | | commit 6c0e4cb8f9b49c0e7d1c2d0f713f062c4f94588b
+| | |_|/  Author: Anushka Roy <anushka.roy@mail.utoronto.ca>
+| |/| |   Date:   Wed Nov 5 20:06:07 2025 -0500
+| | | |   
+| | | |       update US3.009
+| | | | 
+| * | | commit 8a867de43be1a0131a6d5b90a670a78bd19a789c
+| | | | Author: Anushka Roy <anushka.roy@mail.utoronto.ca>
+| | | | Date:   Wed Nov 5 18:59:41 2025 -0500
+| | | | 
+| | | |     updated US3.009
+| | | | 
+* | | | commit 4d8d0328f0caa3460c24f6cc83ab37eb7a7db198
+| | | | Author: Anushka Roy <anushka.roy@mail.utoronto.ca>
+| | | | Date:   Wed Nov 5 21:12:10 2025 -0500
+| | | | 
+| | | |     US3.008, US3.009, and US3.010 pull request
+| | | | 
+* | | | commit 1eab4f402788f3b584717a16b24f55603bb4445a
+| | | | Author: sidd1378 <zainabb.siddiqui@mail.utoronto.ca>
+| | | | Date:   Wed Nov 5 19:57:59 2025 -0500
+| | | | 
+| | | |     sidd1378 - Rejected pull request for US3.009 - changes to cursor has to be made
+| | | | 
+* | | | commit 091b6d621b4ad2e4a03b046381ec6e435498c30f
+|/ / /  Author: Anushka Roy <anushka.roy@mail.utoronto.ca>
+| | |   Date:   Wed Nov 5 19:16:22 2025 -0500
+| | |   
+| | |       US3.009 and US3.010 pull request
+| | |   
+* | |   commit 4699d5a3c29c80f50b09643c9a115c8f24228821
+|\ \ \  Merge: 82466a3 85115c0
+| | | | Author: Anushka Roy <anushka.roy@mail.utoronto.ca>
+| | | | Date:   Wed Nov 5 16:39:55 2025 -0500
+| | | | 
+| | | |     Merge remote-tracking branch 'origin/master'
+| | | | 
+| * | | commit 85115c0d105f4229f73f420bab08d9127e6981a0
+| | | | Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+| | | | Date:   Wed Nov 5 15:50:36 2025 -0500
+| | | | 
+| | | |     mover cursor updated!
+| | | |   
+| * | |   commit f795680586e8cc1ef6c98263f2b9d07d17a272e2
+| |\ \ \  Merge: f3c8643 b232ad3
+| | | | | Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+| | | | | Date:   Wed Nov 5 15:48:06 2025 -0500
+| | | | | 
+| | | | |     Merge remote-tracking branch 'origin/master'
+| | | | |   
+| | * | |   commit b232ad364afc37e144bc5aedb8d07a3edc7468b6
+| | |\ \ \  Merge: 5b9c48a 31c9315
+| | | | |/  Author: tatisoha <s.tati@mail.utoronto.ca>
+| | | |/|   Date:   Wed Nov 5 15:41:55 2025 -0500
+| | | | |   
+| | | | |       Merge branch 'master' of https://mcsscm.utm.utoronto.ca:9999/git/207/25f/repo_a2_888
+| | | | | 
+| | * | | commit 5b9c48a0b10a92020e7550e5954a06e605787881
+| | | | | Author: tatisoha <s.tati@mail.utoronto.ca>
+| | | | | Date:   Wed Nov 5 15:41:46 2025 -0500
+| | | | | 
+| | | | |     tatisoha - Added possible user stories/bugs for sprint4.
+| | | | | 
+| * | | | commit f3c8643a53c5b1057ad5c32fd4eb4d2425be0723
+| | |/ /  Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+| |/| |   Date:   Wed Nov 5 15:47:42 2025 -0500
+| | | |   
+| | | |       scrum 05/11/25
+| | | | 
+* | | | commit 82466a3aa6ea71b560f0b4a417ac208f1bf8a1e2
+|/ / /  Author: Anushka Roy <anushka.roy@mail.utoronto.ca>
+| | |   Date:   Wed Nov 5 16:39:48 2025 -0500
+| | |   
+| | |       update US3.010
+| | |   
+* | |   commit 31c9315d4783402ae6c87e1f863e1348b8fa2410
+|\ \ \  Merge: aee8035 19a0313
+| | | | Author: Anushka Roy <anushka.roy@mail.utoronto.ca>
+| | | | Date:   Wed Nov 5 02:05:15 2025 -0500
+| | | | 
+| | | |     Merge branch 'US3.011'
+| | | | 
+| * | | commit 19a03137930166b701c09119bbf247786caf6291
+| | |/  Author: tatisoha <s.tati@mail.utoronto.ca>
+| |/|   Date:   Tue Nov 4 23:38:33 2025 -0500
+| | |   
+| | |       Implemented mover
+| | | 
+* | | commit aee80353003f195880d9c0968491ad6ef9c8a7ba
+| | | Author: Anushka Roy <anushka.roy@mail.utoronto.ca>
+| | | Date:   Wed Nov 5 01:52:31 2025 -0500
+| | | 
+| | |     pull request US3.011 approved.
+| | | 
+* | | commit fc174bfc9cc668b98156c2c8d4b2f7ae50ea9fd1
+| | | Author: Anushka Roy <anushka.roy@mail.utoronto.ca>
+| | | Date:   Wed Nov 5 01:29:16 2025 -0500
+| | | 
+| | |     scrum update
+| | | 
+* | | commit 931649346ab8c1d14bca47449a60d9352d4ab7c3
+| |/  Author: sidd1378 <zainabb.siddiqui@mail.utoronto.ca>
+|/|   Date:   Wed Nov 5 00:10:10 2025 -0500
+| |   
+| |       sidd1378 - daily scrum 04/11/2025
+| | 
+* | commit 2fa42729110af7a4be831725b2256f873ca4c407
+|/  Author: tatisoha <s.tati@mail.utoronto.ca>
+|   Date:   Tue Nov 4 23:41:07 2025 -0500
+|   
+|       tatisoha - daliy scrum + pull request US3.011
+| 
+* commit 289affd9cdc6976c56fc72b10c065ae5d5b2c5f3
+| Author: sidd1378 <zainabb.siddiqui@mail.utoronto.ca>
+| Date:   Tue Nov 4 13:39:48 2025 -0500
+| 
+|     sidd1378 - minor fix
+| 
+* commit 4c27e6e884e5e2098b92960bcb399dbd5b5d6540
+| Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+| Date:   Tue Nov 4 09:04:50 2025 -0500
+| 
+|     pull request US3.006 approved!
+|   
+*   commit 68ef2359823ee1323938a9bee75320e4a75c73f9
+|\  Merge: b37add1 0649c25
+| | Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+| | Date:   Tue Nov 4 09:00:17 2025 -0500
+| | 
+| |     Merge branch 'refs/heads/US3.006'
+| | 
+| * commit 0649c2505976721d514bd3581e8dffad13233b8b
+| | Author: sidd1378 <zainabb.siddiqui@mail.utoronto.ca>
+| | Date:   Mon Nov 3 23:54:01 2025 -0500
+| | 
+| |     sidd1378 - finished fill style selector (US3.006)
+| | 
+| * commit 6d254671b71ef26e64095cff44c942b36819f2fe
+| | Author: sidd1378 <zainabb.siddiqui@mail.utoronto.ca>
+| | Date:   Mon Nov 3 19:14:10 2025 -0500
+| | 
+| |     sidd1378 - started on US3.006
+| | 
+* | commit b37add167de6add6aed6954c315059dee21d6802
+| | Author: sidd1378 <zainabb.siddiqui@mail.utoronto.ca>
+| | Date:   Tue Nov 4 00:17:47 2025 -0500
+| | 
+| |     sidd1378 - updated product backlog
+| | 
+* | commit a402a5a59696e62767516223e36cd1353b70c662
+| | Author: sidd1378 <zainabb.siddiqui@mail.utoronto.ca>
+| | Date:   Mon Nov 3 23:59:07 2025 -0500
+| | 
+| |     sidd1378 - daily scrum 03/11/2025 + pull request
+| | 
+* | commit 10f9acf181623c5e1c8907de9651c08b680f8534
+|/  Author: tatisoha <s.tati@mail.utoronto.ca>
+|   Date:   Mon Nov 3 22:20:46 2025 -0500
+|   
+|       tatisoha - daily scrum 03/11/2025 + claimed US3.011
+| 
+* commit 08618274e0ef81a5dbeb9e48a74f5839521b2180
+| Author: sidd1378 <zainabb.siddiqui@mail.utoronto.ca>
+| Date:   Mon Nov 3 18:53:14 2025 -0500
+| 
+|     sidd1378 - claimed US3.006
+| 
+* commit b3c7477583dc94bc1467f244a1d14d0a1be6ff26
+| Author: sidd1378 <zainabb.siddiqui@mail.utoronto.ca>
+| Date:   Mon Nov 3 18:16:19 2025 -0500
+| 
+|     sidd1378 - daily scrum 02/11/2025
+| 
+* commit acd032c78f97447e858117e9b760c3cb1d20a2c8
+| Author: sidd1378 <zainabb.siddiqui@mail.utoronto.ca>
+| Date:   Mon Nov 3 18:13:54 2025 -0500
+| 
+|     sidd1378 - daily scrum 02/10/2025
+| 
+* commit 136b0fe88a954ce1e616ac1f6c9957dafa4562c3
+| Author: Anushka Roy <anushka.roy@mail.utoronto.ca>
+| Date:   Mon Nov 3 00:35:45 2025 -0500
+| 
+|     sprint backlog update
+|   
+*   commit f47dde75fd992f04f0c8f44cbce6fe69f13ba6fd
+|\  Merge: 2a55d68 5afcbdf
+| | Author: Anushka Roy <anushka.roy@mail.utoronto.ca>
+| | Date:   Mon Nov 3 00:25:19 2025 -0500
+| | 
+| |     Merge remote-tracking branch 'origin/master'
+| | 
+| * commit 5afcbdf58882f72956425516414ec2360e009410
+| | Author: tatisoha <s.tati@mail.utoronto.ca>
+| | Date:   Sun Nov 2 20:30:47 2025 -0500
+| | 
+| |     tatisoha - Daily scrum 02/11/2025
+| | 
+| * commit 0a5bc45f01c4499b595d87d42efbccc3f866e354
+| | Author: tatisoha <s.tati@mail.utoronto.ca>
+| | Date:   Sun Nov 2 20:27:07 2025 -0500
+| | 
+| |     minor fix
+| | 
+| * commit 9d5213c0e25a9eaec0a7e6d7e7d4e47f0c764ec4
+| | Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+| | Date:   Sun Nov 2 20:22:55 2025 -0500
+| | 
+| |     backlogs
+| |   
+| *   commit e10b5fca5e51075cc0943935ce1d1593c49af5d0
+| |\  Merge: b99be49 ff59bc4
+| | | Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+| | | Date:   Sun Nov 2 20:15:45 2025 -0500
+| | | 
+| | |     Merge remote-tracking branch 'origin/master'
+| | | 
+| | * commit ff59bc4460f61cc8883f0d29c15da65ac5e555d5
+| | | Author: sidd1378 <zainabb.siddiqui@mail.utoronto.ca>
+| | | Date:   Sun Nov 2 20:15:04 2025 -0500
+| | | 
+| | |     sidd1378 - Completed US3.004 pull request
+| | | 
+| * | commit b99be4903ccd0854fc465dcc7897443cc4dda033
+| | | Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+| | | Date:   Sun Nov 2 20:15:28 2025 -0500
+| | | 
+| | |     merged us3.001 into master
+| | | 
+| * | commit 58ca32878b34f26edc9797178c8f76fedf05d952
+| |\| Merge: 7a51138 c4d03ba
+| | | Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+| | | Date:   Sun Nov 2 20:14:40 2025 -0500
+| | | 
+| | |     Merge remote-tracking branch 'origin/master'
+| | |     
+| | |     # Conflicts:
+| | |     #       Assignment2/src/main/java/ca/utoronto/utm/assignment2/paint/ShapeChooserPanel.java
+| | |   
+| * |   commit 7a51138095812fa08056946637d21242bba1f116
+| |\ \  Merge: f8b4e8d 3d5c600
+| | | | Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+| | | | Date:   Sun Nov 2 20:11:28 2025 -0500
+| | | | 
+| | | |     Merge branch 'refs/heads/US3.001'
+| | | | 
+| | * | commit 3d5c6003f2846f68ff9eeec616a3b617677024a0
+| | | | Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+| | | | Date:   Sun Nov 2 20:11:09 2025 -0500
+| | | | 
+| | | |     merged us3.001 into master
+| | | | 
+* | | | commit 2a55d689d436cd80878ae73cc2d0de788c035e77
+| | | | Author: Anushka Roy <anushka.roy@mail.utoronto.ca>
+| | | | Date:   Mon Nov 3 00:19:52 2025 -0500
+| | | | 
+| | | |     scrum update
+| | | |   
+* | | |   commit b5c96e73079835a45ad43b2be90ad6228d73ca1d
+|\ \ \ \  Merge: b730cb2 c4d03ba
+| | |_|/  Author: Anushka Roy <anushka.roy@mail.utoronto.ca>
+| |/| |   Date:   Sun Nov 2 20:14:42 2025 -0500
+| | | |   
+| | | |       Merge branch 'master' of https://mcsscm.utm.utoronto.ca:9999/git/207/25f/repo_a2_888
+| | | | 
+| * | | commit c4d03ba7432ce72d665ca6d10d37c7c03fe15a68
+| | | | Author: sidd1378 <zainabb.siddiqui@mail.utoronto.ca>
+| | | | Date:   Sun Nov 2 20:14:03 2025 -0500
+| | | | 
+| | | |     sidd1378 - minor fix
+| | | |   
+| * | |   commit a573cc108f3ed3d7b2d7e154789097139a1bbb21
+| |\ \ \  Merge: f8b4e8d cf92728
+| | |/ /  Author: sidd1378 <zainabb.siddiqui@mail.utoronto.ca>
+| |/| |   Date:   Sun Nov 2 20:09:26 2025 -0500
+| | | |   
+| | | |       Merge branch 'US3.004'
+| | | | 
+| | * | commit cf92728047303ce3f76119993a9f002ac0a38fe1
+| | | | Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+| | | | Date:   Sun Nov 2 19:49:32 2025 -0500
+| | | | 
+| | | |     paint bucket png
+| | | | 
+| | * | commit 64266254886965bbf9291ea03b24b098eb2742ad
+| | | | Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+| | | | Date:   Sun Nov 2 18:36:27 2025 -0500
+| | | | 
+| | | |     paint bucket png
+| | | | 
+| | * | commit de45852471881387be87ede1a5aaa388da605e91
+| | | | Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+| | | | Date:   Sun Nov 2 15:24:35 2025 -0500
+| | | | 
+| | | |     US3.005 complete.
+| | | | 
+| * | | commit f8b4e8d11fbc4488274aa9f8724650043ef5d17e
+| | |/  Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+| |/|   Date:   Sun Nov 2 20:00:28 2025 -0500
+| | |   
+| | |       merged us3.001 into master
+| | |   
+| * |   commit 54e6717e917619bbef16e86091786d410c08aee9
+| |\ \  Merge: 9a3b532 06668ea
+| | | | Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+| | | | Date:   Sun Nov 2 19:58:49 2025 -0500
+| | | | 
+| | | |     Merge branch 'refs/heads/master' into US3.001
+| | | |     
+| | | |     # Conflicts:
+| | | |     #       Assignment2/scrum/pullRequests
+| | | |     #       Assignment2/src/main/java/ca/utoronto/utm/assignment2/paint/ShapeChooserPanel.java
+| | | | 
+| | * | commit 06668ea95ca1a129e0825c0ab59e5ee022f293db
+| | | | Author: tatisoha <s.tati@mail.utoronto.ca>
+| | | | Date:   Sun Nov 2 19:05:49 2025 -0500
+| | | | 
+| | | |     minor change
+| | | | 
+| | * | commit f6c3eb627a828ad480342aa157083c9ca245dfb0
+| | | | Author: tatisoha <s.tati@mail.utoronto.ca>
+| | | | Date:   Sun Nov 2 19:01:13 2025 -0500
+| | | | 
+| | | |     Created US3.001 pull request
+| | | | 
+| | * | commit 1efc0b6321cb9eab86258445a99fe059088646be
+| | | | Author: tatisoha <s.tati@mail.utoronto.ca>
+| | | | Date:   Sun Nov 2 18:57:56 2025 -0500
+| | | | 
+| | | |     tatisoha - completed pull US3.003 pull request.
+| | | |   
+| | * |   commit 310c883db3ae11f22065ce94661f662a1325ef15
+| | |\ \  Merge: 3fcfdcf 64aa64d
+| | | | | Author: tatisoha <s.tati@mail.utoronto.ca>
+| | | | | Date:   Sun Nov 2 18:56:18 2025 -0500
+| | | | | 
+| | | | |     Merge branch 'US3.003'
+| | | | | 
+| | | * | commit 64aa64d3f136995043fc05cfed769876b35a2eca
+| | | | | Author: sidd1378 <zainabb.siddiqui@mail.utoronto.ca>
+| | | | | Date:   Sun Nov 2 17:54:25 2025 -0500
+| | | | | 
+| | | | |     sidd1378 - Finished redo function (US3.003)
+| | | | | 
+| | * | | commit 3fcfdcf9abce90b0ca8ec8cb7f36818518a35223
+| | |/ /  Author: sidd1378 <zainabb.siddiqui@mail.utoronto.ca>
+| | | |   Date:   Sun Nov 2 17:56:24 2025 -0500
+| | | |   
+| | | |       sidd1378 - Accepted US3.004 pull request and created US3.003 request.
+| | | | 
+| | * | commit fdca0644c516fbbf712fb3fda5f11a915b919031
+| | | | Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+| | | | Date:   Sun Nov 2 15:52:16 2025 -0500
+| | | | 
+| | | |     updated missing US3.009
+| | | | 
+| | * | commit 67a00920e5edc7484f4d398b20dc058b8f6da4e0
+| | | | Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+| | | | Date:   Sun Nov 2 15:28:30 2025 -0500
+| | | | 
+| | | |     scrum 2/11/25
+| | | | 
+| | * | commit 08fa8815bca5ce16e2e6e06e70b06639ffdc95ee
+| | |/  Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+| | |   Date:   Sun Nov 2 15:26:27 2025 -0500
+| | |   
+| | |       pull request US3.004
+| | | 
+| | * commit 2744034f5d6e6d117d789e489f1272c720d94adc
+| | | Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+| | | Date:   Sun Nov 2 12:33:43 2025 -0500
+| | | 
+| | |     backlog updated + US3.004
+| | | 
+| | * commit 5e5386cacadfd8210e77ac4b47056e2eb71ec397
+| | | Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+| | | Date:   Sun Nov 2 12:30:48 2025 -0500
+| | | 
+| | |     shape chooser with helper
+| | | 
+| | * commit 016dfc71d36cd6c792daea4519d5ff095ca13e69
+| | | Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+| | | Date:   Sun Nov 2 12:16:53 2025 -0500
+| | | 
+| | |     restored shape chooser panel
+| | | 
+| | * commit 5abcbf375e6ead1301819085aaa4cfe41778b631
+| | | Author: sidd1378 <zainabb.siddiqui@mail.utoronto.ca>
+| | | Date:   Sun Nov 2 01:19:03 2025 -0500
+| | | 
+| | |     sidd1378 - 01/11/2025 daily scrum
+| | | 
+| * | commit 9a3b532d926f5dbe613ca6ed939afc9eca378d17
+| | | Author: tatisoha <s.tati@mail.utoronto.ca>
+| | | Date:   Sun Nov 2 18:59:28 2025 -0500
+| | | 
+| | |     Minor change
+| | | 
+| * | commit 7cd1254c0e4aea32633faafdd2ab2b8728b26a66
+| | | Author: tatisoha <s.tati@mail.utoronto.ca>
+| | | Date:   Sun Nov 2 16:17:13 2025 -0500
+| | | 
+| | |     Implemented eraser.
+| | | 
+| * | commit 52d69352fc83308dcd64be36131cb214638d5419
+| | | Author: tatisoha <s.tati@mail.utoronto.ca>
+| | | Date:   Sun Nov 2 16:15:17 2025 -0500
+| | | 
+| | |     Implemented eraser.
+| | | 
+| * | commit d21b6111bdd47e33253f0d8cbafd0d035bfca104
+| |\| Merge: 8e09ca9 f52c8ae
+| | | Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+| | | Date:   Sat Nov 1 21:51:47 2025 -0400
+| | | 
+| | |     Merge branch 'refs/heads/master' into US3.001
+| | | 
+| | * commit f52c8aeaa0233612e888b47cd4430530f4fe4815
+| | | Author: sidd1378 <zainabb.siddiqui@mail.utoronto.ca>
+| | | Date:   Sat Nov 1 21:20:28 2025 -0400
+| | | 
+| | |     sidd1378 - Accepted US3.005 pull request
+| | |   
+| | *   commit 4455b0aa3b90ff0f045001de0e05e77b13511848
+| | |\  Merge: deb20da 137ed47
+| | | | Author: sidd1378 <zainabb.siddiqui@mail.utoronto.ca>
+| | | | Date:   Sat Nov 1 21:15:28 2025 -0400
+| | | | 
+| | | |     Merge branch 'US3.005'
+| | | |   
+| | | *   commit 137ed4749b892bcbdac34864c3a78c20bea34193
+| | | |\  Merge: 0622bee 18988c5
+| | | | | Author: sidd1378 <zainabb.siddiqui@mail.utoronto.ca>
+| | | | | Date:   Sat Nov 1 21:12:33 2025 -0400
+| | | | | 
+| | | | |     Merge branch 'master' of https://mcsscm.utm.utoronto.ca:9999/git/207/25f/repo_a2_888 into US3.005
+| | | | |     git merge --abort# the commit.
+| | | | | 
+| | | | * commit 18988c508053fa140465ca7049242a4385d7fed8
+| | | | | Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+| | | | | Date:   Sat Nov 1 20:47:23 2025 -0400
+| | | | | 
+| | | | |     updated sprint + product backlogs
+| | | | | 
+| | * | | commit deb20da6759bb6efbd663583ba015ea595a81aef
+| | |\| | Merge: b8c9328 0622bee
+| | | |/  Author: sidd1378 <zainabb.siddiqui@mail.utoronto.ca>
+| | |/|   Date:   Sat Nov 1 20:48:56 2025 -0400
+| | | |   
+| | | |       Merge branch 'US3.005'
+| | | | 
+| | | * commit 0622bee605e61b1ca170feb6e091549fbb8aa60f
+| | | | Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+| | | | Date:   Sat Nov 1 20:38:27 2025 -0400
+| | | | 
+| | | |     hex colour picker
+| | | | 
+| | | * commit a4f3f00c99970ddeb3e07f35e99eaceb59bed536
+| | | | Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+| | | | Date:   Sat Nov 1 20:05:25 2025 -0400
+| | | | 
+| | | |     hex colour picker draft 1
+| | | |   
+| | | *   commit 7e25d347a9f3050b4810b94235fe7bc92f6c28b1
+| | | |\  Merge: 0c62dd5 ce169bf
+| | | | | Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+| | | | | Date:   Sat Nov 1 18:27:56 2025 -0400
+| | | | | 
+| | | | |     Merge branch 'refs/heads/master' into US3.005
+| | | | |     
+| | | | |     # Conflicts:
+| | | | |     #       Assignment2/src/main/java/ca/utoronto/utm/assignment2/paint/PaintModel.java
+| | | | | 
+| | | * | commit 0c62dd5eb14af0f526f5789354f0d7e370d80b0f
+| | | | | Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+| | | | | Date:   Fri Oct 31 12:54:37 2025 -0400
+| | | | | 
+| | | | |     updated colour panels
+| | | | | 
+| | * | | commit b8c932876efcfb68fac825dba03076ae4ec7a274
+| | | |/  Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+| | |/|   Date:   Sat Nov 1 20:41:50 2025 -0400
+| | | |   
+| | | |       pull request
+| | | | 
+| | * | commit ce169bf0ea6d61bb8aeb01085bcf71b319eb7bfb
+| | | | Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+| | | | Date:   Sat Nov 1 18:25:32 2025 -0400
+| | | | 
+| | | |     pull request + scrum
+| | | |   
+| | * |   commit c10bdf48354fc3286d53126de85cf1473c5fdf81
+| | |\ \  Merge: 3c168df 0f31479
+| | | | | Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+| | | | | Date:   Sat Nov 1 18:24:09 2025 -0400
+| | | | | 
+| | | | |     Merge branch 'refs/heads/US3.002'
+| | | | | 
+| | * | | commit 3c168df2f474fcaa2f2d0dd7e4e03f4a9f89321e
+| | | | | Author: sidd1378 <zainabb.siddiqui@mail.utoronto.ca>
+| | | | | Date:   Sat Nov 1 16:44:10 2025 -0400
+| | | | | 
+| | | | |     sidd1378 - Added pull request for US3.002
+| | | | |   
+| * | | |   commit 8e09ca9d9d05fff858287feb6a36efd359284536
+| |\ \ \ \  Merge: 13720ce 0f31479
+| | | |/ /  Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+| | |/| |   Date:   Sat Nov 1 21:15:43 2025 -0400
+| | | | |   
+| | | | |       Merge remote-tracking branch 'refs/remotes/origin/US3.002' into US3.001
+| | | | | 
+| | * | | commit 0f31479324f16f8656c47f009a82372c6935abaa
+| | |/ /  Author: sidd1378 <zainabb.siddiqui@mail.utoronto.ca>
+| | | |   Date:   Sat Nov 1 16:40:18 2025 -0400
+| | | |   
+| | | |       sidd1378 - Implemented US3.002 - Undo Function
+| | | | 
+| | * | commit 7c87ea30c4ea6c26186eb146b9524c93017bab9c
+| | | | Author: sidd1378 <zainabb.siddiqui@mail.utoronto.ca>
+| | | | Date:   Fri Oct 31 23:57:09 2025 -0400
+| | | | 
+| | | |     sidd1378 - daily scrum 31/10/2025
+| | | | 
+| | * | commit f6202af3d0aead4cfc370547fcdac40b107e7079
+| | | | Author: sidd1378 <zainabb.siddiqui@mail.utoronto.ca>
+| | | | Date:   Fri Oct 31 23:56:42 2025 -0400
+| | | | 
+| | | |     sidd1378 - claimed US3.002
+| | | | 
+| | * | commit ea4f2c7f77ab716106875649a9cf4f555654c70a
+| | | | Author: tatisoha <s.tati@mail.utoronto.ca>
+| | | | Date:   Fri Oct 31 18:08:34 2025 -0400
+| | | | 
+| | | |     tatisoha - Daily scrum 31/10/2025
+| | | | 
+| * | | commit 13720ceaa7f0a48cf73ca0d35ad9527f29592680
+| | | | Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+| | | | Date:   Sat Nov 1 21:15:21 2025 -0400
+| | | | 
+| | | |     experiment
+| | | | 
+| * | | commit 8a74e8ef33b779fe4e8a6f956e8beda5e0e8849a
+| | | | Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+| | | | Date:   Sat Nov 1 21:14:41 2025 -0400
+| | | | 
+| | | |     experiment
+| | | | 
+| * | | commit 932589ddb238b04711f4e2309f708d538a78d792
+| |/ /  Author: tatisoha <s.tati@mail.utoronto.ca>
+| | |   Date:   Fri Oct 31 18:05:27 2025 -0400
+| | |   
+| | |       Added an EraserStrategy class.
+| | | 
+| * | commit 42ce48328a55034058f4826b73c10256b98f89ff
+| |/  Author: tatisoha <s.tati@mail.utoronto.ca>
+| |   Date:   Fri Oct 31 16:55:20 2025 -0400
+| |   
+| |       tatisoha - claimed US3.001
+| | 
+| * commit 1f925f998545cd96eaed22c2720eb4dfbb3727c7
+| | Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+| | Date:   Fri Oct 31 10:35:06 2025 -0400
+| | 
+| |     started US3.005
+| | 
+| * commit 1d9d3515f8d21a91aa73d5172ba93e3810f81c95
+| | Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+| | Date:   Fri Oct 31 10:28:56 2025 -0400
+| | 
+| |     backlogs updated for sprint 3
+| | 
+| * commit 7dc1073597d6467cdff56aad4cb7249c47a4e515
+| | Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+| | Date:   Fri Oct 31 10:13:38 2025 -0400
+| | 
+| |     pullRequest file for Sprint 3
+| | 
+| * commit b8d372b99d622abe42a38641d032727175a79e4c
+| | Author: sidd1378 <zainabb.siddiqui@mail.utoronto.ca>
+| | Date:   Thu Oct 30 23:50:32 2025 -0400
+| | 
+| |     sidd1378 - daily scrum 30/10/2025
+| | 
+| * commit 7a7f60b12662d0614bf75b7f149863611360f444
+| | Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+| | Date:   Thu Oct 30 22:14:45 2025 -0400
+| | 
+| |     backlogs + sprint updated
+| |   
+| *   commit 3209e69c6bacefb8bb58fb88913e76b3d2a2a153
+| |\  Merge: f19cdcf 7dc4520
+| | | Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+| | | Date:   Thu Oct 30 21:52:34 2025 -0400
+| | | 
+| | |     Merge branch 'refs/heads/BUG2.003'
+| | | 
+| | * commit 7dc4520216fad1eb8a2cc03179ff792eaee16174
+| | | Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+| | | Date:   Thu Oct 30 00:05:10 2025 -0400
+| | | 
+| | |     clean up paint panel and view after shapechooserpanel
+| | | 
+| | * commit af8695ff363805330a44044f6168972934a982e5
+| | | Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+| | | Date:   Wed Oct 29 23:33:19 2025 -0400
+| | | 
+| | |     factory for ShapeChooserPanel
+| | | 
+| * | commit f19cdcf8e137918bd51f4d96668340d283f44589
+| | | Author: tatisoha <s.tati@mail.utoronto.ca>
+| | | Date:   Thu Oct 30 18:31:58 2025 -0400
+| | | 
+| | |     tatisoha - daily scrum 30/10/2025
+| | | 
+| * | commit 6670364cfa10013685be0be210a19f0650b3475f
+| | | Author: sidd1378 <zainabb.siddiqui@mail.utoronto.ca>
+| | | Date:   Wed Oct 29 23:43:54 2025 -0400
+| | | 
+| | |     sidd1378 - daily scrum 29/10/2025
+| | | 
+| * | commit 0b102035594b81152446608876d143141dd3b328
+| | | Author: sidd1378 <zainabb.siddiqui@mail.utoronto.ca>
+| | | Date:   Wed Oct 29 23:42:30 2025 -0400
+| | | 
+| | |     sidd1378 - daily scrum 28/10/2025
+| | | 
+| * | commit 22490cc26a8d892197b92a74e07c0c5ea0de875c
+| |/  Author: tatisoha <s.tati@mail.utoronto.ca>
+| |   Date:   Wed Oct 29 23:13:36 2025 -0400
+| |   
+| |       tatisoha - updated scrum 29/10/2025
+| | 
+| * commit b4f281dd58f9490f8081a7e5a021a3e187952430
+| | Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+| | Date:   Wed Oct 29 22:45:09 2025 -0400
+| | 
+| |     update
+| |   
+| *   commit cdbd5b533f4f31173d5688b6c06d20467651ff00
+| |\  Merge: 7969ff3 061da8f
+| | | Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+| | | Date:   Wed Oct 29 22:42:59 2025 -0400
+| | | 
+| | |     Merge branch 'refs/heads/US2.006'
+| | |   
+* | |   commit b730cb2ffb6fb03e46fa31fa75b1bdba21a01ef1
+|\ \ \  Merge: 7969ff3 061da8f
+| |/ /  Author: Anushka Roy <anushka.roy@mail.utoronto.ca>
+|/| /   Date:   Wed Oct 29 22:37:53 2025 -0400
+| |/    
+| |         Merge branch 'US2.006'
+| | 
+| * commit 061da8fc9bd7b2ede2881b132c5e37f3deefb58b
+| | Author: Anushka Roy <anushka.roy@mail.utoronto.ca>
+| | Date:   Wed Oct 29 22:36:45 2025 -0400
+| | 
+| |     US2.006 - removed bounding box
+| | 
+* | commit 7969ff3e3b89cbfe0e879c37b402a0fcd45e0701
+| | Author: Anushka Roy <anushka.roy@mail.utoronto.ca>
+| | Date:   Wed Oct 29 18:51:14 2025 -0400
+| | 
+| |     Scrum update
+| | 
+* | commit c67006f669aad8fafbc8258c13c649ac44c80e6e
+|/  Author: Anushka Roy <anushka.roy@mail.utoronto.ca>
+|   Date:   Wed Oct 29 18:45:47 2025 -0400
+|   
+|       Sprint and Product backlog update
+| 
+* commit e51f28d49ba8bc85005b5558a9e4161df46f1ba6
+| Author: Anushka Roy <anushka.roy@mail.utoronto.ca>
+| Date:   Wed Oct 29 18:34:57 2025 -0400
+| 
+|     US2.006 Completed
+|   
+*   commit 76b8fb31d633ddc4fcebb742ad5052339d5eb48f
+|\  Merge: 9392a76 6d1bc3b
+| | Author: Anushka Roy <anushka.roy@mail.utoronto.ca>
+| | Date:   Wed Oct 29 18:26:52 2025 -0400
+| | 
+| |     Merge branch 'US2.005'
+| | 
+| * commit 6d1bc3b6d688c199060e524aa625f68ee9843f6a
+| | Author: Anushka Roy <anushka.roy@mail.utoronto.ca>
+| | Date:   Wed Oct 29 18:23:53 2025 -0400
+| | 
+| |     US2.005 Completed
+| | 
+| * commit 43b9e3c9fa2206197a2a4fc64be95c8bf5962d9c
+| | Author: Anushka Roy <anunu@Anushkas-MacBook-Pro.local>
+| | Date:   Wed Oct 29 01:10:15 2025 -0400
+| | 
+| |     implemented Oval
+| | 
+* | commit 9392a76e3972e6ee89705911e7d69e05c4bd80cf
+|/  Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+|   Date:   Wed Oct 29 13:58:22 2025 -0400
+|   
+|       daily scrum 29/10/25
+| 
+* commit 41237a5e709f346fb2b6d7c712bbaab47d016ec3
+| Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+| Date:   Tue Oct 28 23:26:31 2025 -0400
+| 
+|     backlogs cleanup
+| 
+* commit deef1bbd4edef900cc8e507f8a8b1c9532e311df
+| Author: tatisoha <s.tati@mail.utoronto.ca>
+| Date:   Tue Oct 28 23:02:53 2025 -0400
+| 
+|     tatisoha - daily scrum update + updated backlogs
+|   
+*   commit 9e139dde711256a1edc284475025c66c0af87d47
+|\  Merge: cc6eada aaa4f10
+| | Author: tatisoha <s.tati@mail.utoronto.ca>
+| | Date:   Tue Oct 28 22:51:05 2025 -0400
+| | 
+| |     Merge branch 'US2.004'
+| | 
+| * commit aaa4f103572732146ff4e22f9a76f1c44f8b4ee8
+| | Author: tatisoha <s.tati@mail.utoronto.ca>
+| | Date:   Tue Oct 28 22:49:23 2025 -0400
+| | 
+| |     Implemented Triangle feedback
+| | 
+* | commit cc6eada87367593203c839e997aefd61206476de
+| | Author: sidd1378 <zainabb.siddiqui@mail.utoronto.ca>
+| | Date:   Tue Oct 28 22:38:33 2025 -0400
+| | 
+| |     sidd1378 - daily scrum 28/10/2025
+| | 
+* | commit c9cb3dcbb50122db0c713eacca6350871486b189
+|/  Author: sidd1378 <zainabb.siddiqui@mail.utoronto.ca>
+|   Date:   Tue Oct 28 19:52:00 2025 -0400
+|   
+|       US2.002 - Added live preview for Square drawing
+| 
+* commit f041a3e3d176e8c379f35fb8d946a85bde4d49ad
+| Author: tatisoha <s.tati@mail.utoronto.ca>
+| Date:   Tue Oct 28 16:02:26 2025 -0400
+| 
+|     minor update in backlogs
+| 
+* commit 4179aadf42d2a969a9af5c19d4ee0c54183247e8
+| Author: tatisoha <s.tati@mail.utoronto.ca>
+| Date:   Tue Oct 28 16:00:08 2025 -0400
+| 
+|     tatisoha - updated backlogs
+| 
+* commit 8a492c2d3391886db5854b7235f33da6e25bddd2
+| Author: tatisoha <s.tati@mail.utoronto.ca>
+| Date:   Tue Oct 28 11:46:27 2025 -0400
+| 
+|     tatisoha - Daily scrum 28/10/2025
+|   
+*   commit 9680cf9c9a2943470f37bff276d765d6c9a396dc
+|\  Merge: a5de307 87c4bf7
+| | Author: tatisoha <s.tati@mail.utoronto.ca>
+| | Date:   Tue Oct 28 11:40:08 2025 -0400
+| | 
+| |     Resolved merge conflict
+| | 
+| * commit 87c4bf77820ef71c2ecc10be4a72f451ef1f71df
+| | Author: tatisoha <s.tati@mail.utoronto.ca>
+| | Date:   Tue Oct 28 11:34:04 2025 -0400
+| | 
+| |     minor change
+| | 
+| * commit 4d23ba722b1ef27eaa90b6d9bb3ae2db05c1e37e
+| | Author: tatisoha <s.tati@mail.utoronto.ca>
+| | Date:   Tue Oct 28 10:48:08 2025 -0400
+| | 
+| |     Completed triangle
+| | 
+| * commit fbf6d1b091999e4896c0d3352b1f89522c8d50ea
+| | Author: tatisoha <s.tati@mail.utoronto.ca>
+| | Date:   Mon Oct 27 17:33:12 2025 -0400
+| | 
+| |     Added Triangle and TriangleStrategy java classes
+| | 
+* | commit a5de3077b5d11d8cb2114bbecc078ff668c27b23
+| | Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+| | Date:   Tue Oct 28 09:22:20 2025 -0400
+| | 
+| |     comments cleanup
+| | 
+* | commit e1de12720658a1f71ef2ac34cd93baa6a3fdd377
+| | Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+| | Date:   Tue Oct 28 08:37:27 2025 -0400
+| | 
+| |     scrum 28/10/25 + backlog and sprint updated
+| | 
+* | commit 752f24c2f7be9d5d20b7d527cb835b18279102e5
+| | Author: sidd1378 <zainabb.siddiqui@mail.utoronto.ca>
+| | Date:   Mon Oct 27 23:41:23 2025 -0400
+| | 
+| |     sidd1378 - daily scrum 27/10/2025
+| | 
+* | commit 89ce34a380d5d85fc969b1a9111c7bc2b81ea418
+| | Author: sidd1378 <zainabb.siddiqui@mail.utoronto.ca>
+| | Date:   Mon Oct 27 23:40:45 2025 -0400
+| | 
+| |     sidd1378 - updated productBacklog.txt and sprintBacklog2.txt
+| |   
+* |   commit ebf4b0be1ad0ad9998743149676985b974505c70
+|\ \  Merge: bac1981 69b369f
+| | | Author: sidd1378 <zainabb.siddiqui@mail.utoronto.ca>
+| | | Date:   Mon Oct 27 23:35:33 2025 -0400
+| | | 
+| | |     sidd1378- Completed US2.001 erge branch 'US2.001'
+| | | 
+| * | commit 69b369f08f4d81003b7d262b25d8ab4fab259121
+| | | Author: sidd1378 <zainabb.siddiqui@mail.utoronto.ca>
+| | | Date:   Mon Oct 27 23:34:08 2025 -0400
+| | | 
+| | |     sidd1378 - Completed US2.002
+| | | 
+| * | commit 525160395d6e37619e80e4732b9cecec95c349bc
+| |/  Author: sidd1378 <zainabb.siddiqui@mail.utoronto.ca>
+| |   Date:   Mon Oct 27 12:21:18 2025 -0400
+| |   
+| |       Started US2.001
+| |   
+* |   commit bac19817460f27dfa8766b2aa8bf09aac6d30fcf
+|\ \  Merge: a5b1959 9e133f4
+| |/  Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+|/|   Date:   Mon Oct 27 13:43:14 2025 -0400
+| |   
+| |       Merge branch 'refs/heads/US2.008'
+| | 
+| * commit 9e133f48c6d02c38407fe8db15e090a83e05db32
+| | Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+| | Date:   Mon Oct 27 12:30:14 2025 -0400
+| | 
+| |     polyline feedback updated
+| | 
+| * commit 0e574300013fe4fbb6a06f997d15c29b9170f53e
+| | Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+| | Date:   Mon Oct 27 12:28:06 2025 -0400
+| | 
+| |     polyline feedback updated
+| | 
+| * commit f05570b8150e1ea1b7fd709dc7b264eea7694075
+| | Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+| | Date:   Mon Oct 27 10:49:03 2025 -0400
+| | 
+| |     polyline feedback
+| | 
+* | commit a5b1959b1b393e110ae94fe3b42bd23cddd9f96a
+|/  Author: sidd1378 <zainabb.siddiqui@mail.utoronto.ca>
+|   Date:   Mon Oct 27 11:46:07 2025 -0400
+|   
+|       sidd1378 - daily scrum 26/10/2025
+| 
+* commit 781aec35b3f8e5200c1f3f6c4609d63fcf903d46
+| Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+| Date:   Mon Oct 27 10:34:27 2025 -0400
+| 
+|     backlogs updated
+| 
+* commit 216c5bb2c1869c9d818c1458ddf53a7f93952ac3
+| Author: tatisoha <s.tati@mail.utoronto.ca>
+| Date:   Mon Oct 27 10:23:18 2025 -0400
+| 
+|     tatisoha - Updated sprintBacklog2 as completed US2.007
+|   
+*   commit ef734a3ef21b9104a85782e31675ed21d95a7735
+|\  Merge: 28dd3e6 b88cb26
+| | Author: tatisoha <s.tati@mail.utoronto.ca>
+| | Date:   Mon Oct 27 10:18:38 2025 -0400
+| | 
+| |     Merge branch 'US2.007'
+| | 
+| * commit b88cb263d0fdc691bd85974857a2121b3153c38a
+| | Author: tatisoha <s.tati@mail.utoronto.ca>
+| | Date:   Mon Oct 27 10:17:53 2025 -0400
+| | 
+| |     Removed test print statements.
+| | 
+| * commit 7008c727de6cfe157d28d3718aff5084e82bfdbd
+| | Author: tatisoha <s.tati@mail.utoronto.ca>
+| | Date:   Mon Oct 27 10:05:51 2025 -0400
+| | 
+| |     Implemented US2.007 polyline
+| | 
+| * commit 0584d27950c760cc8cb10749a25207e6666a970d
+| | Author: tatisoha <s.tati@mail.utoronto.ca>
+| | Date:   Mon Oct 27 09:07:06 2025 -0400
+| | 
+| |     Added Polyline and PolylineStrategy.
+| | 
+* | commit 28dd3e6e7ce1f8a2d5036d1a5a392d38726a6c3d
+|/  Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+|   Date:   Mon Oct 27 09:58:38 2025 -0400
+|   
+|       sprint 27/10/25 + clean up
+| 
+* commit 5663c1f4c19fd1a94f2ea2b862f8b4c459c9f846
+| Author: tatisoha <s.tati@mail.utoronto.ca>
+| Date:   Mon Oct 27 08:59:37 2025 -0400
+| 
+|     tatisoha - Added US2.007 to draw a polyline.
+| 
+* commit 1b87152f19d29fec54658b36f637cfee9960d548
+| Author: Anushka Roy <anunu@Anushkas-MacBook-Pro.local>
+| Date:   Mon Oct 27 01:37:28 2025 -0400
+| 
+|     small update
+| 
+* commit 2bcaef3c9735fc89eedf18b509fda97039ae4055
+| Author: Anushka Roy <anunu@Anushkas-MacBook-Pro.local>
+| Date:   Mon Oct 27 01:34:42 2025 -0400
+| 
+|     daily scrum update
+|   
+*   commit 041bedb0db3c0e9fa3837c553e6df43739892b2f
+|\  Merge: 2643920 682adc0
+| | Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+| | Date:   Sun Oct 26 23:58:23 2025 -0400
+| | 
+| |     Merge branch 'refs/heads/BUG2.003'
+| | 
+| * commit 682adc028f9ae818ba2e8925292854634b5aba23
+| | Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+| | Date:   Sun Oct 26 23:57:30 2025 -0400
+| | 
+| |     paintmodel refactored via observer
+| | 
+| * commit 9790c450b8535be5895bb24ea0a2c5e8ca3d5577
+| | Author: tatisoha <s.tati@mail.utoronto.ca>
+| | Date:   Sun Oct 26 13:00:53 2025 -0400
+| | 
+| |     Refactor ShapeChooserPanel to load tools from PaintPanel
+| | 
+| * commit 96d1f60996b669f8951fc2aabceb331ee356b264
+| | Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+| | Date:   Sun Oct 26 11:31:38 2025 -0400
+| | 
+| |     architecture discussion
+| | 
+| * commit 122b9c2c8c8c33a1cae7285143f1c2b01ed682eb
+| | Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+| | Date:   Sun Oct 26 11:20:15 2025 -0400
+| | 
+| |     refactored paintpanel using strategy design pattern
+| | 
+| * commit 85f810cf04a7b5ed0c7f3e5ac8af5b992074abeb
+| | Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+| | Date:   Sun Oct 26 11:16:24 2025 -0400
+| | 
+| |     refactored paintpanel using strategy design pattern
+| | 
+* | commit 26439207ef5ea8516dc2aecef5177a76991e3cd7
+|/  Author: tatisoha <s.tati@mail.utoronto.ca>
+|   Date:   Sun Oct 26 21:13:57 2025 -0400
+|   
+|       tatisoha - daily scrum 26/10/2025
+| 
+* commit 8d74be620e81601ca877ec1ad01128f43b60bf9f
+| Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+| Date:   Sun Oct 26 10:08:34 2025 -0400
+| 
+|     scrum 26/10/25 + sprint 2 + productBacklog
+| 
+* commit 2b4341103464c152cc5d4aeeb15565d99c5a0946
+| Author: sidd1378 <zainabb.siddiqui@mail.utoronto.ca>
+| Date:   Sat Oct 25 22:49:02 2025 -0400
+| 
+|     sidd1378 - daily scrum 25/10/2025
+| 
+* commit 9531108cdaa4f07578c91f01139133cf1efdcab5
+| Author: tatisoha <s.tati@mail.utoronto.ca>
+| Date:   Sat Oct 25 19:19:32 2025 -0400
+| 
+|     tatisoha - daily scrum 25/10/2025
+| 
+* commit 0143a3e7f01a91971f14f7349443518375e2ab6b
+| Author: sidd1378 <zainabb.siddiqui@mail.utoronto.ca>
+| Date:   Fri Oct 24 23:47:04 2025 -0400
+| 
+|     sidd1378 - daily scrum 24/10/2025
+| 
+* commit b2f913e6dc32b7cfcfdc7a855e371e0468a765ec
+| Author: sidd1378 <zainabb.siddiqui@mail.utoronto.ca>
+| Date:   Fri Oct 24 12:29:23 2025 -0400
+| 
+|     sidd1378 - claimed user stories for sprint 2
+| 
+* commit c784b6adf7cd46f93fcedbf5d4753e65c1e75c0f
+| Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+| Date:   Fri Oct 24 11:00:02 2025 -0400
+| 
+|     scrum 24/10/25
+| 
+* commit 2905baeac06fc0ce84e0a124291aa647a5e2f5da
+| Author: tatisoha <s.tati@mail.utoronto.ca>
+| Date:   Fri Oct 24 10:47:30 2025 -0400
+| 
+|     tatisoha - Chosen user stories for sprint2
+| 
+* commit 73519988df003fa69e38d57e5c31a0ff50a98438
+| Author: sidd1378 <zainabb.siddiqui@mail.utoronto.ca>
+| Date:   Thu Oct 23 22:00:33 2025 -0400
+| 
+|     sidd1378 - daily scrum updated 23/10/2025
+| 
+* commit 727b654f398b69e1be9902cfab9d8f0ae776daee
+| Author: sidd1378 <zainabb.siddiqui@mail.utoronto.ca>
+| Date:   Thu Oct 23 21:59:24 2025 -0400
+| 
+|     sidd1378 - daily scrum updated 22/10/2025
+|   
+*   commit 7d0296863476231056c5a9e51d6dccd741e4c0b9
+|\  Merge: 8f01eaf d8e81a3
+| | Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+| | Date:   Thu Oct 23 20:27:10 2025 -0400
+| | 
+| |     Merge remote-tracking branch 'origin/master'
+| | 
+| * commit d8e81a336c5d56ea520c048e39f84ff9edc42eee
+| | Author: tatisoha <s.tati@mail.utoronto.ca>
+| | Date:   Thu Oct 23 20:24:29 2025 -0400
+| | 
+| |     tatisoha - daily scrum 23/10/2025
+| | 
+* | commit 8f01eaf445576fae9b5dac5f902ccf496e5377c1
+|/  Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+|   Date:   Thu Oct 23 20:26:49 2025 -0400
+|   
+|       scrum + sprint 2 + productBacklog
+| 
+* commit 7742dbfe905800e7122a67cd1fb58d0200fa548f
+| Author: tatisoha <s.tati@mail.utoronto.ca>
+| Date:   Tue Oct 21 21:50:27 2025 -0400
+| 
+|     tatisoha - daily scrum 21/10/2025
+| 
+* commit bf76e6e2c31bcac14cc46f5a677078c4fcff480f
+| Author: sidd1378 <zainabb.siddiqui@mail.utoronto.ca>
+| Date:   Tue Oct 21 21:40:26 2025 -0400
+| 
+|     sidd1378 - daily scrum 21/10/2025
+| 
+* commit 1ed9f8dd81c1d0e94d2d6bb9b4f12b5b2a16d46e
+| Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+| Date:   Tue Oct 21 12:23:47 2025 -0400
+| 
+|     daily scrum 21/10/25
+| 
+* commit 67e3b415d8674322c7fad35197759e1d3879e91e
+| Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+| Date:   Mon Oct 20 23:16:35 2025 -0400
+| 
+|     scrum 20/10/25
+| 
+* commit db08ed16bedfface6613ed1c9b15203b7c0ff6cc
+| Author: sidd1378 <zainabb.siddiqui@mail.utoronto.ca>
+| Date:   Mon Oct 20 20:37:43 2025 -0400
+| 
+|     sidd1378 - daily scrum 20/10/2025
+| 
+* commit bd91685a28cb0c25e95f959ff67156cc55b0e979
+| Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+| Date:   Mon Oct 20 09:25:53 2025 -0400
+| 
+|     backlog cohesiveness
+| 
+* commit d4e8b12c158024acba68dcd93493a92545166eef
+| Author: tatisoha <s.tati@mail.utoronto.ca>
+| Date:   Mon Oct 20 06:40:08 2025 -0400
+| 
+|     tatisoha : daily scrum 20/10/25 + updated product backlog
+| 
+* commit a4bfd8d1cc83a8680169625f251955b7ba59ae79
+| Author: royanus1 <anushka.roy@mail.utoronto.ca>
+| Date:   Mon Oct 20 01:50:47 2025 -0400
+| 
+|     update scrum and complete US
+| 
+* commit def38299b82b78c464712a2dc2c394badd7945c4
+| Author: royanus1 <anushka.roy@mail.utoronto.ca>
+| Date:   Mon Oct 20 01:34:08 2025 -0400
+| 
+|     Finished US1.002 - draw circle feedback
+|   
+*   commit 425aaa3ff9f3f0d9564c4f0d767471daaa2b101e
+|\  Merge: 31840f5 0b1b0a2
+| | Author: royanus1 <anushka.roy@mail.utoronto.ca>
+| | Date:   Mon Oct 20 00:23:11 2025 -0400
+| | 
+| |     Merge branch 'BUG1.006'
+| | 
+| * commit 0b1b0a231b908e39fbe7b2d9718b42a95293e8c3
+| | Author: royanus1 <anushka.roy@mail.utoronto.ca>
+| | Date:   Mon Oct 20 00:17:32 2025 -0400
+| | 
+| |     Completed BUG1.006
+| | 
+| * commit 0dba206538e6e5a15df1a56edbe40e0b97b38bb2
+| | Author: royanus1 <anushka.roy@mail.utoronto.ca>
+| | Date:   Sun Oct 19 23:13:01 2025 -0400
+| | 
+| |     small fix
+| | 
+| * commit ad5520073a788e06f77f4e73b234f6227aa99857
+| | Author: royanus1 <anushka.roy@mail.utoronto.ca>
+| | Date:   Sun Oct 19 21:22:18 2025 -0400
+| | 
+| |     minor changes
+| | 
+* | commit 31840f5e5b866eed0e62258b2f1b3de65542b718
+| | Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+| | Date:   Sun Oct 19 21:21:00 2025 -0400
+| | 
+| |     backlog cohesiveness
+| | 
+* | commit 46c077086f2305c6eb25ed5be2f524300c53b0f2
+| | Author: sidd1378 <zainabb.siddiqui@mail.utoronto.ca>
+| | Date:   Sun Oct 19 16:32:10 2025 -0400
+| | 
+| |     sidd1378 - daily scrum updated 19/10/2025
+| | 
+* | commit 3842fea1f7ce19a37e1f7743dd5eb5629eaf6b97
+| | Author: tatisoha <s.tati@mail.utoronto.ca>
+| | Date:   Sun Oct 19 11:01:39 2025 -0400
+| | 
+| |     Daily scrum 19/10/2025
+| | 
+* | commit 7b78ee63cf5b5420a0427a34e3c0dcce2e80cfbc
+| | Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+| | Date:   Sun Oct 19 09:16:53 2025 -0400
+| | 
+| |     Daily scrum 19/10/25
+| | 
+* | commit 76cbb739c60e57f2c4b0629817bc76e56c631f85
+| | Author: sidd1378 <zainabb.siddiqui@mail.utoronto.ca>
+| | Date:   Sun Oct 19 00:27:52 2025 -0400
+| | 
+| |     sidd1378 - updated productBacklog.txt
+| |   
+* |   commit 076b93fd86fd641f4a883772b45965811a5c2f5c
+|\ \  Merge: 019d758 4f4cf10
+| | | Author: tatisoha <119457313+sohantati@users.noreply.github.com>
+| | | Date:   Sat Oct 18 21:38:05 2025 -0400
+| | | 
+| | |     Merge branch 'BUG1.005'
+| | | 
+| * | commit 4f4cf10715f8166b2196ef4c52697465f3091cb5
+| | | Author: tatisoha <119457313+sohantati@users.noreply.github.com>
+| | | Date:   Sat Oct 18 21:37:33 2025 -0400
+| | | 
+| | |     updated scrum
+| | | 
+* | | commit 019d758a3ef1f91fd34f9d001f84ce46512061b2
+|\| | Merge: 477d53a bab18dd
+| | | Author: Sohan Tati <119457313+sohantati@users.noreply.github.com>
+| | | Date:   Sat Oct 18 21:12:41 2025 -0400
+| | | 
+| | |     Merge branch 'BUG1.005'
+| | | 
+| * | commit bab18dd13355ac5d6c623e2056a04cea99dd2e57
+| | | Author: Sohan Tati <119457313+sohantati@users.noreply.github.com>
+| | | Date:   Sat Oct 18 21:10:52 2025 -0400
+| | | 
+| | |     Daily scrum 18/10/2025
+| | |   
+| * |   commit 2cc137b886c471d0fb205b172ca13eabef0b50af
+| |\ \  Merge: 65b0596 9d7bb90
+| | | | Author: Sohan Tati <119457313+sohantati@users.noreply.github.com>
+| | | | Date:   Fri Oct 17 14:33:39 2025 -0400
+| | | | 
+| | | |     Merge branch 'master' into BUG1.005
+| | | |     
+| | | |     # Conflicts:
+| | | |     #       Assignment2/src/main/java/ca/utoronto/utm/assignment2/paint/ShapeChooserPanel.java
+| | | |   
+| * | |   commit 65b05961d785acf171fedb3851bab25773a08c6b
+| |\ \ \  Merge: ef1c324 6fa8975
+| | | | | Author: Sohan Tati <119457313+sohantati@users.noreply.github.com>
+| | | | | Date:   Fri Oct 17 14:32:02 2025 -0400
+| | | | | 
+| | | | |     Merge branch 'master' into BUG1.005
+| | | | |   
+| * | | |   commit ef1c324bfcc19c7915fb0fada717ae38d023eff6
+| |\ \ \ \  Merge: 54b4bdb b5f0c5b
+| | | | | | Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+| | | | | | Date:   Fri Oct 17 14:26:54 2025 -0400
+| | | | | | 
+| | | | | |     Merge remote-tracking branch 'origin/BUG1.005' into BUG1.005
+| | | | | | 
+| | * | | | commit b5f0c5b9cc1007755d85b1b4d17653d5b7b11bc6
+| | | | | | Author: Sohan Tati <119457313+sohantati@users.noreply.github.com>
+| | | | | | Date:   Fri Oct 17 14:11:31 2025 -0400
+| | | | | | 
+| | | | | |     branch
+| | | | | | 
+| * | | | | commit 54b4bdb914dcc06229deb391f80d6ee3f11601f3
+| |/ / / /  Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+| | | | |   Date:   Fri Oct 17 14:26:44 2025 -0400
+| | | | |   
+| | | | |       image change
+| | | | | 
+* | | | | commit 477d53a422b576ee9e30d58f78571d4876c972b2
+| | | | | Author: zainabsidd1 <zainabsiddiqui888@gmail.com>
+| | | | | Date:   Sat Oct 18 19:26:52 2025 -0400
+| | | | | 
+| | | | |     daily scrum
+| | | | |   
+* | | | |   commit 9010c56b57830d315320a56226cde588547075b2
+|\ \ \ \ \  Merge: 2ef30ec 31ec6d3
+| | | | | | Author: zainabsidd1 <zainabsiddiqui888@gmail.com>
+| | | | | | Date:   Sat Oct 18 18:09:32 2025 -0400
+| | | | | | 
+| | | | | |     Merge remote-tracking branch 'origin/master'
+| | | | | | 
+| * | | | | commit 31ec6d311a2e4540361d11d5383ab989a2130f5a
+| | |_|_|/  Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+| |/| | |   Date:   Sat Oct 18 18:00:26 2025 -0400
+| | | | |   
+| | | | |       Daily scrum 18/10/25
+| | | | | 
+* | | | | commit 2ef30ec9c177a7abd29bc2046a66720adbf11e0d
+|/ / / /  Author: zainabsidd1 <zainabsiddiqui888@gmail.com>
+| | | |   Date:   Sat Oct 18 18:07:59 2025 -0400
+| | | |   
+| | | |       BUG1.002 - Updated drawing selection
+| | | | 
+* | | | commit b9559d51ac4c3ac8ac0f1b9d0dee7b4bff77336d
+| | | | Author: royanus1 <anushka.roy@mail.utoronto.ca>
+| | | | Date:   Sat Oct 18 16:58:46 2025 -0400
+| | | | 
+| | | |     updated scrum
+| | | | 
+* | | | commit 876251dc9aff154477e1505f827f04a3e6032261
+| | | | Author: Sohan Tati <119457313+sohantati@users.noreply.github.com>
+| | | | Date:   Fri Oct 17 23:29:53 2025 -0400
+| | | | 
+| | | |     Daily scrum update
+| | | |   
+* | | |   commit 881d784bd6d5bda62aa7bf19bec13511506397db
+|\ \ \ \  Merge: 9d7bb90 bbbdd2e
+| |_|_|/  Author: Sohan Tati <119457313+sohantati@users.noreply.github.com>
+|/| | |   Date:   Fri Oct 17 23:27:01 2025 -0400
+| | | |   
+| | | |       Merge branch 'master' of https://mcsscm.utm.utoronto.ca:9999/git/207/25f/repo_a2_888
+| | | | 
+| * | | commit bbbdd2eeedd81fd2a4f4318091ae82b1d5055149
+| | | | Author: zainabsidd1 <zainabsiddiqui888@gmail.com>
+| | | | Date:   Fri Oct 17 20:22:17 2025 -0400
+| | | | 
+| | | |     Completed BUG1.001. Added to dailyScrum. Updated productBacklog.txt.
+| | | | 
+* | | | commit 9d7bb90ae7d7a4eeacb81dd4b2b1f3c2dd229915
+|\| | | Merge: 6fa8975 357e06d
+| |_|/  Author: Sohan Tati <119457313+sohantati@users.noreply.github.com>
+|/| |   Date:   Fri Oct 17 14:32:27 2025 -0400
+| | |   
+| | |       Merge branch 'master' of https://mcsscm.utm.utoronto.ca:9999/git/207/25f/repo_a2_888
+| | | 
+| * | commit 357e06d8a587c8cdcf53bfdc14c34bb394a3e249
+| |/  Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+| |   Date:   Fri Oct 17 14:29:53 2025 -0400
+| |   
+| |       bug fix
+| | 
+* | commit 6fa89752ddd0e3f5ad61d4c36bf8c4b266f8a390
+|/  Author: Sohan Tati <119457313+sohantati@users.noreply.github.com>
+|   Date:   Fri Oct 17 14:20:00 2025 -0400
+|   
+|       Revert "Ignore IntelliJ project files"
+|       
+|       This reverts commit 56170826b3ced9acf4333dea1be9697d4f7f45df.
+| 
+* commit f1d72309d14e2f64e9a4c58e49e4c6bc3e92b8f0
+| Author: zainabsidd1 <zainabsiddiqui888@gmail.com>
+| Date:   Fri Oct 17 11:44:41 2025 -0400
+| 
+|     Daily scrum 16/10/25
+| 
+* commit d0ab7487a09944a771c575eb54178f421527fd1a
+| Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+| Date:   Fri Oct 17 09:26:11 2025 -0400
+| 
+|     daily scrum 17/10/25
+| 
+* commit f882160ace2c6ac416b4416db23a2d7a298b9862
+| Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+| Date:   Fri Oct 17 09:21:57 2025 -0400
+| 
+|     updated productBacklog.txt
+| 
+* commit e8f92e1edfaf2a0dbd0d07f238650f02c7b8b9eb
+| Author: Sohan Tati <119457313+sohantati@users.noreply.github.com>
+| Date:   Thu Oct 16 23:19:11 2025 -0400
+| 
+|     Updated daily scrum
+| 
+* commit 56170826b3ced9acf4333dea1be9697d4f7f45df
+| Author: Sohan Tati <119457313+sohantati@users.noreply.github.com>
+| Date:   Thu Oct 16 22:21:25 2025 -0400
+| 
+|     Ignore IntelliJ project files
+| 
+* commit 943c034e774a7db3ceff5f0887d2651ac184f3e6
+| Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+| Date:   Thu Oct 16 21:47:51 2025 -0400
+| 
+|     minor bug fix
+|   
+*   commit 9773b8967e75f782b3bc918e4bca4879ed592fc7
+|\  Merge: 0131c6d b1b34f5
+| | Author: zainabsidd1 <zainabsiddiqui888@gmail.com>
+| | Date:   Thu Oct 16 20:02:39 2025 -0400
+| | 
+| |     Completed BUG1.001
+| | 
+| * commit b1b34f585aecb69252f04c26d0e2ba0b2724d1c3
+| | Author: zainabsidd1 <zainabsiddiqui888@gmail.com>
+| | Date:   Thu Oct 16 19:54:27 2025 -0400
+| | 
+| |     BUG1.001 - Changed buttons from words to icons.
+| | 
+| * commit a146928fafe68a38994afc18711f789a253817ea
+| | Author: zainabsidd1 <zainabsiddiqui888@gmail.com>
+| | Date:   Wed Oct 15 20:18:11 2025 -0400
+| | 
+| |     Added to productBacklog.txt. Started working on BUG1.001
+| | 
+* | commit 0131c6da683577f3318a93b6df7b5dee3ffef545
+| | Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+| | Date:   Thu Oct 16 09:35:35 2025 -0400
+| | 
+| |     daily scrum 16/10/25
+| | 
+* | commit b4f0791ad99047c4ba975426b313b8b49bec295f
+| | Author: Sohan Tati <119457313+sohantati@users.noreply.github.com>
+| | Date:   Wed Oct 15 23:50:36 2025 -0400
+| | 
+| |     fixed bug1.005
+| | 
+* | commit 9c002d4b2b8c487dbdb090bda9c904bdb44618fc
+| | Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+| | Date:   Wed Oct 15 20:31:41 2025 -0400
+| | 
+| |     minor fixes in productBacklog.txt and sprintBacklog1.txt
+| | 
+* | commit 6a6a04b9d61c1607eb135b9f2ede9d26b2d9b7c5
+|/  Author: Sohan Tati <119457313+sohantati@users.noreply.github.com>
+|   Date:   Wed Oct 15 20:17:46 2025 -0400
+|   
+|       Updated scrum meeting notes and backlogs
+| 
+* commit 822b25a965f811554865d6a358d7c949d7c82b16
+| Author: Anushka Roy <anunu@Anushkas-MacBook-Pro.local>
+| Date:   Wed Oct 15 18:10:50 2025 -0400
+| 
+|     sprintBacklog1.txt updated
+| 
+* commit 651513957bddc73cff88689689a1a4b66706d8a5
+| Author: Anushka Roy <anunu@Anushkas-MacBook-Pro.local>
+| Date:   Wed Oct 15 17:58:42 2025 -0400
+| 
+|     sprintBacklog1 updated
+| 
+* commit bdee02ec64447d1c1ce89a129073efecd79e7bec
+| Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+| Date:   Wed Oct 15 16:41:27 2025 -0400
+| 
+|     Completed UserStory1.004
+| 
+* commit 70121e832ba087cf1fb4e4bbb828efcc49815327
+| Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+| Date:   Wed Oct 15 16:07:46 2025 -0400
+| 
+|     minor fix
+| 
+* commit 381ca077e9cedebcc507a9af4954a52aeba439f6
+| Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+| Date:   Wed Oct 15 16:00:05 2025 -0400
+| 
+|     sprintBacklog1.txt and productBacklog.txt updated
+| 
+* commit 443a68fe7ac31e95e59ca3a77d53905657b001ab
+| Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+| Date:   Wed Oct 15 15:55:53 2025 -0400
+| 
+|     minor fix in US1.003
+| 
+* commit 88eea647dc142e99760acbfc034488d43eaafac3
+| Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
+| Date:   Wed Oct 15 15:49:04 2025 -0400
+| 
+|     Finished UserStory1.003
+| 
+* commit b148c532e31caa8511d1812ce3a36de957ba6350
+| Author: Japnoor Kaur <japnoor.kaur@mail.utoronto.ca>
+| Date:   Wed Oct 15 15:11:59 2025 -0400
+| 
+|     daily scrum and sprint + product backlog
+| 
+* commit f475de8e0534bf96b272b2f04259feefb5b948fa
+| Author: zainabsidd1 <zainabsiddiqui888@gmail.com>
+| Date:   Wed Oct 15 11:19:17 2025 -0400
+| 
+|     sidd1378 - Claimed BUG1.001 and BUG1.002
+| 
+* commit fe112165411eb163684a9b57382fac9e67b5e52f
+| Author: zainabsidd1 <zainabsiddiqui888@gmail.com>
+| Date:   Wed Oct 15 10:49:07 2025 -0400
+| 
+|     Assignment2 Folder Added
+| 
+* commit c65188daeaa28865a9ac6357628c05c2fef6dfa3
+  Author: zainabsidd1 <zainabsiddiqui888@gmail.com>
+  Date:   Wed Oct 15 10:36:10 2025 -0400
+  
+      members.txt added

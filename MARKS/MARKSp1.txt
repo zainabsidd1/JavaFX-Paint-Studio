@@ -1,0 +1,136 @@
+WORK_START
+Amount of work you did on the project:
+	1) Work done on each sprint
+
+	2) Work done on project: count user stories, a quick glance to determine if they are reasonable. 
+		If listing many small things, use a .5 factor
+WORK_END
+WORK: /???
+
+CODEQUALITY_START
+Code quality: Individual classes marked according to 5 mark grading scheme, code marking scheme.
+	
+	1) Please make your code so simple, with names so well chosen, that minimal documentation is needed. 
+
+		Check use of naming convention for mapping between 
+			Name on Rectangle Button
+			Rectangle
+			filenames for Rectangle ICONS
+			classes involving Rectangle
+
+		[YN] Classes named according to mode/shape
+
+		Check for names of classes that mention which design pattern they are using
+			*Factory*
+			*Strategy*
+			*Command*
+
+		[YN] Classes named according to design pattern
+
+	2) 
+		[YN] Code is simple: 
+			Example: methods appropriately short and serve a specific purpose
+			Example: classes appropriately short and serve a specific purpose
+			Example: uses correct few concepts effectively
+			Example: captures concepts in methods and classes
+
+		[YN] Code is clear and clean
+			Example: documenting interesting algorithms
+			Example: No deeply nested if
+			Example: Good naming
+			Example: easy to understand if conditions
+			Example: Easy to see what a variable is used for
+			Example: Easy to find your way around code
+			Example: Ask whats going on here, its easy to understand based on names, doc, 
+				mention paradigm and then code matches paradigm.
+
+			Example: no commented out code left in etc.
+			Example: code is nicely organized and indented for easy reading.
+			Example: Methods that work together appear together
+
+		[YN] Code is concise
+			Example: Minimal repeated code
+
+	3) instanceof OR is instance
+		The following is 3 marks, all or nothing. 
+		MARKER: Look for chained if statements/switch in code. Look for instance of or isinstance
+	
+		[YN] No mention of isInstance/instanceof/switching on some class name
+		[YN] No mention of isInstance/instanceof/switching on some class name
+		[YN] No mention of isInstance/instanceof/switching on some class name
+
+CODEQUALITY_END
+CODEQUALITY: /9
+
+ARCHITECTURE_START
+Architecture: The extent to which you use Design Patterns to create simple, extendable, clear, concise code.
+
+	1) Count if they specifically have:
+		CHECK: finalArchitecture/architecture.txt
+
+		BUG?.003 Architecture behind choosing selection mode is poor
+		[YN] Factory: When the ShapeSelector Button is pressed
+		[YN] Strategy: Handling mouse events
+
+		BUG3.004 Architecture behind Model is poor
+		[YN] Command: For a stack of shape commands. 
+
+			CHECK: PaintModel, they have a collection of Shape with Shape.paint(GraphicsContext g2d) or similar.
+
+
+	2) marked from finalArchitecture/architecture.txt, count number of ADDITIONAL design patterns they architected.
+
+		POINTS: 
+		1) Use of library DP does not count, example Observer/Observable or Iterator. For example,
+		   claiming that the listeners is Observer/Observable does not count.
+
+		2) If you re-created Iterator or Observer/Observable this does not count.
+
+		3) To count, it should make a difference, just using a linked list when there is an ArrayList
+		   will not make the code better.
+		
+		MARKER NOTE: Please list the design patterns you accepted from their finalArchitecture/architecture.txt
+		MARKER NOTE: Accept a maximum of the best 3
+
+		[YN] Additional DP
+		[YN] Additional DP
+		[YN] Additional DP
+
+ARCHITECTURE_END
+ARCHITECTURE: /6
+
+GIT_START
+Git: We expect to see simultaneous working branches merging into master, moving the project forward.
+	1) branches on BUG/US
+		[YN] list of branches named according to US/BUG
+
+	2) quality of git log --graph 
+		[YN] clean git graph (branches and merges)
+GIT_END
+GIT: /2
+
+DOCUMENTATION_START
+Documentation: 
+	1) In addition to normal JavaDoc, please make sure that you describe how classes are used in any Design Patterns. 
+
+		From repo_a2_XXX/Assignment2/scrum/finalArchitecture/architecture.txt
+
+		[YN] Describes one scenario/story
+		[YN] Clearly describes one scenario/story (all details needed to follow and implement)
+
+
+	3) Additionally, you will be marked on your architecture documents as submitted in Sprint1 and Sprint4.
+
+		Marks from Prof. Zhang
+
+DOCUMENTATION_END
+DOCUMENTATION: /2
+
+MVCSEPARATION_START
+	[YN] MV separation: Check Circle.java for Graphics
+        [YN] VC separation: Check PaintPanel.java (Canvas) for MouseEvent
+        [YN] MC separation: Check Circle.java for MouseEvent
+MVCSEPARATION_END
+MVCSEPARATION: /3
+
+

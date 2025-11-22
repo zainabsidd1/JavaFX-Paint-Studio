@@ -1,0 +1,158 @@
+# Fill in, commit and push each day.
+Member name: Zainab Siddiqui     email: zainabb.siddiqui@mail.utoronto.ca     utorid: sidd1378
+
+Oct 15,2025
+	What I did yesterday: n/a.
+	What I will do today: Create a branch for my selected BUGs and get started on it.
+	Obstacles I face: Remembering the appropriate git commands.
+
+Oct 16,2025
+	What I did yesterday: Set up the repo and created a branch for BUG1.001.
+	What I will do today: Work on BUG01.001 by finding png's of icons to use.
+	Obstacles I face: Rectangle and Circle were not syncing with the icon buttons.
+
+Oct 17,2025
+	What I did yesterday: Worked on BUG1.001 by replacing text buttons with icon buttons in ShapeChooserPanel.
+	What I will do today: Ensure the new icon buttons sync with the drawing modes in ShaperChooserPanel.
+	Obstacles I face: The mode wasn't being reflected when changing shapes.
+
+Oct 18,2025
+	What I did yesterday: Finished BUG1.001.
+	What I will do today: Get started on BUG1.002, decide on the styling for selected buttons.
+	Obstacles I face: n/a.
+
+Oct 19,2025
+	What I did yesterday: Worked on styling the icon buttons.
+	What I will do today: Finish BUG1.002 by ensuring highlighted feature works.
+	Obstacles I face: Choosing an appropriate color to highlight the icon.
+
+Oct 20,2025
+	What I did yesterday: Finished up on BUG1.002.
+	What I will do today: Analyze the architecture used by the classes and note down any design improvements that can be made.
+	Obstacles I face: n/a.
+
+Oct 21,2025
+	What I did yesterday: Study the projects architecture and design patterns.
+	What I will do today: Update sprintBacklog1 and productBacklog.
+	Obstacles I face: n/a.
+
+Oct 22,2025
+	What I did yesterday: update sprintBacklog1 and productBacklog.
+	What I will do today: review design patters used by Shape and improvements that can be made.
+	Obstacles I face: n/a.
+
+Oct 23,2025
+	What I did yesterday: Studied the projects architecture and design patterns.
+	What I will do today: Look over sprint 2.
+	Obstacles I face: n/a.
+
+Oct 24,2025
+	What I did yesterday: look over sprint 2.
+	What I will do today: pick user stories from sprintBacklog2 for sprint2.
+	Obstacles I face: n/a.
+
+Oct 25,2025
+	What I did yesterday: Pick user stories from sprintBacklog2 for sprint2.
+	What I will do today: Look over US2.001 and decide how to implement Draw Square.
+	Obstacles I face: n/a.
+
+Oct 26,2025
+	What I did yesterday: Plan how to implement Draw Square.
+	What I will do today: Work on US2.001.
+	Obstacles I face: n/a.
+
+Oct 27,2025
+	What I did yesterday: Started on US2.001.
+	What I will do today: Implement Square and SquareStrategy classes.
+	Obstacles I face: Understanding how to keep all sides equal when dragging to create Square shape.
+
+Oct 28,2025
+	What I did yesterday: Finished up on US2.001.
+	What I will do today: Implement live feedback for the Square shape (US2.002).
+	Obstacles I face: Ensuring equal side lengths when dragging the square.
+
+Oct 29,2025
+	What I did yesterday: Finished up on US2.002.
+	What I will do today: Update sprintBacklog2.txt and product backlog.
+	Obstacles I face: n/a.
+
+Oct 30,2025
+	What I did yesterday: Updated my user stories in sprintBacklog2 and product backlog.
+	What I will do today: Look over architecture bug for sprint2.
+	Obstacles I face: n/a.
+
+Oct 31,2025
+	What I did yesterday: Look over architecture bug for sprint2.
+	What I will do today: Look over sprint 3 and claimed US3.002.
+	Obstacles I face: n/a.
+
+Nov 1,2025
+	What I did yesterday: Claimed US3.002 and got started on implemented the undo feature.
+	What I will do today: Finish US3.002 and submit a pull request. Look over any pull requests I was assigned to.
+	Obstacles I face: Resolving merge conflicts when merging a pull request.
+
+Nov 2,2025
+	What I did yesterday: Finished US3.003 and accepted pull requests.
+	What I will do today: Start on US3.007, line thickness selector.
+	Obstacles I face: n/a
+
+Nov 3,2025
+	What I did yesterday: Looked over US3.006 and US3.007.
+	What I will do today: Worked on fill style selector so that all fillable shapes can be either solid or filled.
+	Obstacles I face: Syncing the fill bucket tool with outlined only shapes.
+
+Nov 4,2025
+	What I did yesterday: Implemented the fill style selector tool.
+	What I will do today: Minor fixes to the PaintModel class to clean up the code.
+	Obstacles I face: n/a.
+
+Nov 5,2025
+	What I did yesterday: Cleaned up PaintModel class.
+	What I will do today: Accepted pull requests for US3.008, US3.009, and US3.010.
+	Obstacles I face: Merge conflicts with the pull requests.
+
+Nov 6,2025
+	What I did yesterday: Accepted pull requests for 3 user stories.
+	What I will do today: Accepted pull requests for US3.007.
+	Obstacles I face: merge conflicts with the fill bucket code.
+
+Nov 7,2025
+	What I did yesterday: Accepted and merged 3 pull requests.
+	What I will do today: Look over sprint 4 and claim user stories.
+	Obstacles I face: n/a.
+
+Nov 8,2025
+	What I did yesterday: Claim US4.001 and US4.002 from sprint backlog 4.
+	What I will do today: Work on implementing background color changing feature (US4.001).
+	Obstacles I face: Applying undo/redo functionality with the background color change.
+
+Nov 9,2025
+	What I did yesterday: Worked on US4.001.
+	What I will do today: Work on the accessibility feature that displays the color selected.
+	Obstacles I face: n/a.
+
+Nov 10,2025
+	What I did yesterday: Finished the accessibility feature (US4.004).
+	What I will do today: Look over code architecture.
+	Obstacles I face: n/a.
+
+Nov 11,2025
+	What I did yesterday: Looked over code architecture.
+	What I will do today: Accept pull request for the spray can implementation (US4.005).
+	Obstacles I face: Resolving merge conflicts.
+
+Nov 12,2025
+	What I did yesterday: Accepted pull requests for spray can implementation.
+	What I will do today: Accept pull request for architecture bug (BUG4.004).
+	Obstacles I face: n/a.
+
+Nov 13,2025
+	What I did yesterday: Accepted pull request for BUG.4.004.
+	What I will do today: Final assignment submission.
+	Obstacles I face: n/a.
+
+Nov 14,2025
+	What I did yesterday: Final assignment submission.
+	What I will do today: Project completed!
+	Obstacles I face: n/a.
+

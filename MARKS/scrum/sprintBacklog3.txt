@@ -1,0 +1,161 @@
+# Move User Stories from the ProductBacklog 
+# to the appropriate sprintBacklogN.txt after the 
+# Sprint Planning Meeting.
+
+# Sprint 3 Oct 31-Nov 06, 2025
+# Sprint 3 Backlog UserStories go below
+
+--------------------------------------------------------------------------
+TYPE     : BUG BUG3.004 : kaurjap9 : Complete
+NAME     : Architecture behind Model is poor
+PRIORITY : 3
+ESTIMATE : 1 day    ACTUAL : 1 day
+ISSUE    : Having a list of different types of drawable things in the
+           model is cumbersome. In fact, it is currently incorrect, with
+           Squiggle's not drawing properly. Need to re-architect the Model
+           so that it is more flexible, and easier to work with.
+           Consider some design patterns, or change of responsibility
+           here.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US3.001 : tatisoha : Complete
+NAME     : Eraser Tool
+PRIORITY : 3
+ESTIMATE : 1 hour     ACTUAL : 1 day
+AS A     : user
+I WANT   : To erase parts of existing drawings
+SO THAT  : I can remove unwanted shapes or sections from the canvas
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US3.002 : sidd1378 : Complete
+NAME     : Undo Function
+PRIORITY : 3
+ESTIMATE : 2 hours     ACTUAL : 2 hours
+AS A     : user
+I WANT   : To undo the most recent action
+SO THAT  : I can correct mistakes without restarting my work
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US3.003 : sidd1378 : Complete
+NAME     : Redo Function
+PRIORITY : 3
+ESTIMATE : 2 hours     ACTUAL : 1 hour
+AS A     : user
+I WANT   : To redo an action previously undone
+SO THAT  : I can reapply the last undone change if needed
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US3.004 : kaurjap9 : Complete
+NAME     : Fill Bucket Tool
+PRIORITY : 3
+ESTIMATE : 2 hours     ACTUAL : 4 hours
+AS A     : user
+I WANT   : To fill enclosed areas or shapes with a selected color
+SO THAT  : I can quickly color large regions
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US3.005 : kaurjap9 : Complete
+NAME     : Color selector
+PRIORITY : 3
+ESTIMATE : 2 hours    ACTUAL : 1 day
+AS A     : user
+I WANT   : To be able to select the current drawing color, to be applied
+           to subsequent shapes. Example:
+           		selects color red
+           		mode circle
+           		draw a circle
+           		draw a circle
+           		mode rectangle
+           		draw a rectangle
+           		select color green
+           		draw a rectangle
+           		draw a rectangle
+           		select mode squiggle
+           		draw a squiggle
+           	results in two red circles and a red rectangle as well as
+           	two green rectangles and a green squiggle
+SO THAT  : Shapes drawn afterwards use the chosen color
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US3.006 : sidd1378 : Complete
+NAME     : Fill style selector
+PRIORITY : 3
+ESTIMATE : 2 hours    ACTUAL : 2 hours
+AS A     : user
+I WANT   : To be able to select the current drawing style (filled or outline), to be applied
+           to subsequent shapes. Example:
+           		selects fill style solid
+           		mode circle
+           		draw a circle
+           		draw a circle
+           		mode rectangle
+           		draw a rectangle
+           		select fill style outline
+           		draw a rectangle
+           		draw a rectangle
+           		select mode squiggle
+           		draw a squiggle
+           	results in two solid circles and a solid rectangle as well as
+           	two outlined rectangles and a squiggle
+SO THAT  : Shapes are rendered using the chosen style
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US3.007 : tatisoha : Complete
+NAME     : Line thickness selector
+PRIORITY : 3
+ESTIMATE : 1 hour    ACTUAL : 2 hours
+AS A     : user
+I WANT   : To be able to select the current line thickness, to be applied
+           to subsequent shapes. Example:
+           		select fill style outline
+           		selects line thickness 1
+           		mode circle
+           		draw a circle
+           		draw a circle
+           		mode rectangle
+           		draw a rectangle
+           		select line thickness 9
+           		draw a rectangle
+           		draw a rectangle
+           		select mode squiggle
+           		draw a squiggle
+           	results in two thinly outlined circles and a thinly outlined
+           	rectangle as well as two thickly outlined rectangles and a thick squiggle
+SO THAT  : Outlines and strokes appear at the chosen width
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US3.008 : royanus1 : Complete
+NAME     : Cut Function
+PRIORITY : 3
+ESTIMATE : 2 hours     ACTUAL : 3 hours
+AS A     : user
+I WANT   : To cut selected shapes
+SO THAT  : I can remove and move them elsewhere using paste
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US3.009 : royanus1 : Complete
+NAME     : Copy Function
+PRIORITY : 3
+ESTIMATE : 2 hours     ACTUAL : 2 hours
+AS A     : user
+I WANT   : To copy the selected shape
+SO THAT  : I can copy the selected shape
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US3.010 : royanus1 : Complete
+NAME     : Paste Function
+PRIORITY : 3
+ESTIMATE : 2 hours     ACTUAL : 4 hours
+AS A     : user
+I WANT   : To paste previously cut or copied shapes
+SO THAT  : I can reposition or duplicate content
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US3.011 : tatisoha : Complete
+NAME     : Mover Tool
+PRIORITY : 3
+ESTIMATE : 2 hours     ACTUAL : 2 hours
+AS A     : user
+I WANT   : To move existing shapes to a different position on the canvas
+SO THAT  : I can reposition elements without redrawing them
+--------------------------------------------------------------------------
