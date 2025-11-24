@@ -50,6 +50,12 @@
 --------------------------------------------------------------------
  git log --graph 
 --------------------------------------------------------------------
+* commit 872c22261872ffcf6dbad1a30c104d12f0564b15
+| Author: MCS CSC207H5 <207@dh2010pc10.utm.utoronto.ca>
+| Date:   Sat Nov 22 10:34:44 2025 -0500
+| 
+|     Completed setup for MARKS
+| 
 * commit 157698620299d9ef9c66af2ef36bbb53d4c940d4
 | Author: kaurjap9 <japnoor.kaur@mail.utoronto.ca>
 | Date:   Thu Nov 13 13:41:03 2025 -0500
