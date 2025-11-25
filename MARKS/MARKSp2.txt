@@ -37,7 +37,7 @@ FUNCTIONALITY: /10
 
 
 EXTRAFEATURES_START
-10% of the mark will be competitive, for the collection of interesting features your group comes up with. 
+15% of the mark will be competitive, for the collection of interesting features your group comes up with. 
 	This will appear in sprints 2,3,4. 
 
 	See: https://docs.google.com/document/d/1Nffz_hrN4fhQdobX7iOFBK0gVWbhKdwFUOtqgywxi48/edit?tab=t.0
