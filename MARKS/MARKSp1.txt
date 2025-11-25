@@ -20,12 +20,16 @@ Code quality: Individual classes marked according to 5 mark grading scheme, code
 
 	2) 
 		[YN] Code is simple: 
+			NOTE: This is a higher level, more global notion, about code organization
+			NOTE: and effective use of classes, methods etc. 
 			Example: methods appropriately short and serve a specific purpose
 			Example: classes appropriately short and serve a specific purpose
 			Example: uses correct few concepts effectively
 			Example: captures concepts in methods and classes
 
 		[YN] Code is clear and clean
+			NOTE: This is a lower level, more local notion, basically what you see
+			NOTE: on any given screens worth of code.
 			Example: documenting interesting algorithms
 			Example: No deeply nested if
 			Example: Good naming
