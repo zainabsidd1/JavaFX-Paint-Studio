@@ -3,37 +3,37 @@ Functionality Basics: Tested by running your code.
 	Mark with E for error
 	[0E] ERROR: 
 	
-	[YN] Icons for drawing modes
+	[Y] Icons for drawing modes
 		BUG1.001 Icons instead of text for drawing mode selection
 
-	[YN] Very easy to see which drawing mode is selected
+	[Y] Very easy to see which drawing mode is selected
 		BUG1.002 Drawing selection mode not indicated
 
-	[YN] Can create multiple, disconnected squiggles 
+	[Y] Can create multiple, disconnected squiggles
 		without clicking on the drawing mode again.
 
 		BUG1.005 Squiggle is broken
 		Fix was to create multiple squiggle objects
 
-	[YN] Draw a circle by clicking on center and dragging radius.
+	[Y] Draw a circle by clicking on center and dragging radius.
 		BUG1.006 Circle drawing is broken
 		
-	[YN] Feedback as drag on radius happen
+	[Y] Feedback as drag on radius happen
 		US1.002 Draw Circle Feedback
 		Show drag on circle radius. 
 
-	[YN] Rectangle drawing works, with second corner in any location
+	[Y] Rectangle drawing works, with second corner in any location
 		US1.003 Draw Rectangle
 
-	[YN] Feedback as dragging second point
+	[Y] Feedback as dragging second point
 		US1.004 Draw Rectangle Feedback
 
-	[YN] Square 
-	[YN] Triangle
-	[YN] Oval
+	[Y] Square
+	[Y] Triangle
+	[Y] Oval
 
 FUNCTIONALITY_END
-FUNCTIONALITY: /10
+FUNCTIONALITY: 10/10
 
 
 EXTRAFEATURES_START
@@ -51,20 +51,47 @@ EXTRAFEATURES_START
 		Mark with F for feature error
 		[0F] ERROR: 
 
-		Feature: DIFFICULTY:[123] OUR_NAME
-		FeatureName: THEIR_NAME
+        Feature: DIFFICULTY:[2] Eraser
+        FeatureName: Eraser Tool
 
-		TOTAL FEATURE SCORE: [] = sum(difficulty)
-		TOTAL FEATURE ERRORS: [] = sum(errors)
-		FEATURE SCORE: [] = TOTAL FEATURE SCORE - TOTAL FEATURE ERRORS
+        Feature: DIFFICULTY:[2] UndoRedo
+        FeatureName: Undo, Redo
+
+        Feature: DIFFICULTY:[2] FillPattern
+        FeatureName: Fill Bucket Tool
+
+        Feature: DIFFICULTY:[3] ColorXFillXStrokeXThickness
+        FeatureName: Color Selector, Fill Style Selector, Line Thickness Selector
+
+        Feature: DIFFICULTY:[3] SelectXCutCopyXPasteXDrag
+        FeatureName: Cut, Copy, Paste, Mover Tool
+
+        Feature: DIFFICULTY:[2] SprayPaint
+        FeatureName: Spray Can Tool
+
+        Feature: DIFFICULTY:[1] New screen
+        FeatureName: Clear Canvas
+
+        Feature: DIFFICULTY:[3] RandomImageGenerator
+        FeatureName: AI Random Shape Generator
+
+        Feature: DIFFICULTY:[1] DrawingTemplates
+        FeatureName: Random Scenery Generator
+
+        Feature: DIFFICULTY:[1] RGBColorPicker
+        FeatureName: NOT LISTED
+
+		TOTAL FEATURE SCORE: [20] = sum(difficulty)
+		TOTAL FEATURE ERRORS: [0] = sum(errors)
+		FEATURE SCORE: [20] = TOTAL FEATURE SCORE - TOTAL FEATURE ERRORS
 EXTRAFEATURES_END
-EXTRAFEATURES: 000
+EXTRAFEATURES: 20
 
 ACCESSIBILITYFEATURES_START
-	AccessibilityFeature: OUR_NAME
-        AccessibilityFeatureName: THEIR_NAME
+	AccessibilityFeature: ColorName
+    AccessibilityFeatureName: Accessibility Color Description Label
 
-	[01] Accessibility feature attempted
-	[01] Accessibility has an impact
+	[1] Accessibility feature attempted
+	[1] Accessibility has an impact
 ACCESSIBILITYFEATURES_END
-ACCESSIBILITY: /2
+ACCESSIBILITY: 2/2
