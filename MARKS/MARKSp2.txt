@@ -78,14 +78,17 @@ EXTRAFEATURES_START
         Feature: DIFFICULTY:[1] DrawingTemplates
         FeatureName: Random Scenery Generator
 
+        Feature: DIFFICULTY:[3] Polyline
+        FeatureName: NOT LISTED
+
         Feature: DIFFICULTY:[1] RGBColorPicker
         FeatureName: NOT LISTED
 
-		TOTAL FEATURE SCORE: [20] = sum(difficulty)
+		TOTAL FEATURE SCORE: [23] = sum(difficulty)
 		TOTAL FEATURE ERRORS: [0] = sum(errors)
-		FEATURE SCORE: [20] = TOTAL FEATURE SCORE - TOTAL FEATURE ERRORS
+		FEATURE SCORE: [23] = TOTAL FEATURE SCORE - TOTAL FEATURE ERRORS
 EXTRAFEATURES_END
-EXTRAFEATURES: 20
+EXTRAFEATURES: 23
 
 ACCESSIBILITYFEATURES_START
 	AccessibilityFeature: ColorName
