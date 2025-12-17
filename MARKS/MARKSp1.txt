@@ -9,17 +9,17 @@ Code quality: Individual classes marked according to 5 mark grading scheme, code
 			filenames for Rectangle ICONS
 			classes involving Rectangle
 
-		[YN] Classes named according to mode/shape
+		[Y] Classes named according to mode/shape
 
 		Check for names of classes that mention which design pattern they are using
 			*Factory*
 			*Strategy*
 			*Command*
 
-		[YN] Classes named according to design pattern
+		[Y] Classes named according to design pattern
 
 	2) 
-		[YN] Code is simple: 
+		[Y] Code is simple:
 			NOTE: This is a higher level, more global notion, about code organization
 			NOTE: and effective use of classes, methods etc. 
 			Example: methods appropriately short and serve a specific purpose
@@ -27,7 +27,7 @@ Code quality: Individual classes marked according to 5 mark grading scheme, code
 			Example: uses correct few concepts effectively
 			Example: captures concepts in methods and classes
 
-		[YN] Code is clear and clean
+		[N] Code is clear and clean
 			NOTE: This is a lower level, more local notion, basically what you see
 			NOTE: on any given screens worth of code.
 			Example: documenting interesting algorithms
@@ -43,19 +43,21 @@ Code quality: Individual classes marked according to 5 mark grading scheme, code
 			Example: code is nicely organized and indented for easy reading.
 			Example: Methods that work together appear together
 
-		[YN] Code is concise
+			COMMENT: No documentation
+
+		[Y] Code is concise
 			Example: Minimal repeated code
 
 	3) instanceof OR is instance
 		The following is 3 marks, all or nothing. 
 		MARKER: Look for chained if statements/switch in code. Look for instance of or isinstance
 	
-		[YN] No mention of isInstance/instanceof/switching on some class name
-		[YN] No mention of isInstance/instanceof/switching on some class name
-		[YN] No mention of isInstance/instanceof/switching on some class name
+		[N] No mention of isInstance/instanceof/switching on some class name
+		[N] No mention of isInstance/instanceof/switching on some class name
+		[N] No mention of isInstance/instanceof/switching on some class name
 
 CODEQUALITY_END
-CODEQUALITY: /9
+CODEQUALITY: 4/8
 
 ARCHITECTURE_START
 Architecture: The extent to which you use Design Patterns to create simple, extendable, clear, concise code.
@@ -64,11 +66,11 @@ Architecture: The extent to which you use Design Patterns to create simple, exte
 		CHECK: architecture/architecture.txt
 
 		BUG?.003 Architecture behind choosing selection mode is poor
-		[YN] Factory: When the ShapeSelector Button is pressed
-		[YN] Strategy: Handling mouse events
+		[Y] Factory: When the ShapeSelector Button is pressed
+		[Y] Strategy: Handling mouse events
 
 		BUG3.004 Architecture behind Model is poor
-		[YN] Command: For a stack of shape commands. 
+		[Y] Command: For a stack of shape commands.
 
 			CHECK: PaintModel, they have a collection of Shape with Shape.paint(GraphicsContext g2d) or similar.
 
@@ -87,28 +89,28 @@ Architecture: The extent to which you use Design Patterns to create simple, exte
 		MARKER NOTE: Please list the design patterns you accepted from their finalArchitecture/architecture.txt
 		MARKER NOTE: Accept a maximum of the best 3
 
-		[YN] Additional DP
-		[YN] Additional DP
-		[YN] Additional DP
+		[Y] Composite
+		[Y] Visitor
+		[N] Additional DP
 
 ARCHITECTURE_END
-ARCHITECTURE: /6
+ARCHITECTURE: 5/6
 
 GIT_START
 Git: We expect to see simultaneous working branches merging into master, moving the project forward.
 	1) branches on BUG/US
-		[YN] list of branches named according to US/BUG
+		[Y] list of branches named according to US/BUG
 
 	2) quality of git log --graph 
-		[YN] clean git graph (branches and merges)
+		[Y] clean git graph (branches and merges)
 GIT_END
-GIT: /2
+GIT: 2/2
 
 MVCSEPARATION_START
-	[YN] MV separation: Check Circle.java for Graphics
-        [YN] VC separation: Check PaintPanel.java (Canvas) for MouseEvent
-        [YN] MC separation: Check Circle.java for MouseEvent
+	[Y] MV separation: Check Circle.java for Graphics
+        [N] VC separation: Check PaintPanel.java (Canvas) for MouseEvent
+        [Y] MC separation: Check Circle.java for MouseEvent
 MVCSEPARATION_END
-MVCSEPARATION: /3
+MVCSEPARATION: 2/3
 
 
