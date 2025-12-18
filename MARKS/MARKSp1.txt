@@ -107,7 +107,7 @@ GIT_END
 GIT: 2/2
 
 MVCSEPARATION_START
-	[Y] MV separation: Check Circle.java for Graphics
+	[N] MV separation: Check Circle.java for Graphics
         [N] VC separation: Check PaintPanel.java (Canvas) for MouseEvent
         [Y] MC separation: Check Circle.java for MouseEvent
 MVCSEPARATION_END
