@@ -1,4 +1,4 @@
-##JavaFX Paint Application🎨
+## JavaFX Paint Application🎨
 
 ## About 
 
