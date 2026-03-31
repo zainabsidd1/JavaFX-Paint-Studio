@@ -26,6 +26,9 @@ range of drawing tools, smart AI features, and a clean, accessible UI.
 
 ## Architecture
 
+Multiple refactoring passes were done throughout development to eliminate code smells, reduce warnings, and improve modularity.
+Documented in architecture.txt.
+
 | Pattern | Role |
 |---|---|
 | Command | Powers the undo/redo system for all user actions |
@@ -33,5 +36,7 @@ range of drawing tools, smart AI features, and a clean, accessible UI.
 | Visitor | Decouples rendering logic from shape definitions |
 | Strategy | Drives the pluggable tool system (draw, erase, move, fill, etc.) |
 | MVC | Separates model, view, and controller responsibilities |
+
+Beyond the core requirements, the team implemented several additional features detailed in extraFeatures.txt.
 
 
