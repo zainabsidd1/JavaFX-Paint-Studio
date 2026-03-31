@@ -1,0 +1,103 @@
+# Move User Stories from the ProductBacklog 
+# to the appropriate sprintBacklogN.txt after the 
+# Sprint Planning Meeting.
+
+# Sprint 2 Oct 24–Oct 30, 2025
+# Sprint 2 Backlog UserStories go below
+
+--------------------------------------------------------------------------
+TYPE     : BUG BUG2.003 : kaurjap9 : Complete
+NAME     : Architecture behind choosing selection mode is poor
+PRIORITY : 3
+ESTIMATE : 2 days    ACTUAL : 2 days
+ISSUE    : Code is not modular and is difficult to expand. Need a better
+           architecture behind selecting a drawing mode, and handling
+           the drawing events. Consider some design patterns here.
+           Refactor ShapeChooserPanel and PaintPanel to get rid of the
+           'if' blocks in the PaintPanel mouse event code.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US2.001 : sidd1378 : Complete
+NAME     : Draw Square
+PRIORITY : 2
+ESTIMATE : 2 hours    ACTUAL : 3 hours
+AS A     : user
+I WANT   : To click and drag from one corner to another to create a square
+           where all sides are equal, drawn in the current style (outline,
+           fill, colour).
+SO THAT  : I can easily draw perfect squares on my canvas.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US2.002 : sidd1378 : Complete
+NAME     : Draw Square Feedback
+PRIORITY : 2
+ESTIMATE : 2 hours    ACTUAL : 1 hour
+AS A     : user
+I WANT   : To see a live preview of the square as I drag, showing the
+           current square outline updating in real time.
+SO THAT  : I can visualize the square I am about to draw before releasing
+           the mouse button.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US2.003 : tatisoha : Complete
+NAME     : Draw Triangle
+PRIORITY : 2
+ESTIMATE : 3 hours    ACTUAL : 2 hours
+AS A     : user
+I WANT   : To click three times to specify the vertices of a triangle that
+           will be drawn using the current colour, outline, and fill settings.
+SO THAT  : I can add triangular shapes to my drawings for more design variety.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US2.004 : tatisoha : Complete
+NAME     : Draw Triangle Feedback
+PRIORITY : 2
+ESTIMATE : 2 hours    ACTUAL : 1 hour
+AS A     : user
+I WANT   : To see the triangle lines update dynamically as I choose the
+           vertices, giving a preview of the final triangle before confirming.
+SO THAT  : I can adjust the shape in real time before finalizing it.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US2.005 : royanus1 : Complete
+NAME     : Draw Oval
+PRIORITY : 2
+ESTIMATE : 3 hours    ACTUAL : 3 hours
+AS A     : user
+I WANT   : To click and drag to define an oval is drawn using the current
+           colour and fill settings.
+SO THAT  : I can create smooth oval shapes similar to those in standard
+           paint programs.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US2.006 : royanus1 : Complete
+NAME     : Draw Oval Feedback
+PRIORITY : 2
+ESTIMATE : 2 hours    ACTUAL : 1 hour
+AS A     : user
+I WANT   : To see a live outline of the oval as I drag, dynamically showing
+           the shape that will be finalized on mouse release.
+SO THAT  : I can control the proportions and positioning of the oval more easily.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US2.007 : tatisoha : Complete
+NAME     : Draw Polyline
+PRIORITY : 1
+ESTIMATE : 1 hour    ACTUAL : 1 hour
+AS A     : user
+I WANT   : To click multiple points on the canvas to create a connected
+           series of straight line segments, ending the shape with a
+           double click.
+SO THAT  : I can draw custom multi-segment shapes that are not restricted
+           to standard polygons.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US2.008 : kaurjap9 : Complete
+NAME     : Draw Polyline Feedback
+PRIORITY : 1
+ESTIMATE : 1 hour    ACTUAL : 1 hour
+AS A     : user
+I WANT   : To see a live outline of the polyline as I drag, dynamically
+           showing the shape that will be finalized on mouse release.
+SO THAT  : I can adjust the polyline in real time before finalizing it.
+--------------------------------------------------------------------------

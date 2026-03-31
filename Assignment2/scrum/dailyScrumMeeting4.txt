@@ -1,0 +1,159 @@
+# Fill in, commit and push each day.
+Member name: Sohan Tati     email: s.tati@mail.utoronto.ca    utorid: tatisoha
+
+Oct 15,2025
+	What I did yesterday: n/a.
+	What I will do today: Pick a bug and create a branch.
+	Obstacles I face: cloning repo and learning to merge to and pull from master branch.
+
+Oct 16,2025
+	What I did yesterday: Fixed BUG1.005.
+	What I will do today: n/a.
+	Obstacles I face: learning about git merge branches and idea files.
+
+Oct 17,2025
+	What I did yesterday: n/a.
+	What I will do today: minor bug fixes in bug1.005.
+	Obstacles I face: n/a.
+
+Oct 18,2025
+	What I did yesterday: fixed idea file commits and other bugs.
+	What I will do today: changed username.
+	Obstacles I face: n/a.
+
+Oct 19,2025
+	What I did yesterday: changed username to utorid.
+	What I will do today: changed email to uoft email + looked over project structure and product backlog.
+	Obstacles I face: n/a.
+
+Oct 20,2025
+	What I did yesterday: changed email + looked over project structure.
+	What I will do today: update product backlog.
+	Obstacles I face: n/a.
+
+Oct 21,2025
+	What I did yesterday: updated product backlog.
+	What I will do today: sprint1 completed.
+	Obstacles I face:n/a.
+
+Oct 22,2025
+	What I did yesterday: sprint1 completed.
+	What I will do today: look over sprint2 and product backlog.
+	Obstacles I face: n/a.
+
+Oct 23,2025
+	What I did yesterday: looked over the project.
+	What I will do today: helping with git fixes and reverts.
+	Obstacles I face: n/a.
+
+Oct 24,2025
+	What I did yesterday: helping with git fixes and reverts.
+	What I will do today: Reviewed sprint2 and selected userstories.
+	Obstacles I face: n/a.
+
+Oct 25,2025
+	What I did yesterday: Reviewed sprint2 and selected userstories.
+	What I will do today: Review sprint2 and selected userstories.
+	Obstacles I face: n/a.
+
+Oct 26,2025
+	What I did yesterday: Reviewed sprint2 and selected userstories.
+	What I will do today: Refactored PaintChooserPanel to remove hardcoding the
+	                      paint tool chooser in BUG2.003.
+	Obstacles I face: n/a.
+
+Oct 27,2025
+	What I did yesterday: Refactored PaintChooserPanel to remove hardcoding the paint tool chooser in BUG2.003.
+	What I will do today: Implmented US2.007 to create polylines.
+	Obstacles I face:  n/a.
+
+Oct 28,2025
+	What I did yesterday: Implmented US2.007 to create polylines.
+	What I will do today: Implemented US2.003 and US2.004 to satisfy triangle and triangle feedback.
+	Obstacles I face: n/a.
+
+Oct 29,2025
+	What I did yesterday: Implemented US2.003 and US2.004 to satisfy triangle and triangle feedback.
+	What I will do today: Looked over architecture logs and backlogs.
+	Obstacles I face: n/a.
+
+Oct 30,2025
+	What I did yesterday: Looked over architecture and backlogs.
+	What I will do today: Looked over sprint3 requirements.
+	Obstacles I face: n/a.
+
+Oct 31,2025
+	What I did yesterday: Looked over sprint3.
+	What I will do today: Chose US3.001 to implement an eraser tool.
+	Obstacles I face: n/a.
+
+Nov 1,2025
+	What I did yesterday:Chose US3.001 to implement an eraser tool.
+	What I will do today:Worked on eraser tool.
+	Obstacles I face: Working on eraser and eraser strategy class.
+
+Nov 2,2025
+	What I did yesterday:Worked on eraser tool.
+	What I will do today:Implemented eraser tool.
+	Obstacles I face:n/a.
+
+Nov 3,2025
+	What I did yesterday: Implemented eraser tool.
+	What I will do today: Claimed US3.011.
+	Obstacles I face:n/a.
+
+Nov 4,2025
+	What I did yesterday: Claimed US3.011.
+	What I will do today: Implemented mover tool.
+	Obstacles I face:n/a.
+
+Nov 5,2025
+	What I did yesterday:Implemented mover tool.
+	What I will do today: Found bugs and made possible user story outlines for sprint 4.
+	Obstacles I face:n/a.
+
+Nov 6,2025
+	What I did yesterday:Found bugs and made possible user story outlines for sprint 4.
+	What I will do today: Implemented line thickness tool, US3.007.
+	Obstacles I face: Finding a way to concisely and efficiently add the feature.
+
+Nov 7,2025
+	What I did yesterday: Implemented line thickness tool, US3.007.
+	What I will do today: Added sprint 4 user stories ideas.
+	Obstacles I face:n/a.
+
+Nov 8,2025
+	What I did yesterday: Added sprint 4 user stories ideas.
+	What I will do today: Implemented US4.003, but still need to make some minor changes.
+	Obstacles I face: Finding a way to display the stroke circle without grouping it with the shapes list.
+
+Nov 9,2025
+	What I did yesterday: Created and added information of extraFeatures.txt, completed US4.006/US4.008 pull requests, and added Toronto Skyline to Scenery Library.
+	What I will do today: Started working on US4.005 - the spray can tool.
+	Obstacles I face: n/a.
+
+Nov 10,2025
+	What I did yesterday: Started working on US4.005 - the spray can tool.
+	What I will do today: Added spray class and spray strategy and implemented a few methods.
+	Obstacles I face: n/a.
+
+Nov 11,2025
+	What I did yesterday:Added spray class and spray strategy and implemented a fe methods.
+	What I will do today:Implemented Spray can tool US4.005.
+	Obstacles I face: n/a.
+
+Nov 12,2025
+	What I did yesterday: Implemented Spray can tool Us4.005.
+	What I will do today: Helped refactor code to remove redundancies.
+	Obstacles I face: n/a.
+
+Nov 13,2025
+	What I did yesterday: Helped refactor code to remove redundancies.
+	What I will do today: n/a.
+	Obstacles I face: n/a.
+
+Nov 14,2025
+	What I did yesterday: n/a.
+	What I will do today: project submitted!
+	Obstacles I face: n/a.
+
