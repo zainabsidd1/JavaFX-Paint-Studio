@@ -1,4 +1,5 @@
-JavaFX Paint Application🎨
+##JavaFX Paint Application🎨
+
 ## About 
 
 JavaFX Paint Studio is a fully-featured desktop painting application built in Java 
